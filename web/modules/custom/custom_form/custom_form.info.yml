@@ -1,0 +1,4 @@
+name: Custom Form Solutions
+description: Custom forms for dynamic use outside of webforms
+type: module
+core_version_requirement: ^9.2 || ^10

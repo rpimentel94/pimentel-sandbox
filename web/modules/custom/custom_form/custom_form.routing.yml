@@ -1,0 +1,7 @@
+custom_form.form:
+  path: '/testing/form-integration'
+  defaults:
+    _form: 'Drupal\custom_form\Form\ExampleForm'
+    _title: 'POC for Commerical Lead Nurturing.'
+  requirements:
+    _permission: 'access content'
