@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "af15ec676c0838a7fb43774a06d54b6c",
+    "content-hash": "f014bd8d8a8c12f5ba3993b5ccfd8e2c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1629,6 +1629,50 @@
                 "source": "https://github.com/drupal/core-recommended/tree/9.5.10"
             },
             "time": "2023-07-05T09:26:59+00:00"
+        },
+        {
+            "name": "drupal/tailwindcss",
+            "version": "5.0.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/tailwindcss.git",
+                "reference": "5.0.0-alpha2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/tailwindcss-5.0.0-alpha2.zip",
+                "reference": "5.0.0-alpha2",
+                "shasum": "1c02347fdee7e471a9928c3c2e4eda1a2af455dc"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "drupal": {
+                    "version": "5.0.0-alpha2",
+                    "datestamp": "1641888127",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "opdavies",
+                    "homepage": "https://www.drupal.org/user/381388"
+                }
+            ],
+            "description": "A starter kit theme for Drupal 8/9 and Tailwind CSS.",
+            "homepage": "https://www.drupal.org/project/tailwindcss",
+            "support": {
+                "source": "https://git.drupalcode.org/project/tailwindcss"
+            }
         },
         {
             "name": "drush/drush",
@@ -10444,7 +10488,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "pantheon-upstreams/upstream-configuration": 20
+        "pantheon-upstreams/upstream-configuration": 20,
+        "drupal/tailwindcss": 15
     },
     "prefer-stable": true,
     "prefer-lowest": false,
