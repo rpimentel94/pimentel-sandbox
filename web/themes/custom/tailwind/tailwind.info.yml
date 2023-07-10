@@ -1,0 +1,15 @@
+name: tailwind
+type: theme
+base theme: stable
+description: 'Drupal theme development with TailwindCSS'
+alt text: 'Screenshot of tws theme.'
+core_version_requirement: ^9
+version: VERSION
+
+libraries:
+  - tailwind/global-styling
+  - tailwind/alpine-js
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  content: Content
