@@ -89,7 +89,7 @@ class ExampleForm extends FormBase {
             $form_state->setErrorByName('Email', $this->t('Please enter a valid email address.'));
         }
 
-        $phone_number_validation_regex = "^\(?([2-9][0-8][0-9])\)?[-. ]?([2-9][0-9]{2})[-. ]?([0-9]{4})$";
+        $phone_number_validation_regex = "\(?([2-9][0-8][0-9])\)?[-. ]?([2-9][0-9]{2})[-. ]?([0-9]{4})$";
         // Validate email
         if (preg_match($phone_number_validation_regex, $form_state->getValues()['phone'])) {
             $form_state->setErrorByName('Phone', $this->t('Please enter a valid US phone number.'));

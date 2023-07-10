@@ -1,0 +1,6 @@
+name: pimentel-sandbox
+recipe: pantheon
+config:
+  framework: drupal8
+  site: pimentel-sandbox
+  id: f81c4767-a713-4e8c-80c8-bc10f2433469
