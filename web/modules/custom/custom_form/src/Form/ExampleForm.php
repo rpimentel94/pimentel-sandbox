@@ -103,27 +103,27 @@ class ExampleForm extends FormBase {
         $client = \Drupal::httpClient();
 
     $data = [];
-    $data['lead_id'] = $form_state->getValue('lead_id');
-    $data['first_name'] = $form_state->getValue('first_name');
-    $data['last_name'] = $form_state->getValue('last_name');
+    $data['id'] = $form_state->getValue('lead_id');
+    $data['firstName'] = $form_state->getValue('first_name');
+    $data['lastName'] = $form_state->getValue('last_name');
     $data['email'] = $form_state->getValue('email');
     $data['phone'] = $form_state->getValue('phone');
-    $data['body'] = $form_state->getValue('body');
+    $data['thoughts'] = $form_state->getValue('body');
 
     \Drupal::logger('my_module')->debug('<pre><code>' . print_r($data, TRUE) . '</code></pre>');
     \Drupal::messenger()->addMessage($this->t('Form Submitted Successfully'), 'status', TRUE);
 
-    // try {
-    //     $response = $client->post("https://testing/endpoint.com/api", [
-    //       'form_params' => $data,
-    //     ]);
-    //     $response_data = json_decode($response->getBody()->getContents(), TRUE);
+    try {
+        $response = $client->request("PATCH", "https://thehtlfsalesforceapi.azurewebsites.net/api/UpdateSalesforceLead?code=huZbEjSWICii0zn7oTR-EcxhY14HIAOwIU0GjPRTXwfSAzFu0tXYBQ==", [
+          'form_params' => $data,
+        ]);
+        $response_data = json_decode($response->getBody()->getContents(), TRUE);
     
-    //     // do something with data
-    //   }
-    //   catch (RequestException $e) {
-    //     // log exception
-    //   }
+        // do something with data
+      }
+      catch (RequestException $e) {
+        // log exception
+      }
 
 
     }
