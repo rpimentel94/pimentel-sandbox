@@ -27,7 +27,12 @@
         "drupal/components": "^3.0@beta",
         "drupal/paragraphs": "^1.15",
         "drupal/block_field": "^1.0@RC",
-        "drupal/entity_usage": "^2.0@beta"
+        "drupal/entity_usage": "^2.0@beta",
+        "drupal/viewfield": "^3.0@beta",
+        "drupal/smart_date": "^4.0",
+        "drupal/symfony_debug": "^2.0",
+        "drupal/twig_tweak": "^3.2",
+        "drupal/devel_kint_extras": "^1.1"
     },
     "require-dev": {
         "drupal/core-dev": "^9.2"
