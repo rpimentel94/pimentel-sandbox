@@ -1,6 +1,45 @@
 name: pimentel-sandbox
 recipe: pantheon
 config:
-  framework: drupal8
+  framework: drupal9
   site: pimentel-sandbox
   id: f81c4767-a713-4e8c-80c8-bc10f2433469
+  composer_version: 2-latest
+  php: '8.1'
+  cache: false
+  edge: false
+  index: false
+proxy:
+  search:
+    - search.pimentel-sandbox.site:8963
+services:
+  search:
+    type: solr:8
+    portforward: true
+    core: sandbox
+    config:
+      dir: .config/solr_8.x
+      conf: solr/conf
+  appserver:
+    overrides:
+      environment:
+        DRUSH_OPTIONS_URI: "https://pimentel-sandbox.lndo.site"
+    build_as_root:
+        - apt update -y && apt install -y apt-transport-https
+        - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+        - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+        - curl -sL https://deb.nodesource.com/setup_14.x | bash -
+        - apt install -y nodejs
+        - apt update -y && apt install -y yarn=1.12.3-1
+
+tooling:
+  npm:
+    service: appserver
+  node:
+    service: appserver
+  gulp:
+    service: appserver
+  yarn:
+    service: appserver
+  npx:
+    service: appserver
