@@ -1,14 +1,14 @@
-uuid: 2ac17d00-38cb-49b9-bd0a-7cbd2b3cda72
+uuid: ebd22d1d-d0c1-4c3b-917a-3330695df2e1
 langcode: en
 status: true
 dependencies:
   theme:
-    - tailwindcss
+    - tailwind
 _core:
   default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
-id: tailwindcss_secondary_local_tasks
-theme: tailwindcss
-region: highlighted
+id: tailwind_secondary_local_tasks
+theme: tailwind
+region: header
 weight: -2
 provider: null
 plugin: local_tasks_block

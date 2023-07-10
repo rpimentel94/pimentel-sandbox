@@ -1,16 +1,16 @@
-uuid: 8ca84610-b847-4430-a180-5ed12819f885
+uuid: 81681727-8523-40c5-868b-5847775b4c08
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - tailwindcss
+    - tailwind
 _core:
   default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
-id: tailwindcss_breadcrumbs
-theme: tailwindcss
-region: breadcrumb
+id: tailwind_breadcrumbs
+theme: tailwind
+region: header
 weight: 0
 provider: null
 plugin: system_breadcrumb_block

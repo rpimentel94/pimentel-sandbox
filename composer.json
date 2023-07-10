@@ -22,7 +22,12 @@
         "cweagans/composer-patches": "^1.7",
         "drush/drush": "^11 || ^12",
         "drupal/admin_toolbar": "^3.4",
-        "drupal/tailwindcss": "^5.0@alpha"
+        "drupal/tailwindcss": "^5.0@alpha",
+        "drupal/preprocess": "^2.1",
+        "drupal/components": "^3.0@beta",
+        "drupal/paragraphs": "^1.15",
+        "drupal/block_field": "^1.0@RC",
+        "drupal/entity_usage": "^2.0@beta"
     },
     "require-dev": {
         "drupal/core-dev": "^9.2"

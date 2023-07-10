@@ -1,14 +1,14 @@
-uuid: 3999ccc3-35ce-448d-b0cb-aeff92c2f239
+uuid: be7f34a9-f994-4115-81a7-500e303a2f38
 langcode: en
 status: true
 dependencies:
   theme:
-    - tailwindcss
+    - tailwind
 _core:
   default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
-id: tailwindcss_page_title
-theme: tailwindcss
-region: sidebar_first
+id: tailwind_page_title
+theme: tailwind
+region: header
 weight: -5
 provider: null
 plugin: page_title_block

@@ -1,16 +1,16 @@
-uuid: 9e618a64-360d-456c-a74b-ea0fb9ac2430
+uuid: ef193c38-f462-4c50-8456-3964ccfd3e9a
 langcode: en
 status: true
 dependencies:
   module:
     - search
   theme:
-    - tailwindcss
+    - tailwind
 _core:
   default_config_hash: imMyHD6LYci0gtXq56qr9ZKGHzbEG9uFydrN5EhKtSU
-id: tailwindcss_search_form_wide
-theme: tailwindcss
-region: secondary_menu
+id: tailwind_search_form_wide
+theme: tailwind
+region: header
 weight: -5
 provider: null
 plugin: search_form_block

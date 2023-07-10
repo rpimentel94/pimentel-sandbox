@@ -1,16 +1,16 @@
-uuid: 8d308458-48b6-4152-aa5c-6bce711ada36
+uuid: fdeead55-18e3-4682-8b7f-e2d462957ec0
 langcode: en
 status: true
 dependencies:
   module:
     - help
   theme:
-    - tailwindcss
+    - tailwind
 _core:
   default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
-id: tailwindcss_help
-theme: tailwindcss
-region: sidebar_first
+id: tailwind_help
+theme: tailwind
+region: header
 weight: 0
 provider: null
 plugin: help_block

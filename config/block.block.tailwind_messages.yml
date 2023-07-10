@@ -1,16 +1,16 @@
-uuid: 7902e898-cbf4-48ad-9741-b3a026560f44
+uuid: 4ad638df-1b8f-46cb-aba9-99e523b8ae65
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - tailwindcss
+    - tailwind
 _core:
   default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
-id: tailwindcss_messages
-theme: tailwindcss
-region: highlighted
+id: tailwind_messages
+theme: tailwind
+region: header
 weight: -5
 provider: null
 plugin: system_messages_block

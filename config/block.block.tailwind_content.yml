@@ -1,15 +1,15 @@
-uuid: 67bdac1e-9992-4a12-a6ec-c661c05c8193
+uuid: 4f6e0806-70fc-4992-8028-7fa2cd7d3266
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - tailwindcss
+    - tailwind
 _core:
   default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
-id: tailwindcss_content
-theme: tailwindcss
+id: tailwind_content
+theme: tailwind
 region: content
 weight: 0
 provider: null

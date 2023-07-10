@@ -1,4 +1,4 @@
-uuid: d9831bc3-b9a4-4c56-85a3-fe07c9675fa2
+uuid: 3490b4df-6eda-4abc-af46-23bca6c52786
 langcode: en
 status: true
 dependencies:
@@ -7,12 +7,12 @@ dependencies:
   module:
     - system
   theme:
-    - tailwindcss
+    - tailwind
 _core:
   default_config_hash: gmxYWWHmgbe0Pnv8y48ZLSLH5mEHejOjAP6RLxUfdzU
-id: tailwindcss_account_menu
-theme: tailwindcss
-region: secondary_menu
+id: tailwind_account_menu
+theme: tailwind
+region: header
 weight: -4
 provider: null
 plugin: 'system_menu_block:account'
