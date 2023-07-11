@@ -49,11 +49,11 @@
 <header role="banner" class="w-full bg-white">
     <nav>
 
-        <div class="w-4/5 container m-auto flex justify-end">
+        <div class="w-9/12 container m-auto flex justify-end">
           {{ page.header }}
         </div>
 
-        <div class="flex flex-wrap items-center justify-between w-4/5 py-4 md:py-0 px-4 text-lg text-gray-700 bg-white container m-auto">
+        <div class="flex flex-wrap items-center justify-between w-9/12 py-6 text-lg text-gray-700 bg-white container m-auto">
         {{ page.primary_menu }}
 
 
@@ -66,35 +66,36 @@
 
   {{ page.content_above }}
 
-  <div class="container">
+  <div class="container w-9/12 m-auto">
 
-  <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    <main role="main">
+      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    {{ page.hero }}
+      {{ page.hero }}
 
-    <div class="-mx-4 md:flex">
-      <div class="p-4 md:flex-1">
-        {{ page.content }}
-      </div>{# /.layout-content #}
+      <div class="-mx-4 md:flex">
+        <div class="p-4 md:flex-1">
+          {{ page.content }}
+        </div>{# /.layout-content #}
 
-      {% if page.sidebar_first %}
-        <aside class="p-4 md:w-1/4" role="complementary">
-          {{ page.sidebar_first }}
-        </aside>
-      {% endif %}
+        {% if page.sidebar_first %}
+          <aside class="p-4 md:w-1/4" role="complementary">
+            {{ page.sidebar_first }}
+          </aside>
+        {% endif %}
 
-      {% if page.sidebar_second %}
-        <aside class="md:w-1/4" role="complementary">
-          {{ page.sidebar_second }}
-        </aside>
-      {% endif %}
-    </div>
-  </main>
+        {% if page.sidebar_second %}
+          <aside class="md:w-1/4" role="complementary">
+            {{ page.sidebar_second }}
+          </aside>
+        {% endif %}
+      </div>
+    </main>
 
   </div>
 
-    <footer role="contentinfo">
+    <footer role="contentinfo" class="w-full bg-zinc-500">
+      TEST
       {{ page.social }}
       {{ page.footer_top }}
       {{page.footer_bottom}}
