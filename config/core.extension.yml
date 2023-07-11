@@ -28,6 +28,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  fontawesome: 0
   help: 0
   history: 0
   image: 0
@@ -36,6 +37,7 @@ module:
   media_library: 0
   menu_link_content: 0
   menu_ui: 0
+  menus_attribute: 0
   mysql: 0
   node: 0
   options: 0
@@ -53,6 +55,7 @@ module:
   text: 0
   toolbar: 0
   tour: 0
+  twig_debugger: 0
   twig_tweak: 0
   update: 0
   user: 0

@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme override to display a single page.
+ * Default theme implementation to display a single page.
  *
  * The doctype, html, head and body tags are not in this template. Instead they
  * can be found in the html.html.twig template in this directory.
@@ -41,61 +41,62 @@
  *
  * @see template_preprocess_page()
  * @see html.html.twig
+ *
+ * @ingroup themeable
  */
 #}
-<div class="layout-container">
 
-  <header role="banner" class="w-full bg-gray-800 border-b-4 border-yellow-400" x-data="{ open: false }">
-    <div class="lg:flex lg:flex-wrap items-center justify-between p-5 lg:py-14 lg:pl-8 max-w-screen-lg xl:max-w-screen-xl mx-auto relative">
-      {{ page.header }}
+<header role="banner" class="w-full bg-white">
+    <nav>
 
-      <button class="absolute top-5 right-4 lg:hidden text-white text-opacity-80 font-semibold transition duration-500 ease-in-out hover:text-opacity-85"
-        @click="open = ! open">
-        Menu
-      </button>
+        <div class="w-4/5 container m-auto flex justify-end">
+          {{ page.header }}
+        </div>
 
-      <div class="w-full lg:w-auto lg:flex lg:items-center" 
-        :class="{ 'block': open, 'hidden': !open }"
-        @click.outside="open = false">
+        <div class="flex flex-wrap items-center justify-between w-4/5 py-4 md:py-0 px-4 text-lg text-gray-700 bg-white container m-auto">
         {{ page.primary_menu }}
-      </div>
-    </div>
-  </header>
 
-  
-  {{ page.secondary_menu }}
+
+    </nav>
+  </header>
 
   {{ page.breadcrumb }}
 
   {{ page.highlighted }}
 
-  {{ page.help }}
+  {{ page.content_above }}
+
+  <div class="container">
 
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    <div class="layout-content">
-      {{ page.content }}
-    </div>{# /.layout-content #}
+    {{ page.hero }}
 
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
+    <div class="-mx-4 md:flex">
+      <div class="p-4 md:flex-1">
+        {{ page.content }}
+      </div>{# /.layout-content #}
 
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
+      {% if page.sidebar_first %}
+        <aside class="p-4 md:w-1/4" role="complementary">
+          {{ page.sidebar_first }}
+        </aside>
+      {% endif %}
 
+      {% if page.sidebar_second %}
+        <aside class="md:w-1/4" role="complementary">
+          {{ page.sidebar_second }}
+        </aside>
+      {% endif %}
+    </div>
   </main>
 
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
-    </footer>
-  {% endif %}
+  </div>
 
-</div>{# /.layout-container #}
+    <footer role="contentinfo">
+      {{ page.social }}
+      {{ page.footer_top }}
+      {{page.footer_bottom}}
+    </footer>
+
