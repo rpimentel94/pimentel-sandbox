@@ -15,9 +15,11 @@
 #}
 {% block content %}
   {% if site_logo %}
-    <a href="{{ path('<front>') }}" rel="home" class="site-logo">
-      <img class="min-h-[5.625rem] max-h-[5.625rem] w-full" src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
-    </a>
+    <div class="py-10 pr-10 border-r border-[#d4dcde]">
+      <a href="{{ path('<front>') }}" rel="home" class="site-logo">
+        <img class="min-h-[5.625rem] max-h-[5.625rem] w-full" src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
+      </a>
+    </div>
   {% elseif site_name %}
     {% if site_name %}
       <div class="site-name">
