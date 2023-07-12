@@ -60,13 +60,13 @@
     </nav>
   </header>
 
+  <div class="container w-9/12 m-auto">
+
   {{ page.breadcrumb }}
 
   {{ page.highlighted }}
 
   {{ page.content_above }}
-
-  <div class="container w-9/12 m-auto">
 
     <main role="main">
       <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
@@ -95,9 +95,18 @@
   </div>
 
     <footer role="contentinfo" class="w-full bg-zinc-500">
-      TEST
-      {{ page.social }}
-      {{ page.footer_top }}
+      <div class="footer-inner container w-9/12 m-auto">
+      <div class="footer-inner-top flex flex-wrap items-center justify-between">
+        <div class="py-10 pr-10">
+          <a href="#" rel="home" class="site-logo">
+            <img class="min-w-[10rem] max-w-[10rem] w-full" src="/themes/custom/tailwind/assets/images/footer_logo.svg" alt="{{ 'Home'|t }}" />
+          </a>
+        </div>
+        {{ page.footer_top }}
+      </div>
+      <div class="footer-inner-middle">
       {{page.footer_bottom}}
+      </div>
+      </div>
     </footer>
 
