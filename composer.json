@@ -11,6 +11,17 @@
         {
             "type": "path",
             "url": "upstream-configuration"
+        },
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8",
+            "exclude": [
+                "drupal/domain_menu_access"
+            ]
+        },
+        {
+            "type": "git",
+            "url": "https://git.drupalcode.org/issue/domain_menu_access-3372512.git"
         }
     ],
     "require": {
@@ -39,7 +50,8 @@
         "drupal/domain": "^2.0@beta",
         "drupal/domain_access_logo": "^2.0",
         "drupal/gin": "^3.0@RC",
-        "drupal/domain_theme_switch": "^1.5"
+        "drupal/domain_theme_switch": "^1.5",
+        "drupal/total_control": "^3.0"
     },
     "require-dev": {
         "drupal/core-dev": "^9.2"

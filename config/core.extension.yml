@@ -17,6 +17,7 @@ module:
   config: 0
   contact: 0
   contextual: 0
+  ctools: 0
   custom_form: 0
   datetime: 0
   dblog: 0
@@ -41,6 +42,7 @@ module:
   help: 0
   history: 0
   image: 0
+  layout_discovery: 0
   link: 0
   media: 0
   media_library: 0
@@ -51,6 +53,8 @@ module:
   node: 0
   options: 0
   page_cache: 0
+  page_manager: 0
+  panels: 0
   paragraphs_library: 0
   path: 0
   path_alias: 0
@@ -63,6 +67,7 @@ module:
   taxonomy: 0
   text: 0
   toolbar: 0
+  total_control: 0
   tour: 0
   twig_debugger: 0
   twig_tweak: 0
