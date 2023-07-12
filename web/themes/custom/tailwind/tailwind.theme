@@ -1,0 +1,22 @@
+<?php
+/**
+ * @file
+ * Theme settings in this file.
+ */
+/**
+ * Implements hook_form_system_theme_settings_alter().
+ */
+
+function tailwind_form_system_theme_settings_alter(&$form, $form_state) {
+
+    $form['logo_footer'] = array(
+        '#title' => t('Logo Footer'),
+        '#description' => t('This Is Logo Footer: png|jpg|jpeg'),
+        '#type' => 'managed_file',
+        '#upload_location' => 'public://logo-footer/',
+        '#upload_validators' => array(
+            'file_validate_extensions' => array('png jpg jpeg svg'),
+        ),
+        '#default_value' => theme_get_setting('logo_footer'),
+    );
+}

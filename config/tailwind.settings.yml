@@ -4,6 +4,9 @@ features:
   comment_user_verification: 1
   favicon: 1
 logo:
-  use_default: 1
+  use_default: 0
+  path: 'public://logo/puppy_logo.svg'
 favicon:
   use_default: 1
+logo_footer:
+  - '3'
