@@ -1,0 +1,14 @@
+uuid: fb76bd62-d08b-424b-896f-0b4c5a1b96e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.pimentel_sandbox_lndo_site
+  module:
+    - domain_access
+id: domain_access_add_action.pimentel_sandbox_lndo_site
+label: 'Add selected content to the Ryan&#039;s Sandbox domain'
+type: node
+plugin: domain_access_add_action
+configuration:
+  domain_id: pimentel_sandbox_lndo_site

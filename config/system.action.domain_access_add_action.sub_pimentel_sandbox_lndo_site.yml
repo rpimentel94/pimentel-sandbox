@@ -1,0 +1,14 @@
+uuid: 893db5c6-053b-47f8-9a94-a988a1fefb8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.sub_pimentel_sandbox_lndo_site
+  module:
+    - domain_access
+id: domain_access_add_action.sub_pimentel_sandbox_lndo_site
+label: 'Add selected content to the Ryan&#039;s Sub Domain Sandbox domain'
+type: node
+plugin: domain_access_add_action
+configuration:
+  domain_id: sub_pimentel_sandbox_lndo_site

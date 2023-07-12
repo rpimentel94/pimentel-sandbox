@@ -1,0 +1,14 @@
+uuid: 5f6c404a-9de0-42af-ba39-32f28191caac
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.sub_pimentel_sandbox_lndo_site
+  module:
+    - domain_access
+id: domain_access_add_editor_action.sub_pimentel_sandbox_lndo_site
+label: 'Add editors to the Ryan&#039;s Sub Domain Sandbox domain'
+type: user
+plugin: domain_access_add_editor_action
+configuration:
+  domain_id: sub_pimentel_sandbox_lndo_site

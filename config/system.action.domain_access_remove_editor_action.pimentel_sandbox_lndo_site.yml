@@ -1,0 +1,14 @@
+uuid: c64763d8-3994-4777-a49a-7d72a08019df
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.pimentel_sandbox_lndo_site
+  module:
+    - domain_access
+id: domain_access_remove_editor_action.pimentel_sandbox_lndo_site
+label: 'Remove editors from the Ryan&#039;s Sandbox domain'
+type: user
+plugin: domain_access_remove_editor_action
+configuration:
+  domain_id: pimentel_sandbox_lndo_site

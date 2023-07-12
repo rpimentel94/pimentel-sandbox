@@ -1,0 +1,14 @@
+uuid: 32ef3eb3-9ce5-479d-9f4c-dd858e3675a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.pimentel_sandbox_lndo_site
+  module:
+    - domain_access
+id: domain_access_remove_action.pimentel_sandbox_lndo_site
+label: 'Remove selected content from the Ryan&#039;s Sandbox domain'
+type: node
+plugin: domain_access_remove_action
+configuration:
+  domain_id: pimentel_sandbox_lndo_site

@@ -6,6 +6,9 @@ dependencies:
     - core.entity_view_display.comment.comment.default
     - field.field.node.article.body
     - field.field.node.article.comment
+    - field.field.node.article.field_domain_access
+    - field.field.node.article.field_domain_all_affiliates
+    - field.field.node.article.field_domain_source
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
     - image.style.wide
@@ -42,8 +45,8 @@ content:
     type: image
     label: hidden
     settings:
-      image_style: wide
       image_link: ''
+      image_style: wide
       image_loading:
         attribute: lazy
     third_party_settings: {  }
@@ -62,4 +65,7 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_domain_access: true
+  field_domain_all_affiliates: true
+  field_domain_source: true

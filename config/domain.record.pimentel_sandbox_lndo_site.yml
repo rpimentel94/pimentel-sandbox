@@ -1,0 +1,11 @@
+uuid: 7047db0e-334e-4f62-8dbc-6aadfab9eceb
+langcode: en
+status: true
+dependencies: {  }
+id: pimentel_sandbox_lndo_site
+domain_id: 4424830
+hostname: pimentel-sandbox.lndo.site
+name: 'Ryan''s Sandbox'
+scheme: https
+weight: 1
+is_default: true

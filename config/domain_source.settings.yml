@@ -1,0 +1,10 @@
+_core:
+  default_config_hash: mqVsLCNF_WfM-XDhZ0nuTWd7bjvrqR5a6K_-vd0bwjU
+exclude_routes:
+  canonical: '0'
+  delete_form: '0'
+  delete_multiple_form: '0'
+  edit_form: '0'
+  version_history: '0'
+  revision: '0'
+  create: '0'

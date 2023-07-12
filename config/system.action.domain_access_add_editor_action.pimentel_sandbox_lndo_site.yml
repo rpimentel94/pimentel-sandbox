@@ -1,0 +1,14 @@
+uuid: 4d58f22f-8635-40db-ac34-51f1499ad625
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.pimentel_sandbox_lndo_site
+  module:
+    - domain_access
+id: domain_access_add_editor_action.pimentel_sandbox_lndo_site
+label: 'Add editors to the Ryan&#039;s Sandbox domain'
+type: user
+plugin: domain_access_add_editor_action
+configuration:
+  domain_id: pimentel_sandbox_lndo_site

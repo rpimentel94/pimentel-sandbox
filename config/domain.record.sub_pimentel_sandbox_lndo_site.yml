@@ -1,0 +1,11 @@
+uuid: 773ab9bb-afa3-4f84-90eb-d8d2811fe5ea
+langcode: en
+status: true
+dependencies: {  }
+id: sub_pimentel_sandbox_lndo_site
+domain_id: 1739734
+hostname: sub.pimentel-sandbox.lndo.site
+name: 'Ryan''s Sub Domain Sandbox'
+scheme: https
+weight: 2
+is_default: false

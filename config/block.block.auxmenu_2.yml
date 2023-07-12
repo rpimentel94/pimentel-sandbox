@@ -1,0 +1,25 @@
+uuid: 5f0d75c8-10b9-4988-965a-9fa1e523498c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.aux-menu
+  module:
+    - system
+  theme:
+    - tailwind
+id: auxmenu_2
+theme: tailwind
+region: footer_top
+weight: 0
+provider: null
+plugin: 'system_menu_block:aux-menu'
+settings:
+  id: 'system_menu_block:aux-menu'
+  label: 'Aux Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

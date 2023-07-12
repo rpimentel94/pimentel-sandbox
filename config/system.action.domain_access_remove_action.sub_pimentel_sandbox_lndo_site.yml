@@ -1,0 +1,14 @@
+uuid: af77b15d-54fa-45a5-84ae-4f92373d65fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.sub_pimentel_sandbox_lndo_site
+  module:
+    - domain_access
+id: domain_access_remove_action.sub_pimentel_sandbox_lndo_site
+label: 'Remove selected content from the Ryan&#039;s Sub Domain Sandbox domain'
+type: node
+plugin: domain_access_remove_action
+configuration:
+  domain_id: sub_pimentel_sandbox_lndo_site
