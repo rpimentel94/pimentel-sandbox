@@ -2,8 +2,7 @@ global-styling:
   version: VERSION
   css:
     theme:
-      assets/dist/css/styles.css: {}
-      assets/src/css/custom.css: {}
+      assets/dist/css/htlf.css: {}
 
 alpine-js:     
   js: 

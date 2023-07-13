@@ -1,5 +1,5 @@
 let gulp = require("gulp");
-let sass = require("gulp-sass");
+let sass = require('gulp-sass')(require('sass'));
 let autoprefixer = require("gulp-autoprefixer");
 let concat = require("gulp-concat");
 let uglify = require('gulp-uglify-es').default;
@@ -9,7 +9,7 @@ let rename = require('gulp-rename');
 var css = {
   src: 'components/**/*.scss',
   dest: 'assets/src/css',
-  filename: 'style.scss'
+  filename: 'custom.scss'
 };
 
 var js = {
@@ -50,6 +50,19 @@ function watch(){
   gulp.watch(js.src, script);
 }
 
+function cssBundle(){
+   return (
+      gulp
+         .src([
+            'assets/dist/css/styles.css',
+            'assets/src/css/custom.min.css'
+         ])
+         .pipe(concat('htlf.css'))
+         .pipe(gulp.dest('assets/dist/css'))
+   )
+}
+
 exports.css = style;
 exports.js = script;
 exports.default = watch;
+exports.cssBundle = cssBundle;

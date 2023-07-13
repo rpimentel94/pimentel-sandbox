@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "concurrently": "^8.2.0",
     "del": "^7.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
@@ -16,7 +17,7 @@
   "scripts": {
     "build": "npx tailwindcss build -i assets/src/css/styles.css -o assets/dist/css/styles.css",
     "build:prod": "npx tailwindcss build -i assets/src/css/styles.css -o assets/dist/css/styles.css --minify",
-    "watch": "npx tailwindcss -i assets/src/css/styles.css -o assets/dist/css/styles.css --watch",
+    "watch": "concurrently \"npx tailwindcss -i assets/src/css/styles.css -o assets/dist/css/styles.css --watch\" \"gulp\"",
     "scss": "gulp watch"
   },
   "dependencies": {
