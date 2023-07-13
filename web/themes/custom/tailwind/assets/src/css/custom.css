@@ -1,3 +1,4 @@
-body {
-  background-color: orange;
+.darker {
+  background-color: lavender;
+  border-radius: 45px;
 }

@@ -19,17 +19,15 @@ var js = {
 };
 
 function style() {
+   cssBundle()
   return (
     gulp
       .src(css.src)
       .pipe(concat(css.filename))
       .pipe(sass())
       .on("error", sass.logError)
-      .pipe(autoprefixer())
       .pipe(gulp.dest(css.dest))
-      .pipe(csso())
-      .pipe(rename({extname: '.min.css'}))
-      .pipe(gulp.dest(css.dest))
+      .pipe(cssBundle())
   );
 }
 
@@ -42,6 +40,7 @@ function script() {
       .pipe(uglify())
       .pipe(rename({extname: '.min.js'}))
       .pipe(gulp.dest(js.dest))
+      .run(cssBundle)
   );
 }
 
@@ -55,9 +54,10 @@ function cssBundle(){
       gulp
          .src([
             'assets/dist/css/styles.css',
-            'assets/src/css/custom.min.css'
+            'assets/src/css/custom.css'
          ])
          .pipe(concat('htlf.css'))
+         .pipe(csso())
          .pipe(gulp.dest('assets/dist/css'))
    )
 }
