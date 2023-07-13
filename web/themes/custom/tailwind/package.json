@@ -1,10 +1,20 @@
 {
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.1.0",
+    "node-sass": "^9.0.0",
+    "postcss-import": "^15.1.0",
+    "scss": "^0.2.4",
     "tailwindcss": "^3.3.2"
   },
   "scripts": {
     "build": "npx tailwindcss build -i assets/src/css/styles.css -o assets/dist/css/styles.css",
     "build:prod": "npx tailwindcss build -i assets/src/css/styles.css -o assets/dist/css/styles.css --minify",
-    "watch": "npx tailwindcss -i assets/src/css/styles.css -o assets/dist/css/styles.css --watch"
+    "watch": "npx tailwindcss -i assets/src/css/styles.css -o assets/dist/css/styles.css --watch",
+    "scss": "gulp sass"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.14"
   }
 }

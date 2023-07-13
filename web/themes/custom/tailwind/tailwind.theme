@@ -7,11 +7,21 @@
  * Implements hook_form_system_theme_settings_alter().
  */
 
-function tailwind_form_system_theme_settings_alter(&$form, $form_state) {
+function tailwind_form_system_theme_settings_alter(&$form, $form_state)
+{
 
-    $form['logo_footer'] = array(
+    // To make the fieldset collapsible
+    $form['custom'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Name'),
+        '#collapsible' => TRUE,
+        // Added
+        '#collapsed' => FALSE, // Added
+    );
+
+    $form['custom']['logo_footer'] = array(
         '#title' => t('Logo Footer'),
-        '#description' => t('This Is Logo Footer: png|jpg|jpeg'),
+        '#description' => t('This Is Logo Footer: png|jpg|jpeg|svg'),
         '#type' => 'managed_file',
         '#upload_location' => 'public://logo-footer/',
         '#upload_validators' => array(
@@ -19,4 +29,19 @@ function tailwind_form_system_theme_settings_alter(&$form, $form_state) {
         ),
         '#default_value' => theme_get_setting('logo_footer'),
     );
+
+    $form['custom']['primary_color'] = array(
+        '#title' => t('Primary Color'),
+        '#description' => t('Color used for main banner'),
+        '#type' => 'textfield',
+        '#default_value' => theme_get_setting('primary_color'),
+    );
+
+    $form['custom']['secondary_color'] = array(
+        '#title' => t('Secondary Color'),
+        '#description' => t('Color used link colors links, buttons & section background colors'),
+        '#type' => 'textfield',
+        '#default_value' => theme_get_setting('secondary_color'),
+    );
+
 }
