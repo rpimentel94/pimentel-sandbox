@@ -3,6 +3,7 @@ global-styling:
   css:
     theme:
       assets/dist/css/styles.css: {}
+      assets/src/css/custom.css: {}
 
 alpine-js:     
   js: 
