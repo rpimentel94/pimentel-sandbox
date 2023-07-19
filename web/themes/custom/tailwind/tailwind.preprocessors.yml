@@ -1,0 +1,4 @@
+tailwind.page:
+  class: '\Drupal\tailwind\Plugin\Preprocess\Page'
+  hook: page
+  weight: 0

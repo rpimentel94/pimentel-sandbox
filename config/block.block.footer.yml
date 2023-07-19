@@ -1,22 +1,22 @@
-uuid: 6d091a30-e93a-4b36-9779-260122a69172
+uuid: ef0497ad-8e1c-4ca2-9461-796b15f7ea1d
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.main
+    - system.menu.footer
   module:
     - system
   theme:
     - tailwind
-id: mainnavigation
+id: footer
 theme: tailwind
 region: footer_bottom
 weight: 0
 provider: null
-plugin: 'system_menu_block:main'
+plugin: 'system_menu_block:footer'
 settings:
-  id: 'system_menu_block:main'
-  label: 'Main navigation'
+  id: 'system_menu_block:footer'
+  label: Footer
   label_display: '0'
   provider: system
   level: 1

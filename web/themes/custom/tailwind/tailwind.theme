@@ -19,6 +19,13 @@ function tailwind_form_system_theme_settings_alter(&$form, $form_state)
         '#collapsed' => FALSE, // Added
     );
 
+    $form['custom']['bank_name'] = array(
+        '#title' => t('Bank Name'),
+        '#description' => t('Official user facing name of bank/division'),
+        '#type' => 'textfield',
+        '#default_value' => theme_get_setting('bank_name'),
+    );
+
     $form['custom']['logo_footer'] = array(
         '#title' => t('Logo Footer'),
         '#description' => t('This Is Logo Footer: png|jpg|jpeg|svg'),

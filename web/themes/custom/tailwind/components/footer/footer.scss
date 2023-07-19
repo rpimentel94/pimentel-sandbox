@@ -2,7 +2,6 @@ footer {
   .footer-inner {
     &-top {
       #block-auxmenu-2 {
-        width: 70%;
 
         ul {
           justify-content: flex-start;
@@ -21,6 +20,16 @@ footer {
           }
         }
       }
+
+      #block-socialmedia {
+        margin-left: auto;
+      }
     }
+
+    &-middle {
+        #block-footer {
+            width: 100%;
+        }
+      }
   }
 }
