@@ -605,6 +605,10 @@ video {
   height: 0.5rem;
 }
 
+.h-11 {
+  height: 2.75rem;
+}
+
 .max-h-\[5\.625rem\] {
   max-height: 5.625rem;
 }
