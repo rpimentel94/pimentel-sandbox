@@ -21,6 +21,9 @@ module:
   custom_form: 0
   datetime: 0
   dblog: 0
+  devel: 0
+  devel_generate: 0
+  devel_kint_extras: 0
   domain: 0
   domain_access: 0
   domain_access_logo: 0
@@ -39,6 +42,9 @@ module:
   file: 0
   filter: 0
   fontawesome: 0
+  fontawesome_iconpicker_widget: 0
+  fontawesome_media: 0
+  gin_toolbar: 0
   help: 0
   history: 0
   image: 0
@@ -54,14 +60,20 @@ module:
   options: 0
   page_cache: 0
   page_manager: 0
+  page_manager_ui: 0
   panels: 0
+  paragraphs_browser: 0
+  paragraphs_features: 0
   paragraphs_library: 0
+  paragraphs_type_permissions: 0
   path: 0
   path_alias: 0
   preprocess: 0
   search: 0
   shortcut: 0
+  simplei: 0
   smart_date: 0
+  svg_image: 0
   symfony_debug: 0
   system: 0
   taxonomy: 0
@@ -78,6 +90,7 @@ module:
   views_ui: 0
   views: 10
   paragraphs: 11
+  paragraphs_ee: 15
   standard: 1000
 theme:
   claro: 0

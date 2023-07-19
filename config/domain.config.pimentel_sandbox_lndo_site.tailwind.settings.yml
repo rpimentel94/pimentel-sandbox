@@ -10,5 +10,5 @@ favicon:
   use_default: 1
 logo_footer: {  }
 bank_name: 'HTLF Bank'
-primary_color: ''
+primary_color: '#00838f'
 secondary_color: ''
