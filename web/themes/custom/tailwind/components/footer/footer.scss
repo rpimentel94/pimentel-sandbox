@@ -1,0 +1,26 @@
+footer {
+  .footer-inner {
+    &-top {
+      #block-auxmenu-2 {
+        width: 70%;
+
+        ul {
+          justify-content: flex-start;
+          margin-left: 1em;
+
+          li {
+            padding-right: 2em;
+
+            a {
+              color: white;
+            }
+
+            span {
+              background-color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

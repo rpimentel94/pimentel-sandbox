@@ -13,6 +13,7 @@ proxy:
   appserver_nginx:
     - pimentel-sandbox.lndo.site
     - sub.pimentel-sandbox.lndo.site
+    - sub2.pimentel-sandbox.lndo.site
   # search:
   #   - search.pimentel-sandbox.site:8963
 services:

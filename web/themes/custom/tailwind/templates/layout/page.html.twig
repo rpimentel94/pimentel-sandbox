@@ -53,14 +53,14 @@
           {{ page.header }}
         </div>
 
-        <div class="flex flex-wrap items-center justify-between w-9/12 py-6 text-lg text-gray-700 bg-white container m-auto">
+        <div class="flex flex-wrap items-center justify-between w-8/12 py-6 text-lg text-gray-700 bg-white container m-auto">
         {{ page.primary_menu }}
 
 
     </nav>
   </header>
 
-  <div class="container w-9/12 m-auto">
+  <div class="container w-8/12 m-auto">
 
   {{ page.breadcrumb }}
 
@@ -95,7 +95,7 @@
   </div>
 
     <footer role="contentinfo" class="w-full bg-zinc-500">
-      <div class="footer-inner container w-9/12 m-auto">
+      <div class="footer-inner container w-8/12 m-auto">
       <div class="footer-inner-top flex flex-wrap items-center justify-between">
         <div class="py-10 pr-10">
           <a href="#" rel="home" class="site-logo">
@@ -105,8 +105,15 @@
         {{ page.footer_top }}
       </div>
       <div class="footer-inner-middle">
-      {{page.footer_bottom}}
+        {{page.footer_bottom}}
       </div>
+      <div class="footer-inner-bottom pt-[3.75rem] pb-[7.25rem] flex flex-wrap items-center justify-between text-white">
+        <div class="">
+          ©{{ 'now' | date('Y') }} HTLF Bank
+        </div>
+        <div class="right-test pr-4">
+          ©{{ 'now' | date('Y') }} HTLF Bank
+        </div>
       </div>
     </footer>
 

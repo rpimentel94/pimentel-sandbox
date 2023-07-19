@@ -1,4 +1,16 @@
-.darker {
-  background-color: lavender;
-  border-radius: 45px;
+footer .footer-inner-top #block-auxmenu-2 {
+  width: 70%;
+}
+footer .footer-inner-top #block-auxmenu-2 ul {
+  justify-content: flex-start;
+  margin-left: 1em;
+}
+footer .footer-inner-top #block-auxmenu-2 ul li {
+  padding-right: 2em;
+}
+footer .footer-inner-top #block-auxmenu-2 ul li a {
+  color: white;
+}
+footer .footer-inner-top #block-auxmenu-2 ul li span {
+  background-color: white;
 }
