@@ -601,12 +601,12 @@ video {
   display: flex;
 }
 
-.h-2 {
-  height: 0.5rem;
-}
-
 .h-11 {
   height: 2.75rem;
+}
+
+.h-2 {
+  height: 0.5rem;
 }
 
 .max-h-\[5\.625rem\] {
@@ -621,76 +621,32 @@ video {
   width: 0px;
 }
 
-.w-9\/12 {
-  width: 75%;
-}
-
-.w-full {
-  width: 100%;
-}
-
 .w-10\/12 {
   width: 83.333333%;
-}
-
-.w-11\/12 {
-  width: 91.666667%;
-}
-
-.w-\[90\%\] {
-  width: 90%;
-}
-
-.w-\[85\%\] {
-  width: 85%;
-}
-
-.w-8\/12 {
-  width: 66.666667%;
-}
-
-.w-\[50\%\] {
-  width: 50%;
-}
-
-.w-\[82\.75\%\] {
-  width: 82.75%;
-}
-
-.w-\[83\%\] {
-  width: 83%;
 }
 
 .w-44 {
   width: 11rem;
 }
 
+.w-8\/12 {
+  width: 66.666667%;
+}
+
+.w-full {
+  width: 100%;
+}
+
 .min-w-\[10rem\] {
   min-width: 10rem;
 }
 
-.min-w-\[700px\] {
-  min-width: 700px;
-}
-
-.min-w-\[970px\] {
-  min-width: 970px;
+.max-w-7xl {
+  max-width: 80rem;
 }
 
 .max-w-\[10rem\] {
   max-width: 10rem;
-}
-
-.max-w-\[700px\] {
-  max-width: 700px;
-}
-
-.max-w-\[970px\] {
-  max-width: 970px;
-}
-
-.max-w-7xl {
-  max-width: 80rem;
 }
 
 .flex-grow {
@@ -764,22 +720,28 @@ video {
   padding-bottom: 1.5rem;
 }
 
-.px-14 {
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
+.pb-10 {
+  padding-bottom: 2.5rem;
 }
 
-.px-\[2\.5rem\] {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+.pb-\[7\.25rem\] {
+  padding-bottom: 7.25rem;
 }
 
 .pl-4 {
   padding-left: 1rem;
 }
 
+.pl-8 {
+  padding-left: 2rem;
+}
+
 .pr-10 {
   padding-right: 2.5rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
 }
 
 .pr-6 {
@@ -790,36 +752,8 @@ video {
   padding-top: 1rem;
 }
 
-.pb-28 {
-  padding-bottom: 7rem;
-}
-
-.pt-14 {
-  padding-top: 3.5rem;
-}
-
-.pr-4 {
-  padding-right: 1rem;
-}
-
-.pb-10 {
-  padding-bottom: 2.5rem;
-}
-
-.pb-\[7\.25rem\] {
-  padding-bottom: 7.25rem;
-}
-
 .pt-\[3\.75rem\] {
   padding-top: 3.75rem;
-}
-
-.pl-2 {
-  padding-left: 0.5rem;
-}
-
-.pl-8 {
-  padding-left: 2rem;
 }
 
 .text-base {
@@ -837,12 +771,12 @@ video {
   line-height: 1.75rem;
 }
 
-.font-semibold {
-  font-weight: 600;
-}
-
 .font-light {
   font-weight: 300;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .tracking-wide {
@@ -888,14 +822,6 @@ video {
 
 .duration-500 {
   transition-duration: 500ms;
-}
-
-.ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hover\:text-opacity-95:hover {
-  --tw-text-opacity: 0.95;
 }
 
 .group:hover .group-hover\:w-full {
