@@ -1,0 +1,21 @@
+uuid: c23c0d78-48ba-4e82-bc06-1175eb3a277f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.accordions_tabs
+  module:
+    - options
+id: paragraph.accordions_tabs.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: accordions_tabs
+label: 'Background Color'
+description: 'This option sets a background color for the entire section. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

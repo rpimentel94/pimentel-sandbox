@@ -1,0 +1,21 @@
+uuid: 0dc4b633-13ca-4c2d-bbe8-b08b4b8d4437
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gutter
+    - paragraphs.paragraphs_type.accordions_tabs
+  module:
+    - options
+id: paragraph.accordions_tabs.field_gutter
+field_name: field_gutter
+entity_type: paragraph
+bundle: accordions_tabs
+label: 'Section Gutter(s)'
+description: 'This option changes where extra space will be printed around the section.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

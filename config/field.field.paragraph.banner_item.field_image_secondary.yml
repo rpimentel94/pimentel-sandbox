@@ -1,0 +1,29 @@
+uuid: 773c8f87-14c5-419f-91eb-f16a22c305b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_secondary
+    - media.type.image
+    - paragraphs.paragraphs_type.banner_item
+id: paragraph.banner_item.field_image_secondary
+field_name: field_image_secondary
+entity_type: paragraph
+bundle: banner_item
+label: 'Mobile Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: 32c182c9-d26c-4620-b198-7dc23b209bd8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_overlay
+    - paragraphs.paragraphs_type.banner_item
+  module:
+    - options
+id: paragraph.banner_item.field_overlay
+field_name: field_overlay
+entity_type: paragraph
+bundle: banner_item
+label: Overlay
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: dark
+default_value_callback: ''
+settings: {  }
+field_type: list_string

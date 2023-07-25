@@ -1,0 +1,23 @@
+uuid: 3a6dfac4-97e6-4e4c-98a8-ab6915b08764
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tag
+    - paragraphs.paragraphs_type.accordion_tab_item
+  module:
+    - options
+id: paragraph.accordion_tab_item.field_tag
+field_name: field_tag
+entity_type: paragraph
+bundle: accordion_tab_item
+label: 'Title Tag'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: h2
+default_value_callback: ''
+settings: {  }
+field_type: list_string

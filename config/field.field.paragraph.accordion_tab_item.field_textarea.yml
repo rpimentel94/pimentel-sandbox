@@ -1,0 +1,21 @@
+uuid: 1219aa45-4982-49fc-82bc-e31c2aaddbcc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_textarea
+    - paragraphs.paragraphs_type.accordion_tab_item
+  module:
+    - text
+id: paragraph.accordion_tab_item.field_textarea
+field_name: field_textarea
+entity_type: paragraph
+bundle: accordion_tab_item
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

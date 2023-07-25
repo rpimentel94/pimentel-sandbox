@@ -1,0 +1,23 @@
+uuid: 9df91b5d-485e-467c-8c9e-e12aef6809b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_alignment
+    - paragraphs.paragraphs_type.banner_item
+  module:
+    - options
+id: paragraph.banner_item.field_alignment
+field_name: field_alignment
+entity_type: paragraph
+bundle: banner_item
+label: Alignment
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

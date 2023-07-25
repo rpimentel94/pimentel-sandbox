@@ -1,0 +1,63 @@
+uuid: 99fadcc7-061b-4b35-b77c-62447ff8d100
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.accordion_tab_item.field_button
+    - field.field.paragraph.accordion_tab_item.field_button_aria_label
+    - field.field.paragraph.accordion_tab_item.field_tag
+    - field.field.paragraph.accordion_tab_item.field_text
+    - field.field.paragraph.accordion_tab_item.field_textarea
+    - paragraphs.paragraphs_type.accordion_tab_item
+  module:
+    - link
+    - options
+    - text
+id: paragraph.accordion_tab_item.default
+targetEntityType: paragraph
+bundle: accordion_tab_item
+mode: default
+content:
+  field_button:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_button_aria_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_tag:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_textarea:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

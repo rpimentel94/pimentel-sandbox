@@ -1,0 +1,23 @@
+uuid: 7b50df0b-6982-4618-978f-8d6262739ca2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_admin_title
+    - paragraphs.paragraphs_type.accordions_tabs
+id: paragraph.accordions_tabs.field_display_admin_title
+field_name: field_display_admin_title
+entity_type: paragraph
+bundle: accordions_tabs
+label: 'Display Admin Title'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

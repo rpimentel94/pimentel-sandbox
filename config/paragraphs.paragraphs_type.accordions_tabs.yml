@@ -1,0 +1,10 @@
+uuid: c16f54e6-75e5-4f51-b1b9-5bacaafe3ec2
+langcode: en
+status: true
+dependencies: {  }
+id: accordions_tabs
+label: 'Accordions / Tabs'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

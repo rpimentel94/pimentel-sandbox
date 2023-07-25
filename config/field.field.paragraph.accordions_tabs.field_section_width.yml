@@ -1,0 +1,21 @@
+uuid: bea174f3-845c-4b40-a479-e95a689f5152
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_width
+    - paragraphs.paragraphs_type.accordions_tabs
+  module:
+    - options
+id: paragraph.accordions_tabs.field_section_width
+field_name: field_section_width
+entity_type: paragraph
+bundle: accordions_tabs
+label: 'Section Width'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

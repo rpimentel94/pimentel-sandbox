@@ -1,0 +1,23 @@
+uuid: c1e69bd8-a24d-409f-ae82-b39a911fc097
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button
+    - paragraphs.paragraphs_type.accordion_tab_item
+  module:
+    - link
+id: paragraph.accordion_tab_item.field_button
+field_name: field_button
+entity_type: paragraph
+bundle: accordion_tab_item
+label: Button
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

@@ -1,0 +1,21 @@
+uuid: 7c0d5d7b-101a-4563-a9cb-f81a27db0ff0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_widget_type
+    - paragraphs.paragraphs_type.accordions_tabs
+  module:
+    - options
+id: paragraph.accordions_tabs.field_widget_type
+field_name: field_widget_type
+entity_type: paragraph
+bundle: accordions_tabs
+label: 'Widget Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

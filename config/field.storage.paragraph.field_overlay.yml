@@ -1,0 +1,27 @@
+uuid: a90d67e7-067a-4f74-9e54-4c1552bf43fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_overlay
+field_name: field_overlay
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: dark
+      label: Dark
+    -
+      value: light
+      label: Light
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

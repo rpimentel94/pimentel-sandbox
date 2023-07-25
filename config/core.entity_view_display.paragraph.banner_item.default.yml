@@ -1,0 +1,98 @@
+uuid: f7bf6b88-8c1c-4254-8e6d-06d66cde9df7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.banner_item.field_alignment
+    - field.field.paragraph.banner_item.field_banner_height
+    - field.field.paragraph.banner_item.field_button
+    - field.field.paragraph.banner_item.field_button_aria_label
+    - field.field.paragraph.banner_item.field_image
+    - field.field.paragraph.banner_item.field_image_secondary
+    - field.field.paragraph.banner_item.field_overlay
+    - field.field.paragraph.banner_item.field_text
+    - field.field.paragraph.banner_item.field_textarea_plain
+    - paragraphs.paragraphs_type.banner_item
+  module:
+    - link
+    - options
+id: paragraph.banner_item.default
+targetEntityType: paragraph
+bundle: banner_item
+mode: default
+content:
+  field_alignment:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_banner_height:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_button:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_button_aria_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_image_secondary:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_overlay:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_textarea_plain:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden: {  }

@@ -1,0 +1,19 @@
+uuid: 21ae5519-6adb-4756-80a9-a2d91d05992f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_textarea_plain
+    - paragraphs.paragraphs_type.banner_item
+id: paragraph.banner_item.field_textarea_plain
+field_name: field_textarea_plain
+entity_type: paragraph
+bundle: banner_item
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

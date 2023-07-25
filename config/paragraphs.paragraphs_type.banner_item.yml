@@ -1,0 +1,15 @@
+uuid: ab53dadb-9bfa-47f9-a353-2b3073ac2262
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: banner_item
+label: 'Banner Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
