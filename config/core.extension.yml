@@ -23,7 +23,6 @@ module:
   dblog: 0
   devel: 0
   devel_generate: 0
-  devel_kint_extras: 0
   domain: 0
   domain_access: 0
   domain_access_logo: 0
@@ -71,6 +70,7 @@ module:
   preprocess: 0
   search: 0
   shortcut: 0
+  simple_sitemap: 0
   simplei: 0
   smart_date: 0
   svg_image: 0
