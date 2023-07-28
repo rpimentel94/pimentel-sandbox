@@ -59,7 +59,8 @@
         "drupal/svg_image": "^3.0",
         "drupal/simplei": "^2.1",
         "drupal/simple_sitemap": "^4.1",
-        "drupal/webform": "^6.2@beta"
+        "drupal/webform": "^6.2@beta",
+        "drupal/geocoder": "^3.34"
     },
     "require-dev": {
         "drupal/core-dev": "^9.2"
