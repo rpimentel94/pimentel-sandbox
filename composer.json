@@ -60,7 +60,11 @@
         "drupal/simplei": "^2.1",
         "drupal/simple_sitemap": "^4.1",
         "drupal/webform": "^6.2@beta",
-        "drupal/geocoder": "^3.34"
+        "drupal/geocoder": "^3.34",
+        "drupal/scheduled_transitions": "^2.3",
+        "drupal/migrate_plus": "^6.0",
+        "drupal/migrate_tools": "^6.0",
+        "drupal/migrate_upgrade": "^4.0"
     },
     "require-dev": {
         "drupal/core-dev": "^9.2"
