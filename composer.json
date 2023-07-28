@@ -58,7 +58,8 @@
         "drupal/paragraphs_ee": "^2.1@alpha",
         "drupal/svg_image": "^3.0",
         "drupal/simplei": "^2.1",
-        "drupal/simple_sitemap": "^4.1"
+        "drupal/simple_sitemap": "^4.1",
+        "drupal/webform": "^6.2@beta"
     },
     "require-dev": {
         "drupal/core-dev": "^9.2"
