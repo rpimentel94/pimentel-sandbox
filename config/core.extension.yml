@@ -16,12 +16,12 @@ module:
   components: 0
   config: 0
   contact: 0
+  content_moderation: 0
   contextual: 0
   ctools: 0
   custom_form: 0
   datetime: 0
   dblog: 0
-  devel: 0
   devel_generate: 0
   domain: 0
   domain_access: 0
@@ -88,6 +88,7 @@ module:
   user: 0
   viewfield: 0
   views_ui: 0
+  workflows: 0
   views: 10
   paragraphs: 11
   paragraphs_ee: 15

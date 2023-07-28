@@ -1,0 +1,23 @@
+uuid: 7599cd19-478e-443d-b004-ed65ea24a878
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_animation
+    - paragraphs.paragraphs_type.banner
+  module:
+    - options
+id: paragraph.banner.field_animation
+field_name: field_animation
+entity_type: paragraph
+bundle: banner
+label: 'Animation Type'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: fade
+default_value_callback: ''
+settings: {  }
+field_type: list_string

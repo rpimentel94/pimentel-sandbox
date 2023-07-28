@@ -1,0 +1,23 @@
+uuid: 74502a4c-9fa3-44cf-bd6b-32366dc7f055
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_admin_title
+    - paragraphs.paragraphs_type.ordered_team_members
+id: paragraph.ordered_team_members.field_display_admin_title
+field_name: field_display_admin_title
+entity_type: paragraph
+bundle: ordered_team_members
+label: 'Display Admin Title'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

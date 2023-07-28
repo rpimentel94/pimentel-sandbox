@@ -1,0 +1,8 @@
+uuid: 1eb051da-e68a-4038-be0c-0d6fc5ec44d0
+langcode: en
+status: true
+dependencies: {  }
+name: 'Blog Post Tags'
+vid: blog_post_tags
+description: 'Tags used to groups similar blog posts.'
+weight: 0

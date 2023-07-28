@@ -1,0 +1,8 @@
+uuid: 33de4cdb-8f3c-482e-856f-ace8f2b9dd1f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Blog Post Category'
+vid: blog_post_category
+description: 'Used to categorize blog posts.'
+weight: 0

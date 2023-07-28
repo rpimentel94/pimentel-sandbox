@@ -1,0 +1,23 @@
+uuid: a5867595-6284-47a4-ac27-067aa86df43e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_image
+    - paragraphs.paragraphs_type.team_members
+id: paragraph.team_members.field_display_image
+field_name: field_display_image
+entity_type: paragraph
+bundle: team_members
+label: 'Display Image'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

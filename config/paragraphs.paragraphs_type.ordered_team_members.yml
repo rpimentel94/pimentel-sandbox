@@ -1,0 +1,15 @@
+uuid: 20fbabbc-b47a-4e33-9ff9-f305dbd6c67d
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: ordered_team_members
+label: 'Ordered Team Members'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,15 @@
+uuid: 2b982e17-2ca7-415e-846f-8490514d5a69
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: grid_item
+label: 'Grid Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

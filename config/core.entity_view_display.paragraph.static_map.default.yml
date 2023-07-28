@@ -1,0 +1,40 @@
+uuid: f3a3a7cb-be42-4cce-9d28-5e481ef7d816
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.static_map.field_admin_title
+    - field.field.paragraph.static_map.field_image
+    - field.field.paragraph.static_map.field_textarea
+    - paragraphs.paragraphs_type.static_map
+  module:
+    - text
+id: paragraph.static_map.default
+targetEntityType: paragraph
+bundle: static_map
+mode: default
+content:
+  field_admin_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_textarea:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

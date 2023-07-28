@@ -1,0 +1,19 @@
+uuid: 4a657312-8382-4273-ac4f-4e0fa5c9d9fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.testimonial
+id: paragraph.testimonial.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: testimonial
+label: Name
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

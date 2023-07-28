@@ -1,0 +1,21 @@
+uuid: 523c3259-9c95-4b38-adfe-fc5eab222f5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_num_cols
+    - paragraphs.paragraphs_type.team_members
+  module:
+    - options
+id: paragraph.team_members.field_num_cols
+field_name: field_num_cols
+entity_type: paragraph
+bundle: team_members
+label: 'Number of Members'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

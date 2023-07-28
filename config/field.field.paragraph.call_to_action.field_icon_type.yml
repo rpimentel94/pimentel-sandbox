@@ -1,0 +1,23 @@
+uuid: f47f9b6f-5a36-432b-8a14-2fdb005cbba1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon_type
+    - paragraphs.paragraphs_type.call_to_action
+  module:
+    - options
+id: paragraph.call_to_action.field_icon_type
+field_name: field_icon_type
+entity_type: paragraph
+bundle: call_to_action
+label: 'Icon Type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: fa
+default_value_callback: ''
+settings: {  }
+field_type: list_string

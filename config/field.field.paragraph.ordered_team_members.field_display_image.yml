@@ -1,0 +1,23 @@
+uuid: 1d414621-b00f-436e-b42e-cc754315bd6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_image
+    - paragraphs.paragraphs_type.ordered_team_members
+id: paragraph.ordered_team_members.field_display_image
+field_name: field_display_image
+entity_type: paragraph
+bundle: ordered_team_members
+label: 'Display Team Bio Image'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

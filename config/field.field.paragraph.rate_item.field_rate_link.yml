@@ -1,0 +1,23 @@
+uuid: af3b779d-0909-48ef-b5e5-8aebcfde6f41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_rate_link
+    - paragraphs.paragraphs_type.rate_item
+  module:
+    - link
+id: paragraph.rate_item.field_rate_link
+field_name: field_rate_link
+entity_type: paragraph
+bundle: rate_item
+label: 'Rate Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

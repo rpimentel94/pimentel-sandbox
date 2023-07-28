@@ -1,0 +1,45 @@
+uuid: a207695e-7fb0-4aa2-854f-e6b370452f74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.static_map.field_admin_title
+    - field.field.paragraph.static_map.field_image
+    - field.field.paragraph.static_map.field_textarea
+    - paragraphs.paragraphs_type.static_map
+  module:
+    - text
+id: paragraph.static_map.default
+targetEntityType: paragraph
+bundle: static_map
+mode: default
+content:
+  field_admin_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_image:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_textarea:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

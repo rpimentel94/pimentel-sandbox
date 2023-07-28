@@ -1,0 +1,21 @@
+uuid: 01e074c6-4563-4ca3-9655-cdfb0807a141
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gutter
+    - paragraphs.paragraphs_type.sidebar_content_section
+  module:
+    - options
+id: paragraph.sidebar_content_section.field_gutter
+field_name: field_gutter
+entity_type: paragraph
+bundle: sidebar_content_section
+label: 'Section Gutter(s)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

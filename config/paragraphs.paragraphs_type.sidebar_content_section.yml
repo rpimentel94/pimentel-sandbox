@@ -1,0 +1,15 @@
+uuid: e9a876ef-1d18-436a-ad61-233376ffed18
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: sidebar_content_section
+label: 'Sidebar Content Section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

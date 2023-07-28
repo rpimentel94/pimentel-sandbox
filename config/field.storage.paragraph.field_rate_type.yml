@@ -1,0 +1,30 @@
+uuid: 53b880b6-632b-4fb0-ba86-7da83fc38e94
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_rate_type
+field_name: field_rate_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: apr
+      label: APR
+    -
+      value: apy
+      label: APY
+    -
+      value: none
+      label: None
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

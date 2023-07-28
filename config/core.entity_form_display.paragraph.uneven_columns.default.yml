@@ -1,0 +1,109 @@
+uuid: ae9d4672-4c01-4da3-93ab-a9ae2ee05d60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.uneven_columns.field_admin_title
+    - field.field.paragraph.uneven_columns.field_aria_label_secondary
+    - field.field.paragraph.uneven_columns.field_background_color
+    - field.field.paragraph.uneven_columns.field_button
+    - field.field.paragraph.uneven_columns.field_button_aria_label
+    - field.field.paragraph.uneven_columns.field_button_secondary
+    - field.field.paragraph.uneven_columns.field_col_split
+    - field.field.paragraph.uneven_columns.field_display_admin_title
+    - field.field.paragraph.uneven_columns.field_gutter
+    - field.field.paragraph.uneven_columns.field_textarea
+    - field.field.paragraph.uneven_columns.field_textarea_secondary
+    - paragraphs.paragraphs_type.uneven_columns
+  module:
+    - link
+    - text
+id: paragraph.uneven_columns.default
+targetEntityType: paragraph
+bundle: uneven_columns
+mode: default
+content:
+  field_admin_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_aria_label_secondary:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_background_color:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_button:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_button_aria_label:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_button_secondary:
+    type: link_default
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_col_split:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_display_admin_title:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_gutter:
+    type: options_select
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_textarea:
+    type: text_textarea
+    weight: 6
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_textarea_secondary:
+    type: text_textarea
+    weight: 7
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

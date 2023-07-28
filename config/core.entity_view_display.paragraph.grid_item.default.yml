@@ -1,0 +1,82 @@
+uuid: 8e181409-34ea-4cfd-a24c-43731fd64c23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.grid_item.field_button
+    - field.field.paragraph.grid_item.field_button_aria_label
+    - field.field.paragraph.grid_item.field_fa_icon
+    - field.field.paragraph.grid_item.field_icon_type
+    - field.field.paragraph.grid_item.field_image
+    - field.field.paragraph.grid_item.field_text
+    - field.field.paragraph.grid_item.field_textarea
+    - paragraphs.paragraphs_type.grid_item
+  module:
+    - fontawesome
+    - link
+    - options
+    - text
+id: paragraph.grid_item.default
+targetEntityType: paragraph
+bundle: grid_item
+mode: default
+content:
+  field_button:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_button_aria_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_fa_icon:
+    type: fontawesome_icon_formatter
+    label: above
+    settings:
+      layers: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_icon_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_image:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_textarea:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

@@ -1,0 +1,29 @@
+uuid: d634a484-4861-47e3-b1b5-478858695891
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image
+    - media.type.image
+    - paragraphs.paragraphs_type.static_map
+id: paragraph.static_map.field_image
+field_name: field_image
+entity_type: paragraph
+bundle: static_map
+label: 'Map Image'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

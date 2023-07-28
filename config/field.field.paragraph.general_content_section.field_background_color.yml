@@ -1,0 +1,21 @@
+uuid: f0a2d096-f534-4a4a-8568-d91fec921fd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.general_content_section
+  module:
+    - options
+id: paragraph.general_content_section.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: general_content_section
+label: 'Background Color'
+description: 'This option sets a background color for the entire section. '
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

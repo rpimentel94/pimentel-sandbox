@@ -1,0 +1,23 @@
+uuid: 15a233d0-2f64-4240-9646-8da5d55f9bee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_section_sidebar
+    - paragraphs.paragraphs_type.webform
+id: paragraph.webform.field_display_section_sidebar
+field_name: field_display_section_sidebar
+entity_type: paragraph
+bundle: webform
+label: 'Display Section Sidebar'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

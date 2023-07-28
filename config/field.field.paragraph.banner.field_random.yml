@@ -1,0 +1,23 @@
+uuid: 9b72dec6-3d60-463b-83cf-410ac0fd46bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_random
+    - paragraphs.paragraphs_type.banner
+id: paragraph.banner.field_random
+field_name: field_random
+entity_type: paragraph
+bundle: banner
+label: 'Random Load First Banner'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

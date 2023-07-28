@@ -1,0 +1,68 @@
+uuid: 6accdf0f-a644-439b-96db-4de0d0dd08bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.rate_item.field_qualifying_text
+    - field.field.paragraph.rate_item.field_rate_link
+    - field.field.paragraph.rate_item.field_rate_symbol
+    - field.field.paragraph.rate_item.field_rate_type
+    - field.field.paragraph.rate_item.field_rate_value
+    - field.field.paragraph.rate_item.field_text
+    - paragraphs.paragraphs_type.rate_item
+  module:
+    - link
+id: paragraph.rate_item.default
+targetEntityType: paragraph
+bundle: rate_item
+mode: default
+content:
+  field_qualifying_text:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_rate_link:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_rate_symbol:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_rate_type:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_rate_value:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_text:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

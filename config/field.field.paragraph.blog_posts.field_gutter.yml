@@ -1,0 +1,21 @@
+uuid: 0f2b4e52-26f6-4f34-abb5-162f25b379e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gutter
+    - paragraphs.paragraphs_type.blog_posts
+  module:
+    - options
+id: paragraph.blog_posts.field_gutter
+field_name: field_gutter
+entity_type: paragraph
+bundle: blog_posts
+label: 'Section Gutter(s)'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

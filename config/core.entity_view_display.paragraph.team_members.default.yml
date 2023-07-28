@@ -1,0 +1,130 @@
+uuid: ab302fb3-98ab-418a-b539-1caf3694c3c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.team_members.field_admin_title
+    - field.field.paragraph.team_members.field_background
+    - field.field.paragraph.team_members.field_display_admin_title
+    - field.field.paragraph.team_members.field_display_bio
+    - field.field.paragraph.team_members.field_display_button
+    - field.field.paragraph.team_members.field_display_image
+    - field.field.paragraph.team_members.field_display_links
+    - field.field.paragraph.team_members.field_display_title
+    - field.field.paragraph.team_members.field_gutter
+    - field.field.paragraph.team_members.field_image_orientation
+    - field.field.paragraph.team_members.field_num_cols
+    - field.field.paragraph.team_members.field_team_member_group
+    - paragraphs.paragraphs_type.team_members
+  module:
+    - options
+id: paragraph.team_members.default
+targetEntityType: paragraph
+bundle: team_members
+mode: default
+content:
+  field_admin_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_background:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_display_admin_title:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_display_bio:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_display_button:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_display_image:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_display_links:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_display_title:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_gutter:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_image_orientation:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_num_cols:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_team_member_group:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden: {  }

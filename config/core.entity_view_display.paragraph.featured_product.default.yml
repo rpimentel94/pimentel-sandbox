@@ -1,0 +1,88 @@
+uuid: aa171477-9dfe-47a7-abba-cf0d2e20ce1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.featured_product.field_admin_title
+    - field.field.paragraph.featured_product.field_alignment
+    - field.field.paragraph.featured_product.field_background
+    - field.field.paragraph.featured_product.field_button
+    - field.field.paragraph.featured_product.field_button_aria_label
+    - field.field.paragraph.featured_product.field_gutter
+    - field.field.paragraph.featured_product.field_image
+    - field.field.paragraph.featured_product.field_textarea
+    - paragraphs.paragraphs_type.featured_product
+  module:
+    - link
+    - options
+    - text
+id: paragraph.featured_product.default
+targetEntityType: paragraph
+bundle: featured_product
+mode: default
+content:
+  field_admin_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_alignment:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_background:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_button:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_button_aria_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_gutter:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_image:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_textarea:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden: {  }

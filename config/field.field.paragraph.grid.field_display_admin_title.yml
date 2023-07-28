@@ -1,0 +1,23 @@
+uuid: 19d1ef6e-fa67-4722-8d95-37ca8fe2922b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_admin_title
+    - paragraphs.paragraphs_type.grid
+id: paragraph.grid.field_display_admin_title
+field_name: field_display_admin_title
+entity_type: paragraph
+bundle: grid
+label: 'Display Admin Title'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

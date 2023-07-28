@@ -1,0 +1,15 @@
+uuid: 661b3308-7f22-4d50-8d75-337feea48e17
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: team_members
+label: 'Team Members'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

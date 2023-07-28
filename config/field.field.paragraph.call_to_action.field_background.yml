@@ -1,0 +1,21 @@
+uuid: 2d0e5606-04a7-40a3-a60a-7db4a1cfc876
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background
+    - paragraphs.paragraphs_type.call_to_action
+  module:
+    - options
+id: paragraph.call_to_action.field_background
+field_name: field_background
+entity_type: paragraph
+bundle: call_to_action
+label: Background
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

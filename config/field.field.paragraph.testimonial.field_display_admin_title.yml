@@ -1,0 +1,23 @@
+uuid: 4a92d9e8-5d4a-461f-b020-7fb439fa37b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_admin_title
+    - paragraphs.paragraphs_type.testimonial
+id: paragraph.testimonial.field_display_admin_title
+field_name: field_display_admin_title
+entity_type: paragraph
+bundle: testimonial
+label: 'Display Admin Title'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

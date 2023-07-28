@@ -1,0 +1,78 @@
+uuid: 55cba864-13f6-4d9c-87c0-b6d1c9b5b4b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.webform.field_admin_title
+    - field.field.paragraph.webform.field_background_color
+    - field.field.paragraph.webform.field_display_section_sidebar
+    - field.field.paragraph.webform.field_fa_icon
+    - field.field.paragraph.webform.field_gutter
+    - field.field.paragraph.webform.field_text
+    - field.field.paragraph.webform.field_textarea
+    - paragraphs.paragraphs_type.webform
+  module:
+    - fontawesome
+    - options
+    - text
+id: paragraph.webform.default
+targetEntityType: paragraph
+bundle: webform
+mode: default
+content:
+  field_admin_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_background_color:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_display_section_sidebar:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_fa_icon:
+    type: fontawesome_icon_formatter
+    label: above
+    settings:
+      layers: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_gutter:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_textarea:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden: {  }

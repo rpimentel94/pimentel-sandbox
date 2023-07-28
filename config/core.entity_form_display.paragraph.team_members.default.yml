@@ -1,0 +1,110 @@
+uuid: ed28df75-58c1-4030-924c-a1cb4aca0057
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.team_members.field_admin_title
+    - field.field.paragraph.team_members.field_background
+    - field.field.paragraph.team_members.field_display_admin_title
+    - field.field.paragraph.team_members.field_display_bio
+    - field.field.paragraph.team_members.field_display_button
+    - field.field.paragraph.team_members.field_display_image
+    - field.field.paragraph.team_members.field_display_links
+    - field.field.paragraph.team_members.field_display_title
+    - field.field.paragraph.team_members.field_gutter
+    - field.field.paragraph.team_members.field_image_orientation
+    - field.field.paragraph.team_members.field_num_cols
+    - field.field.paragraph.team_members.field_team_member_group
+    - paragraphs.paragraphs_type.team_members
+id: paragraph.team_members.default
+targetEntityType: paragraph
+bundle: team_members
+mode: default
+content:
+  field_admin_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_background:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_display_admin_title:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_display_bio:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_display_button:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_display_image:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_display_links:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_display_title:
+    type: boolean_checkbox
+    weight: 12
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_gutter:
+    type: options_select
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_image_orientation:
+    type: options_select
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_num_cols:
+    type: options_select
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_team_member_group:
+    type: entity_reference_autocomplete
+    weight: 10
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,15 @@
+uuid: b1ca768f-d3ef-4381-b0b5-369f1c7f3b7f
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: rate_item
+label: 'Rate Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

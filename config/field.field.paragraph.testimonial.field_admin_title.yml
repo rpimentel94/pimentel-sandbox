@@ -1,0 +1,19 @@
+uuid: 17ca8934-7b9f-4d7a-bdf6-dc6eefdd986f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_admin_title
+    - paragraphs.paragraphs_type.testimonial
+id: paragraph.testimonial.field_admin_title
+field_name: field_admin_title
+entity_type: paragraph
+bundle: testimonial
+label: 'Admin Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

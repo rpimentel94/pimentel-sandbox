@@ -1,0 +1,61 @@
+uuid: 50485073-4880-45d6-9ee2-88446c7ed32a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_grid_item
+    - paragraphs.paragraphs_type.grid
+    - paragraphs.paragraphs_type.grid_item
+  module:
+    - entity_reference_revisions
+id: paragraph.grid.field_grid_item
+field_name: field_grid_item
+entity_type: paragraph
+bundle: grid
+label: 'Grid Item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      grid_item: grid_item
+    negate: 0
+    target_bundles_drag_drop:
+      accordion_tab_item:
+        weight: 13
+        enabled: false
+      accordions_tabs:
+        weight: 12
+        enabled: false
+      banner:
+        weight: 14
+        enabled: false
+      banner_item:
+        weight: 15
+        enabled: false
+      blog_posts:
+        weight: 16
+        enabled: false
+      call_to_action:
+        weight: 17
+        enabled: false
+      featured_product:
+        weight: 18
+        enabled: false
+      from_library:
+        weight: 19
+        enabled: false
+      general_content_section:
+        weight: 20
+        enabled: false
+      grid:
+        weight: 21
+        enabled: false
+      grid_item:
+        weight: 22
+        enabled: true
+field_type: entity_reference_revisions

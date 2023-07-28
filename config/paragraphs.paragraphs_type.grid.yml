@@ -1,0 +1,15 @@
+uuid: 76fd6985-f00a-4ad4-bd49-c642f06c5b31
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: grid
+label: Grid
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

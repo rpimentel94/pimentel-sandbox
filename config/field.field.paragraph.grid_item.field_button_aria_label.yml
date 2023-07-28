@@ -1,0 +1,19 @@
+uuid: d36324a4-61ad-421e-81d3-6b65df506260
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button_aria_label
+    - paragraphs.paragraphs_type.grid_item
+id: paragraph.grid_item.field_button_aria_label
+field_name: field_button_aria_label
+entity_type: paragraph
+bundle: grid_item
+label: 'Button Aria Label'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

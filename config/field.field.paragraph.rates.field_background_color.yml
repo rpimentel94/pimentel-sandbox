@@ -1,0 +1,21 @@
+uuid: 61c7f0a7-da1f-4437-942b-6f6a24b803fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.rates
+  module:
+    - options
+id: paragraph.rates.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: rates
+label: 'Background Color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: 95e3d72f-0824-4f57-9d32-69f861206200
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_rate_symbol
+    - paragraphs.paragraphs_type.rate_item
+id: paragraph.rate_item.field_rate_symbol
+field_name: field_rate_symbol
+entity_type: paragraph
+bundle: rate_item
+label: 'Rate Symbol'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '%'
+default_value_callback: ''
+settings: {  }
+field_type: string

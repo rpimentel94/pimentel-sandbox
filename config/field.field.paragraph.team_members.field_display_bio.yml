@@ -1,0 +1,23 @@
+uuid: 6f8bb439-85fb-4534-99a9-535503cd2e2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_bio
+    - paragraphs.paragraphs_type.team_members
+id: paragraph.team_members.field_display_bio
+field_name: field_display_bio
+entity_type: paragraph
+bundle: team_members
+label: 'Display Bio'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

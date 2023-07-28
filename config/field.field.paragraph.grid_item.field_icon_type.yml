@@ -1,0 +1,21 @@
+uuid: a50a53bc-1d87-4806-a41d-aa42525fd991
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon_type
+    - paragraphs.paragraphs_type.grid_item
+  module:
+    - options
+id: paragraph.grid_item.field_icon_type
+field_name: field_icon_type
+entity_type: paragraph
+bundle: grid_item
+label: 'Image Type'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

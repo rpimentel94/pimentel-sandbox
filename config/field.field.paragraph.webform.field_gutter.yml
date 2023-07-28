@@ -1,0 +1,21 @@
+uuid: 6c19776b-5c0b-4c61-b773-2b1256044973
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gutter
+    - paragraphs.paragraphs_type.webform
+  module:
+    - options
+id: paragraph.webform.field_gutter
+field_name: field_gutter
+entity_type: paragraph
+bundle: webform
+label: 'Section Gutter(s)'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,19 @@
+uuid: 2b60e227-17a9-4adf-9db6-de7dcedb5996
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_admin_title
+    - paragraphs.paragraphs_type.team_members
+id: paragraph.team_members.field_admin_title
+field_name: field_admin_title
+entity_type: paragraph
+bundle: team_members
+label: 'Admin Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: 87badb64-4f4f-4794-bedb-05f3e91d734c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_fa_icon
+    - paragraphs.paragraphs_type.webform
+  module:
+    - fontawesome
+id: paragraph.webform.field_fa_icon
+field_name: field_fa_icon
+entity_type: paragraph
+bundle: webform
+label: Icon
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: fontawesome_icon

@@ -1,0 +1,85 @@
+uuid: 8fa4e422-b783-48d3-b38d-f20c3500bb49
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.testimonial.field_admin_title
+    - field.field.paragraph.testimonial.field_background_color
+    - field.field.paragraph.testimonial.field_display_admin_title
+    - field.field.paragraph.testimonial.field_gutter
+    - field.field.paragraph.testimonial.field_image
+    - field.field.paragraph.testimonial.field_text
+    - field.field.paragraph.testimonial.field_text_secondary
+    - field.field.paragraph.testimonial.field_textarea_plain
+    - paragraphs.paragraphs_type.testimonial
+  module:
+    - options
+id: paragraph.testimonial.default
+targetEntityType: paragraph
+bundle: testimonial
+mode: default
+content:
+  field_admin_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_background_color:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_display_admin_title:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_gutter:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_image:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_text_secondary:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_textarea_plain:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden: {  }

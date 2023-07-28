@@ -1,0 +1,23 @@
+uuid: 7f9860e3-8c7d-40dc-a762-926949a36d46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_links
+    - paragraphs.paragraphs_type.team_members
+id: paragraph.team_members.field_display_links
+field_name: field_display_links
+entity_type: paragraph
+bundle: team_members
+label: 'Display Links'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,15 @@
+uuid: 97a261bd-ae5c-4ab2-a698-13003680bf2b
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: featured_product
+label: 'Featured Product'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,23 @@
+uuid: 86302664-c58b-4689-ab3a-304a46fa137e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_static
+    - paragraphs.paragraphs_type.banner
+id: paragraph.banner.field_static
+field_name: field_static
+entity_type: paragraph
+bundle: banner
+label: 'Static Image'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

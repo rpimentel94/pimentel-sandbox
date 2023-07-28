@@ -1,0 +1,27 @@
+uuid: 6f87ab2a-f602-4e4b-a6ae-9313bb519557
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_team_styling
+field_name: field_team_styling
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: default
+      label: Default
+    -
+      value: simplified
+      label: Simplified
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

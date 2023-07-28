@@ -1,0 +1,27 @@
+uuid: e894e5e6-eab3-4e31-92a4-abfe81a77d40
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_icon_type
+field_name: field_icon_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: fa
+      label: 'Font Awesome'
+    -
+      value: img
+      label: Image
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

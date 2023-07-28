@@ -1,0 +1,23 @@
+uuid: cf8f02d1-791a-4e31-b274-97d5b97f1f0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_admin_title
+    - paragraphs.paragraphs_type.sidebar_content_section
+id: paragraph.sidebar_content_section.field_display_admin_title
+field_name: field_display_admin_title
+entity_type: paragraph
+bundle: sidebar_content_section
+label: 'Display Admin Title'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

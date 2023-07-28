@@ -1,0 +1,21 @@
+uuid: 7d9da0fa-3570-481f-8c89-25223b2c3508
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gutter
+    - paragraphs.paragraphs_type.grid
+  module:
+    - options
+id: paragraph.grid.field_gutter
+field_name: field_gutter
+entity_type: paragraph
+bundle: grid
+label: 'Section Gutter(s)'
+description: 'This option changes where extra space will be printed around the section.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,43 @@
+uuid: cd5313ba-2eea-4877-9e5d-a6e9b2a55c40
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_banner_item
+    - paragraphs.paragraphs_type.banner
+    - paragraphs.paragraphs_type.banner_item
+  module:
+    - entity_reference_revisions
+id: paragraph.banner.field_banner_item
+field_name: field_banner_item
+entity_type: paragraph
+bundle: banner
+label: 'Banner Item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      banner_item: banner_item
+    negate: 0
+    target_bundles_drag_drop:
+      accordion_tab_item:
+        weight: 7
+        enabled: false
+      accordions_tabs:
+        weight: 6
+        enabled: false
+      banner:
+        weight: 8
+        enabled: false
+      banner_item:
+        weight: 9
+        enabled: true
+      from_library:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

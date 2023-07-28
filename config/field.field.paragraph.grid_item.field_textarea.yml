@@ -1,0 +1,21 @@
+uuid: 0e768cad-8628-416c-99e0-d137d9c8155c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_textarea
+    - paragraphs.paragraphs_type.grid_item
+  module:
+    - text
+id: paragraph.grid_item.field_textarea
+field_name: field_textarea
+entity_type: paragraph
+bundle: grid_item
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

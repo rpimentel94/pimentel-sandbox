@@ -1,0 +1,19 @@
+uuid: eb7eac1a-bcde-4e9e-9744-f19474aaedc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_admin_title
+    - paragraphs.paragraphs_type.uneven_columns
+id: paragraph.uneven_columns.field_admin_title
+field_name: field_admin_title
+entity_type: paragraph
+bundle: uneven_columns
+label: 'Admin Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

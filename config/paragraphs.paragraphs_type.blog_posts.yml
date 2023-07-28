@@ -1,0 +1,15 @@
+uuid: 2df754de-aa93-4024-9c10-750d8ff02541
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: blog_posts
+label: 'Blog Posts'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,42 @@
+uuid: a47c8f3b-c6e7-489f-bdab-b3972d25beab
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_display_type
+field_name: field_display_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: recent
+      label: 'Recent Content'
+    -
+      value: tag
+      label: 'Recent Tag Content'
+    -
+      value: category
+      label: 'Recent Category Content'
+    -
+      value: full
+      label: 'Full Tag Content'
+    -
+      value: featured
+      label: 'Featured Content'
+    -
+      value: topics
+      label: 'Topic Center Filter'
+    -
+      value: personalize
+      label: 'Personalize your experience'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

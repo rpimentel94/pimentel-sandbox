@@ -1,0 +1,23 @@
+uuid: 104124d8-70b8-4af9-bb36-e388434d7222
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_rate_type
+    - paragraphs.paragraphs_type.rate_item
+  module:
+    - options
+id: paragraph.rate_item.field_rate_type
+field_name: field_rate_type
+entity_type: paragraph
+bundle: rate_item
+label: 'Rate Type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: apr
+default_value_callback: ''
+settings: {  }
+field_type: list_string

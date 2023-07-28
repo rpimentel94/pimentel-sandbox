@@ -1,0 +1,23 @@
+uuid: 83c10072-d2ee-41d6-9571-4c9686d5e038
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_num_cols
+    - paragraphs.paragraphs_type.ordered_team_members
+  module:
+    - options
+id: paragraph.ordered_team_members.field_num_cols
+field_name: field_num_cols
+entity_type: paragraph
+bundle: ordered_team_members
+label: 'Number of Columns'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: two
+default_value_callback: ''
+settings: {  }
+field_type: list_string

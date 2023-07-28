@@ -1,0 +1,73 @@
+uuid: a8bd0cd4-9d06-4eab-9cc7-5e7c6f819e65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_rate_item
+    - paragraphs.paragraphs_type.rate_item
+    - paragraphs.paragraphs_type.rates
+  module:
+    - entity_reference_revisions
+id: paragraph.rates.field_rate_item
+field_name: field_rate_item
+entity_type: paragraph
+bundle: rates
+label: 'Rate Item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      rate_item: rate_item
+    negate: 0
+    target_bundles_drag_drop:
+      accordion_tab_item:
+        weight: 17
+        enabled: false
+      accordions_tabs:
+        weight: 16
+        enabled: false
+      banner:
+        weight: 18
+        enabled: false
+      banner_item:
+        weight: 19
+        enabled: false
+      blog_posts:
+        weight: 20
+        enabled: false
+      call_to_action:
+        weight: 21
+        enabled: false
+      featured_product:
+        weight: 22
+        enabled: false
+      from_library:
+        weight: 23
+        enabled: false
+      general_content_section:
+        weight: 24
+        enabled: false
+      grid:
+        weight: 25
+        enabled: false
+      grid_item:
+        weight: 26
+        enabled: false
+      ordered_team_members:
+        weight: 27
+        enabled: false
+      rate_item:
+        weight: 29
+        enabled: true
+      rates:
+        weight: 28
+        enabled: false
+      team_members:
+        weight: 30
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,120 @@
+uuid: 35eae26c-9a62-4fa2-b5eb-7169dc2fbdc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.uneven_columns.field_admin_title
+    - field.field.paragraph.uneven_columns.field_aria_label_secondary
+    - field.field.paragraph.uneven_columns.field_background_color
+    - field.field.paragraph.uneven_columns.field_button
+    - field.field.paragraph.uneven_columns.field_button_aria_label
+    - field.field.paragraph.uneven_columns.field_button_secondary
+    - field.field.paragraph.uneven_columns.field_col_split
+    - field.field.paragraph.uneven_columns.field_display_admin_title
+    - field.field.paragraph.uneven_columns.field_gutter
+    - field.field.paragraph.uneven_columns.field_textarea
+    - field.field.paragraph.uneven_columns.field_textarea_secondary
+    - paragraphs.paragraphs_type.uneven_columns
+  module:
+    - link
+    - options
+    - text
+id: paragraph.uneven_columns.default
+targetEntityType: paragraph
+bundle: uneven_columns
+mode: default
+content:
+  field_admin_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_aria_label_secondary:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_background_color:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_button:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_button_aria_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_button_secondary:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_col_split:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_display_admin_title:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_gutter:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_textarea:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_textarea_secondary:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+hidden: {  }

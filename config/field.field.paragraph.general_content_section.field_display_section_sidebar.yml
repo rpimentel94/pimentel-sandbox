@@ -1,0 +1,23 @@
+uuid: 9cdd5454-1b6f-43d6-b45c-3da30b82c551
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_section_sidebar
+    - paragraphs.paragraphs_type.general_content_section
+id: paragraph.general_content_section.field_display_section_sidebar
+field_name: field_display_section_sidebar
+entity_type: paragraph
+bundle: general_content_section
+label: 'Display Section Sidebar'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

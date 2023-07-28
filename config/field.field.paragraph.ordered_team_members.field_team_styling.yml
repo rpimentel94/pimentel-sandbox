@@ -1,0 +1,21 @@
+uuid: a13a1eb9-aa70-4b49-86f5-edd3cacdd518
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_team_styling
+    - paragraphs.paragraphs_type.ordered_team_members
+  module:
+    - options
+id: paragraph.ordered_team_members.field_team_styling
+field_name: field_team_styling
+entity_type: paragraph
+bundle: ordered_team_members
+label: 'Team Member Styling'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

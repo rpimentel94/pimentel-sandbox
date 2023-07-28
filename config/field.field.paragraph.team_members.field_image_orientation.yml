@@ -1,0 +1,23 @@
+uuid: 8428eb55-ad64-4b16-b21a-29e51b04b006
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_orientation
+    - paragraphs.paragraphs_type.team_members
+  module:
+    - options
+id: paragraph.team_members.field_image_orientation
+field_name: field_image_orientation
+entity_type: paragraph
+bundle: team_members
+label: 'Image Orientation'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: horizontal
+default_value_callback: ''
+settings: {  }
+field_type: list_string

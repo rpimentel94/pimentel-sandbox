@@ -1,0 +1,23 @@
+uuid: 4638a99b-34b7-4b82-a2c2-a615cc7437be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_width
+    - paragraphs.paragraphs_type.general_content_section
+  module:
+    - options
+id: paragraph.general_content_section.field_section_width
+field_name: field_section_width
+entity_type: paragraph
+bundle: general_content_section
+label: 'Section Width'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,23 @@
+uuid: d2fbcc1c-eb04-4f5d-8872-a2381e8433c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_title
+    - paragraphs.paragraphs_type.team_members
+id: paragraph.team_members.field_display_title
+field_name: field_display_title
+entity_type: paragraph
+bundle: team_members
+label: 'Display Title'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,21 @@
+uuid: 14cb3a55-6b44-4e52-965f-39b3cdb75431
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_type
+    - paragraphs.paragraphs_type.blog_posts
+  module:
+    - options
+id: paragraph.blog_posts.field_display_type
+field_name: field_display_type
+entity_type: paragraph
+bundle: blog_posts
+label: 'Display Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: a474a20c-3d33-454d-8895-278df4790c9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_textarea
+    - paragraphs.paragraphs_type.webform
+  module:
+    - text
+id: paragraph.webform.field_textarea
+field_name: field_textarea
+entity_type: paragraph
+bundle: webform
+label: 'Sidebar Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

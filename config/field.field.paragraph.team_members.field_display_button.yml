@@ -1,0 +1,23 @@
+uuid: 5579bb9a-bb3a-4b76-9c7b-fb1766cd728b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_button
+    - paragraphs.paragraphs_type.team_members
+id: paragraph.team_members.field_display_button
+field_name: field_display_button
+entity_type: paragraph
+bundle: team_members
+label: 'Display Button'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

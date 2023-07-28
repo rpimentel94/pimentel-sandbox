@@ -1,0 +1,74 @@
+uuid: f78fbb76-a989-4b6a-90cb-1c034bb8e2e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.banner.field_animation
+    - field.field.paragraph.banner.field_auto_play
+    - field.field.paragraph.banner.field_banner_item
+    - field.field.paragraph.banner.field_integer
+    - field.field.paragraph.banner.field_random
+    - field.field.paragraph.banner.field_static
+    - paragraphs.paragraphs_type.banner
+  module:
+    - paragraphs
+id: paragraph.banner.default
+targetEntityType: paragraph
+bundle: banner
+mode: default
+content:
+  field_animation:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_auto_play:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_banner_item:
+    type: paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_integer:
+    type: number
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_random:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_static:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

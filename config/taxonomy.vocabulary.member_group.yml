@@ -1,0 +1,8 @@
+uuid: f1615a95-295e-4071-95ad-f73f3b8c5ffc
+langcode: en
+status: true
+dependencies: {  }
+name: 'Member Group'
+vid: member_group
+description: 'Team member group'
+weight: 0

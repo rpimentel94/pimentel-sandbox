@@ -1,0 +1,15 @@
+uuid: bf208bec-c1e0-4578-bcc6-dd6cdfcbe1ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: general_content_section
+label: 'General Content Section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

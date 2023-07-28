@@ -1,0 +1,19 @@
+uuid: 86f63920-afc8-4ebc-b608-b36251ce9a27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_admin_title
+    - paragraphs.paragraphs_type.rates
+id: paragraph.rates.field_admin_title
+field_name: field_admin_title
+entity_type: paragraph
+bundle: rates
+label: 'Admin Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

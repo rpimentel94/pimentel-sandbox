@@ -1,0 +1,15 @@
+uuid: 93117ed7-37a9-43a8-92d2-4d442205926c
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: static_map
+label: 'Static Map'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

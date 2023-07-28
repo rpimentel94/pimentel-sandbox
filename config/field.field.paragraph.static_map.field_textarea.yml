@@ -1,0 +1,21 @@
+uuid: f7417b41-77a7-4dfa-86eb-f43d4423e638
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_textarea
+    - paragraphs.paragraphs_type.static_map
+  module:
+    - text
+id: paragraph.static_map.field_textarea
+field_name: field_textarea
+entity_type: paragraph
+bundle: static_map
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

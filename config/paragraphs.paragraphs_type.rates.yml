@@ -1,0 +1,15 @@
+uuid: b14a6ec9-4059-4c0d-8bb7-800520517f28
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: rates
+label: Rates
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

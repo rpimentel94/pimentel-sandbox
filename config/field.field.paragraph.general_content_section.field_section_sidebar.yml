@@ -1,0 +1,53 @@
+uuid: ea88c7fb-5afe-49a7-b858-66df90d2a141
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_sidebar
+    - paragraphs.paragraphs_type.general_content_section
+  module:
+    - entity_reference_revisions
+id: paragraph.general_content_section.field_section_sidebar
+field_name: field_section_sidebar
+entity_type: paragraph
+bundle: general_content_section
+label: 'Section Sidebar'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    negate: 0
+    target_bundles_drag_drop:
+      accordion_tab_item:
+        weight: 11
+        enabled: false
+      accordions_tabs:
+        weight: 10
+        enabled: false
+      banner:
+        weight: 12
+        enabled: false
+      banner_item:
+        weight: 13
+        enabled: false
+      blog_posts:
+        weight: 14
+        enabled: false
+      call_to_action:
+        weight: 15
+        enabled: false
+      featured_product:
+        weight: 16
+        enabled: false
+      from_library:
+        weight: 17
+        enabled: false
+      general_content_section:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

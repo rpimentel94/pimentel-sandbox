@@ -1,0 +1,23 @@
+uuid: de6cfa39-2ac3-48ac-8b11-e9be2723cee4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_auto_play
+    - paragraphs.paragraphs_type.banner
+id: paragraph.banner.field_auto_play
+field_name: field_auto_play
+entity_type: paragraph
+bundle: banner
+label: 'Enable Autoplay'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

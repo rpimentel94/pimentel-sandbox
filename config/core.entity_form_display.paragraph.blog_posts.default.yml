@@ -1,0 +1,63 @@
+uuid: 964045dd-2dfc-44db-b4b6-ed53828e5abe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blog_posts.field_admin_title
+    - field.field.paragraph.blog_posts.field_background_color
+    - field.field.paragraph.blog_posts.field_blog_tag_filter
+    - field.field.paragraph.blog_posts.field_display_admin_title
+    - field.field.paragraph.blog_posts.field_display_type
+    - field.field.paragraph.blog_posts.field_gutter
+    - paragraphs.paragraphs_type.blog_posts
+id: paragraph.blog_posts.default
+targetEntityType: paragraph
+bundle: blog_posts
+mode: default
+content:
+  field_admin_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_background_color:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_blog_tag_filter:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_display_admin_title:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_display_type:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_gutter:
+    type: options_select
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,21 @@
+uuid: 655a95c9-9b2c-4c42-bc1a-014addb4e085
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background
+    - paragraphs.paragraphs_type.team_members
+  module:
+    - options
+id: paragraph.team_members.field_background
+field_name: field_background
+entity_type: paragraph
+bundle: team_members
+label: Background
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

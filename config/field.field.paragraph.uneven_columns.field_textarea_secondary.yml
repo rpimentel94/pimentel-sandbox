@@ -1,0 +1,21 @@
+uuid: 4fe8a578-3c1d-4eb9-a5a7-12db4848a145
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_textarea_secondary
+    - paragraphs.paragraphs_type.uneven_columns
+  module:
+    - text
+id: paragraph.uneven_columns.field_textarea_secondary
+field_name: field_textarea_secondary
+entity_type: paragraph
+bundle: uneven_columns
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

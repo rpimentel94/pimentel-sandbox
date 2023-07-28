@@ -1,0 +1,21 @@
+uuid: d947bb30-61ae-460c-a3ad-2d2b931298c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gutter
+    - paragraphs.paragraphs_type.testimonial
+  module:
+    - options
+id: paragraph.testimonial.field_gutter
+field_name: field_gutter
+entity_type: paragraph
+bundle: testimonial
+label: 'Section Gutter(s)'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

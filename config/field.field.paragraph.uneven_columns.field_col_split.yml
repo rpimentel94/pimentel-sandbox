@@ -1,0 +1,23 @@
+uuid: c4528c53-767e-49d4-8e15-3233a98fe64d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_col_split
+    - paragraphs.paragraphs_type.uneven_columns
+  module:
+    - options
+id: paragraph.uneven_columns.field_col_split
+field_name: field_col_split
+entity_type: paragraph
+bundle: uneven_columns
+label: Split
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 25-75
+default_value_callback: ''
+settings: {  }
+field_type: list_string

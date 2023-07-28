@@ -1,0 +1,21 @@
+uuid: bd6ce5ec-b4f2-4468-bcc1-68dfeb40f87e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gutter
+    - paragraphs.paragraphs_type.ordered_team_members
+  module:
+    - options
+id: paragraph.ordered_team_members.field_gutter
+field_name: field_gutter
+entity_type: paragraph
+bundle: ordered_team_members
+label: 'Section Gutter(s)'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

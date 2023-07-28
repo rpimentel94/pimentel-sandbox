@@ -1,0 +1,20 @@
+uuid: 530668f6-f86d-4485-bdf2-78e3f8537052
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.field_blog_tag_filter
+field_name: field_blog_tag_filter
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
