@@ -10,11 +10,13 @@ dependencies:
     - field.field.paragraph.webform.field_gutter
     - field.field.paragraph.webform.field_text
     - field.field.paragraph.webform.field_textarea
+    - field.field.paragraph.webform.field_webform
     - paragraphs.paragraphs_type.webform
   module:
     - fontawesome
     - options
     - text
+    - webform
 id: paragraph.webform.default
 targetEntityType: paragraph
 bundle: webform
@@ -74,5 +76,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 6
+    region: content
+  field_webform:
+    type: webform_entity_reference_entity_view
+    label: above
+    settings:
+      source_entity: true
+      lazy: false
+    third_party_settings: {  }
+    weight: 7
     region: content
 hidden: {  }
