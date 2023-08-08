@@ -65,7 +65,9 @@
         "drupal/migrate_plus": "^6.0",
         "drupal/migrate_tools": "^6.0",
         "drupal/migrate_upgrade": "^4.0",
-        "drupal/address": "^1.12"
+        "drupal/address": "^1.12",
+        "drupal/metatag": "^2.0",
+        "drupal/pathauto": "^1.11"
     },
     "require-dev": {
         "drupal/core-dev": "^9.2"
