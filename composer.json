@@ -67,7 +67,8 @@
         "drupal/migrate_upgrade": "^4.0",
         "drupal/address": "^1.12",
         "drupal/metatag": "^2.0",
-        "drupal/pathauto": "^1.11"
+        "drupal/pathauto": "^1.11",
+        "geocoder-php/google-maps-provider": "^4.7"
     },
     "require-dev": {
         "drupal/core-dev": "^9.2"
@@ -125,7 +126,8 @@
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "php-http/discovery": true
         }
     }
 }
