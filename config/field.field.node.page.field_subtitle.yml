@@ -1,0 +1,19 @@
+uuid: 33b125ed-533e-423c-8561-8822ff52c81a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+    - node.type.page
+id: node.page.field_subtitle
+field_name: field_subtitle
+entity_type: node
+bundle: page
+label: 'Title Override'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

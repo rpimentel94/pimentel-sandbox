@@ -1,0 +1,21 @@
+uuid: 3cfa05f6-7ef5-49ee-a9fd-07a4aeca653a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alert_theme
+    - node.type.alert
+  module:
+    - options
+id: node.alert.field_alert_theme
+field_name: field_alert_theme
+entity_type: node
+bundle: alert
+label: 'Alert Theme'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

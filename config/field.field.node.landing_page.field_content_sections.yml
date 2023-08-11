@@ -1,0 +1,110 @@
+uuid: e1261494-6f6a-49a3-84a1-aa3c7586ad61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_sections
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.accordions_tabs
+    - paragraphs.paragraphs_type.blog_posts
+    - paragraphs.paragraphs_type.call_to_action
+    - paragraphs.paragraphs_type.featured_product
+    - paragraphs.paragraphs_type.general_content_section
+    - paragraphs.paragraphs_type.grid
+    - paragraphs.paragraphs_type.ordered_team_members
+    - paragraphs.paragraphs_type.rates
+    - paragraphs.paragraphs_type.team_members
+    - paragraphs.paragraphs_type.testimonial
+    - paragraphs.paragraphs_type.uneven_columns
+    - paragraphs.paragraphs_type.webform
+  module:
+    - entity_reference_revisions
+id: node.landing_page.field_content_sections
+field_name: field_content_sections
+entity_type: node
+bundle: landing_page
+label: 'Content Sections'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      accordions_tabs: accordions_tabs
+      blog_posts: blog_posts
+      call_to_action: call_to_action
+      featured_product: featured_product
+      general_content_section: general_content_section
+      grid: grid
+      ordered_team_members: ordered_team_members
+      rates: rates
+      team_members: team_members
+      testimonial: testimonial
+      uneven_columns: uneven_columns
+      webform: webform
+    negate: 0
+    target_bundles_drag_drop:
+      accordion_tab_item:
+        weight: 22
+        enabled: false
+      accordions_tabs:
+        weight: 21
+        enabled: true
+      banner:
+        weight: 23
+        enabled: false
+      banner_item:
+        weight: 24
+        enabled: false
+      blog_posts:
+        weight: 25
+        enabled: true
+      call_to_action:
+        weight: 26
+        enabled: true
+      featured_product:
+        weight: 27
+        enabled: true
+      from_library:
+        weight: 28
+        enabled: false
+      general_content_section:
+        weight: 29
+        enabled: true
+      grid:
+        weight: 30
+        enabled: true
+      grid_item:
+        weight: 31
+        enabled: false
+      ordered_team_members:
+        weight: 32
+        enabled: true
+      rate_item:
+        weight: 34
+        enabled: false
+      rates:
+        weight: 33
+        enabled: true
+      sidebar_content_section:
+        weight: 35
+        enabled: false
+      static_map:
+        weight: 36
+        enabled: false
+      team_members:
+        weight: 37
+        enabled: true
+      testimonial:
+        weight: 38
+        enabled: true
+      uneven_columns:
+        weight: 39
+        enabled: true
+      webform:
+        weight: 40
+        enabled: true
+field_type: entity_reference_revisions

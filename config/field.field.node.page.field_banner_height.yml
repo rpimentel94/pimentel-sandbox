@@ -1,0 +1,23 @@
+uuid: 30fc1f44-c1fe-427b-95e9-106bc047113d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_height
+    - node.type.page
+  module:
+    - options
+id: node.page.field_banner_height
+field_name: field_banner_height
+entity_type: node
+bundle: page
+label: 'Banner Height'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

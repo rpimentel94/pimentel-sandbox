@@ -1,0 +1,23 @@
+uuid: 514bd8a0-7344-426d-a62b-c09a6e0be606
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sidebar_enabled
+    - node.type.page
+id: node.page.field_sidebar_enabled
+field_name: field_sidebar_enabled
+entity_type: node
+bundle: page
+label: 'Sidebar Enabled?'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

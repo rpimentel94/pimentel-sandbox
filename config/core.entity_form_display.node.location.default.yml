@@ -1,28 +1,28 @@
-uuid: 20909bb7-be6e-4e54-a863-720313f767fc
+uuid: 537317a5-70df-4362-8096-43b9b7e812dd
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.webform.body
-    - field.field.node.webform.field_domain_access
-    - field.field.node.webform.field_domain_all_affiliates
-    - field.field.node.webform.field_domain_source
-    - field.field.node.webform.webform
-    - node.type.webform
+    - field.field.node.location.body
+    - field.field.node.location.field_domain_access
+    - field.field.node.location.field_domain_all_affiliates
+    - field.field.node.location.field_domain_source
+    - field.field.node.location.field_location_address
+    - field.field.node.location.field_location_fax
+    - field.field.node.location.field_location_geocode
+    - node.type.location
   module:
+    - address
     - path
     - text
-    - webform
-_core:
-  default_config_hash: A3evv2pt6d-bKCPcgjXA5VGTemXWOxG3lSXvWiRWcck
-id: node.webform.default
+id: node.location.default
 targetEntityType: node
-bundle: webform
+bundle: location
 mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 1
+    weight: 121
     region: content
     settings:
       rows: 9
@@ -32,72 +32,67 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_domain_access:
-    type: entity_reference_autocomplete
-    weight: 10
+  field_location_address:
+    type: address_default
+    weight: 122
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_location_fax:
+    type: string_textfield
+    weight: 123
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_domain_all_affiliates:
-    type: boolean_checkbox
-    weight: 11
+  field_location_geocode:
+    type: string_textfield
+    weight: 124
     region: content
     settings:
-      display_label: true
-    third_party_settings: {  }
-  field_domain_source:
-    type: entity_reference_autocomplete
-    weight: 12
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
   path:
     type: path
-    weight: 8
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 6
+    weight: 15
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   simple_sitemap:
-    weight: 5
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 9
+    weight: 120
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 7
+    weight: 16
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: -5
     region: content
     settings:
       size: 60
@@ -105,7 +100,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 5
     region: content
     settings:
       match_operator: CONTAINS
@@ -113,12 +108,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  webform:
-    type: webform_entity_reference_select
-    weight: 2
-    region: content
-    settings:
-      default_data: true
-      webforms: {  }
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_domain_access: true
+  field_domain_all_affiliates: true
+  field_domain_source: true

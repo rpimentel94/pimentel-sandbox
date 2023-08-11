@@ -1,0 +1,27 @@
+uuid: 2f753681-c3aa-4ddf-8b1a-2f810d4c24f7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_banner_height
+field_name: field_banner_height
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: default
+      label: Default
+    -
+      value: short
+      label: 'Short Banner'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

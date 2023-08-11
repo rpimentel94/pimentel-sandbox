@@ -99,7 +99,6 @@ module:
   webform: 0
   webform_access: 0
   webform_attachment: 0
-  webform_devel: 0
   webform_image_select: 0
   webform_node: 0
   webform_options_custom: 0

@@ -1,0 +1,30 @@
+uuid: cfcfa546-9088-402e-b996-d83fcf856370
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_alert_theme
+field_name: field_alert_theme
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: general
+      label: General
+    -
+      value: information
+      label: Information
+    -
+      value: high_priority
+      label: High-Priority
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: 79c60dd8-2373-4f42-b9db-41686196e65a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_disable_banner
+    - node.type.page
+id: node.page.field_disable_banner
+field_name: field_disable_banner
+entity_type: node
+bundle: page
+label: 'Disable Banner'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
