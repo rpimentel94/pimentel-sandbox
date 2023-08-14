@@ -1,0 +1,27 @@
+uuid: 54049747-614c-4efd-97f4-a6f6d3416ca7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_location_type
+field_name: field_location_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: branch
+      label: Branch
+    -
+      value: atm
+      label: ATM
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

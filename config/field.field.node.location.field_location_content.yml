@@ -1,0 +1,21 @@
+uuid: 15d88fb6-966d-49fa-b787-d443fa49e656
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location_content
+    - node.type.location
+  module:
+    - text
+id: node.location.field_location_content
+field_name: field_location_content
+entity_type: node
+bundle: location
+label: 'Page Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

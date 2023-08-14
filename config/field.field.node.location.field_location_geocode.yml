@@ -5,6 +5,24 @@ dependencies:
   config:
     - field.storage.node.field_location_geocode
     - node.type.location
+  module:
+    - geocoder_field
+third_party_settings:
+  geocoder_field:
+    method: geocode
+    weight: 0
+    field: field_location_address
+    skip_not_empty_value: false
+    disabled: false
+    hidden: true
+    providers:
+      - googlemaps
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
 id: node.location.field_location_geocode
 field_name: field_location_geocode
 entity_type: node

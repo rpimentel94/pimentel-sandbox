@@ -1,0 +1,23 @@
+uuid: 7feb6fc3-9242-4342-81ac-420e592436a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location_type
+    - node.type.location
+  module:
+    - options
+id: node.location.field_location_type
+field_name: field_location_type
+entity_type: node
+bundle: location
+label: Type
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: branch
+default_value_callback: ''
+settings: {  }
+field_type: list_string

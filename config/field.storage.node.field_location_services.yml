@@ -1,0 +1,42 @@
+uuid: 0aed3100-f949-4a8a-a8b9-19dc68ec961f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_location_services
+field_name: field_location_services
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: drive-up
+      label: Drive-Up
+    -
+      value: coin-counter
+      label: 'Coin Counter'
+    -
+      value: safe-deposit
+      label: 'Safe Deposit'
+    -
+      value: 24-hour-atm
+      label: '24-Hour ATM'
+    -
+      value: teller-services
+      label: 'Teller Services'
+    -
+      value: audio-assist
+      label: 'Audio Assist'
+    -
+      value: banking-center
+      label: 'Banking Center'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
