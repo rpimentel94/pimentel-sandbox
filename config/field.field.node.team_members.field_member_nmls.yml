@@ -1,0 +1,19 @@
+uuid: 513975c7-be61-4f4d-8ef7-3373add8c124
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_member_nmls
+    - node.type.team_members
+id: node.team_members.field_member_nmls
+field_name: field_member_nmls
+entity_type: node
+bundle: team_members
+label: 'NMLS# (Optional)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

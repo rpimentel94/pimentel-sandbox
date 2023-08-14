@@ -20,7 +20,7 @@ dependencies:
   module:
     - media_library
     - metatag
-    - paragraphs
+    - paragraphs_previewer
     - path
     - text
 _core:
@@ -53,7 +53,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_content_sections:
-    type: paragraphs
+    type: paragraphs_previewer
     weight: 16
     region: content
     settings:
@@ -112,7 +112,7 @@ content:
       use_details: true
     third_party_settings: {  }
   field_middle_section:
-    type: paragraphs
+    type: paragraphs_previewer
     weight: 18
     region: content
     settings:
@@ -130,7 +130,7 @@ content:
         duplicate: duplicate
     third_party_settings: {  }
   field_sidebar:
-    type: paragraphs
+    type: paragraphs_previewer
     weight: 19
     region: content
     settings:
@@ -175,6 +175,12 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   simple_sitemap:
     weight: 7
     region: content
@@ -211,5 +217,11 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp
+    weight: 22
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden: {  }

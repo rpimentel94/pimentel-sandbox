@@ -1,0 +1,21 @@
+uuid: c994639c-1517-43f8-9310-136cd0e8759a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.team_members
+  module:
+    - metatag
+id: node.team_members.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: team_members
+label: Metatags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

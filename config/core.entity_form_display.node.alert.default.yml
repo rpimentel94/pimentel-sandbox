@@ -47,31 +47,23 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_domain_access:
-    type: entity_reference_autocomplete
+    type: options_buttons
     weight: 11
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_domain_all_affiliates:
     type: boolean_checkbox
-    weight: 12
+    weight: 13
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_domain_source:
-    type: entity_reference_autocomplete
-    weight: 13
+    type: options_buttons
+    weight: 12
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
@@ -85,6 +77,12 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp
+    weight: 14
+    region: content
+    settings: {  }
     third_party_settings: {  }
   simple_sitemap:
     weight: 3
@@ -122,5 +120,11 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp
+    weight: 15
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden: {  }

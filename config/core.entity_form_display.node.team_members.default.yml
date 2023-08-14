@@ -1,25 +1,32 @@
-uuid: 5df4c94d-9364-4f16-8911-f1ed39371e70
+uuid: e08cfd28-a859-440f-85a6-7509c98348c9
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.landing_page.body
-    - field.field.node.landing_page.field_banner_content
-    - field.field.node.landing_page.field_content_sections
-    - field.field.node.landing_page.field_domain_access
-    - field.field.node.landing_page.field_domain_all_affiliates
-    - field.field.node.landing_page.field_domain_source
-    - field.field.node.landing_page.field_metatags
-    - field.field.node.landing_page.field_middle_section
-    - node.type.landing_page
+    - field.field.node.team_members.body
+    - field.field.node.team_members.field_additional_links
+    - field.field.node.team_members.field_bio
+    - field.field.node.team_members.field_domain_access
+    - field.field.node.team_members.field_domain_all_affiliates
+    - field.field.node.team_members.field_domain_source
+    - field.field.node.team_members.field_email
+    - field.field.node.team_members.field_member_button
+    - field.field.node.team_members.field_member_group
+    - field.field.node.team_members.field_member_image
+    - field.field.node.team_members.field_member_nmls
+    - field.field.node.team_members.field_member_title
+    - field.field.node.team_members.field_metatags
+    - field.field.node.team_members.field_phone
+    - node.type.team_members
   module:
+    - link
+    - media_library
     - metatag
-    - paragraphs_previewer
     - path
     - text
-id: node.landing_page.default
+id: node.team_members.default
 targetEntityType: node
-bundle: landing_page
+bundle: team_members
 mode: default
 content:
   body:
@@ -38,86 +45,101 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_banner_content:
-    type: paragraphs_previewer
-    weight: 12
-    region: content
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-      features:
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
-    third_party_settings: {  }
-  field_content_sections:
-    type: paragraphs_previewer
+  field_additional_links:
+    type: link_default
     weight: 9
     region: content
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      features:
-        duplicate: duplicate
-        collapse_edit_all: collapse_edit_all
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_bio:
+    type: text_textarea
+    weight: 10
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
   field_domain_access:
     type: options_buttons
-    weight: 14
+    weight: 21
     region: content
     settings: {  }
     third_party_settings: {  }
   field_domain_all_affiliates:
     type: boolean_checkbox
-    weight: 15
+    weight: 22
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_domain_source:
     type: options_buttons
-    weight: 17
+    weight: 23
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_email:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_member_button:
+    type: link_default
+    weight: 12
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_member_group:
+    type: options_select
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_member_image:
+    type: media_library_widget
+    weight: 14
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_member_nmls:
+    type: string_textfield
+    weight: 16
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_member_title:
+    type: string_textfield
+    weight: 15
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_metatags:
     type: metatag_firehose
-    weight: 11
+    weight: 18
     region: content
     settings:
       sidebar: true
       use_details: true
     third_party_settings: {  }
-  field_middle_section:
-    type: paragraphs_previewer
-    weight: 10
+  field_phone:
+    type: string_textfield
+    weight: 17
     region: content
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      features:
-        duplicate: duplicate
-        collapse_edit_all: collapse_edit_all
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   path:
     type: path
@@ -134,7 +156,7 @@ content:
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp
-    weight: 16
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -177,7 +199,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp
-    weight: 13
+    weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }
