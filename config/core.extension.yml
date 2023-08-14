@@ -71,11 +71,13 @@ module:
   paragraphs_browser: 0
   paragraphs_features: 0
   paragraphs_library: 0
+  paragraphs_previewer: 0
   paragraphs_type_permissions: 0
   path: 0
   path_alias: 0
   preprocess: 0
   scheduled_transitions: 0
+  scheduler: 0
   search: 0
   shortcut: 0
   simple_sitemap: 0

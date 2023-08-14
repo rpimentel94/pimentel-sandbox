@@ -68,7 +68,10 @@
         "drupal/address": "^1.12",
         "drupal/metatag": "^2.0",
         "drupal/pathauto": "^1.11",
-        "geocoder-php/google-maps-provider": "^4.7"
+        "geocoder-php/google-maps-provider": "^4.7",
+        "drupal/scheduler": "^2.0",
+        "drupal/paragraphs_previewer": "^1.7",
+        "drupal/search_api_exclude": "^2.0"
     },
     "require-dev": {
         "drupal/core-dev": "^9.2"
