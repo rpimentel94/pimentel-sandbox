@@ -53,6 +53,9 @@ module:
   help: 0
   history: 0
   image: 0
+  jquery_ui: 0
+  jquery_ui_autocomplete: 0
+  jquery_ui_menu: 0
   layout_discovery: 0
   link: 0
   media: 0
@@ -61,6 +64,17 @@ module:
   menu_ui: 0
   menus_attribute: 0
   metatag: 0
+  migrate: 0
+  migrate_drupal: 0
+  migrate_drupal_ui: 0
+  migrate_example: 0
+  migrate_example_advanced: 0
+  migrate_example_advanced_setup: 0
+  migrate_example_setup: 0
+  migrate_plus: 0
+  migrate_tools: 0
+  migrate_upgrade: 0
+  module_filter: 0
   mysql: 0
   node: 0
   options: 0
@@ -76,9 +90,11 @@ module:
   path: 0
   path_alias: 0
   preprocess: 0
+  rest: 0
   scheduled_transitions: 0
   scheduler: 0
   search: 0
+  serialization: 0
   shortcut: 0
   simple_sitemap: 0
   simplei: 0

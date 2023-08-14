@@ -1,0 +1,16 @@
+uuid: ab0d4f0a-61e1-474b-9d24-1f779c8897fd
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - migrate_example_advanced_setup
+_core:
+  default_config_hash: _fAJi4WnQLemvvr4vNrqhgTwRP-ON-p_jaPX339eZpY
+name: Wine
+type: migrate_example_wine
+description: 'Wine is what we drink.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true
