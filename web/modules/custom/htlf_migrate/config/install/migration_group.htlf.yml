@@ -1,0 +1,7 @@
+id: htlf
+label: HTLF
+description: Custom migration for lift & shift effort.
+source_type: Drupal 8
+shared_configuration:
+  source:
+    key: migrate

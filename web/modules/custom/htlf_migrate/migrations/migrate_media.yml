@@ -1,0 +1,64 @@
+id: migrate_media
+label: Media Files.
+status: true
+dependencies: {  }
+migration_group: htlf
+migration_tags:
+  - 'Drupal 8'
+  - HTLF
+  - Files
+source:
+  plugin: d8_entity # Our new source plugin. Note: use "d8_entity" if on D8 since the custom source plugin is not necessary.
+  scheme: public
+  key: migrate # Our Drupal 8 source database name.
+  entity_type: file
+process:
+  name:
+    -
+      plugin: get
+      source: filename
+  _file:
+    -
+      plugin: migration_lookup
+      migration: migrate_files # Previously defined migration => migrate_files.yml
+      source: fid
+    -
+      plugin: skip_on_empty
+      method: row
+  field_media_document: '@_file'
+  field_media_video_file: '@_file'
+  field_media_image: '@_file'
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: timestamp
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  uid:
+    -
+      plugin: default_value
+      default_value: 1
+  bundle:
+    -
+      plugin: static_map # for more the one media bundle.
+      source: filemime
+      default_value: image
+      map:
+        document/pdf: document
+        application/pdf: document
+        application/msword: document
+        application/vnd.openxmlformats-officedocument.wordprocessingml.document: document
+        application/vnd.ms-excel: document
+        application/vnd.openxmlformats-officedocument.spreadsheetml.sheet: document
+destination:
+  plugin: 'entity:media' # Import to Media entities.
+migration_dependencies:
+  optional: {  }
+  required:
+    - migrate_files # Previously defined migration => migrate_files.yml
