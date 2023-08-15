@@ -1,0 +1,43 @@
+# Migration for user accounts.
+id: migrate_user
+label: User Migration
+migration_group: htlf
+migration_tags:
+  - 'Drupal 8'
+  - HTLF
+  - Files
+source:
+  plugin: d8_user
+  key: migrate # Our Drupal 8 source database name.
+destination:
+  plugin: entity:user
+process:
+  mail:
+    plugin: get
+    source: mail
+  status: status
+
+  name:
+    -
+      plugin: get
+      source: name
+    -
+      plugin: dedupe_entity
+      entity_type: user
+      field: name
+
+  roles:
+    plugin: get
+    source: roles
+
+  created: created
+  changed: changed
+  field_domain_access: field_domain_access
+  field_domain_admin: field_domain_admin
+  field_domain_all_affiliates: field_domain_all_affiliates
+  field_last_password_reset: field_last_password_reset
+  field_password_expiration: field_password_expiration
+  field_pending_expire_sent: field_pending_expire_sent
+
+migration_dependencies:
+  required: { }

@@ -75,7 +75,8 @@
         "drupal/module_filter": "^4.0",
         "drupal/feeds_tamper": "^2.0@beta",
         "drupal/migrate_drupal_d8": "^1.0",
-        "drupal/migrate_devel": "^2.1"
+        "drupal/migrate_devel": "^2.1",
+        "drupal/password_policy": "^4.0"
     },
     "require-dev": {
         "drupal/core-dev": "^9.2"
@@ -113,12 +114,7 @@
         "patchLevel": {
             "drupal/core": "-p2"
         },
-        "enable-patching": true,
-        "patches": {
-            "drupal/core": {
-                "3026875: Taxonomy Migration fails since taxonomy_term_hierarchy table does not exists": "https://www.drupal.org/files/issues/2020-10-30/migrate_drupal_d8-taxonomy_term_hierarchy_table_removed-3026875-26.patch"
-            }
-        }
+        "enable-patching": true
     },
     "autoload": {
         "classmap": ["upstream-configuration/scripts/ComposerScripts.php"]

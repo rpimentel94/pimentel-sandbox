@@ -1,5 +1,5 @@
 # Migration for category taxonomy
-id: migrate_blog_post_category
+id: migrate_taxonomy_blog_post_category
 label: Blog Category Taxonomy terms
 migration_group: htlf
 migration_tags:

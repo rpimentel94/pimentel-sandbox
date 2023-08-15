@@ -1,0 +1,9 @@
+uuid: 1fe16d62-9103-4e86-ad65-de5bbb0f1e7c
+langcode: en
+status: true
+dependencies: {  }
+id: content_viewer
+label: 'Content Viewer'
+weight: 6
+is_admin: null
+permissions: {  }

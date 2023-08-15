@@ -1,0 +1,9 @@
+uuid: ec7c3fef-8f4d-4b52-a204-9bdbc4265413
+langcode: en
+status: true
+dependencies: {  }
+id: form_manager
+label: 'Form Manager'
+weight: 7
+is_admin: null
+permissions: {  }
