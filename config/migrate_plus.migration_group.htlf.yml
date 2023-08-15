@@ -1,0 +1,14 @@
+uuid: d5b1a862-3139-4a07-85d7-10df2d4bfe9b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: wLrmUFJAuKZltEXVMsDi8Lc3hkey_SKXQ_UdoagKqn8
+id: htlf
+label: HTLF
+description: 'Custom migration for lift & shift effort.'
+source_type: 'Drupal 8'
+module: null
+shared_configuration:
+  source:
+    key: migrate
