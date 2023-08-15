@@ -14,8 +14,6 @@ source:
 destination:
   plugin: entity:taxonomy_term
 process:
-  type:
-    plugin: member_group
   tid: tid
   vid:
     plugin: default_value

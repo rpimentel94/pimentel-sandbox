@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\htlf_migrate\Plugin\migrate\source\d8;
+namespace Drupal\htlf_migrate\Plugin\migrate\source;
 
 use Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException;
 use Drupal\Core\Entity\EntityFieldManagerInterface;
@@ -17,11 +17,11 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * Base class for D8 source plugins to collect field values from Field API.
  *
  * @MigrateSource(
- *   id = "d8_entity_altern",
+ *   id = "d8_entity_alter",
  *   source_provider = "htlf_migrate"
  * )
  */
-class ContentEntityAltern extends SqlBase {
+class ContentEntityAlter extends SqlBase {
 
   /**
    * The entity type manager.

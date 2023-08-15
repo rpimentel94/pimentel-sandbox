@@ -1,5 +1,5 @@
 # Migration for category taxonomy
-id: migrate_taxonomy_blog_category
+id: migrate_blog_post_category
 label: Blog Category Taxonomy terms
 migration_group: htlf
 migration_tags:
@@ -7,19 +7,17 @@ migration_tags:
   - HTLF
   - Files
 source:
-  plugin: d8_taxonomy_term
+  plugin: d8_taxonomy_term_alter
   bundle: q2_blog_category
   key: migrate # Our Drupal 8 source database name.
   entity_type: taxonomy
 destination:
   plugin: entity:taxonomy_term
 process:
-  type:
-    plugin: blog_category
   tid: tid
   vid:
     plugin: default_value
-    default_value: blog_category
+    default_value: blog_post_category
   
   name: name
   weight: weight
@@ -33,7 +31,7 @@ process:
       source: parent
     -
       plugin: migration_lookup
-      migration: blog_category
+      migration: blog_post_category
   parent:
     plugin: default_value
     default_value: 0
