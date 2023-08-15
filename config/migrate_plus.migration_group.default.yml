@@ -1,0 +1,10 @@
+uuid: bbecad22-d7e9-4401-be9d-e7a11b917e58
+langcode: en
+status: true
+dependencies: {  }
+id: default
+label: Default
+description: 'A container for any migrations not explicitly assigned to a group.'
+source_type: null
+module: null
+shared_configuration: null
