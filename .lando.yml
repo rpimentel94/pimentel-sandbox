@@ -38,6 +38,11 @@ services:
         - chown -R www-data /usr/bin
         - npm install -g npm gulp-cli npx
         - apt update -y && apt install -y yarn=1.12.3-1
+  database:
+    portforward: 3307
+  legacy_db:
+    type: mysql
+    portforward: 3308
 
 tooling:
   npm:
@@ -50,3 +55,7 @@ tooling:
     service: appserver
   npx:
     service: appserver
+  refresh:
+    service: apperserver
+    description: Corrects current issue between Devel & Pantheon after database refresh
+    cmd: drush pmu devel -y && drush en devel -y && drush cr && drush cex -y
