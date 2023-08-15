@@ -99,3 +99,4 @@
 web/themes/custom/tailwind/node_modules
 web/themes/custom/tailwind/node_modules/
 *.gz
+*.sql
