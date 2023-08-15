@@ -1,6 +1,6 @@
 # Migration for category taxonomy
-id: migrate_member_group
-label: Member Group Taxonomy terms
+id: migrate_taxonomy_blog_tags
+label: Blog Tags Taxonomy terms
 migration_group: htlf
 migration_tags:
   - 'Drupal 8'
@@ -8,18 +8,18 @@ migration_tags:
   - Files
 source:
   plugin: d8_taxonomy_term
-  bundle: q2_member_group
+  bundle: q2_blog_tags
   key: migrate # Our Drupal 8 source database name.
   entity_type: taxonomy
 destination:
   plugin: entity:taxonomy_term
 process:
   type:
-    plugin: member_group
+    plugin: blog_tags
   tid: tid
   vid:
     plugin: default_value
-    default_value: member_group
+    default_value: blog_tags
   
   name: name
   weight: weight
@@ -33,7 +33,7 @@ process:
       source: parent
     -
       plugin: migration_lookup
-      migration: member_group
+      migration: blog_tags
   parent:
     plugin: default_value
     default_value: 0

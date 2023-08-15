@@ -1,10 +1,16 @@
 # Migration for category taxonomy
-id: member_group
+id: migrate_taxonomy_member_group
 label: Member Group Taxonomy terms
 migration_group: htlf
+migration_tags:
+  - 'Drupal 8'
+  - HTLF
+  - Files
 source:
   plugin: d8_taxonomy_term
   bundle: q2_member_group
+  key: migrate # Our Drupal 8 source database name.
+  entity_type: taxonomy
 destination:
   plugin: entity:taxonomy_term
 process:
