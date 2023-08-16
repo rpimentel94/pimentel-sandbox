@@ -1,0 +1,15 @@
+uuid: 8476745d-8e39-4a7c-81bf-9cf217827916
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 6Xnrs4zbLFDGpqLmWY-G0qcALgguYp_TShaD7z3ae80
+id: csv
+label: CSV
+description: ''
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_file_csv
+field_map: {  }

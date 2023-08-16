@@ -1,0 +1,13 @@
+uuid: 03e9dd31-a925-4fc4-a46f-bad980352c58
+langcode: en
+status: true
+dependencies: {  }
+id: uopen
+label: Uopen
+description: ''
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_file
+field_map: {  }
