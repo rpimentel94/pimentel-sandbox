@@ -1,0 +1,11 @@
+uuid: 96a3ea21-88d8-4b70-a0c1-00e5170c8d99
+langcode: en
+status: true
+dependencies: {  }
+id: nbt
+domain_id: 11211540
+hostname: www.nmb-t.com
+name: 'New Mexico Bank & Trust'
+scheme: https
+weight: -7
+is_default: false

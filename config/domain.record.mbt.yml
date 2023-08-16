@@ -1,0 +1,11 @@
+uuid: 80c07fea-a3ce-4a26-ac27-90e67f7de80c
+langcode: en
+status: true
+dependencies: {  }
+id: mbt
+domain_id: 2287229
+hostname: www.mnbankandtrust.com
+name: 'Minnesota Bank & Trust, a division of HTLF Bank'
+scheme: https
+weight: -8
+is_default: false

@@ -1,0 +1,11 @@
+uuid: 2c245cfd-14bf-4e8f-ae02-0d853fbcdc49
+langcode: en
+status: true
+dependencies: {  }
+id: pwm
+domain_id: 15205436
+hostname: www.primewestmortgage.com
+name: 'PrimeWest Mortgage, a division of HTLF Bank'
+scheme: https
+weight: -5
+is_default: false

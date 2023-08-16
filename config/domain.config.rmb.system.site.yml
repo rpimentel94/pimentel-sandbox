@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: aL3BtaIolEma8blxyy3oEaB9QSvBbCNSmkUQ3Qd7lac
+langcode: en
+uuid: 30bbe56b-d100-4f3d-8315-1faf8364ba3b
+name: 'Rocky Mountain Bank'
+mail: canvas@trabian.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/1069
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: ''

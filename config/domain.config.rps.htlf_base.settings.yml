@@ -1,0 +1,22 @@
+features:
+  node_user_picture: 1
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: 1
+logo:
+  use_default: 1
+favicon:
+  use_default: 1
+contain_width: 0
+theme_color: ''
+olb_login: 'https://www.retirementaccountlogin.com/heartland/'
+split_login: 0
+olb_enroll: ''
+olb_forgot: ''
+olb_android: ''
+olb_apple: ''
+custom_css: ".box .rate {\r\n  font-size: 45px;\r\nfont-weight: 700;\r\ntext-align: center;\r\nline-height: 1;\r\n}\r\ni {\r\nfont-family:'Font Awesome 5 Pro';\r\n}\r\n.callout > :last-child {\r\n    margin-top: auto;\r\n}\r\n\r\nbutton.right-off-canvas-toggle.button,  {\r\ndisplay: none;\r\n}\r\n\r\n.map-list .get-directions {\r\n  display: none;\r\n}\r\n\r\n.top-level-menu ul {\r\n  justify-content: flex-start;\r\n  gap: 50px\r\n}\r\n\r\n.routing-number {\r\n display: none !important;\r\n}\r\n\r\n.header-menu .footer-only {\r\n display: none;\r\n}\r\n\r\n.main-menu-wrapper .menu-wrapper .menu.desktop.multi-column > li.footer-only {\r\n display: none;\r\n}\r\n\r\n.main-menu-wrapper .menu-wrapper .menu.desktop.multi-column > li.footer-only, .menu-wrapper .menu.mobile ul, .menu-wrapper .menu.mobile li.footer-only {\r\n display: none;\r\n}\r\n\r\nfooter .footer > ul li ul li.footer-only a {\r\n display: block;\r\n margin-bottom: .5rem;\r\n}\r\nlabel[for*=\"atm\"] {\r\n    text-transform: uppercase !important;\r\n}\r\n\r\n.title-bar .title-bar-right a {\r\n    padding: 1.25rem;\r\n    margin: 0;\r\n    background: transparent;\r\n    color: var(--primary-first, #757575);\r\n    -webkit-box-shadow: none;\r\n    box-shadow: none;\r\n    margin-right: 0.375rem;\r\n    font-size: 1.2rem;\r\n}\r\n.title-bar .title-bar-right a::after {\r\n    font-family: \"Font Awesome 5 Pro\", sans-serif;\r\n    font-weight: 900;\r\n    content: '\\f007';\r\n    padding-left: 0.625rem;\r\n}\r\n.title-bar-middle #mobile-logo > img {\r\n    max-height: 3.25rem;\r\n    min-height: unset;\r\n}"
+head_javascript: "setTimeout(function () {\r\n  jQuery(document).ready(function ($) {\r\nif ($('.page-node-type-location .address').length) {\r\n  $.each($('.page-node-type-location .address'), function(){\r\n    const bankName = !$('.internal-page-banner h1').text().includes('ATM') ? $('title').text().split('|')[1] + ' - ' : '';\r\n    const address = $(this).find('.address-line1').text();\r\n    const city = $(this).find('.locality').text();\r\n    const state = $(this).find('.administrative-area').text();\r\n    const zip = $(this).find('.postal-code').text();\r\n    const country = $(this).find('.country').text();\r\n    const fullAddress = encodeURIComponent(`${bankName}${address}, ${city},${state}, ${zip} ${country}`);\r\n    const searchUrl = 'https://www.google.com/maps/search/?api=1&query=' + fullAddress;\r\n    const directionsUrl = 'https://www.google.com/maps/dir/?api=1&destination=' + fullAddress;\r\n\r\n    $(this).find('.button').attr('href', searchUrl);\r\n  })\r\n}\r\n    let olb_url = document.getElementById('mobile-login').action;\r\n    olb_url = '<a href=\"' + olb_url + '\" class=\"right-off-canvas-toggle button\" aria-label=\"Login to Online Banking\">Login</a>';\r\n\r\n    $('.title-bar-right').html(olb_url);\r\n  });\r\n}, 200)"
+body_javascript: ''
+footer_javascript: ''
+header_height: '150'

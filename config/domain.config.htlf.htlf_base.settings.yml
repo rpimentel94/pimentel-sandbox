@@ -1,0 +1,22 @@
+features:
+  node_user_picture: 1
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: 1
+logo:
+  use_default: 1
+favicon:
+  use_default: 1
+contain_width: 0
+theme_color: ''
+olb_login: 'https://savvyatarizbank.com/arizonabankandtrustonline/Uux.aspx'
+split_login: 0
+olb_enroll: ''
+olb_forgot: ''
+olb_android: ''
+olb_apple: ''
+custom_css: ".box .rate {\r\n  font-size: 45px;\r\nfont-weight: 700;\r\ntext-align: center;\r\nline-height: 1;\r\n}\r\ni {\r\nfont-family:'Font Awesome 5 Pro';\r\n}\r\n.callout > :last-child {\r\n    margin-top: auto;\r\n}\r\n\r\n#services-fieldset::before {\r\n  display: none !important;\r\n}\r\n\r\n#map-container .map-panel .controls .map-panel-body .filters .services-filters .checkboxes label {\r\n  display: inline;\r\n  font-size: 14px; \r\n}\r\n\r\n#map-container .map-panel .controls .map-panel-body .types-filters label {\r\n  font-size: 0.875rem;\r\n}\r\n\r\n#map-container .map-panel .controls .map-panel-body .types-filters select {\r\n  min-height: 30px;\r\n}\r\n\r\n#map-container .map-panel .controls .map-panel-body .services-filters label, #map-container .map-panel .controls .map-panel-body .filters legend {\r\n  display: none;\r\n}\r\n\r\nbutton.right-off-canvas-toggle.button,  {\r\ndisplay: none;\r\n}\r\n\r\n.title-bar-middle #mobile-logo > img {\r\n    min-height: unset;\r\n}"
+head_javascript: ''
+body_javascript: ''
+footer_javascript: ''
+header_height: '150'

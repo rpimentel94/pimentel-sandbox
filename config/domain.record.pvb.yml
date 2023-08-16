@@ -1,0 +1,11 @@
+uuid: 76516047-adce-4e4e-aab2-5a9b2373e618
+langcode: en
+status: true
+dependencies: {  }
+id: pvb
+domain_id: 9009258
+hostname: www.premiervalleybank.com
+name: 'Premier Valley Bank, a division of HTLF Bank'
+scheme: https
+weight: -6
+is_default: false

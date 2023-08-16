@@ -1,0 +1,11 @@
+uuid: dd97cf46-6f74-4580-9c36-a2d582fcbfa6
+langcode: en
+status: true
+dependencies: {  }
+id: fbt
+domain_id: 9664465
+hostname: www.firstbanktexas.com
+name: 'First Bank & Trust, a division of HTLF Bank'
+scheme: https
+weight: -10
+is_default: false

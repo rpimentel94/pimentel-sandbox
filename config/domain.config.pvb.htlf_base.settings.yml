@@ -1,0 +1,22 @@
+features:
+  node_user_picture: 1
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: 1
+logo:
+  use_default: 1
+favicon:
+  use_default: 1
+contain_width: 0
+theme_color: ''
+olb_login: 'https://olb.premiervalleybank.com/PVBOnline/uux.aspx'
+split_login: 0
+olb_enroll: 'https://olb.premiervalleybank.com/PVB_AutoEnrollment/v2/enroll.html'
+olb_forgot: 'https://olb.premiervalleybank.com/PVBOnline/uux.aspx#/login/resetPasswordUsername'
+olb_android: 'https://play.google.com/store/apps/details?id=com.premiervalleybank335312.mobile'
+olb_apple: 'https://itunes.apple.com/us/app/premier-valley-bank-mobile/id1080772567?mt=8'
+custom_css: ".box .rate {\r\n  font-size: 45px;\r\nfont-weight: 700;\r\ntext-align: center;\r\nline-height: 1;\r\n}\r\ni {\r\nfont-family:'Font Awesome 5 Pro';\r\n}\r\n.callout > :last-child {\r\n    margin-top: auto;\r\n}\r\n\r\n.map-list .get-directions {\r\n  display: none;\r\n}\r\n\r\nheader .head-container .logo-container #logo img  {\r\n  min-height: 102px;\r\n}\r\n\r\n.main-menu-wrapper .menu-wrapper .menu.desktop.multi-column > li [aria-expanded=\"true\"] + ul > li.pvb-no-mortages {\r\n  display: none;\r\n}\r\nlabel[for*=\"atm\"] {\r\n    text-transform: uppercase !important;\r\n}\r\n.title-bar-middle #mobile-logo > img {\r\n    min-height: unset;\r\n}"
+head_javascript: ''
+body_javascript: ''
+footer_javascript: "jQuery(document).ready(function($){\r\nif ($('.page-node-type-location .address').length) {\r\n  $.each($('.page-node-type-location .address'), function(){\r\n    const bankName = !$('.internal-page-banner h1').text().includes('ATM') ? $('title').text().split('|')[1] + ' - ' : '';\r\n    const address = $(this).find('.address-line1').text();\r\n    const city = $(this).find('.locality').text();\r\n    const state = $(this).find('.administrative-area').text();\r\n    const zip = $(this).find('.postal-code').text();\r\n    const country = $(this).find('.country').text();\r\n    const fullAddress = encodeURIComponent(`${bankName}${address}, ${city},${state}, ${zip} ${country}`);\r\n    const searchUrl = 'https://www.google.com/maps/search/?api=1&query=' + fullAddress;\r\n    const directionsUrl = 'https://www.google.com/maps/dir/?api=1&destination=' + fullAddress;\r\n\r\n    $(this).find('.button').attr('href', searchUrl);\r\n  })\r\n}\r\n});"
+header_height: '150'

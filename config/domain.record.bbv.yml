@@ -1,0 +1,11 @@
+uuid: d7b391a2-55a5-4bba-8d8b-663429e9b855
+langcode: en
+status: true
+dependencies: {  }
+id: bbv
+domain_id: 14810673
+hostname: www.bankbv.com
+name: 'Bank of Blue Valley, a division of HTLF Bank'
+scheme: https
+weight: -13
+is_default: false

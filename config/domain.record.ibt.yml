@@ -1,0 +1,11 @@
+uuid: eff89d79-e362-45cf-98d9-44bae3d7aa45
+langcode: en
+status: true
+dependencies: {  }
+id: ibt
+domain_id: 4084767
+hostname: www.illinoisbank.com
+name: 'Illinois Bank & Trust, a division of HTLF Bank'
+scheme: https
+weight: -9
+is_default: false

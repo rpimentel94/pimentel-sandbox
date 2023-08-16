@@ -1,0 +1,21 @@
+features:
+  node_user_picture: 1
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: 1
+logo:
+  use_default: 1
+favicon:
+  use_default: 1
+contain_width: 0
+theme_color: ''
+olb_login: 'https://kansas.savvyatbankbv.com/Bankofbluevalleyonline/uux.aspx'
+split_login: 0
+olb_enroll: ''
+olb_forgot: ''
+olb_android: ''
+olb_apple: ''
+custom_css: ''
+head_javascript: ''
+body_javascript: ''
+footer_javascript: ''
