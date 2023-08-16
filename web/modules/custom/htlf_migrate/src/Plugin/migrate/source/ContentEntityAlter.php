@@ -277,6 +277,45 @@ class ContentEntityAlter extends SqlBase {
       $row->setSourceProperty($field, $this->getFieldValues($entityType, $field, $entityId, $revisionId));
     }
 
+    // Creating Alter for Body field
+    $nid = $row->getSourceProperty('nid');
+    // body (compound field with value, summary, and format)
+    $result = $this->getDatabase()->query('
+      SELECT
+        fld.body_value,
+        fld.body_summary,
+        fld.body_format
+      FROM
+        {node__body} fld
+      WHERE
+        fld.entity_id = :nid
+    ', array(':nid' => $nid));
+
+    if ($result) {
+      foreach ($result as $record) {
+        $row->setSourceProperty('body_value', $record->body_value );
+        $row->setSourceProperty('body_summary', $record->body_summary );
+        $row->setSourceProperty('body_format', $record->body_format );
+      }
+    }
+
+    $result = $this->getDatabase()->query('
+      SELECT
+        fld.uid
+      FROM
+        {node_field_data} fld
+      WHERE
+        fld.nid = :nid
+    ', array(':nid' => $nid));
+
+    if ($result) {
+      foreach ($result as $record) {
+        $row->setSourceProperty('uid', $record->uid);
+      }
+    } else {
+      $row->setSourceProperty('uid', 1);
+    }
+
     return parent::prepareRow($row);
   }
 

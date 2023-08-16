@@ -35,5 +35,12 @@ process:
   field_password_expiration: field_password_expiration
   field_pending_expire_sent: field_pending_expire_sent
 
+  langcode:
+    plugin: static_map
+    bypass: true
+    source: language
+    map:
+      und: en
+
 migration_dependencies:
   required: { }
