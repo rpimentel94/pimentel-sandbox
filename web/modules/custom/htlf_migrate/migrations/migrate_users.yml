@@ -21,10 +21,6 @@ process:
     -
       plugin: get
       source: name
-    -
-      plugin: dedupe_entity
-      entity_type: user
-      field: name
 
   roles:
     plugin: get
