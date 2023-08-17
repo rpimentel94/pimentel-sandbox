@@ -1,0 +1,61 @@
+id: migrate_node_location
+label: Custom Location node migration from Trabian Site
+migration_group: htlf
+migration_tags:
+  - 'Drupal 8'
+  - HTLF
+  - Files
+source:
+  plugin: d8_entity_alter
+  entity_type: node
+  bundle: location
+  key: migrate
+destination:
+  plugin: entity:node
+process:
+  nid: nid
+  vid: vid
+  type: type
+  langcode:
+    plugin: static_map
+    bypass: true
+    source: language
+    map:
+      und: en
+  title: title
+  uid:
+    plugin: migration_lookup
+    migration: migrate_user
+    source: uid
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  'body/format':
+    plugin: static_map
+    bypass: true
+    source: body_format
+    map:
+      1: plain_text
+      2: restricted_html
+      3: full_html
+      4: full_html
+  'body/value': body_value
+  'body/summary': body_summary
+  field_domain_access: field_domain_access
+  field_domain_all_affiliates: field_domain_all_affiliates
+  ####### Start Custom Fields ######
+  field_location_address: field_q2_location_address
+  field_location_fax: field_q2_location_fax
+  field_location_geocode: field_q2_location_geocode
+  field_location_hours: field_q2_location_hours
+  #field_location_image: field_q2_location_image
+  field_metatags: field_metatags
+  field_location_content: field_q2_location_content
+  field_location_phone: field_q2_location_phone
+  field_location_services: field_q2_location_services
+  field_location_type: field_q2_location_type
+migration_dependencies:
+  optional: { }
+  required: { }

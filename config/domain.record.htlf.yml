@@ -8,4 +8,4 @@ hostname: www.htlf.com
 name: 'HTLF '
 scheme: https
 weight: -15
-is_default: true
+is_default: false

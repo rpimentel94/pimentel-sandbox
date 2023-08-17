@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.location.body
     - field.field.node.location.field_domain_access
     - field.field.node.location.field_domain_all_affiliates
     - field.field.node.location.field_domain_source
@@ -20,21 +19,12 @@ dependencies:
     - field.field.node.location.field_metatags
     - node.type.location
   module:
-    - text
     - user
 id: node.location.teaser
 targetEntityType: node
 bundle: location
 mode: teaser
 content:
-  body:
-    type: text_summary_or_trimmed
-    label: hidden
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    weight: 101
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }
