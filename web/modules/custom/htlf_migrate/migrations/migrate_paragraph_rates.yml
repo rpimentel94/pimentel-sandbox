@@ -1,0 +1,59 @@
+langcode: en
+status: true
+dependencies: {}
+id: migrate_paragraph_rates
+label: Custom Grid paragraph bundle migration from Trabian Site
+migration_group: htlf
+migration_tags:
+  - 'Drupal 8'
+  - HTLF
+  - Files
+source:
+  plugin: d8_entity
+  key: migrate
+  bundle: rates
+  entity_type: paragraph
+destination: 
+  plugin: 'entity_reference_revisions:paragraph'
+process:
+  id: id
+  revision_id: revision_id
+  langcode:
+    plugin: static_map
+    bypass: true
+    source: language
+    map:
+      und: en
+  default_langcode:
+    plugin: static_map
+    bypass: true
+    source: language
+    map:
+      und: 1
+  revision_translation_affected:
+    plugin: static_map
+    bypass: true
+    source: language
+    map:
+      und: 1
+  type: type
+  status: status
+  created: created
+  parent_id: parent_id
+  parent_type: parent_type
+  parent_field_name: parent_field_name
+  behavior_settings: behavior_settings
+  ##### Start Custom Fields ######
+  field_admin_title: field_q2_admin_title
+  field_background_color: field_q2_background_color
+  field_display_admin_title: field_q2_display_admin_title
+  field_gutter: field_q2_gutter
+  ### Start Section for Paragraph References ###
+  field_rate_item:
+    plugin: migration_lookup
+    migration: migrate_paragraph_rate_item
+    source: id
+
+migration_dependencies:
+  required: {}
+  optional: {}

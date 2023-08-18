@@ -1,0 +1,61 @@
+langcode: en
+status: true
+dependencies: {}
+id: migrate_paragraph_grid_item
+label: Custom Grid Item paragraph bundle migration from Trabian Site
+migration_group: htlf
+migration_tags:
+  - 'Drupal 8'
+  - HTLF
+  - Files
+source:
+  plugin: d8_entity
+  key: migrate
+  bundle: grid_item
+  entity_type: paragraph
+destination: 
+  plugin: 'entity_reference_revisions:paragraph'
+process:
+  id: id
+  revision_id: revision_id
+  langcode:
+    plugin: static_map
+    bypass: true
+    source: language
+    map:
+      und: en
+  default_langcode:
+    plugin: static_map
+    bypass: true
+    source: language
+    map:
+      und: 1
+  revision_translation_affected:
+    plugin: static_map
+    bypass: true
+    source: language
+    map:
+      und: 1
+  type: type
+  status: status
+  created: created
+  parent_id: parent_id
+  parent_type: parent_type
+  parent_field_name: parent_field_name
+  behavior_settings: behavior_settings
+  ##### Start Custom Fields ######
+  field_button: field_q2_button
+  field_aria_label: field_q2_aria_label
+  field_textarea: field_q2_textarea
+  field_fa_icon: field_q2_fa_icon
+  field_text: field_q2_text
+  field_icon_type: field_q2_icon_type
+  ### Start Section for Paragraph References ###
+  field_image/target_id:
+    plugin: migration_lookup
+    migration: migrate_media
+    source: id
+
+migration_dependencies:
+  required: {}
+  optional: {}
