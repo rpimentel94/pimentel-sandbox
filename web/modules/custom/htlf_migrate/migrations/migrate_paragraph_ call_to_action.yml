@@ -1,8 +1,8 @@
 langcode: en
 status: true
 dependencies: {}
-id: migrate_paragraph_featured_product
-label: Custom Rate Item paragraph bundle migration from Trabian Site
+id: migrate_paragraph_call_to_action
+label: Custom Call to Action paragraph bundle migration from Trabian Site
 migration_group: htlf
 migration_tags:
   - 'Drupal 8'
@@ -11,7 +11,7 @@ migration_tags:
 source:
   plugin: d8_entity
   key: migrate
-  bundle: featured_product
+  bundle: call_to_action
   entity_type: paragraph
 destination: 
   plugin: 'entity_reference_revisions:paragraph'
@@ -45,17 +45,25 @@ process:
   behavior_settings: behavior_settings
   ##### Start Custom Fields ######
   field_admin_title: field_q2_admin_title
+  field_alignment: field_q2_alignment
   field_background: field_q2_background
+  field_image_secondary: field_q2_image_secondary
+  field_gutter: field_q2_gutter
   field_button: field_q2_button
   field_aria_label: field_q2_aria_label
-  field_textarea: field_q2_textarea
-  field_alignment: field_q2_alignment
-  field_gutter: field_q2_gutter
+  field_fa_icon: field_q2_fa_icon
+  field_icon_type: field_q2_icon_type
+  field_text: field_q2_text
   ### Start Section for Paragraph & Media References ###
   field_image/target_id:
     plugin: migration_lookup
     migration: migrate_media
     source: id
+  field_image_secondary/target_id:
+    plugin: migration_lookup
+    migration: migrate_media
+    source: id
+
 migration_dependencies:
   required: {}
   optional: {}
