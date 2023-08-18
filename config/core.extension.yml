@@ -93,6 +93,7 @@ module:
   path: 0
   path_alias: 0
   preprocess: 0
+  redirect: 0
   rest: 0
   scheduled_transitions: 0
   scheduler: 0
