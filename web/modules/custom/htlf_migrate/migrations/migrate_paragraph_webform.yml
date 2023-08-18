@@ -1,7 +1,7 @@
 langcode: en
 status: true
 dependencies: {}
-id: migrate_paragraph_banner_item
+id: migrate_paragraph_webform
 label: Custom Banner Item paragraph bundle migration from Trabian Site
 migration_group: htlf
 migration_tags:
@@ -11,7 +11,7 @@ migration_tags:
 source:
   plugin: d8_entity
   key: migrate
-  bundle: banner_item
+  bundle: webform
   entity_type: paragraph
 destination: 
   plugin: 'entity_reference_revisions:paragraph'
@@ -44,16 +44,14 @@ process:
   parent_field_name: parent_field_name
   behavior_settings: behavior_settings
   ##### Start Custom Fields ######
-  field_alignment: field_q2_alignment
-  field_banner_height: field_q2_banner_height
-  field_textarea_plain: field_q2_textarea_plain
-  field_button: field_q2_button
-  field_aria_label: field_q2_aria_label
-  field_image: field_q2_image
-  field_image_secondary: field_q2_image_secondary
-  field_overlay: field_q2_overlay
+  field_admin_title: field_q2_admin_title
+  field_background_color: field_q2_background_color
+  field_display_section_sidebar: field_q2_display_section_sidebar
   field_text: field_q2_text
-  ### Start Section for Paragraph & Media References ###
+  field_fa_icon: field_q2_fa_icon
+  field_textarea: field_q2_textarea
+  field_gutter: field_q2_gutter
+  field_webform: field_q2_webform
 migration_dependencies:
   required: {}
   optional: {}
