@@ -1,0 +1,20 @@
+id: migrate_url_alias
+label: URL aliases
+migration_group: htlf
+migration_tags:
+  - 'Drupal 8'
+  - HTLF
+  - Files
+source:
+  plugin: d8_entity
+  key: migrate
+  entity_type: path_alias
+  constants:
+    slash: '/'
+process:
+  path/alias: alias
+  path/pathauto:
+    plugin: default_value
+    default_value: false
+destination:
+  plugin: entity:path_alias

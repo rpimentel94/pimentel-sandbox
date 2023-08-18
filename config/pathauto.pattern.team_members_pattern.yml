@@ -1,0 +1,23 @@
+uuid: 5a5c3c18-c36d-4153-83ba-ef1d5c1c20da
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: VGVM8x17Q1-j7ti5STFCUC4OUOhPdtv-gKWqrnMSeic
+id: team_members_pattern
+label: 'Team Members Pattern'
+type: 'canonical_entities:node'
+pattern: 'team-members/[node:title]'
+selection_criteria:
+  4ba779d9-ea27-49c6-8fdf-0c161f367e32:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      team_members: team_members
+selection_logic: and
+weight: -8
+relationships: {  }

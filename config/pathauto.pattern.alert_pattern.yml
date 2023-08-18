@@ -1,0 +1,24 @@
+uuid: 52da623f-1647-4c37-ab4c-6ff17e93f542
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 9oAlZ3MdNVe-b0lzs4nFgZx__k7cbwEzrh7UhEd2NWI
+id: alert_pattern
+label: 'Alert Pattern'
+type: 'canonical_entities:node'
+pattern: 'alerts/[node:title]'
+selection_criteria:
+  d7b77e44-2291-4e51-b14f-d1e15b8e381f:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: d7b77e44-2291-4e51-b14f-d1e15b8e381f
+    context_mapping:
+      node: node
+    bundles:
+      alert: alert
+selection_logic: and
+weight: -10
+relationships: {  }

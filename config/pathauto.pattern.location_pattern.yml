@@ -1,0 +1,24 @@
+uuid: 36538d8d-4c4e-4a41-b8bf-4e370408c14a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: QRpohlF47eOcNhejGWoh8RO0VKpAzA9T15cEDAg3oJo
+id: location_pattern
+label: 'Location Pattern'
+type: 'canonical_entities:node'
+pattern: 'locations/[node:title]'
+selection_criteria:
+  e30d4416-57aa-45c1-9d79-5cef012656d1:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: e30d4416-57aa-45c1-9d79-5cef012656d1
+    context_mapping:
+      node: node
+    bundles:
+      location: location
+selection_logic: and
+weight: -9
+relationships: {  }

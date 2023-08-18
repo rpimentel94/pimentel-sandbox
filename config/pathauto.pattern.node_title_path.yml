@@ -1,0 +1,16 @@
+uuid: 70df854d-0991-4bb5-9548-548c9d196ffb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: iw9IiNLIdwl7Qz2x14Kn25MGHu-ruzVHFDKPTbNgXp0
+id: node_title_path
+label: 'Uses the title as the title of the page'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria: {  }
+selection_logic: and
+weight: -7
+relationships: {  }
