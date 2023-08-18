@@ -1,0 +1,61 @@
+id: migrate_node_blog_post
+label: Custom Blog Post node migration from Trabian Site
+migration_group: htlf
+migration_tags:
+  - 'Drupal 8'
+  - HTLF
+  - Files
+source:
+  plugin: d8_entity_alter
+  entity_type: node
+  bundle: blog_post
+  key: migrate
+destination:
+  plugin: entity:node
+process:
+  nid: nid
+  vid: vid
+  type: type
+  langcode:
+    plugin: static_map
+    bypass: true
+    source: language
+    map:
+      und: en
+  title: title
+  uid:
+    plugin: migration_lookup
+    migration: migrate_user
+    source: uid
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  'body/format':
+    plugin: static_map
+    bypass: true
+    source: body_format
+    map:
+      1: plain_text
+      2: restricted_html
+      3: full_html
+      4: full_html
+  'body/value': body_value
+  'body/summary': body_summary
+  field_domain_access: field_domain_access
+  field_domain_all_affiliates: field_domain_all_affiliates
+  ####### Start Custom Fields ######
+  field_blog_category: field_q2_blog_category
+  field_blog_content: field_q2_blog_content
+  #field_content_sections: field_q2_content_sections
+  #field_blog_image: field_q2_blog_image
+  #field_internal_banner_image: field_q2_internal_banner_image
+  field_metatags: field_metatags
+  #field_middle_section: field_q2_middle_sections
+  #field_sidebar: field_q2_sidebar
+  field_blog_tags: field_q2_blog_tags
+  field_blog_time: field_q2_blog_time
+migration_dependencies:
+  optional: { }
+  required: { }

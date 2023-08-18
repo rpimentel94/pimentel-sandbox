@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "df887e576fb82042dc8ddbfe33428b69",
+    "content-hash": "a8684a8e3717168e727a07463c190d5d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5149,6 +5149,57 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/search_api_exclude",
                 "issues": "https://www.drupal.org/project/issues/search_api_exclude"
+            }
+        },
+        {
+            "name": "drupal/shs",
+            "version": "2.0.0-rc4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/shs.git",
+                "reference": "2.0.0-rc4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/shs-2.0.0-rc4.zip",
+                "reference": "2.0.0-rc4",
+                "shasum": "15d4d84f4c91dc9d4a304bfec8255a13b75b2195"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10"
+            },
+            "require-dev": {
+                "drupal/chosen": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-rc4",
+                    "datestamp": "1681242239",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "jhedstrom",
+                    "homepage": "https://www.drupal.org/user/208732"
+                },
+                {
+                    "name": "stBorchert",
+                    "homepage": "https://www.drupal.org/user/36942"
+                }
+            ],
+            "description": "Creates a simple hierarchical select widget for taxonomy fields.",
+            "homepage": "https://www.drupal.org/project/shs",
+            "support": {
+                "source": "https://git.drupalcode.org/project/shs"
             }
         },
         {
@@ -15551,6 +15602,7 @@
         "drupal/gin": 5,
         "drupal/paragraphs_ee": 15,
         "drupal/paragraphs_features": 10,
+        "drupal/shs": 5,
         "drupal/tailwindcss": 15,
         "drupal/viewfield": 10,
         "drupal/webform": 10,

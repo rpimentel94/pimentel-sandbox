@@ -61,6 +61,7 @@
         "drupal/scheduled_transitions": "^2.3",
         "drupal/scheduler": "^2.0",
         "drupal/search_api_exclude": "^2.0",
+        "drupal/shs": "^2.0@RC",
         "drupal/simple_sitemap": "^4.1",
         "drupal/simplei": "^2.1",
         "drupal/smart_date": "^4.0",
