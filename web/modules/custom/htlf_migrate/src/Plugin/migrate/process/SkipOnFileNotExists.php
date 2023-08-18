@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\migrate_plus\Plugin\migrate\process;
+namespace Drupal\htlf_migrate\Plugin\migrate\process;
 
 use Drupal\migrate\MigrateSkipProcessException;
 use Drupal\migrate\ProcessPluginBase;
