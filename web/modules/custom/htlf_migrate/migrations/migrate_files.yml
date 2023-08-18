@@ -13,7 +13,7 @@ source:
   key: migrate # Our Drupal 8 source database name.
   entity_type: file
   constants:
-    source_base_path: 'https://www.htlf.com/' # Source domain.
+    source_base_path: 'sites/default/files/'
 process:
   filename:
     -
