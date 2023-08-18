@@ -51,7 +51,7 @@ process:
   field_q2_email: field_q2_email
   field_q2_member_button: field_q2_member_button
   field_q2_member_group: field_q2_member_group
-  #field_q2_member_image: field_q2_member_image
+  field_q2_member_image: field_q2_member_image
   field_q2_member_title: field_q2_member_title
   field_metatags: field_metatags
   field_q2_member_nmls: field_q2_member_nmls

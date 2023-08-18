@@ -1,8 +1,8 @@
 langcode: en
 status: true
 dependencies: {}
-id: migrate_paragraph_featured_product
-label: Custom Rate Item paragraph bundle migration from Trabian Site
+id: migrate_paragraph_banner_item
+label: Custom Banner Item paragraph bundle migration from Trabian Site
 migration_group: htlf
 migration_tags:
   - 'Drupal 8'
@@ -11,7 +11,7 @@ migration_tags:
 source:
   plugin: d8_entity
   key: migrate
-  bundle: featured_product
+  bundle: banner_item
   entity_type: paragraph
 destination: 
   plugin: 'entity_reference_revisions:paragraph'
@@ -44,14 +44,15 @@ process:
   parent_field_name: parent_field_name
   behavior_settings: behavior_settings
   ##### Start Custom Fields ######
-  field_admin_title: field_q2_admin_title
-  field_background: field_q2_background
-  field_image: field_q2_image
+  field_alignment: field_q2_alignment
+  field_banner_height: field_q2_banner_height
+  field_textarea_plain: field_q2_textarea_plain
   field_button: field_q2_button
   field_aria_label: field_q2_aria_label
-  field_textarea: field_q2_textarea
-  field_alignment: field_q2_alignment
-  field_gutter: field_q2_gutter
+  field_image: field_q2_image
+  field_image_secondary: field_q2_image_secondary
+  field_overlay: field_q2_overlay
+  field_text: field_q2_text
 migration_dependencies:
   required: {}
   optional: {}
