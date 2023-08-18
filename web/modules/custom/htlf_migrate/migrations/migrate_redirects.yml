@@ -9,8 +9,9 @@ migration_tags:
   - HTLF
   - Files
 source:
-  plugin: htlf_node_redirect_from_path
+  plugin: d8_entity
   key: migrate
+  entity_type: redirect
   constants:
     prefix: node
 process:

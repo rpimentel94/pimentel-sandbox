@@ -41,4 +41,5 @@ Results as of 8/18/2023
   HTLF (htlf)   migrate_paragraph_grid_item                 Idle     1948    0          1948          0                                    
   HTLF (htlf)   migrate_node_location                       Idle     330     0          330           0                                    
   HTLF (htlf)   migrate_paragraph_grid                      Idle     487     0          487           0                                    
+  HTLF (htlf)   migrate_redirects                           Idle     1342    0          1342          0                                    
  ------------- ------------------------------------------- -------- ------- ---------- ------------- --------------- --------------------- 
