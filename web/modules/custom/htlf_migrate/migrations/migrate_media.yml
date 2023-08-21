@@ -13,6 +13,11 @@ source:
   key: migrate # Our Drupal 8 source database name.
   entity_type: file
 process:
+  mid:
+    -
+      plugin: get
+      source: mid
+  vid: vid
   name:
     -
       plugin: get
@@ -25,9 +30,6 @@ process:
     -
       plugin: skip_on_empty
       method: row
-  field_media_document: '@_file'
-  field_media_video_file: '@_file'
-  field_media_image: '@_file'
   status:
     -
       plugin: get

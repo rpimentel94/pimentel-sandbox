@@ -46,16 +46,18 @@ process:
   field_domain_access: field_domain_access
   field_domain_all_affiliates: field_domain_all_affiliates
   ####### Start Custom Fields ######
-  field_q2_additional_links: field_q2_additional_links
-  field_q2_bio: field_q2_bio
-  field_q2_email: field_q2_email
-  field_q2_member_button: field_q2_member_button
-  field_q2_member_group: field_q2_member_group
-  field_q2_member_image: field_q2_member_image
-  field_q2_member_title: field_q2_member_title
+  field_additional_links: field_q2_additional_links
+  field_bio: field_q2_bio
+  field_email: field_q2_email
+  field_member_button: field_q2_member_button
+  field_member_group: field_q2_member_group
+  ##field_member_image: field_q2_member_image
+  field_member_title: field_q2_member_title
   field_metatags: field_metatags
-  field_q2_member_nmls: field_q2_member_nmls
-  field_q2_phone: field_q2_phone
+  field_member_nmls: field_q2_member_nmls
+  field_phone: field_q2_phone
+  ### Start Section for Paragraph & Media References ###
+  field_member_image: member_image
 migration_dependencies:
   optional: { }
   required: { }

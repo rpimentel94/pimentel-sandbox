@@ -55,6 +55,11 @@ process:
   #field_sidebar: field_q2_sidebar
   field_sidebar_enabled: field_q2_sidebar_enabled
   field_subtitle: field_q2_subtitle
+  ### Start Section for Paragraph & Media References ###
+  field_internal_banner_image/target_id:
+    plugin: migration_lookup
+    migration: migrate_media
+    source: id
 migration_dependencies:
   optional: { }
   required: { }

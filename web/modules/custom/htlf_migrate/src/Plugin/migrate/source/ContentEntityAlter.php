@@ -12,6 +12,8 @@ use Drupal\migrate\Plugin\migrate\source\SqlBase;
 use Drupal\migrate\Plugin\MigrationInterface;
 use Drupal\migrate\Row;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\media\Entity\Media;
+use Drupal\file\Entity\File;
 
 /**
  * Base class for D8 source plugins to collect field values from Field API.
@@ -316,7 +318,42 @@ class ContentEntityAlter extends SqlBase {
       $row->setSourceProperty('uid', 1);
     }
 
+    $result = $this->getDatabase()->query('
+      SELECT
+        fld.field_q2_member_image_target_id,
+        f.thumbnail__target_id
+      FROM
+        {node__field_q2_member_image} fld
+      JOIN
+        {media_field_data} f 
+      ON 
+        fld.field_q2_member_image_target_id = f.mid
+      WHERE
+        fld.entity_id = :nid
+    ', array(':nid' => $nid));
+
+    if ($result) {
+      foreach ($result as $record) {
+        $media_entity = Media::load($this->getNewMediaId($record->thumbnail__target_id));
+        \Drupal::logger('my_module')->debug('<pre><code>' . print_r($media_entity, TRUE) . '</code></pre>');
+      }
+    }
+
     return parent::prepareRow($row);
+  }
+
+  public function getNewMediaId($id) {
+    $query = \Drupal::entityQuery('media')
+      ->condition('thumbnail__target_id', $id)
+      ->accessCheck(TRUE);
+    $results = $query->execute();
+
+    if ($results) {
+      foreach ($results as $record) {
+        $mid = $record->mid;
+      }
+      return $mid;
+    }
   }
 
   /**

@@ -15,6 +15,10 @@ source:
   constants:
     source_base_path: 'https://pimentel-sandbox.lndo.site/'
 process:
+  fid:
+    -
+      plugin: get
+      source: fid
   filename:
     -
       plugin: get
