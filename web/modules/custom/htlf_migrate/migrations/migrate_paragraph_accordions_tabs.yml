@@ -50,10 +50,7 @@ process:
   field_gutter: field_q2_gutter
   field_section_width: field_q2_section_width
   ### Start Section for Paragraph References ###
-  field_accordion_tab_item:
-    plugin: migration_lookup
-    migration: migrate_paragraph_accordions_tab_item
-    source: id
+  field_accordion_tab_item: field_q2_accordion_tab_item
 
 migration_dependencies:
   required: {}

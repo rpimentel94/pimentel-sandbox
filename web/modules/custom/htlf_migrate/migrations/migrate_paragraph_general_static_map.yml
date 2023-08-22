@@ -47,10 +47,7 @@ process:
   field_admin_title: field_q2_admin_title
   field_textarea: field_q2_textarea
   ### Start Section for Paragraph References ###
-  field_image/target_id:
-    plugin: migration_lookup
-    migration: migrate_media
-    source: id
+  field_image: image
 
 migration_dependencies:
   required: {}

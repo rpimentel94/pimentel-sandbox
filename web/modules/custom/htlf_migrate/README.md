@@ -4,6 +4,9 @@ function mymodule_uninstall() {
 
 lando drush migrate-upgrade --legacy-db-key=migrate --legacy-root=https://htlf.ddev.site:8443/
 
+Notes:
+Direct Paragraph Relations are 1:1, there is no need to do a migration_look up
+
 
 Results as of 8/18/2023
 

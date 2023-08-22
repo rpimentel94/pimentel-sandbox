@@ -48,12 +48,11 @@ process:
   field_background_color: field_q2_background_color
   field_display_admin_title: field_q2_display_admin_title
   field_gutter: field_q2_gutter
+  field_rate_item: field_q2_rate_item
   ### Start Section for Paragraph References ###
-  field_rate_item:
-    plugin: migration_lookup
-    migration: migrate_paragraph_rate_item
-    source: id
 
 migration_dependencies:
-  required: {}
+  required:
+      -
+        migrate_paragraph_rate_item
   optional: {}

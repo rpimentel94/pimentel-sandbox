@@ -47,7 +47,6 @@ process:
   field_admin_title: field_q2_admin_title
   field_alignment: field_q2_alignment
   field_background: field_q2_background
-  field_image_secondary: field_q2_image_secondary
   field_gutter: field_q2_gutter
   field_button: field_q2_button
   field_aria_label: field_q2_aria_label
@@ -55,10 +54,7 @@ process:
   field_icon_type: field_q2_icon_type
   field_text: field_q2_text
   ### Start Section for Paragraph & Media References ###
-  field_image/target_id:
-    plugin: migration_lookup
-    migration: migrate_media
-    source: id
+  field_image: image
   field_image_secondary/target_id:
     plugin: migration_lookup
     migration: migrate_media

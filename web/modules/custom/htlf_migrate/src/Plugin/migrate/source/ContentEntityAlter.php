@@ -23,7 +23,8 @@ use Drupal\file\Entity\File;
  *   source_provider = "htlf_migrate"
  * )
  */
-class ContentEntityAlter extends SqlBase {
+class ContentEntityAlter extends SqlBase
+{
 
   /**
    * The entity type manager.
@@ -49,7 +50,8 @@ class ContentEntityAlter extends SqlBase {
   /**
    * {@inheritdoc}
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, MigrationInterface $migration, StateInterface $state, EntityTypeManagerInterface $entity_type_manager, EntityFieldManagerInterface $entity_field_manager) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, MigrationInterface $migration, StateInterface $state, EntityTypeManagerInterface $entity_type_manager, EntityFieldManagerInterface $entity_field_manager)
+  {
     if (empty($configuration['entity_type'])) {
       throw new InvalidPluginDefinitionException($plugin_id, 'Missing required entity_type definition');
     }
@@ -61,7 +63,8 @@ class ContentEntityAlter extends SqlBase {
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition, MigrationInterface $migration = NULL) {
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition, MigrationInterface $migration = NULL)
+  {
     return new static(
       $configuration,
       $plugin_id,
@@ -88,7 +91,8 @@ class ContentEntityAlter extends SqlBase {
    * @return array[]
    *   The field instances, keyed by field name.
    */
-  protected function getFields($entity_type, $bundle = NULL) {
+  protected function getFields($entity_type, $bundle = NULL)
+  {
     $fieldConfig = $this->select('config', 'c')
       ->fields('c')
       ->condition('name', 'field.field.' . $entity_type . '.%', 'LIKE')
@@ -105,8 +109,7 @@ class ContentEntityAlter extends SqlBase {
         // if it isn't configured.
         if ($bundle && $data['bundle'] == $bundle) {
           $fields[$data['field_name']] = $data;
-        }
-        else {
+        } else {
           $fields[$data['field_name']] = $data;
         }
       }
@@ -143,7 +146,8 @@ class ContentEntityAlter extends SqlBase {
    *
    * @todo Support multilingual field values.
    */
-  protected function getFieldValues($entity_type, $field_name, $entity_id, $revision_id = NULL) {
+  protected function getFieldValues($entity_type, $field_name, $entity_id, $revision_id = NULL)
+  {
     $table = $this->getDedicatedDataTableName($entity_type, $field_name);
 
     $query = $this->select($table, 't')
@@ -185,7 +189,8 @@ class ContentEntityAlter extends SqlBase {
    * @return string
    *   The table name string.
    */
-  protected function getDedicatedDataTableName($entityType, $field_name, $revision = FALSE) {
+  protected function getDedicatedDataTableName($entityType, $field_name, $revision = FALSE)
+  {
     $separator = $revision ? '_revision__' : '__';
     $tableName = $entityType . $separator . $field_name;
 
@@ -202,8 +207,7 @@ class ContentEntityAlter extends SqlBase {
       if ($fieldDefinitionData) {
         $data = unserialize($fieldDefinitionData);
         $uuid = $data['uuid'];
-      }
-      else {
+      } else {
         throw new MigrateException(sprintf('Missing field storage config for field %s', $field_name));
       }
 
@@ -217,7 +221,8 @@ class ContentEntityAlter extends SqlBase {
   /**
    * {@inheritdoc}
    */
-  public function query() {
+  public function query()
+  {
     $entityDefinition = $this->entityTypeManager->getDefinition($this->configuration['entity_type']);
     $idKey = $entityDefinition->getKey('id');
     $bundleKey = $entityDefinition->getKey('bundle');
@@ -232,8 +237,7 @@ class ContentEntityAlter extends SqlBase {
       if (!empty($this->configuration['bundle'])) {
         $query->condition("d.{$bundleKey}", $this->configuration['bundle']);
       }
-    }
-    else {
+    } else {
       $query = $this->select($baseTable, 'b')
         ->fields('b');
       if (!empty($this->configuration['bundle'])) {
@@ -248,7 +252,8 @@ class ContentEntityAlter extends SqlBase {
   /**
    * {@inheritdoc}
    */
-  public function fields() {
+  public function fields()
+  {
     $fieldDefinitions = $this->entityFieldManager->getBaseFieldDefinitions($this->configuration['entity_type']);
     $fields = [];
     foreach ($fieldDefinitions as $fieldName => $definition) {
@@ -260,7 +265,8 @@ class ContentEntityAlter extends SqlBase {
   /**
    * {@inheritdoc}
    */
-  public function prepareRow(Row $row) {
+  public function prepareRow(Row $row)
+  {
     $entityType = $this->configuration['entity_type'];
     $bundleType = $this->configuration['bundle'];
     // Get Field API field values.
@@ -296,33 +302,12 @@ class ContentEntityAlter extends SqlBase {
 
     if ($body_result) {
       foreach ($body_result as $record) {
-        $row->setSourceProperty('body_value', $record->body_value );
-        $row->setSourceProperty('body_summary', $record->body_summary );
-        $row->setSourceProperty('body_format', $record->body_format );
+        $row->setSourceProperty('body_value', $record->body_value);
+        $row->setSourceProperty('body_summary', $record->body_summary);
+        $row->setSourceProperty('body_format', $record->body_format);
       }
     }
 
-    $image_result = $this->getDatabase()->query('
-      SELECT
-        fld.field_q2_image_target_id,
-        f.thumbnail__target_id
-      FROM
-        {node__field_q2_image} fld
-      JOIN
-        {media_field_data} f 
-      ON 
-        fld.field_q2_image_target_id = f.mid
-      WHERE
-        fld.entity_id = :nid
-    ', array(':nid' => $nid));
-
-    if ($image_result) {
-      foreach ($image_result as $record) {
-        $media = $this->getNewMediaId($record->thumbnail__target_id) ?: NULL;
-        $row->setSourceProperty('image', $media->mid);
-      }
-    }
-    
     $author_result = $this->getDatabase()->query('
       SELECT
         fld.uid
@@ -409,10 +394,58 @@ class ContentEntityAlter extends SqlBase {
       }
     }
 
+    if ($entityType = "paragraph") {
+      $nid = $row->getSourceProperty('id');
+      //\Drupal::logger('my_module')->debug('<pre><code>' . print_r($nid, TRUE) . '</code></pre>');
+
+      $image_result = $this->getDatabase()->query('
+        SELECT
+          fld.field_q2_image_target_id,
+          f.thumbnail__target_id
+        FROM
+          {paragraph__field_q2_image} fld
+        JOIN
+          {media_field_data} f 
+        ON 
+          fld.field_q2_image_target_id = f.mid
+        WHERE
+          fld.entity_id = :nid
+      ', array(':nid' => $nid));
+
+      if ($image_result) {
+        foreach ($image_result as $record) {
+          $media = $this->getNewMediaId($record->thumbnail__target_id) ?: NULL;
+          $row->setSourceProperty('image', $media->mid);
+        }
+      }
+    } else {
+      $image_result = $this->getDatabase()->query('
+      SELECT
+        fld.field_q2_image_target_id,
+        f.thumbnail__target_id
+      FROM
+        {node__field_q2_image} fld
+      JOIN
+        {media_field_data} f 
+      ON 
+        fld.field_q2_image_target_id = f.mid
+      WHERE
+        fld.entity_id = :nid
+    ', array(':nid' => $nid));
+
+      if ($image_result) {
+        foreach ($image_result as $record) {
+          $media = $this->getNewMediaId($record->thumbnail__target_id) ?: NULL;
+          $row->setSourceProperty('image', $media->mid);
+        }
+      }
+    }
+
     return parent::prepareRow($row);
   }
 
-  public function getNewMediaId($id) {
+  public function getNewMediaId($id)
+  {
     $database = \Drupal::database();
     $query = $database->query("SELECT * FROM {media_field_data} WHERE thumbnail__target_id = :target_id", [':target_id' => $id,]);
     $media = $query->fetchAll();
@@ -426,7 +459,8 @@ class ContentEntityAlter extends SqlBase {
   /**
    * {@inheritdoc}
    */
-  public function getIds() {
+  public function getIds()
+  {
     $entityDefinition = $this->entityTypeManager->getDefinition($this->configuration['entity_type']);
     $idKey = $entityDefinition->getKey('id');
     $ids[$idKey] = $this->getDefinitionFromEntity($idKey);
@@ -452,7 +486,8 @@ class ContentEntityAlter extends SqlBase {
    *
    * @see \Drupal\migrate\Plugin\migrate\destination\EntityContentBase::getDefinitionFromEntity()
    */
-  protected function getDefinitionFromEntity($key) {
+  protected function getDefinitionFromEntity($key)
+  {
     /** @var \Drupal\Core\Field\FieldStorageDefinitionInterface[] $fieldDefinitions */
     $fieldDefinitions = $this->entityFieldManager->getBaseFieldDefinitions($this->configuration['entity_type']);
     $fieldDefinition = $fieldDefinitions[$key];
@@ -475,7 +510,8 @@ class ContentEntityAlter extends SqlBase {
    *   Return TRUE if the given base field definition should be migrated; FALSE
    *   otherwise.
    */
-  protected function shouldMigrateBaseFieldDefinition($fieldName, $definition) {
+  protected function shouldMigrateBaseFieldDefinition($fieldName, $definition)
+  {
     return $definition instanceof FieldStorageDefinitionInterface
       && $definition->isMultiple()
       && ($definition->isComputed() === FALSE);

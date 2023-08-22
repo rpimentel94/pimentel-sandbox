@@ -49,10 +49,7 @@ process:
   field_random: field_q2_random
   field_integer: field_q2_integer
   ### Start Section for Paragraph References ###
-  field_banner_item:
-    plugin: migration_lookup
-    migration: migrate_paragraph_banner_item
-    source: id
+  field_banner_item: field_q2_banner_item
 
 migration_dependencies:
   required: {}

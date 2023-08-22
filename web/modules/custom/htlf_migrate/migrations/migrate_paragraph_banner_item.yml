@@ -9,7 +9,7 @@ migration_tags:
   - HTLF
   - Files
 source:
-  plugin: d8_entity
+  plugin: d8_entity_alter
   key: migrate
   bundle: banner_item
   entity_type: paragraph
@@ -49,11 +49,12 @@ process:
   field_textarea_plain: field_q2_textarea_plain
   field_button: field_q2_button
   field_aria_label: field_q2_aria_label
-  field_image: field_q2_image
-  field_image_secondary: field_q2_image_secondary
   field_overlay: field_q2_overlay
   field_text: field_q2_text
   ### Start Section for Paragraph & Media References ###
+  field_image: image
+  field_image_secondary: second_image
+
 migration_dependencies:
   required: {}
   optional: {}

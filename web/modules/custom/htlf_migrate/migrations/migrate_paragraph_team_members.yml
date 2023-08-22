@@ -1,7 +1,7 @@
 langcode: en
 status: true
 dependencies: {}
-id: migrate_paragraph_team_member
+id: migrate_paragraph_team_members
 label: Custom Team Member paragraph bundle migration from Trabian Site
 migration_group: htlf
 migration_tags:
@@ -11,7 +11,7 @@ migration_tags:
 source:
   plugin: d8_entity
   key: migrate
-  bundle: team_member
+  bundle: team_members
   entity_type: paragraph
 destination: 
   plugin: 'entity_reference_revisions:paragraph'

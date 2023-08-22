@@ -51,10 +51,7 @@ process:
   field_num_cols: field_q2_num_cols
   field_gutter: field_q2_gutter
   ### Start Section for Paragraph References ###
-  field_grid_item:
-    plugin: migration_lookup
-    migration: migrate_paragraph_grid_item
-    source: id
+  field_grid_item: field_q2_grid_item
 
 migration_dependencies:
   required: {}

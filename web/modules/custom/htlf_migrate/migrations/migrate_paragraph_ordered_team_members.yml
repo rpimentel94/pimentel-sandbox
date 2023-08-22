@@ -51,11 +51,8 @@ process:
   field_num_cols: field_q2_num_cols
   field_gutter: field_q2_gutter
   field_team_styling: field_q2_team_styling
+  field_team_members: field_team_members
   ### Start Section for Paragraph References ###
-  field_team_members:
-    plugin: migration_lookup
-    migration: migrate_team_members
-    source: id
 
 
 migration_dependencies:

@@ -51,10 +51,7 @@ process:
   field_text: field_q2_text
   field_icon_type: field_q2_icon_type
   ### Start Section for Paragraph References ###
-  field_image/target_id:
-    plugin: migration_lookup
-    migration: migrate_media
-    source: id
+  field_image: image
 
 migration_dependencies:
   required: {}

@@ -52,10 +52,7 @@ process:
   field_text_secondary: field_q2_text_secondary
   field_gutter: field_q2_gutter
   ### Start Section for Paragraph & Media References ###
-  field_image/target_id:
-    plugin: migration_lookup
-    migration: migrate_media
-    source: id
+  field_image: image
 migration_dependencies:
   required: {}
   optional: {}
