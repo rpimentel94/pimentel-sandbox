@@ -302,6 +302,27 @@ class ContentEntityAlter extends SqlBase {
       }
     }
 
+    $image_result = $this->getDatabase()->query('
+      SELECT
+        fld.field_q2_image_target_id,
+        f.thumbnail__target_id
+      FROM
+        {node__field_q2_image} fld
+      JOIN
+        {media_field_data} f 
+      ON 
+        fld.field_q2_image_target_id = f.mid
+      WHERE
+        fld.entity_id = :nid
+    ', array(':nid' => $nid));
+
+    if ($image_result) {
+      foreach ($image_result as $record) {
+        $media = $this->getNewMediaId($record->thumbnail__target_id) ?: NULL;
+        $row->setSourceProperty('image', $media->mid);
+      }
+    }
+    
     $author_result = $this->getDatabase()->query('
       SELECT
         fld.uid
@@ -361,6 +382,29 @@ class ContentEntityAlter extends SqlBase {
         foreach ($image_result as $record) {
           $media = $this->getNewMediaId($record->thumbnail__target_id) ?: NULL;
           $row->setSourceProperty('location_image', $media->mid);
+        }
+      }
+    }
+
+    if ($bundleType = "page") {
+      $image_result = $this->getDatabase()->query('
+        SELECT
+          fld.field_q2_internal_banner_image_target_id,
+          f.thumbnail__target_id
+        FROM
+          {node__field_q2_internal_banner_image} fld
+        JOIN
+          {media_field_data} f 
+        ON 
+          fld.field_q2_internal_banner_image_target_id = f.mid
+        WHERE
+          fld.entity_id = :nid
+      ', array(':nid' => $nid));
+
+      if ($image_result) {
+        foreach ($image_result as $record) {
+          $media = $this->getNewMediaId($record->thumbnail__target_id) ?: NULL;
+          $row->setSourceProperty('internal_banner_image', $media->mid);
         }
       }
     }

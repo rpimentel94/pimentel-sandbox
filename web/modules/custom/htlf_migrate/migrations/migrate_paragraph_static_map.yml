@@ -1,8 +1,8 @@
 langcode: en
 status: true
 dependencies: {}
-id: migrate_paragraph_team_member
-label: Custom Team Member paragraph bundle migration from Trabian Site
+id: migrate_paragraph_static_map
+label: Custom Static Map paragraph bundle migration from Trabian Site
 migration_group: htlf
 migration_tags:
   - 'Drupal 8'
@@ -11,7 +11,7 @@ migration_tags:
 source:
   plugin: d8_entity
   key: migrate
-  bundle: team_member
+  bundle: static_map
   entity_type: paragraph
 destination: 
   plugin: 'entity_reference_revisions:paragraph'
@@ -45,19 +45,9 @@ process:
   behavior_settings: behavior_settings
   ##### Start Custom Fields ######
   field_admin_title: field_q2_admin_title
-  field_background: field_q2_background
-  field_display_admin_title: field_q2_display_admin_title
-  field_display_bio: field_q2_display_bio
-  field_display_button: field_q2_display_button
-  field_display_image: field_q2_display_image
-  field_display_links: field_q2_display_links
-  field_display_title: field_q2_display_title
-  field_image_orientation: field_q2_image_orientation
-  field_num_cols: field_q2_num_cols
-  field_gutter: field_q2_gutter
-  field_team_member_group: field_q2_team_member_group
+  field_textarea: field_q2_textarea
   ### Start Section for Paragraph References ###
-
+  field_image: image
 
 migration_dependencies:
   required: {}
