@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.team_members.body
     - field.field.node.team_members.field_additional_links
     - field.field.node.team_members.field_bio
     - field.field.node.team_members.field_domain_access
@@ -28,13 +27,6 @@ targetEntityType: node
 bundle: team_members
 mode: default
 content:
-  body:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 101
-    region: content
   field_additional_links:
     type: link
     label: above
