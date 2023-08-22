@@ -9,7 +9,7 @@ migration_tags:
   - HTLF
   - Files
 source:
-  plugin: d8_entity
+  plugin: d8_entity_alter
   key: migrate
   bundle: call_to_action
   entity_type: paragraph
@@ -55,10 +55,7 @@ process:
   field_text: field_q2_text
   ### Start Section for Paragraph & Media References ###
   field_image: image
-  field_image_secondary/target_id:
-    plugin: migration_lookup
-    migration: migrate_media
-    source: id
+  field_image_secondary: second_image
 
 migration_dependencies:
   required: {}

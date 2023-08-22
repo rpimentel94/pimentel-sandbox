@@ -48,12 +48,12 @@ process:
   ####### Start Custom Fields ######
   field_blog_category: field_q2_blog_category
   field_blog_content: field_q2_blog_content
-  #field_content_sections: field_q2_content_sections
+  field_content_sections: field_q2_content_sections
   field_blog_image: field_q2_blog_image
   field_internal_banner_image: field_q2_internal_banner_image
   field_metatags: field_metatags
-  #field_middle_section: field_q2_middle_sections
-  #field_sidebar: field_q2_sidebar
+  field_middle_section: field_q2_middle_sections
+  field_sidebar: field_q2_sidebar
   field_blog_tags: field_q2_blog_tags
   field_blog_time: field_q2_blog_time
 migration_dependencies:

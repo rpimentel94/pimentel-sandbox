@@ -50,7 +50,6 @@ process:
   field_location_fax: field_q2_location_fax
   field_location_geocode: field_q2_location_geocode
   field_location_hours: field_q2_location_hours
-  ##field_location_image: field_q2_location_image
   field_metatags: field_metatags
   field_location_content: field_q2_location_content
   field_location_phone: field_q2_location_phone

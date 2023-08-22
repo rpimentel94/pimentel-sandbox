@@ -418,6 +418,28 @@ class ContentEntityAlter extends SqlBase
           $row->setSourceProperty('image', $media->mid);
         }
       }
+
+      $image_result = $this->getDatabase()->query('
+        SELECT
+          fld.field_q2_image_secondary_target_id,
+          f.thumbnail__target_id
+        FROM
+          {paragraph__field_q2_image_secondary} fld
+        JOIN
+          {media_field_data} f 
+        ON 
+          fld.field_q2_image_secondary_target_id = f.mid
+        WHERE
+          fld.entity_id = :nid
+      ', array(':nid' => $nid));
+
+      if ($image_result) {
+        foreach ($image_result as $record) {
+          $media = $this->getNewMediaId($record->thumbnail__target_id) ?: NULL;
+          $row->setSourceProperty('second_image', $media->mid);
+        }
+      }
+
     } else {
       $image_result = $this->getDatabase()->query('
       SELECT

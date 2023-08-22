@@ -9,7 +9,7 @@ migration_tags:
   - HTLF
   - Files
 source:
-  plugin: d8_entity
+  plugin: d8_entity_alter
   key: migrate
   bundle: featured_product
   entity_type: paragraph

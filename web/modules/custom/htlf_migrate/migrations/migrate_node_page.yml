@@ -47,12 +47,11 @@ process:
   field_domain_all_affiliates: field_domain_all_affiliates
   ####### Start Custom Fields ######
   field_banner_height: field_q2_banner_height
-  #field_content_sections: field_q2_content_sections
+  field_content_sections: field_q2_content_sections
   field_disable_banner: field_q2_disable_banner
-  #field_internal_banner_image: field_q2_internal_banner_image
   field_metatags: field_metatags
-  #field_middle_section: field_q2_middle_sections
-  #field_sidebar: field_q2_sidebar
+  field_middle_section: field_q2_middle_sections
+  field_sidebar: field_q2_sidebar
   field_sidebar_enabled: field_q2_sidebar_enabled
   field_subtitle: field_q2_subtitle
   ### Start Section for Paragraph & Media References ###
