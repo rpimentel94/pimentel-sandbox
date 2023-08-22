@@ -262,6 +262,7 @@ class ContentEntityAlter extends SqlBase {
    */
   public function prepareRow(Row $row) {
     $entityType = $this->configuration['entity_type'];
+    $bundleType = $this->configuration['bundle'];
     // Get Field API field values.
     if (!$this->bundleFields) {
       $this->bundleFields = $this->getFields($entityType, $this->configuration['bundle']);
@@ -282,7 +283,7 @@ class ContentEntityAlter extends SqlBase {
     // Creating Alter for Body field
     $nid = $row->getSourceProperty('nid');
     // body (compound field with value, summary, and format)
-    $result = $this->getDatabase()->query('
+    $body_result = $this->getDatabase()->query('
       SELECT
         fld.body_value,
         fld.body_summary,
@@ -293,15 +294,15 @@ class ContentEntityAlter extends SqlBase {
         fld.entity_id = :nid
     ', array(':nid' => $nid));
 
-    if ($result) {
-      foreach ($result as $record) {
+    if ($body_result) {
+      foreach ($body_result as $record) {
         $row->setSourceProperty('body_value', $record->body_value );
         $row->setSourceProperty('body_summary', $record->body_summary );
         $row->setSourceProperty('body_format', $record->body_format );
       }
     }
 
-    $result = $this->getDatabase()->query('
+    $author_result = $this->getDatabase()->query('
       SELECT
         fld.uid
       FROM
@@ -310,32 +311,57 @@ class ContentEntityAlter extends SqlBase {
         fld.nid = :nid
     ', array(':nid' => $nid));
 
-    if ($result) {
-      foreach ($result as $record) {
+    if ($author_result) {
+      foreach ($author_result as $record) {
         $row->setSourceProperty('uid', $record->uid);
       }
     } else {
       $row->setSourceProperty('uid', 1);
     }
 
-    $result = $this->getDatabase()->query('
-      SELECT
-        fld.field_q2_member_image_target_id,
-        f.thumbnail__target_id
-      FROM
-        {node__field_q2_member_image} fld
-      JOIN
-        {media_field_data} f 
-      ON 
-        fld.field_q2_member_image_target_id = f.mid
-      WHERE
-        fld.entity_id = :nid
-    ', array(':nid' => $nid));
+    if ($bundleType = "team_member") {
+      $image_result = $this->getDatabase()->query('
+        SELECT
+          fld.field_q2_member_image_target_id,
+          f.thumbnail__target_id
+        FROM
+          {node__field_q2_member_image} fld
+        JOIN
+          {media_field_data} f 
+        ON 
+          fld.field_q2_member_image_target_id = f.mid
+        WHERE
+          fld.entity_id = :nid
+      ', array(':nid' => $nid));
 
-    if ($result) {
-      foreach ($result as $record) {
-        $media_entity = Media::load($this->getNewMediaId($record->thumbnail__target_id));
-        \Drupal::logger('my_module')->debug('<pre><code>' . print_r($media_entity, TRUE) . '</code></pre>');
+      if ($image_result) {
+        foreach ($image_result as $record) {
+          $media = $this->getNewMediaId($record->thumbnail__target_id) ?: NULL;
+          $row->setSourceProperty('member_image', $media->mid);
+        }
+      }
+    }
+
+    if ($bundleType = "location") {
+      $image_result = $this->getDatabase()->query('
+        SELECT
+          fld.field_q2_location_image_target_id,
+          f.thumbnail__target_id
+        FROM
+          {node__field_q2_location_image} fld
+        JOIN
+          {media_field_data} f 
+        ON 
+          fld.field_q2_location_image_target_id = f.mid
+        WHERE
+          fld.entity_id = :nid
+      ', array(':nid' => $nid));
+
+      if ($image_result) {
+        foreach ($image_result as $record) {
+          $media = $this->getNewMediaId($record->thumbnail__target_id) ?: NULL;
+          $row->setSourceProperty('location_image', $media->mid);
+        }
       }
     }
 
@@ -343,16 +369,13 @@ class ContentEntityAlter extends SqlBase {
   }
 
   public function getNewMediaId($id) {
-    $query = \Drupal::entityQuery('media')
-      ->condition('thumbnail__target_id', $id)
-      ->accessCheck(TRUE);
-    $results = $query->execute();
-
-    if ($results) {
-      foreach ($results as $record) {
-        $mid = $record->mid;
+    $database = \Drupal::database();
+    $query = $database->query("SELECT * FROM {media_field_data} WHERE thumbnail__target_id = :target_id", [':target_id' => $id,]);
+    $media = $query->fetchAll();
+    if ($media) {
+      foreach ($media as $record) {
+        return $record;
       }
-      return $mid;
     }
   }
 

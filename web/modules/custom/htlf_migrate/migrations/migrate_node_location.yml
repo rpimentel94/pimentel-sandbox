@@ -57,10 +57,7 @@ process:
   field_location_services: field_q2_location_services
   field_location_type: field_q2_location_type
   ### Start Section for Paragraph & Media References ###
-  field_location_image/target_id:
-    plugin: migration_lookup
-    migration: migrate_media
-    source: id
+  field_location_image: location_image
 migration_dependencies:
   optional: { }
   required:
