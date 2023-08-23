@@ -1,0 +1,8 @@
+uuid: ebd00402-7b79-4cf7-8b0c-0325a9a3a9fa
+langcode: en
+status: true
+dependencies: {  }
+id: main-pwm
+label: 'Main Menu PrimeWest'
+description: ''
+locked: false
