@@ -33,6 +33,29 @@ process:
   field_media_document: '@_file'
   field_media_video_file: '@_file'
   field_media_image: '@_file'
+  thumbnail/target_id: thumbnail__target_id
+  thumbnail/alt: thumbnail__alt
+  thumbnail/title: thumbnail__title
+  thumbnail/width: thumbnail__width
+  thumbnail/height: thumbnail__height
+
+  field_media_image/alt: field_media_image/alt
+  field_media_image/title: field_media_image/title
+  field_media_image/width: field_media_image/width
+  field_media_image/height: field_media_image/height
+
+  field_media_svg/alt: field_media_svg/alt
+  field_media_svg/title: field_media_svg/title
+
+  field_media_document/display: field_media_document/display
+  field_media_document/description: field_media_document/description
+
+  field_media_file_csv/display: field_media_file_csv/display
+  field_media_file_csv/description: field_media_file_csv/description
+
+  field_media_file/display: field_media_file/display
+  field_media_file/description: field_media_file/description
+
   status:
     -
       plugin: get
