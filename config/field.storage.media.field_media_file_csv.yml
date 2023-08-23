@@ -1,0 +1,25 @@
+uuid: 44171549-cc9b-4673-a8c6-22d3923d24ea
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - media
+_core:
+  default_config_hash: LZRB7s2Jzop48Pn3k05RmbCkapJYe1U5w8EbnFLmK3M
+id: media.field_media_file_csv
+field_name: field_media_file_csv
+entity_type: media
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

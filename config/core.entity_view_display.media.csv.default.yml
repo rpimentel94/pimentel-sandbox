@@ -1,0 +1,29 @@
+uuid: 3b719913-1400-4184-baae-2b3adb6a22d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.csv.field_media_file_csv
+    - media.type.csv
+_core:
+  default_config_hash: R4Q8kou2kAqFlyRmAzrz-oGO3xqPEZqwfPkzrqalxdw
+id: media.csv.default
+targetEntityType: media
+bundle: csv
+mode: default
+content:
+  field_media_file_1:
+    label: visually_hidden
+    weight: 0
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+hidden:
+  created: true
+  field_media_file_csv: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

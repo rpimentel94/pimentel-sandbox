@@ -1,0 +1,40 @@
+uuid: 31958502-de1e-4efc-8472-c7021f7d971a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.csv.field_media_file_csv
+    - image.style.medium
+    - media.type.csv
+  module:
+    - svg_image
+_core:
+  default_config_hash: bR3NZUoCw7sm4NlXp4HJ-ozZMJEYHJhs44YcJXpl0MU
+id: media.csv.media_library
+targetEntityType: media
+bundle: csv
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+      image_loading:
+        attribute: lazy
+    weight: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_media_file_1: true
+  field_media_file_csv: true
+  name: true
+  search_api_excerpt: true
+  uid: true

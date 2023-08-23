@@ -1,0 +1,29 @@
+uuid: 5d70cba2-5c93-4cf6-a40e-959db770394c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_file_csv
+    - media.type.csv
+  module:
+    - file
+_core:
+  default_config_hash: I7N3O0wTGJhiz0K3ZAek47TMICMvuwJNw0Q5GSKUolg
+id: media.csv.field_media_file_csv
+field_name: field_media_file_csv
+entity_type: media
+bundle: csv
+label: 'CSV Token Sheet'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: custom_variable_tokens
+  file_extensions: csv
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file
