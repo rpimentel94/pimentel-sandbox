@@ -8,8 +8,6 @@ dependencies:
     - field.field.user.user.field_domain_admin
     - field.field.user.user.field_domain_all_affiliates
     - field.field.user.user.field_last_password_reset
-    - field.field.user.user.field_migrate_example_favbeers
-    - field.field.user.user.field_migrate_example_gender
     - field.field.user.user.field_password_expiration
     - field.field.user.user.field_pending_expire_sent
     - field.field.user.user.user_picture
@@ -40,8 +38,6 @@ hidden:
   field_domain_admin: true
   field_domain_all_affiliates: true
   field_last_password_reset: true
-  field_migrate_example_favbeers: true
-  field_migrate_example_gender: true
   field_password_expiration: true
   field_pending_expire_sent: true
   member_for: true
