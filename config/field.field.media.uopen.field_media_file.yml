@@ -1,0 +1,27 @@
+uuid: cad7e316-db7e-443d-adb3-40855d3819c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_file
+    - media.type.uopen
+  module:
+    - file
+id: media.uopen.field_media_file
+field_name: field_media_file
+entity_type: media
+bundle: uopen
+label: File
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: uopen
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+field_type: file

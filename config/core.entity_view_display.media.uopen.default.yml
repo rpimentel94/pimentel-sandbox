@@ -1,0 +1,28 @@
+uuid: 35bf167f-ac9a-4294-bcf7-d790826478ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.uopen.field_media_file
+    - media.type.uopen
+  module:
+    - file
+id: media.uopen.default
+targetEntityType: media
+bundle: uopen
+mode: default
+content:
+  field_media_file:
+    type: file_default
+    label: visually_hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true
