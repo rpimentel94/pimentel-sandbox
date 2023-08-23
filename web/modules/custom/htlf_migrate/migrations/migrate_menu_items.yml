@@ -1,0 +1,54 @@
+id: migrate_menu_items
+label: Custom Menu Items migration from Trabian Site
+migration_group: htlf
+migration_tags:
+  - 'Drupal 8'
+  - HTLF
+  - Files
+source:
+  plugin: d8_entity
+  entity_type: menu_link_content
+  key: migrate
+process:
+  skip_translation:
+    plugin: skip_on_empty
+    method: row
+    source: skip_translation
+  id: id
+  revision_id: revision_id
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: und
+  bundle: bundle
+  enable: enabled
+  title: title
+  description: description
+  menu_name: menu_name
+  'link/uri':
+    plugin: link_uri
+    source: link_path
+  'link/options': options
+  route:
+    plugin: route
+    source:
+      - link_path
+      - options
+  route_name: '@route/route_name'
+  route_parameters: '@route/route_parameters'
+  url: '@route/url'
+  options: '@route/options'
+  external: external
+  weight: weight
+  rediscover: rediscover
+  expanded: expanded
+  enabled: enabled
+  parent: parent
+  changed: updated
+  revision_translation_affected: revision_translation_affected
+destination:
+  plugin: entity:menu_link_content
+  no_stub: true
+migration_dependencies:
+  required: {}
+  optional: {}
