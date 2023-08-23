@@ -371,7 +371,7 @@ class ContentEntityAlter extends SqlBase
       }
     }
 
-    if ($bundleType = "page") {
+    if ($bundleType = "page" || $bundleType = "blog_post") {
       $image_result = $this->getDatabase()->query('
         SELECT
           fld.field_q2_internal_banner_image_target_id,
@@ -390,6 +390,27 @@ class ContentEntityAlter extends SqlBase
         foreach ($image_result as $record) {
           $media = $this->getNewMediaId($record->thumbnail__target_id) ?: NULL;
           $row->setSourceProperty('internal_banner_image', $media->mid);
+        }
+      }
+
+      $blog_image_result = $this->getDatabase()->query('
+        SELECT
+          fld.field_q2_blog_image_target_id,
+          f.thumbnail__target_id
+        FROM
+          {node__field_q2_blog_image} fld
+        JOIN
+          {media_field_data} f 
+        ON 
+          fld.field_q2_blog_image_target_id = f.mid
+        WHERE
+          fld.entity_id = :nid
+      ', array(':nid' => $nid));
+
+      if ($image_result) {
+        foreach ($blog_image_result as $record) {
+          $media = $this->getNewMediaId($record->thumbnail__target_id) ?: NULL;
+          $row->setSourceProperty('blog_image', $media->mid);
         }
       }
     }
