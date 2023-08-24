@@ -15,16 +15,18 @@ mode: media_library
 content:
   name:
     type: string_textfield
+    weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
-    weight: 0
     third_party_settings: {  }
-    region: content
 hidden:
   created: true
   field_media_file_1: true
   field_media_file_csv: true
   path: true
+  publish_on: true
   status: true
   uid: true
+  unpublish_on: true
