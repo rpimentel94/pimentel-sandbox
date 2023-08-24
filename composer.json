@@ -39,6 +39,7 @@
         "drupal/domain_theme_switch": "^1.5",
         "drupal/entity_usage": "^2.0@beta",
         "drupal/feeds_tamper": "^2.0@beta",
+        "drupal/field_group": "^3.4",
         "drupal/fontawesome": "^2.26",
         "drupal/geocoder": "^3.34",
         "drupal/gin": "^3.0@RC",
