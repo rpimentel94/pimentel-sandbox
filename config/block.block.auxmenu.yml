@@ -1,4 +1,4 @@
-uuid: b2d64518-4815-4c3d-aaa4-e85ec132273d
+uuid: 5c45ca52-3b59-4cd3-aa0f-27eba1d59954
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ dependencies:
 id: auxmenu
 theme: tailwind
 region: header
-weight: -6
+weight: 0
 provider: null
 plugin: 'system_menu_block:aux-menu'
 settings:
@@ -20,6 +20,6 @@ settings:
   label_display: '0'
   provider: system
   level: 1
-  depth: 0
+  depth: 1
   expand_all_items: false
 visibility: {  }

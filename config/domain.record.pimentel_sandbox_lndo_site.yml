@@ -7,5 +7,5 @@ domain_id: 4424830
 hostname: pimentel-sandbox.lndo.site
 name: 'Ryan''s Sandbox'
 scheme: https
-weight: 1
+weight: -18
 is_default: true

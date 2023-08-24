@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.team_members.field_bio
     - field.field.node.team_members.field_domain_access
     - field.field.node.team_members.field_domain_all_affiliates
-    - field.field.node.team_members.field_domain_source
     - field.field.node.team_members.field_email
     - field.field.node.team_members.field_member_button
     - field.field.node.team_members.field_member_group
@@ -35,7 +34,6 @@ hidden:
   field_bio: true
   field_domain_access: true
   field_domain_all_affiliates: true
-  field_domain_source: true
   field_email: true
   field_member_button: true
   field_member_group: true

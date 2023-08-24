@@ -7,5 +7,5 @@ domain_id: 6558595
 hostname: www.wisconsinbankandtrust.com
 name: 'Wisconsin Bank & Trust, a division of HTLF Bank'
 scheme: https
-weight: -3
+weight: -4
 is_default: false

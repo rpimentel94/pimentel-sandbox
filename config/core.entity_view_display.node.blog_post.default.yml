@@ -12,7 +12,6 @@ dependencies:
     - field.field.node.blog_post.field_content_sections
     - field.field.node.blog_post.field_domain_access
     - field.field.node.blog_post.field_domain_all_affiliates
-    - field.field.node.blog_post.field_domain_source
     - field.field.node.blog_post.field_internal_banner_image
     - field.field.node.blog_post.field_metatags
     - field.field.node.blog_post.field_middle_section
@@ -125,4 +124,3 @@ content:
 hidden:
   field_domain_access: true
   field_domain_all_affiliates: true
-  field_domain_source: true

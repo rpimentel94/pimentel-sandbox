@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.team_members.field_bio
     - field.field.node.team_members.field_domain_access
     - field.field.node.team_members.field_domain_all_affiliates
-    - field.field.node.team_members.field_domain_source
     - field.field.node.team_members.field_email
     - field.field.node.team_members.field_member_button
     - field.field.node.team_members.field_member_group
@@ -62,12 +61,6 @@ content:
     region: content
     settings:
       display_label: true
-    third_party_settings: {  }
-  field_domain_source:
-    type: options_buttons
-    weight: 23
-    region: content
-    settings: {  }
     third_party_settings: {  }
   field_email:
     type: string_textfield

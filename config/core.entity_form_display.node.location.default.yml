@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.location.field_domain_access
     - field.field.node.location.field_domain_all_affiliates
-    - field.field.node.location.field_domain_source
     - field.field.node.location.field_location_address
     - field.field.node.location.field_location_content
     - field.field.node.location.field_location_fax
@@ -46,12 +45,6 @@ content:
     region: content
     settings:
       display_label: true
-    third_party_settings: {  }
-  field_domain_source:
-    type: options_buttons
-    weight: 22
-    region: content
-    settings: {  }
     third_party_settings: {  }
   field_location_address:
     type: address_default
@@ -185,6 +178,11 @@ content:
   unpublish_on:
     type: datetime_timestamp
     weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
     region: content
     settings: {  }
     third_party_settings: {  }

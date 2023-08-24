@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.page.field_disable_banner
     - field.field.node.page.field_domain_access
     - field.field.node.page.field_domain_all_affiliates
-    - field.field.node.page.field_domain_source
     - field.field.node.page.field_internal_banner_image
     - field.field.node.page.field_metatags
     - field.field.node.page.field_middle_section
@@ -45,7 +44,6 @@ hidden:
   field_disable_banner: true
   field_domain_access: true
   field_domain_all_affiliates: true
-  field_domain_source: true
   field_internal_banner_image: true
   field_metatags: true
   field_middle_section: true

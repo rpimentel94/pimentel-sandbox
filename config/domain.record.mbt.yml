@@ -7,5 +7,5 @@ domain_id: 2287229
 hostname: www.mnbankandtrust.com
 name: 'Minnesota Bank & Trust, a division of HTLF Bank'
 scheme: https
-weight: -8
+weight: -9
 is_default: false

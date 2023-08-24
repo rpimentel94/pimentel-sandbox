@@ -7,5 +7,5 @@ domain_id: 14810673
 hostname: www.bankbv.com
 name: 'Bank of Blue Valley, a division of HTLF Bank'
 scheme: https
-weight: -13
+weight: -14
 is_default: false

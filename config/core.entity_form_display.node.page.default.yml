@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.page.field_disable_banner
     - field.field.node.page.field_domain_access
     - field.field.node.page.field_domain_all_affiliates
-    - field.field.node.page.field_domain_source
     - field.field.node.page.field_internal_banner_image
     - field.field.node.page.field_metatags
     - field.field.node.page.field_middle_section
@@ -89,12 +88,6 @@ content:
     region: content
     settings:
       display_label: true
-    third_party_settings: {  }
-  field_domain_source:
-    type: options_select
-    weight: 14
-    region: content
-    settings: {  }
     third_party_settings: {  }
   field_internal_banner_image:
     type: media_library_widget
@@ -221,6 +214,11 @@ content:
   unpublish_on:
     type: datetime_timestamp
     weight: 22
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
     region: content
     settings: {  }
     third_party_settings: {  }

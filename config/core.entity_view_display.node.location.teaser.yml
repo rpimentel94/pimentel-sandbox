@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.location.field_domain_access
     - field.field.node.location.field_domain_all_affiliates
-    - field.field.node.location.field_domain_source
     - field.field.node.location.field_location_address
     - field.field.node.location.field_location_content
     - field.field.node.location.field_location_fax
@@ -33,7 +32,6 @@ content:
 hidden:
   field_domain_access: true
   field_domain_all_affiliates: true
-  field_domain_source: true
   field_location_address: true
   field_location_content: true
   field_location_fax: true

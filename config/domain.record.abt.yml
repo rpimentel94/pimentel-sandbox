@@ -7,5 +7,5 @@ domain_id: 405722
 hostname: www.arizbank.com
 name: 'Arizona Bank & Trust, a division of HTLF Bank'
 scheme: https
-weight: -14
+weight: -15
 is_default: false

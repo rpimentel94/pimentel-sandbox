@@ -7,5 +7,5 @@ domain_id: 1739734
 hostname: sub.pimentel-sandbox.lndo.site
 name: 'Ryan''s Sub Domain Sandbox'
 scheme: https
-weight: 2
+weight: -2
 is_default: false

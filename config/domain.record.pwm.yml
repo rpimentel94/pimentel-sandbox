@@ -7,5 +7,5 @@ domain_id: 15205436
 hostname: www.primewestmortgage.com
 name: 'PrimeWest Mortgage, a division of HTLF Bank'
 scheme: https
-weight: -5
+weight: -6
 is_default: false

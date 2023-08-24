@@ -7,5 +7,5 @@ domain_id: 9664465
 hostname: www.firstbanktexas.com
 name: 'First Bank & Trust, a division of HTLF Bank'
 scheme: https
-weight: -10
+weight: -11
 is_default: false
