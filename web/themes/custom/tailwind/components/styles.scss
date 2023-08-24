@@ -1,0 +1,55 @@
+//Generic Form Fields outside of templates & tailwind
+.input-wrapper {
+  --padding: 22px;
+  --focus-color: black;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-bottom: 22px;
+}
+
+input {
+  padding: var(--padding);
+  border: 2px solid gray;
+  outline: none;
+  border-radius: 6px;
+}
+.placeholder {
+  position: absolute;
+  background-color: white;
+  color: gray;
+  left: var(--padding);
+  padding: 0 4px;
+  transition: all 0.2s ease-in;
+  margin-top: 24px;
+}
+
+input:is(:focus, :valid) {
+  border: 2px solid var(--focus-color);
+}
+
+input:is(:focus, :valid) + .placeholder {
+  transform: translatey(calc(-1 * var(--padding) - 12px));
+  font-size: 14px;
+  color: var(--focus-color);
+}
+
+.button {
+  background: #202945;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+  --color: white;
+  --hover: #445794;
+  transition: 0.5s;
+
+  &:hover,
+  &:focus {
+    border-color: var(--hover);
+    color: --color;
+    box-shadow: inset 0 0 0 2em var(--hover);
+    cursor: pointer;
+  }
+}
