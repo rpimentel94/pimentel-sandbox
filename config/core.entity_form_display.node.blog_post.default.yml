@@ -30,7 +30,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 8
+    weight: 14
     region: content
     settings:
       rows: 9
@@ -40,13 +40,13 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 2
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   field_blog_category:
     type: entity_reference_autocomplete
-    weight: 9
+    weight: 5
     region: content
     settings:
       match_operator: CONTAINS
@@ -56,7 +56,7 @@ content:
     third_party_settings: {  }
   field_blog_content:
     type: text_textarea
-    weight: 10
+    weight: 4
     region: content
     settings:
       rows: 5
@@ -64,14 +64,14 @@ content:
     third_party_settings: {  }
   field_blog_image:
     type: media_library_widget
-    weight: 18
+    weight: 2
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_blog_tags:
     type: entity_reference_autocomplete_tags
-    weight: 16
+    weight: 6
     region: content
     settings:
       match_operator: CONTAINS
@@ -81,7 +81,7 @@ content:
     third_party_settings: {  }
   field_blog_time:
     type: string_textfield
-    weight: 17
+    weight: 3
     region: content
     settings:
       size: 60
@@ -89,7 +89,7 @@ content:
     third_party_settings: {  }
   field_content_sections:
     type: paragraphs_previewer
-    weight: 11
+    weight: 23
     region: content
     settings:
       title: Paragraph
@@ -107,27 +107,27 @@ content:
     third_party_settings: {  }
   field_domain_access:
     type: options_buttons
-    weight: 21
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
   field_domain_all_affiliates:
     type: boolean_checkbox
-    weight: 23
+    weight: 19
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_internal_banner_image:
     type: media_library_widget
-    weight: 12
+    weight: 1
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_metatags:
     type: metatag_firehose
-    weight: 13
+    weight: 15
     region: content
     settings:
       sidebar: true
@@ -135,7 +135,7 @@ content:
     third_party_settings: {  }
   field_middle_section:
     type: paragraphs_previewer
-    weight: 14
+    weight: 21
     region: content
     settings:
       title: Paragraph
@@ -153,7 +153,7 @@ content:
     third_party_settings: {  }
   field_sidebar:
     type: paragraphs_previewer
-    weight: 15
+    weight: 22
     region: content
     settings:
       title: Paragraph
@@ -171,38 +171,38 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 4
+    weight: 10
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp
-    weight: 19
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
   simple_sitemap:
-    weight: 3
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 7
+    weight: 13
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 5
+    weight: 11
     region: content
     settings:
       display_label: true
@@ -217,7 +217,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 1
+    weight: 7
     region: content
     settings:
       match_operator: CONTAINS
@@ -227,12 +227,12 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp
-    weight: 20
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }

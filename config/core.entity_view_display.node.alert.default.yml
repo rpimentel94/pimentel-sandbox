@@ -26,14 +26,14 @@ content:
     weight: 101
     region: content
   field_alert_location:
-    type: list_default
+    type: list_key
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 102
     region: content
   field_alert_theme:
-    type: list_default
+    type: list_key
     label: above
     settings: {  }
     third_party_settings: {  }
