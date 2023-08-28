@@ -17,7 +17,7 @@ index 2cce677799..976b81bfdf 100644
 -    $options = $item->options;
 -    $options += $url->getOptions();
 +    $options = $item->options ?? [];
-+    $options = array_merge($options, $url->getOptions());
++    $options = array_merge(unserialize($options), $url->getOptions());
  
      // Add optional 'rel' attribute to link options.
      if (!empty($settings['rel'])) {
