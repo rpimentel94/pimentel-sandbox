@@ -60,6 +60,7 @@
         "drupal/password_policy": "^4.0",
         "drupal/pathauto": "^1.11",
         "drupal/preprocess": "^2.1",
+        "drupal/quick_node_clone": "^1.16",
         "drupal/redirect": "^1.8",
         "drupal/scheduled_transitions": "^2.3",
         "drupal/scheduler": "^2.0",
@@ -72,6 +73,7 @@
         "drupal/svg_image_field": "^2.2",
         "drupal/symfony_debug": "^2.0",
         "drupal/tailwindcss": "^5.0@alpha",
+        "drupal/tb_megamenu": "^1.7",
         "drupal/token": "^1.12",
         "drupal/total_control": "^3.0",
         "drupal/twig_debugger": "^1.1",
@@ -119,7 +121,12 @@
         "patchLevel": {
             "drupal/core": "-p2"
         },
-        "enable-patching": true
+        "enable-patching": true,
+        "patches": {
+            "drupal/core": {
+                "Correct Link Formatter": "./patches/unsupported-link-operator.patch"
+            }
+         }
     },
     "autoload": {
         "classmap": ["upstream-configuration/scripts/ComposerScripts.php"]

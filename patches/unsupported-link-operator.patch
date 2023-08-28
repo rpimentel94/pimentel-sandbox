@@ -1,0 +1,23 @@
+diff --git a/core/modules/link/src/Plugin/Field/FieldFormatter/LinkFormatter.php b/core/modules/link/src/Plugin/Field/FieldFormatter/LinkFormatter.php
+index 2cce677799..976b81bfdf 100644
+--- a/core/modules/link/src/Plugin/Field/FieldFormatter/LinkFormatter.php
++++ b/core/modules/link/src/Plugin/Field/FieldFormatter/LinkFormatter.php
+@@ -237,6 +237,7 @@ public function viewElements(FieldItemListInterface $items, $langcode) {
+    *   A Url object.
+    */
+   protected function buildUrl(LinkItemInterface $item) {
++    $options = [];
+     try {
+       $url = $item->getUrl();
+     }
+@@ -246,8 +247,8 @@ protected function buildUrl(LinkItemInterface $item) {
+     }
+ 
+     $settings = $this->getSettings();
+-    $options = $item->options;
+-    $options += $url->getOptions();
++    $options = $item->options ?? [];
++    $options = array_merge($options, $url->getOptions());
+ 
+     // Add optional 'rel' attribute to link options.
+     if (!empty($settings['rel'])) {

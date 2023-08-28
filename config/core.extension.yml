@@ -92,6 +92,7 @@ module:
   path: 0
   path_alias: 0
   preprocess: 0
+  quick_node_clone: 0
   redirect: 0
   rest: 0
   scheduled_transitions: 0
@@ -109,6 +110,7 @@ module:
   system: 0
   tamper: 0
   taxonomy: 0
+  tb_megamenu: 0
   text: 0
   token: 0
   toolbar: 0
