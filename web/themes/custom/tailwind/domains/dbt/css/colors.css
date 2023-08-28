@@ -1,0 +1,39 @@
+/* Any modifications to the number of variables or their names will need to be reflected in _colors.scss and with consideration for affiliate sites */
+
+:root {
+  --primary-first: #005596;
+  --primary-second: #005596;
+  --primary-third: #D6EDFF;
+  --primary-fourth: #00457A;
+
+  --secondary-first: #4D802D;
+  --secondary-second: #4D802D;
+}
+
+.ibt, .wbt, .nmbt, .rmb, .cwb, .mbt, .mjb, .abt, .pvb, .fbt, .bbv, .pwm, .hltf, .rps {
+  display: none;
+}
+
+.dbt {
+  display: run-in;
+  display: initial;
+}
+
+footer .footer > ul li ul li.abt,
+footer .footer > ul li ul li.ibt,
+footer .footer > ul li ul li.nmbt,
+footer .footer > ul li ul li.rmb,
+footer .footer > ul li ul li.cwb,
+footer .footer > ul li ul li.mbt,
+footer .footer > ul li ul li.mjb,
+footer .footer > ul li ul li.wbt,
+footer .footer > ul li ul li.pvb,
+footer .footer > ul li ul li.fbt,
+footer .footer > ul li ul li.bbv,
+footer .footer > ul li ul li.pwm {
+  display: none;
+}
+
+footer .footer > ul li ul li.dbt {
+  display: block;
+}

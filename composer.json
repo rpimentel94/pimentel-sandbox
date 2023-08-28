@@ -79,6 +79,7 @@
         "drupal/twig_debugger": "^1.1",
         "drupal/twig_tweak": "^3.2",
         "drupal/viewfield": "^3.0@beta",
+        "drupal/views_bulk_edit": "^2.9",
         "drupal/webform": "^6.2@beta",
         "drush/drush": "^11 || ^12",
         "geocoder-php/google-maps-provider": "^4.7",

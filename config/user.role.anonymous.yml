@@ -9,6 +9,7 @@ dependencies:
     - contact
     - filter
     - media
+    - paragraphs_type_permissions
     - search
     - system
 _core:
@@ -24,3 +25,23 @@ permissions:
   - 'search content'
   - 'use text format restricted_html'
   - 'view media'
+  - 'view paragraph content accordion_tab_item'
+  - 'view paragraph content accordions_tabs'
+  - 'view paragraph content banner'
+  - 'view paragraph content banner_item'
+  - 'view paragraph content blog_posts'
+  - 'view paragraph content call_to_action'
+  - 'view paragraph content featured_product'
+  - 'view paragraph content from_library'
+  - 'view paragraph content general_content_section'
+  - 'view paragraph content grid'
+  - 'view paragraph content grid_item'
+  - 'view paragraph content ordered_team_members'
+  - 'view paragraph content rate_item'
+  - 'view paragraph content rates'
+  - 'view paragraph content sidebar_content_section'
+  - 'view paragraph content static_map'
+  - 'view paragraph content team_members'
+  - 'view paragraph content testimonial'
+  - 'view paragraph content uneven_columns'
+  - 'view paragraph content webform'
