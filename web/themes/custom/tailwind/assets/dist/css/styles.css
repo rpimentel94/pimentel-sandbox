@@ -689,6 +689,10 @@ video {
   align-items: center;
 }
 
+.items-stretch {
+  align-items: stretch;
+}
+
 .justify-start {
   justify-content: flex-start;
 }
@@ -932,5 +936,9 @@ video {
 
   .lg\:items-center {
     align-items: center;
+  }
+
+  .lg\:items-stretch {
+    align-items: stretch;
   }
 }
