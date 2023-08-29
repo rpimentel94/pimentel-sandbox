@@ -125,7 +125,8 @@
         "enable-patching": true,
         "patches": {
             "drupal/core": {
-                "Correct Link Formatter": "./patches/unsupported-link-operator.patch"
+                "Correct Link Formatter": "./patches/unsupported-link-operator.patch",
+                "CkEditor5 Not Respecting Row Size": "https://www.drupal.org/files/issues/2023-02-02/3241295-d9.5-101.patch"
             }
          }
     },

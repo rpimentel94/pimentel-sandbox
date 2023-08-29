@@ -1,5 +1,5 @@
 diff --git a/core/modules/link/src/Plugin/Field/FieldFormatter/LinkFormatter.php b/core/modules/link/src/Plugin/Field/FieldFormatter/LinkFormatter.php
-index 2cce677799..976b81bfdf 100644
+index 2cce677799..d08a8c0f15 100644
 --- a/core/modules/link/src/Plugin/Field/FieldFormatter/LinkFormatter.php
 +++ b/core/modules/link/src/Plugin/Field/FieldFormatter/LinkFormatter.php
 @@ -237,6 +237,7 @@ public function viewElements(FieldItemListInterface $items, $langcode) {
@@ -10,7 +10,7 @@ index 2cce677799..976b81bfdf 100644
      try {
        $url = $item->getUrl();
      }
-@@ -246,8 +247,8 @@ protected function buildUrl(LinkItemInterface $item) {
+@@ -246,8 +247,9 @@ protected function buildUrl(LinkItemInterface $item) {
      }
  
      $settings = $this->getSettings();
