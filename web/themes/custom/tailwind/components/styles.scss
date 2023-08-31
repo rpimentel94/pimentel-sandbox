@@ -54,3 +54,11 @@ input:is(:focus, :valid) + .placeholder {
     cursor: pointer;
   }
 }
+
+// Content Editor Primary Node Actions
+
+#block-tailwind-primary-local-tasks {
+  position: absolute;
+  bottom: 0;
+  width: 94vh;
+}

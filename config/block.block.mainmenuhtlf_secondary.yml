@@ -1,0 +1,35 @@
+uuid: 414078eb-8d22-44dc-8942-df51ca2bfaa7
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main-htlf
+  module:
+    - domain
+    - system
+  theme:
+    - tailwind
+id: mainmenuhtlf_secondary
+theme: tailwind
+region: secondary_menu
+weight: -7
+provider: null
+plugin: 'system_menu_block:main-htlf'
+settings:
+  id: 'system_menu_block:main-htlf'
+  label: 'Main Menu HTLF'
+  label_display: '0'
+  provider: system
+  level: 2
+  depth: 1
+  expand_all_items: false
+visibility:
+  domain:
+    id: domain
+    negate: false
+    context_mapping:
+      domain: '@domain.current_domain_context:domain'
+    domains:
+      pimentel_sandbox_lndo_site: pimentel_sandbox_lndo_site
+      htlf: htlf
+      sub_pimentel_sandbox_lndo_site: sub_pimentel_sandbox_lndo_site

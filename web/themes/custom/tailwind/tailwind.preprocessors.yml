@@ -2,3 +2,8 @@ tailwind.page:
   class: '\Drupal\tailwind\Plugin\Preprocess\Page'
   hook: page
   weight: 0
+
+tailwind.main_menu:
+  class: '\Drupal\tailwind\Plugin\Preprocess\MainMenu'
+  hook: menu__main
+  weight: 0

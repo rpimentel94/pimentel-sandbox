@@ -11,7 +11,7 @@ _core:
 id: tailwind_messages
 theme: tailwind
 region: content_above
-weight: -4
+weight: -7
 provider: null
 plugin: system_messages_block
 settings:

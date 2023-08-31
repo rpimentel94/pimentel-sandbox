@@ -9,7 +9,7 @@ _core:
 id: tailwind_primary_local_tasks
 theme: tailwind
 region: content_above
-weight: -3
+weight: -6
 provider: null
 plugin: local_tasks_block
 settings:

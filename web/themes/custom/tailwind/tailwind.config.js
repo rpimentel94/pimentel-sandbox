@@ -9,11 +9,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        htlfGray: '#757575',
+        htlfDarkGray: '#757575',
+        htlfGray: '#a6a6a6',
         htlfLightGray: '#F2F2F2',
         htlWhite: '#FFFFFF',
         htlfDarkBlue: '#1C1F2A',
-        htlfBlue: '#202945'
+        htlfBlue: '#202945',
+        transparent: 'transparent'
       },
     },
   },

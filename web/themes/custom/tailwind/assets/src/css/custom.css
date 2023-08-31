@@ -53,6 +53,12 @@ input:is(:focus, :valid) + .placeholder {
   cursor: pointer;
 }
 
+#block-tailwind-primary-local-tasks {
+  position: absolute;
+  bottom: 0;
+  width: 94vh;
+}
+
 footer .footer-inner-top #block-auxmenu-2 ul {
   justify-content: flex-start;
   margin-left: 1em;

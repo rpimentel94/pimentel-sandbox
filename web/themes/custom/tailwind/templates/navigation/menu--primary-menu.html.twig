@@ -1,0 +1,59 @@
+{#
+/**
+ * @file
+ * Theme override to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ */
+#}
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see https://twig.symfony.com/doc/1.x/tags/macro.html
+#}
+{{ menus.menu_links(items, attributes, 0) }}
+
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul{{ attributes.addClass('pt-4 pl-8 text-xl text-gray-700 md:flex md:justify-between md:pt-0 w-full') }}>
+    {% else %}
+      <ul>
+    {% endif %}
+    {% for item in items %}
+      {% if item.in_active_trail %}
+        <li{{ item.attributes.addClass('lg:mr-3 relative group mx-0 my-auto flex justify-center active-parent') }}>
+      {% else %}
+        <li{{ item.attributes.addClass('lg:mr-3 relative group mx-0 my-auto flex justify-center') }}>
+      {% endif %}
+        <div class="w-full mx-auto">
+        {{ link(item.title, item.url, { 'class':['block lg:inline-block tracking-wide text-black text-opacity-80 text-xl font-light no-underline transition duration-500 p-2'] }) }}
+          <span class="absolute -bottom-0 left-0 w-0 h-2 bg-blue-400 transition-all group-hover:w-full"></span>
+
+          {% if item.in_active_trail %}
+            <div class="active-marker w-0 border-x-[20px] border-b-[40px] border-solid border-htlfDarkGray border-x-transparent absolute w-0 h-2 left-[5%] translate-y-1/2 translate-x-1/2"></div>
+          {% endif %}
+        </div>
+        {% if item.below %}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

@@ -58,19 +58,41 @@
         {{ page.primary_menu }}
         </div>
 
-        <div class="bg-htlfGray h-11 min-h-11">
+        <div class="bg-htlfDarkGray h-11 min-h-11">
+          <div class="w-8/12 container m-auto flex justify-end max-w-7xl">
+            {{ page.secondary_menu }}
+          </div>
         </div>
 
     </nav>
   </header>
 
+  <div class="w-full bg-htlfGray bg-cover bg-center min-h-[19rem] relative" style="background-image: url({{banner_image}});">
+    <div class="container w-8/12 m-auto max-w-7xl">
+      {{ page.breadcrumb }}
+
+      {% if not is_front %}
+        <div class="text-white font-xl">
+          {{page['#title']}}
+        </div>
+      {% endif %}
+
+      {{ page.highlighted }}
+
+      {{ page.content_above }}
+    </div>
+  </div>
+
+  {# <div class="w-full bg-cover bg-center" style="height:32rem; background-image: url(https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
+        <div class="flex items-center justify-center h-full w-full bg-gray-900 bg-opacity-50">
+            <div class="text-center">
+                <h1 class="text-white text-2xl font-semibold uppercase md:text-3xl">Build Your new <span class="underline text-blue-400">Saas</span></h1>
+                <button class="mt-4 px-4 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">Start project</button>
+            </div>
+        </div>
+    </div> #}
+
   <div class="container w-8/12 m-auto max-w-7xl">
-
-  {{ page.breadcrumb }}
-
-  {{ page.highlighted }}
-
-  {{ page.content_above }}
 
     <main role="main">
       <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}

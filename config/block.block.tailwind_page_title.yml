@@ -1,6 +1,6 @@
 uuid: be7f34a9-f994-4115-81a7-500e303a2f38
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - tailwind
