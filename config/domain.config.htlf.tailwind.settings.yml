@@ -1,0 +1,14 @@
+features:
+  node_user_picture: 1
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+logo:
+  use_default: 0
+  path: 'public://logo/logo.svg'
+favicon:
+  use_default: 1
+logo_footer: {  }
+bank_name: 'HTLF Bank'
+primary_color: '#202945'
+secondary_color: '#5572af'
