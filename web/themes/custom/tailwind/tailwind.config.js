@@ -13,10 +13,12 @@ module.exports = {
         htlfDarkGray: '#757575',
         htlfGray: '#a6a6a6',
         htlfLightGray: '#F2F2F2',
-        htlWhite: '#FFFFFF',
+        htlfWhite: '#FFFFFF',
         htlfDarkBlue: '#1C1F2A',
         htlfBlue: '#202945',
-        transparent: 'transparent'
+        htlfLightBlue: '#1C3685',
+        transparent: 'transparent',
+        htlfBlack: '#333'
       },
     },
   },
