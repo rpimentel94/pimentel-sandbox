@@ -92,17 +92,15 @@
         </div>
     </div> #}
 
-  <div class="container w-8/12 m-auto max-w-7xl">
+  {# <div class="container w-full bg-white"> #}
 
-    <main role="main">
+    <main role="main container w-full bg-white">
       <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
       {{ page.hero }}
 
-      <div class="-mx-4 md:flex">
-        <div class="p-4 md:flex-1">
+
           {{ page.content }}
-        </div>{# /.layout-content #}
 
         {% if page.sidebar_first %}
           <aside class="p-4 md:w-1/4" role="complementary">
@@ -115,10 +113,9 @@
             {{ page.sidebar_second }}
           </aside>
         {% endif %}
-      </div>
     </main>
 
-  </div>
+  {# </div> #}
 
     <footer role="contentinfo" class="w-full bg-htlfGray">
       <div class="footer-inner container w-8/12 m-auto max-w-7xl">

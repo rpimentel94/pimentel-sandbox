@@ -1,0 +1,13 @@
+uuid: e8c90dc2-c280-4a6f-8985-d7be1a4be88b
+langcode: en
+status: true
+dependencies: {  }
+name: banner
+label: Banner
+effects:
+  25c33858-f3c1-47c2-9db4-f343d0eb8a6d:
+    uuid: 25c33858-f3c1-47c2-9db4-f343d0eb8a6d
+    id: image_convert
+    weight: 1
+    data:
+      extension: webp

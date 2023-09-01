@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.landing_page.body
     - field.field.node.landing_page.field_banner_content
     - field.field.node.landing_page.field_content_sections
     - field.field.node.landing_page.field_domain_access
@@ -15,22 +14,11 @@ dependencies:
     - metatag
     - paragraphs_previewer
     - path
-    - text
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 12
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 6
@@ -125,12 +113,6 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
-  publish_on:
-    type: datetime_timestamp
-    weight: 17
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   simple_sitemap:
     weight: 7
     region: content
@@ -168,15 +150,11 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  unpublish_on:
-    type: datetime_timestamp
-    weight: 14
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   url_redirects:
     weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true

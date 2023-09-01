@@ -12,6 +12,8 @@ dependencies:
     - field.field.paragraph.testimonial.field_text_secondary
     - field.field.paragraph.testimonial.field_textarea_plain
     - paragraphs.paragraphs_type.testimonial
+  module:
+    - media_library
 id: paragraph.testimonial.default
 targetEntityType: paragraph
 bundle: testimonial
@@ -45,14 +47,11 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_image:
-    type: entity_reference_autocomplete
+    type: media_library_widget
     weight: 3
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      media_types: {  }
     third_party_settings: {  }
   field_text:
     type: string_textfield

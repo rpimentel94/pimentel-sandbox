@@ -31,5 +31,4 @@ dependencies:
 
 components:
  namespaces:
-    tailwind:
-      - components
+    components: components

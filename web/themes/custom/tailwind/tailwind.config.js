@@ -5,6 +5,7 @@ module.exports = {
     'tailwind.theme',
     'components/styles.scss',
     'components/**/*.{html,js,twig, scss}',
+    'src/Plugin/Preprocess/**/*.php'
   ],
   theme: {
     extend: {

@@ -1,0 +1,16 @@
+<div{{ attributes.addClass(classes) }}>
+    <div class="w-full bg-htlfLightGray bg-cover" {% if background_type %} style="background-image: url({{background_image}});" {% endif %}">
+        <div class="w-8/12 m-auto max-w-7xl p-8">
+            {% if content.field_display_admin_title %}
+                <h2 class="text-4xl font-extralight pb-6">{{ content.field_admin_title }}</h2>
+            {% endif %}
+
+            {{content.field_text}}
+
+            {{content.field_button}}
+
+        </div>
+    </div>
+</div>
+
+{{dump(content)}}

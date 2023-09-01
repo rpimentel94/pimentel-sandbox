@@ -1,0 +1,22 @@
+<div{{ attributes.addClass(classes) }}>
+    <div class="w-full bg-{{background_color}} {{gutter_option}}">
+        <div class="w-8/12 m-auto max-w-7xl">
+            {% if content.field_display_admin_title %}
+                <h2 class="text-4xl font-extralight pb-6">{{ content.field_admin_title }}</h2>
+            {% endif %}
+
+            <div class='row flex flex-row flex-wrap	w-full'>
+                <div class='flex flex-col flex-1'>
+                    <div class="pr-4">
+                        {{ content.field_image }}
+                    </div>
+                </div>
+                <div class='flex flex-col flex-[2]'>
+                    <h3 class="italic text-2xl font-extralight">{{content.field_textarea_plain}}</h3>
+                    <p class="font-bold mt-6">{{content.field_text}}</p>
+                    <p>{{content.field_text_secondary}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

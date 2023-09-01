@@ -7,3 +7,15 @@ tailwind.main_menu:
   class: '\Drupal\tailwind\Plugin\Preprocess\MainMenu'
   hook: menu__main
   weight: 0
+
+#Paragraph Bundles
+
+tailwind.paragraph__testimonial:
+  class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\Testimonial'
+  hook: paragraph__testimonial
+  weight: 0
+
+tailwind.paragraph__call_to_action:
+  class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\Cta'
+  hook: paragraph__call_to_action
+  weight: 0
