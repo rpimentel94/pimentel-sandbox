@@ -576,6 +576,10 @@ video {
   visibility: hidden;
 }
 
+.static {
+  position: static;
+}
+
 .absolute {
   position: absolute;
 }
@@ -624,6 +628,10 @@ video {
   margin-bottom: auto;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .ml-auto {
   margin-left: auto;
 }
@@ -634,10 +642,6 @@ video {
 
 .mt-6 {
   margin-top: 1.5rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
 }
 
 .block {
@@ -680,12 +684,12 @@ video {
   min-height: 19rem;
 }
 
-.min-h-\[5\.625rem\] {
-  min-height: 5.625rem;
-}
-
 .min-h-\[28rem\] {
   min-height: 28rem;
+}
+
+.min-h-\[5\.625rem\] {
+  min-height: 5.625rem;
 }
 
 .w-0 {
@@ -816,6 +820,11 @@ video {
   border-color: rgb(117 117 117 / var(--tw-border-opacity));
 }
 
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
 .border-x-transparent {
   border-left-color: transparent;
   border-right-color: transparent;
@@ -841,6 +850,11 @@ video {
   background-color: rgb(32 41 69 / var(--tw-bg-opacity));
 }
 
+.bg-htlfBody {
+  --tw-bg-opacity: 1;
+  background-color: rgb(231 231 231 / var(--tw-bg-opacity));
+}
+
 .bg-htlfDarkGray {
   --tw-bg-opacity: 1;
   background-color: rgb(117 117 117 / var(--tw-bg-opacity));
@@ -851,9 +865,24 @@ video {
   background-color: rgb(166 166 166 / var(--tw-bg-opacity));
 }
 
+.bg-htlfLightBlue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(28 54 133 / var(--tw-bg-opacity));
+}
+
 .bg-htlfLightGray {
   --tw-bg-opacity: 1;
   background-color: rgb(242 242 242 / var(--tw-bg-opacity));
+}
+
+.bg-htlfLighterGray {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+}
+
+.bg-htlfWhite {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -968,6 +997,10 @@ video {
   padding-top: 0.5rem;
 }
 
+.pt-2\.5 {
+  padding-top: 0.625rem;
+}
+
 .pt-24 {
   padding-top: 6rem;
 }
@@ -976,16 +1009,12 @@ video {
   padding-top: 1rem;
 }
 
-.pt-\[3\.75rem\] {
-  padding-top: 3.75rem;
-}
-
-.pt-2\.5 {
-  padding-top: 0.625rem;
-}
-
 .pt-8 {
   padding-top: 2rem;
+}
+
+.pt-\[3\.75rem\] {
+  padding-top: 3.75rem;
 }
 
 .text-center {
@@ -1082,6 +1111,11 @@ video {
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
+.text-htlfBlack {
+  --tw-text-opacity: 1;
+  color: rgb(51 51 51 / var(--tw-text-opacity));
+}
+
 .text-htlfWhite {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1128,20 +1162,16 @@ video {
   transition-duration: 150ms;
 }
 
+.duration-200 {
+  transition-duration: 200ms;
+}
+
 .duration-300 {
   transition-duration: 300ms;
 }
 
 .duration-500 {
   transition-duration: 500ms;
-}
-
-.duration-150 {
-  transition-duration: 150ms;
-}
-
-.duration-200 {
-  transition-duration: 200ms;
 }
 
 .ease-out {
@@ -1157,14 +1187,29 @@ video {
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-htlfBlue:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(32 41 69 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-htlfWhite:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-sky-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(3 105 161 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-htlfLightBlue:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(28 54 133 / var(--tw-bg-opacity));
+.hover\:text-htlfBlack:hover {
+  --tw-text-opacity: 1;
+  color: rgb(51 51 51 / var(--tw-text-opacity));
+}
+
+.hover\:text-htlfWhite:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .hover\:text-white:hover {
@@ -1172,16 +1217,15 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.hover\:shadow-xl:hover {
-  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .hover\:shadow-2xl:hover {
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hover\:drop-shadow-2xl:hover {
+  --tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .hover\:ease-in:hover {

@@ -18,7 +18,7 @@ class TailwindHelper
     /**
      * {@inheritdoc}
      */
-    public function getAlignment(string $field_alignment): string
+    public static function getAlignment(string $field_alignment): string
     {
         $alignment = "";
 
@@ -45,7 +45,7 @@ class TailwindHelper
     /**
      * {@inheritdoc}
      */
-    public function getGutter(string $field_gutter): string
+    public static function getGutter(string $field_gutter): string
     {
         $gutter = "";
 

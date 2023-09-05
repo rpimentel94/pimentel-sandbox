@@ -1,17 +1,14 @@
 <div{{ attributes.addClass(classes) }}>
-    <div class="w-full flex bg-htlfLightGray bg-cover {{background_height}}" {% if background_type %} style="background-image: url({{background_image}});" {% endif %}">
+    <div class="w-full {{background_color}} flex bg-cover {{background_height}}" {% if background_type == 'image' %} style="background-image: url({{background_image}});" {% endif %}>
         <div class="w-8/12 m-auto max-w-7xl p-8 flex content-center items-center">
             {% if content.field_display_admin_title %}
                 <h2 class="text-4xl font-extralight pb-6">{{ content.field_admin_title }}</h2>
             {% endif %}
 
             <div class="w-full flex {{alignment}}">
-                <p class="mx-12 text-3xl font-medium pt-2.5 htlfBlack">{{content.field_text}}</p>
-                <a class="rounded-md py-4 px-10 mb-4 font-medium text-htlfWhite bg-htlfBlue hover:shadow-2xl transition duration-200" href="{{button.url}}">{{button.title}}</a>
-                {# {{content.field_button}} #}
+                <p class="mx-12 text-3xl font-medium pt-2.5 {{text_color}}">{{content.field_text}}</p>
+                <a class="rounded-md py-4 px-10 mb-4 font-medium hover:shadow-2xl hover:drop-shadow-2xl transition duration-200 {{button.color}}" href="{{button.url}}">{{button.title}}</a>
             </div>
         </div>
     </div>
 </div>
-
-{{dump()}}
