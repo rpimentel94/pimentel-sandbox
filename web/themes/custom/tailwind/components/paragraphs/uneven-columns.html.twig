@@ -1,0 +1,40 @@
+<div{{attributes.addClass(classes)}}>
+	<div class="w-full bg-{{background_color}} {{text_color}} {{gutter_option}}" style="background-color:{{background_color}}">
+		<div class="w-8/12 m-auto max-w-7xl">
+			{% if content.field_display_admin_title %}
+				<h2 class="text-4xl font-extralight pb-6">{{ content.field_admin_title }}</h2>
+			{% endif %}
+
+			<div class="flex flex-row justify-between">
+				<div class="py-4 pr-4 relative {{splits.left}}">
+					<div class="mb-24">
+                        {{content.field_textarea}}
+                    </div>   
+                    {% if content.field_button is not empty %}
+                        <a 
+                            class="rounded-md absolute bottom-0 py-4 px-10 mb-4 font-medium hover:shadow-2xl hover:drop-shadow-2xl transition duration-200 {{button.first.color.text}}"
+                            style="background-color: {{button.first.color.background}}"
+                            href="{{button.first.url}}"
+                            aria-label="Testing"
+                        >
+                        {{button.first.title}}</a>
+                    {% endif %}
+				</div>
+				<div class="py-4 pr-4 relative {{splits.right}}">
+                    <div class="mb-24">
+					    {{content.field_textarea_secondary}}
+                    </div>
+                    {% if content.field_button_secondary is not empty %}
+					<a 
+                        class="rounded-md absolute bottom-0 py-4 px-10 mb-4 font-medium hover:shadow-2xl hover:drop-shadow-2xl transition duration-200 {{button.second.color.text}}"
+                        style="background-color: {{button.second.color.background}}"
+                        href="{{button.second.url}}"
+                        aria-label="Testing"
+                    >
+                    {{button.second.title}}</a>
+                    {% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -47,7 +47,7 @@ process:
   field_admin_title: field_q2_admin_title
   field_background: field_q2_background
   field_button: field_q2_button
-  field_aria_label: field_q2_aria_label
+  field_button_aria_label: field_q2_aria_label
   field_textarea: field_q2_textarea
   field_alignment: field_q2_alignment
   field_gutter: field_q2_gutter

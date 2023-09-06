@@ -48,7 +48,7 @@ process:
   field_background_color: field_q2_background_color
   field_button_secondary: field_q2_button_secondary
   field_button: field_q2_button
-  field_aria_label: field_q2_aria_label
+  field_button_aria_label: field_q2_aria_label
   field_aria_label_secondary: field_q2_aria_label_secondary
   field_textarea: field_q2_textarea
   field_textarea_secondary: field_q2_textarea_secondary

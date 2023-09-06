@@ -604,6 +604,10 @@ video {
   left: 5%;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .m-auto {
   margin: auto;
 }
@@ -642,6 +646,26 @@ video {
 
 .mt-6 {
   margin-top: 1.5rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
+
+.mb-24 {
+  margin-bottom: 6rem;
 }
 
 .block {
@@ -734,6 +758,30 @@ video {
 
 .flex-grow {
   flex-grow: 1;
+}
+
+.basis-2\/5 {
+  flex-basis: 40%;
+}
+
+.basis-3\/12 {
+  flex-basis: 25%;
+}
+
+.basis-3\/5 {
+  flex-basis: 60%;
+}
+
+.basis-4\/12 {
+  flex-basis: 33.333333%;
+}
+
+.basis-8\/12 {
+  flex-basis: 66.666667%;
+}
+
+.basis-9\/12 {
+  flex-basis: 75%;
 }
 
 .translate-x-1\/2 {
@@ -830,6 +878,11 @@ video {
   border-right-color: transparent;
 }
 
+.bg-blue-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 234 254 / var(--tw-bg-opacity));
+}
+
 .bg-blue-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(96 165 250 / var(--tw-bg-opacity));
@@ -883,6 +936,11 @@ video {
 .bg-htlfWhite {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-red-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -1202,6 +1260,16 @@ video {
   background-color: rgb(3 105 161 / var(--tw-bg-opacity));
 }
 
+.hover\:\!bg-htlfBlue:hover {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(32 41 69 / var(--tw-bg-opacity)) !important;
+}
+
+.hover\:\!bg-htlfWhite:hover {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+}
+
 .hover\:text-htlfBlack:hover {
   --tw-text-opacity: 1;
   color: rgb(51 51 51 / var(--tw-text-opacity));
@@ -1215,6 +1283,16 @@ video {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:\!text-htlfBlack:hover {
+  --tw-text-opacity: 1 !important;
+  color: rgb(51 51 51 / var(--tw-text-opacity)) !important;
+}
+
+.hover\:\!text-htlfWhite:hover {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 
 .hover\:shadow-2xl:hover {

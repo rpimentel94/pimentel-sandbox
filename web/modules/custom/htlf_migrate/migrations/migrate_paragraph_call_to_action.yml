@@ -49,7 +49,7 @@ process:
   field_background: field_q2_background
   field_gutter: field_q2_gutter
   field_button: field_q2_button
-  field_aria_label: field_q2_aria_label
+  field_button_aria_label: field_q2_aria_label
   field_fa_icon: field_q2_fa_icon
   field_icon_type: field_q2_icon_type
   field_text: field_q2_text

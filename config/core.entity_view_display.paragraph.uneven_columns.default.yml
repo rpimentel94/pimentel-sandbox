@@ -26,7 +26,7 @@ mode: default
 content:
   field_admin_title:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -34,7 +34,7 @@ content:
     region: content
   field_aria_label_secondary:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -42,14 +42,14 @@ content:
     region: content
   field_background_color:
     type: list_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 1
     region: content
   field_button:
     type: link
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -61,7 +61,7 @@ content:
     region: content
   field_button_aria_label:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -69,7 +69,7 @@ content:
     region: content
   field_button_secondary:
     type: link
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -81,14 +81,14 @@ content:
     region: content
   field_col_split:
     type: list_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 10
     region: content
   field_display_admin_title:
     type: boolean
-    label: above
+    label: hidden
     settings:
       format: default
       format_custom_false: ''
@@ -98,21 +98,21 @@ content:
     region: content
   field_gutter:
     type: list_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 9
     region: content
   field_textarea:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 6
     region: content
   field_textarea_secondary:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 7

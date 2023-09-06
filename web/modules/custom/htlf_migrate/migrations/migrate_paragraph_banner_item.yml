@@ -48,7 +48,7 @@ process:
   field_banner_height: field_q2_banner_height
   field_textarea_plain: field_q2_textarea_plain
   field_button: field_q2_button
-  field_aria_label: field_q2_aria_label
+  field_button_aria_label: field_q2_aria_label
   field_overlay: field_q2_overlay
   field_text: field_q2_text
   ### Start Section for Paragraph & Media References ###

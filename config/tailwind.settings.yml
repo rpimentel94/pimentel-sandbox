@@ -5,8 +5,12 @@ features:
   favicon: 1
 logo:
   use_default: 0
-  path: 'public://logo/puppy_logo.svg'
+  path: 'public://logo/logo.svg'
 favicon:
   use_default: 1
 logo_footer:
-  - '3'
+  - '9185'
+bank_name: 'HTLF Bank'
+primary_color: '#00838f'
+secondary_color: '#1c3685'
+test_color: '#1c3685'

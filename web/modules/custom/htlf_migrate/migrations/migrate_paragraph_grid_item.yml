@@ -45,7 +45,7 @@ process:
   behavior_settings: behavior_settings
   ##### Start Custom Fields ######
   field_button: field_q2_button
-  field_aria_label: field_q2_aria_label
+  field_button_aria_label: field_q2_aria_label
   field_textarea: field_q2_textarea
   field_fa_icon: field_q2_fa_icon
   field_text: field_q2_text

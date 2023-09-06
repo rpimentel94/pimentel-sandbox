@@ -51,6 +51,13 @@ function tailwind_form_system_theme_settings_alter(&$form, $form_state)
         '#default_value' => theme_get_setting('secondary_color'),
     );
 
+    $form['custom']['test_color'] = array(
+      '#title' => t('Test Color'),
+      '#description' => t('Color used link colors links, buttons & section background colors'),
+      '#type' => 'textfield',
+      '#default_value' => theme_get_setting('test_color'),
+  );
+
 }
 
 function tailwind_preprocess_block(array &$variables) {

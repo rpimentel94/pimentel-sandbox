@@ -69,4 +69,51 @@ class TailwindHelper
         return $gutter;
     }
 
+    public static function getColor(string $color): string
+    {
+        $theme_color = "";
+        switch ($color) {
+            case 'primary':
+                $theme_color = theme_get_setting('primary_color');
+                break;
+            case 'secondary':
+                $theme_color = theme_get_setting('secondary_color');
+                break;
+            case 'grey':
+                $theme_color = '#f5f5f5';
+                break;
+            default:
+                $theme_color = '#f5f5f5';
+                break;
+        }
+
+        return $theme_color;
+    }
+
+    public static function getButtonColor(string $background_color): array
+    {
+        $color = [];
+
+        switch ($background_color) {
+            case 'primary':
+                $color['background'] = theme_get_setting('primary_color');
+                $color['text'] = "text-htlfWhite border border-white border-solid hover:!bg-htlfWhite hover:!text-htlfBlack";
+                break;
+            case 'secondary':
+                $color['background'] = "bg-htlfWhite";
+                $color['text'] = "bg-htlfWhite text-htlfBlack hover:!bg-htlfBlue hover:!text-htlfWhite";
+                break;
+            case 'htlfBody':
+                $color['background'] = theme_get_setting('primary_color');
+                $color['text'] = "text-htlfWhite";
+                break;
+            default:
+                $color['background'] = theme_get_setting('primary_color');
+                $color['text'] = "text-htlfWhite";
+                break;
+        }
+
+        return $color;
+    }
+
 }

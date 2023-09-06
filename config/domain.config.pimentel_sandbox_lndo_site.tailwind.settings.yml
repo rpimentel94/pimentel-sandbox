@@ -8,7 +8,9 @@ logo:
   path: 'public://logo/logo.svg'
 favicon:
   use_default: 1
-logo_footer: {  }
+logo_footer:
+  - '9185'
 bank_name: 'HTLF Bank'
-primary_color: '#00838f'
-secondary_color: ''
+primary_color: '#212845'
+secondary_color: '#1c3685'
+test_color: '#1c3685'

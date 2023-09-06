@@ -19,3 +19,8 @@ tailwind.paragraph__call_to_action:
   class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\Cta'
   hook: paragraph__call_to_action
   weight: 0
+
+tailwind.paragraph__uneven_columns:
+  class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\UnevenColumns'
+  hook: paragraph__uneven_columns
+  weight: 0

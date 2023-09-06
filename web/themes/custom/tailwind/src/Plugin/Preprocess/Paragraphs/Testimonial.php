@@ -23,8 +23,7 @@ class Testimonial extends PreprocessPluginBase
   {
     // Do any preprocessing here for your block!
     $paragraph = $variables['paragraph'];
-    $helper = new TailwindHelper;
-
+    
     if ($paragraph->hasField('field_background_color')) {
       $variables['background_color'] = !$paragraph->get('field_background_color')->isEmpty() ? $paragraph->get('field_background_color')->getString() : "htlfBody";
     }
@@ -32,7 +31,7 @@ class Testimonial extends PreprocessPluginBase
     //Gutters
     if ($paragraph->hasField('field_gutter')) {
       $field_gutter = !$paragraph->get('field_gutter')->isEmpty() ? $paragraph->get('field_gutter')->getString() : "";
-      $variables['gutter_option'] = $helper->getGutter($field_gutter);
+      $variables['gutter_option'] = TailwindHelper::getGutter($field_gutter);
     }
 
     return $variables;
