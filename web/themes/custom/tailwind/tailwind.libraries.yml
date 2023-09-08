@@ -10,3 +10,18 @@ alpine-js:
       type: external, 
       minified: true 
     }
+
+swiper:
+  css:
+    theme:
+     assets/dist/css/swiper.css: {}
+  js: 
+    assets/src/js/swiper.js: {}
+
+slideshow:
+  js:
+    assets/src/js/slideshow.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+    - tailwind/swiper

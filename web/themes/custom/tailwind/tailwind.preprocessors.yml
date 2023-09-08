@@ -24,3 +24,8 @@ tailwind.paragraph__uneven_columns:
   class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\UnevenColumns'
   hook: paragraph__uneven_columns
   weight: 0
+
+tailwind.paragraph__banner:
+  class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\Banner'
+  hook: paragraph__banner
+  weight: 0
