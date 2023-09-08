@@ -61,3 +61,10 @@ input:is(:focus, :valid) + .placeholder {
   bottom: 0;
   width: 94vh;
 }
+
+//Banner
+span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-bullet-active-main {
+  background: black;
+  border: 1px solid black;
+  padding: 5px;
+}

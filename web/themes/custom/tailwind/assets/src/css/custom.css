@@ -59,6 +59,12 @@ input:is(:focus, :valid) + .placeholder {
   width: 94vh;
 }
 
+span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-bullet-active-main {
+  background: black;
+  border: 1px solid black;
+  padding: 5px;
+}
+
 footer .footer-inner-top #block-auxmenu-2 ul {
   justify-content: flex-start;
   margin-left: 1em;
