@@ -1,27 +1,45 @@
 {{ attach_library('tailwind/slideshow') }}
 
 <div
-	class="banner-slideshow h-96">
+	class="banner-slideshow">
 	<!-- Slider main container -->
 	<div
-		class="swiper">
+		class="swiper mySwiper h-96">
 		<!-- Additional required wrapper -->
 		<div
 			class="swiper-wrapper">
 			<!-- Slides -->
-			<div class="swiper-slide">Slide 1</div>
-			<div class="swiper-slide">Slide 2</div>
-			<div class="swiper-slide">Slide 3</div>
-			...
+			{% for slide in slides %}
+				<div class="swiper-slide bg-cover w-full" {% if slide.background_image is not empty %} style="background-image: url({{slide.background_image}});" {% endif %}>
+					<div class="bg-cover w-full h-full {{slide.overlay}}">
+						<div class="w-8/12 m-auto max-w-7xl py-14 text-htlfWhite flex {{slide.alignment}}">
+							<div class="slide-inner">
+								<h2 class="text-5xl font-medium">{{slide.title}}</h2>
+								<p class="text-htlfWhite py-4">{{slide.body}}</p>
+
+								{% if slide.button is not empty %}
+									<a 
+                                        class="rounded-md relative top-5 py-4 px-10 my-8 font-medium hover:shadow-2xl hover:drop-shadow-2xl transition duration-200 {{slide.button.color.text}}" 
+                                        style="background-color: {{slide.button.color.background}}" href="{{slide.button.url}}" 
+                                        aria-label="{{slide.button.aria}}"
+                                    >
+										{{slide.button.title}}</a>
+								{% endif %}
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
 		</div>
+
 		<!-- If we need pagination -->
 		<div class="swiper-pagination"></div>
 
 		<!-- If we need navigation buttons -->
-		<div class="swiper-button-prev"></div>
-		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev !text-htlfBlack"></div>
+		<div class="swiper-button-next !text-htlfBlack"></div>
 
 		<!-- If we need scrollbar -->
-		<div class="swiper-scrollbar"></div>
+		{# <div class="swiper-scrollbar"></div> #}
 	</div>
 </div>

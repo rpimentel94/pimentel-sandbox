@@ -14,7 +14,7 @@ alpine-js:
 swiper:
   css:
     theme:
-     assets/dist/css/swiper.css: {}
+     assets/src/css/swiper.css: {}
   js: 
     assets/src/js/swiper.js: {}
 

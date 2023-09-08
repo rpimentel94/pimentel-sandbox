@@ -27,8 +27,7 @@ class Cta extends PreprocessPluginBase
     {
         // Do any preprocessing here for your block!
         $paragraph = $variables['paragraph'];
-        $helper = new TailwindHelper;
-
+        
         //Create Button
         $variables['button'] = [];
         $variables['button']['url'] = $paragraph->get('field_button')->first()->getUrl()->toString() != "" ? Url::fromUri($paragraph->get('field_button')->first()->getUrl()->toString()) : "#";
