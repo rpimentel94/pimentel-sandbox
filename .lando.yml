@@ -29,6 +29,7 @@ services:
       environment:
         DRUSH_OPTIONS_URI: "https://pimentel-sandbox.lndo.site"
     build_as_root:
+        #- rm -rf /etc/apt/keyrings/nodesource.gpg
         - apt update -y && apt install -y apt-transport-https
         - apt-get install -y ca-certificates curl gnupg
         - mkdir -p /etc/apt/keyrings
