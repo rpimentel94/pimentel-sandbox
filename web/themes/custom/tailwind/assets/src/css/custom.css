@@ -65,6 +65,52 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   padding: 5px;
 }
 
+.grid-section h2::after {
+  display: block;
+  content: " ";
+  width: 6.875rem;
+  height: 2px;
+  margin: 2rem 0 2.5rem;
+  background-color: var(--SecondaryColor, #757575);
+}
+.grid-section h3::after {
+  display: block;
+  content: " ";
+  width: 15%;
+  height: 2px;
+  margin: 2rem 0 2.5rem;
+  background-color: var(--SecondaryColor, #757575);
+}
+.grid-section .arrow {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid var(--SecondaryColor, #757575);
+  border-left: 2px solid var(--SecondaryColor, #757575);
+  border-color: var(--SecondaryColor, #757575);
+  transform: rotate(135deg);
+}
+.grid-section .arrow:hover {
+  text-decoration: underline;
+}
+.grid-section .card p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: "NeurialGrotesk-Regular", sans-serif;
+  color: #333;
+  margin-bottom: 1.5625rem;
+  font-weight: 300;
+}
+.grid-section .card ul {
+  margin-left: 1.25rem;
+  list-style-type: disc;
+}
+.grid-section .card ul li {
+  font-size: 1rem;
+  font-family: "NeurialGrotesk-Regular", sans-serif;
+  color: #333;
+}
+
 footer .footer-inner-top #block-auxmenu-2 ul {
   justify-content: flex-start;
   margin-left: 1em;

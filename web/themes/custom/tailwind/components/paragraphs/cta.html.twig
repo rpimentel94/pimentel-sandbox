@@ -5,7 +5,7 @@
                 <h2 class="text-4xl font-extralight pb-6">{{ content.field_admin_title }}</h2>
             {% endif %}
 
-            <div class="w-full flex {{alignment}}">
+            <div class="flex grow flex-col md:flex-row {{alignment}}">
                 <p class="mx-12 text-3xl font-medium pt-2.5 {{text_color}}" aria-label="{{content.field_button_aria_label|raw}}">{{content.field_text}}</p>
                 <a class="rounded-md py-4 px-10 mb-4 font-medium hover:shadow-2xl hover:drop-shadow-2xl transition duration-200 {{button.color}}" href="{{button.url}}">{{button.title}}</a>
             </div>

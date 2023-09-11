@@ -29,3 +29,8 @@ tailwind.paragraph__banner:
   class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\Banner'
   hook: paragraph__banner
   weight: 0
+
+tailwind.paragraph__grid:
+  class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\Grid'
+  hook: paragraph__grid
+  weight: 0

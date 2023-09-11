@@ -1,7 +1,7 @@
 {{ attach_library('tailwind/slideshow') }}
 
 <div
-	class="banner-slideshow">
+	{{attributes.addClass(classes, 'banner-slideshow')}}>
 	<!-- Slider main container -->
 	<div
 		class="swiper mySwiper h-96">

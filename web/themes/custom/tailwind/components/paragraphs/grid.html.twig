@@ -1,0 +1,32 @@
+<div{{attributes.addClass(classes,'grid-section')}}>
+	<div class="w-full bg-{{background_color}} {{text_color}} {{gutter_option}}" style="background-color:{{background_color}}">
+		<div class="w-8/12 m-auto max-w-7xl">
+			{% if content.field_display_admin_title %}
+				<h2 class="text-5xl font-extralight py-6">{{ content.field_admin_title }}</h2>
+			{% endif %}
+
+			<div class="flex flex-row justify-between flex-wrap gap-y-8">
+				{% for item in grid_items %}
+					{% set GridIndex = loop.index - 1 %}
+					<div class="bg-htlfWhite shadow-2xl drop-shadow-2xl p-6 grow {{columns}}">
+						{% if item.image_type == 'fa' %}
+							<div class="fontawesome-icon mb-4">
+								<i class="{{item.fa.classes}} text-4xl" data-fa-transform="{{ item.fa.transforms }}" data-fa-mask="{{ item.fa.mask }}" style="{{ item.fa.css }}"></i>
+							</div>
+						{% endif %}
+						<h3 class="font-bold text-2xl">{{item.title}}</h3>
+						<div class="mb-6 card">
+							{{item.body}}
+						</div>
+						{% if item.button is not empty %}
+							<a class="hover:underline underline-offset-8 decoration-2 decoration-[--SecondaryColor]" href="{{item.button.url}}" aria-label="{{item.button.aria}}">
+                                {{item.button.title}} 
+                                <i class="arrow"></i>
+                            </a>
+						{% endif %}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>

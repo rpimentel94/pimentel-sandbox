@@ -42,32 +42,32 @@ class UnevenColumns extends PreprocessPluginBase
         $splits = [];
         switch ($paragraph->get('field_col_split')->getString()) {
             case '25-75':
-                $splits['left'] = 'basis-3/12';
-                $splits['right'] = 'basis-9/12';
+                $splits['left'] = 'md:basis-3/12';
+                $splits['right'] = 'md:basis-9/12';
                 break;
             case '75-25':
-                $splits['left'] = 'basis-9/12';
-                $splits['right'] = 'basis-3/12';
+                $splits['left'] = 'md:basis-9/12';
+                $splits['right'] = 'md:basis-3/12';
                 break;
             case '33-66':
-                $splits['left'] = 'basis-4/12';
-                $splits['right'] = 'basis-8/12';
+                $splits['left'] = 'md:basis-4/12';
+                $splits['right'] = 'md:basis-8/12';
                 break;
             case '66-33':
-                $splits['left'] = 'basis-8/12';
-                $splits['right'] = 'basis-4/12';
+                $splits['left'] = 'md:basis-8/12';
+                $splits['right'] = 'md:basis-4/12';
                 break;
             case '40-60':
-                $splits['left'] = 'basis-2/5';
-                $splits['right'] = 'basis-3/5';
+                $splits['left'] = 'md:basis-2/5';
+                $splits['right'] = 'md:basis-3/5';
                 break;
             case '60-40':
-                $splits['left'] = 'basis-3/5';
-                $splits['right'] = 'basis-2/5';
+                $splits['left'] = 'md:basis-3/5';
+                $splits['right'] = 'md:basis-2/5';
                 break;
             default:
-                $splits['left'] = 'basis-2/5';
-                $splits['right'] = 'basis-3/5';
+                $splits['left'] = 'md:basis-2/5';
+                $splits['right'] = 'md:basis-3/5';
                 break;
         }
 
