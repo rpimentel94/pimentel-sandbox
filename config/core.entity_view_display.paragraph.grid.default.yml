@@ -21,7 +21,7 @@ mode: default
 content:
   field_admin_title:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -29,14 +29,14 @@ content:
     region: content
   field_background_color:
     type: list_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 1
     region: content
   field_display_admin_title:
     type: boolean
-    label: above
+    label: hidden
     settings:
       format: default
       format_custom_false: ''
@@ -46,7 +46,7 @@ content:
     region: content
   field_grid_item:
     type: entity_reference_revisions_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -55,21 +55,21 @@ content:
     region: content
   field_grid_style:
     type: list_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 4
     region: content
   field_gutter:
     type: list_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 6
     region: content
   field_num_cols:
     type: list_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 5

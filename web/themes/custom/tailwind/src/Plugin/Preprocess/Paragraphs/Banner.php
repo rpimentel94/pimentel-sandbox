@@ -57,11 +57,13 @@ class Banner extends PreprocessPluginBase
         }
 
         //Create Button
-        $item['button']['url'] = $slide->get('field_button')->first()->getUrl()->toString() != "" ? Url::fromUri($slide->get('field_button')->first()->getUrl()->toString()) : "#";
-        $item['button']['title'] = $slide->get('field_button')->first()->title ?: "";
-        $item['button']['color'] = TailwindHelper::getButtonColor('');
-        $item['button']['aria'] = $slide->get('field_button_aria_label')->getString() ?: "";
-        $slide_items[] = $item;
+        if ($slide->hasField('field_button') && !$slide->get('field_button')->isEmpty()) {
+          $item['button']['title'] = $slide->get('field_button')->first()->title ?: "";
+          $item['button']['url'] = TailwindHelper::createUrl($item['button']['title'], $slide->get('field_button')->first()->getUrl()->toString(), $slide->get('field_button')->first()->getUrl());
+          $item['button']['color'] = TailwindHelper::getButtonColor('');
+          $item['button']['aria'] = $slide->get('field_button_aria_label')->getString() ?: "";
+          $slide_items[] = $item;
+      }
       }
 
       $variables['slides'] = $slide_items;

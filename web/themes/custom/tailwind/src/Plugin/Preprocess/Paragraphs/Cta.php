@@ -30,8 +30,8 @@ class Cta extends PreprocessPluginBase
         
         //Create Button
         $variables['button'] = [];
-        $variables['button']['url'] = $paragraph->get('field_button')->first()->getUrl()->toString() != "" ? Url::fromUri($paragraph->get('field_button')->first()->getUrl()->toString()) : "#";
         $variables['button']['title'] = $paragraph->get('field_button')->first()->title ?: "";
+        $variables['button']['url'] = TailwindHelper::createUrl($variables['button']['title'], $paragraph->get('field_button')->first()->getUrl()->toString(), $paragraph->get('field_button')->first()->getUrl());
         $variables['button']['color'] = "bg-htlfBlue text-htlfWhite";
 
         //Background Image

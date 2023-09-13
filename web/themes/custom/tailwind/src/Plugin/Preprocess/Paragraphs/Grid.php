@@ -97,11 +97,13 @@ class Grid extends PreprocessPluginBase
                 }
 
                 //Create Button
-                $item['button']['url'] = $grid->get('field_button')->first()->getUrl()->toString() != "" ? Url::fromUri($grid->get('field_button')->first()->getUrl()->toString()) : "#";
-                $item['button']['title'] = $grid->get('field_button')->first()->title ?: "";
-                $item['button']['color'] = TailwindHelper::getButtonColor('');
-                $item['button']['aria'] = $grid->get('field_button_aria_label')->getString() ?: "";
-                $grid_items[] = $item;
+                if ($grid->hasField('field_button') && !$grid->get('field_button')->isEmpty()) {
+                    $item['button']['title'] = $grid->get('field_button')->first()->title ?: "";
+                    $item['button']['url'] = TailwindHelper::createUrl($item['button']['title'], $grid->get('field_button')->first()->getUrl()->toString(), $grid->get('field_button')->first()->getUrl());
+                    $item['button']['color'] = TailwindHelper::getButtonColor('');
+                    $item['button']['aria'] = $grid->get('field_button_aria_label')->getString() ?: "";
+                    $grid_items[] = $item;
+                }
             }
 
             $variables['grid_items'] = $grid_items;

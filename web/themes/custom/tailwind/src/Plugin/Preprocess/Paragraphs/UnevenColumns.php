@@ -78,15 +78,15 @@ class UnevenColumns extends PreprocessPluginBase
 
     //Create Button
     if (!$paragraph->get('field_button')->isEmpty()) {
-    $variables['button']['first']['url'] = $paragraph->get('field_button')->first()->getUrl()->toString() != "" ? Url::fromUri($paragraph->get('field_button')->first()->getUrl()->toString()) : "#";
     $variables['button']['first']['title'] = $paragraph->get('field_button')->first()->title ?: "";
+    $variables['button']['first']['url'] = TailwindHelper::createUrl($variables['button']['first']['title'], $paragraph->get('field_button')->first()->getUrl()->toString(), $paragraph->get('field_button')->first()->getUrl());
     $variables['button']['first']['color'] = TailwindHelper::getButtonColor($background_color);
     }
 
     //Create Second Button
     if (!$paragraph->get('field_button_secondary')->isEmpty()) {
-    $variables['button']['second']['url'] = $paragraph->get('field_button_secondary')->first()->getUrl()->toString() != "" ? Url::fromUri($paragraph->get('field_button')->first()->getUrl()->toString()) : "#";
     $variables['button']['second']['title'] = $paragraph->get('field_button_secondary')->first()->title ?: "";
+    $variables['button']['second']['url'] = TailwindHelper::createUrl($variables['button']['second']['title'], $paragraph->get('field_button_secondary')->first()->getUrl()->toString(), $paragraph->get('field_button_secondary')->first()->getUrl());
     $variables['button']['second']['color'] = TailwindHelper::getButtonColor($background_color);
     }
 

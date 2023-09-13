@@ -116,4 +116,28 @@ class TailwindHelper
         return $color;
     }
 
+    /**
+     * Create a URL object.
+     *
+     * Returns a URL object with some exception handling to prevent
+     * errors.
+     *
+     * @param string $url
+     *   The URL string.
+     *
+     * @return \Drupal\Core\Url
+     *   The Drupal Url object.
+     */
+    public static function createUrl(string $text, string $link, Url $url)
+    {
+        try {
+            $url = Url::fromUri($link);
+        } catch (\InvalidArgumentException $exception) {
+            $link = Link::fromTextAndUrl($text, $url);
+            $url = $link->getUrl()->toString();
+        }
+        return $url;
+    }
+
+
 }
