@@ -5,10 +5,10 @@
 				<h2 class="text-5xl font-extralight py-6">{{ content.field_admin_title }}</h2>
 			{% endif %}
 
-			<div class="flex flex-row justify-between flex-wrap gap-y-8">
+			<div class="flex flex-row flex-wrap gap-y-8 {{col_count}}">
 				{% for item in grid_items %}
 					{% set GridIndex = loop.index - 1 %}
-					<div class="bg-htlfWhite shadow-2xl drop-shadow-2xl p-6 grow {{columns}}">
+					<div class="{{item_background}} p-6 grow {{columns}}">
 						{% if item.image_type == 'fa' %}
 							<div class="fontawesome-icon mb-4">
 								<i class="{{item.fa.classes}} text-4xl" data-fa-transform="{{ item.fa.transforms }}" data-fa-mask="{{ item.fa.mask }}" style="{{ item.fa.css }}"></i>
@@ -19,7 +19,12 @@
 							{{item.body}}
 						</div>
 						{% if item.button is not empty %}
-							<a class="hover:underline underline-offset-8 decoration-2 decoration-[--SecondaryColor]" href="{{item.button.url}}" aria-label="{{item.button.aria}}">
+							<a 
+								class="{{item.button.color.text}}" 
+								style="background-color: {{item.button.color.background}}" 
+								href="{{item.button.url}}" 
+								aria-label="{{item.button.aria}}"
+								>
                                 {{item.button.title}} 
                                 <i class="arrow"></i>
                             </a>

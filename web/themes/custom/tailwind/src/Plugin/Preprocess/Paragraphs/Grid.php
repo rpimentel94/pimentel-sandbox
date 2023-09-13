@@ -39,9 +39,23 @@ class Grid extends PreprocessPluginBase
             }
         }
 
-        //Grid Style 
+        //Grid Style & determine background
         if ($paragraph->hasField('field_grid_style')) {
             $variables['grid_style'] = $paragraph->get('field_grid_style')->getString();
+            switch ($paragraph->get('field_grid_style')->getString()) {
+                case 'cards':
+                    $variables['item_background'] = "bg-htlfWhite shadow-2xl drop-shadow-2xl";
+                    break;
+                case 'callouts':
+                    $variables['item_background'] = "bg-htlfWhite";
+                    break;
+                case 'smallcallouts':
+                    $variables['item_background'] = "bg-htlfWhite shadow-2xl drop-shadow-2xl";
+                    break;
+                default:
+                    $variables['item_background'] = "";
+                    break;
+            }
         }
 
         //Grid Columns
@@ -57,6 +71,15 @@ class Grid extends PreprocessPluginBase
                 case 'four':
                     $variables['columns'] = "md:max-w-[23%]";
                     break;
+            }
+            $variables['col_count'] = $columns == "four" ? " justify-start gap-x-8 " : " justify-between ";
+
+            //Check against Grid Style
+            if ($variables['grid_style'] == "callouts") {
+                $variables['col_count'] .= " shadow-2xl drop-shadow-2xl bg-htlfBody py-8 ";
+                if ($columns == "three") {
+                    $variables['columns'] = "md:max-w-[33%] pb-10";
+                }
             }
         }
 
@@ -100,7 +123,7 @@ class Grid extends PreprocessPluginBase
                 if ($grid->hasField('field_button') && !$grid->get('field_button')->isEmpty()) {
                     $item['button']['title'] = $grid->get('field_button')->first()->title ?: "";
                     $item['button']['url'] = TailwindHelper::createUrl($item['button']['title'], $grid->get('field_button')->first()->getUrl()->toString(), $grid->get('field_button')->first()->getUrl());
-                    $item['button']['color'] = TailwindHelper::getButtonColor('');
+                    $item['button']['color'] = TailwindHelper::getGridButtonColor('primary', $variables['grid_style']);
                     $item['button']['aria'] = $grid->get('field_button_aria_label')->getString() ?: "";
                     $grid_items[] = $item;
                 }

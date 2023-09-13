@@ -875,6 +875,11 @@ video {
   row-gap: 2rem;
 }
 
+.gap-x-8 {
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+
 .rounded {
   border-radius: 0.25rem;
 }
@@ -908,6 +913,11 @@ video {
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.border-slate-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(100 116 139 / var(--tw-border-opacity));
 }
 
 .border-x-transparent {
@@ -1478,6 +1488,10 @@ video {
 
   .md\:max-w-\[49\%\] {
     max-width: 49%;
+  }
+
+  .md\:max-w-\[33\%\] {
+    max-width: 33%;
   }
 
   .md\:basis-2\/5 {
