@@ -73,7 +73,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   margin: 2rem 0 2.5rem;
   background-color: var(--SecondaryColor, #757575);
 }
-.grid-section h3::after {
+.grid-section h3.cards::after {
   display: block;
   content: " ";
   width: 15%;
