@@ -25,7 +25,8 @@ class Testimonial extends PreprocessPluginBase
     $paragraph = $variables['paragraph'];
     
     if ($paragraph->hasField('field_background_color')) {
-      $variables['background_color'] = !$paragraph->get('field_background_color')->isEmpty() ? $paragraph->get('field_background_color')->getString() : "htlfBody";
+      $variables['background_color'] = !$paragraph->get('field_background_color')->isEmpty() ? TailwindHelper::getColor($paragraph->get('field_background_color')->getString()) : "htlfBody";
+      $variables['background_style'] = !$paragraph->get('field_background_color')->isEmpty() ? $paragraph->get('field_background_color')->getString() : "";
     }
 
     //Gutters

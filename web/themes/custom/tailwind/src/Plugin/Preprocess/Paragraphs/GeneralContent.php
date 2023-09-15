@@ -25,8 +25,15 @@ class GeneralContent extends PreprocessPluginBase
     $paragraph = $variables['paragraph'];
     
     if ($paragraph->hasField('field_background_color')) {
-      $variables['background_color'] = !$paragraph->get('field_background_color')->isEmpty() ? $paragraph->get('field_background_color')->getString() : "htlfBody";
+      $variables['background_color'] = !$paragraph->get('field_background_color')->isEmpty() ? TailwindHelper::getColor($paragraph->get('field_background_color')->getString()) : "htlfBody";
+      $variables['background_style'] = !$paragraph->get('field_background_color')->isEmpty() ? $paragraph->get('field_background_color')->getString() : "";
     }
+
+    $variables['body'] = [
+        '#type' => 'processed_text',
+        '#text' => $paragraph->get('field_textarea')->value,
+        '#format' => $paragraph->get('field_textarea')->format,
+    ];
 
     //Gutters
     if ($paragraph->hasField('field_gutter')) {

@@ -54,13 +54,13 @@ class TailwindHelper
                 $gutter = "";
                 break;
             case "top":
-                $gutter = "pt-24 sm:pt-12";
+                $gutter = "pt-24";
                 break;
             case "bottom":
-                $gutter = "pb-24 sm:pb-12";
+                $gutter = "pb-24";
                 break;
             case "both":
-                $gutter = "py-24 sm:py-12";
+                $gutter = "py-24";
                 break;
             default:
                 $gutter = "";
