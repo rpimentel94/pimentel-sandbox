@@ -1,0 +1,11 @@
+<div{{ attributes.addClass(classes, "general-content") }}>
+    <div class="w-full {{background_color}} flex bg-cover {{background_height}}">
+        <div class="w-8/12 m-auto max-w-7xl lg:p-8 sm:py-8 flex content-center items-center">
+            {% if content.field_display_admin_title %}
+                <h2 class="text-4xl font-extralight pb-6">{{ content.field_admin_title }}</h2>
+            {% endif %}
+
+            {{content.field_textarea}}
+        </div>
+    </div>
+</div>

@@ -45,7 +45,7 @@ process:
   behavior_settings: behavior_settings
   ##### Start Custom Fields ######
   field_text: field_q2_text
-  field_rate_qualifying_text: field_q2_rate_qualifying_text
+  field_qualifying_text: field_q2_rate_qualifying_text
   field_rate_link: field_q2_rate_link
   field_rate_symbol: field_q2_rate_symbol
   field_rate_type: field_q2_rate_type

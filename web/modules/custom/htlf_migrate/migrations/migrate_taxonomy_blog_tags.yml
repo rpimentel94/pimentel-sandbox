@@ -1,5 +1,5 @@
 # Migration for category taxonomy
-id: migrate_taxonomy_blog_tags
+id: migrate_taxonomy_blog_post_tags
 label: Blog Tags Taxonomy terms
 migration_group: htlf
 migration_tags:
@@ -17,7 +17,7 @@ process:
   tid: tid
   vid:
     plugin: default_value
-    default_value: blog_tags
+    default_value: blog_post_tags
   
   name: name
   weight: weight
@@ -31,7 +31,7 @@ process:
       source: parent
     -
       plugin: migration_lookup
-      migration: blog_tags
+      migration: blog_post_tags
   parent:
     plugin: default_value
     default_value: 0

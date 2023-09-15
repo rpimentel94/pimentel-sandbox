@@ -114,7 +114,7 @@ class Grid extends PreprocessPluginBase
                         $media_field = $grid->get('field_image')->getString();
                         $media_entity_load = Media::load($media_field);
                         $style = ImageStyle::load('large');
-                        $uri = $media_entity_load->field_media_image->entity->getFileUri();
+                        $uri = $media_entity_load ? $media_entity_load->field_media_image->entity->getFileUri() : "";
                         $item['image'] = $style->buildUrl($uri);
                     }
                 }

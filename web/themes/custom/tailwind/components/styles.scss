@@ -37,10 +37,8 @@ input:is(:focus, :valid) + .placeholder {
 .button {
   background: #202945;
   color: white;
-  border: 2px solid;
   font: inherit;
   line-height: 1;
-  margin: 0.5em;
   padding: 1em 2em;
   --color: white;
   --hover: #445794;
@@ -48,11 +46,16 @@ input:is(:focus, :valid) + .placeholder {
 
   &:hover,
   &:focus {
+    border: 2px solid;
     border-color: var(--hover);
     color: --color;
     box-shadow: inset 0 0 0 2em var(--hover);
     cursor: pointer;
   }
+}
+
+.secondary {
+  background-color: var(--SecondaryColor, #757575);
 }
 
 // Content Editor Primary Node Actions
@@ -124,6 +127,78 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
         font-size: 1rem;
         font-family: "NeurialGrotesk-Regular", sans-serif;
         color: #333;
+      }
+    }
+  }
+}
+
+//General Site Settings
+#block-tailwind-content {
+  h2 {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  h3 {
+    font-size: 1.625rem;
+    font-weight: 500;
+  }
+
+  ol,
+  ul {
+    margin-left: 2.5rem;
+  }
+
+  blockquote {
+    padding: 1.5625rem;
+  }
+
+  p {
+    color: #333;
+  }
+
+  table {
+    display: block;
+    width: 100%;
+    overflow: auto;
+
+    thead {
+      background: #f8f8f8;
+      color: #0a0a0a;
+
+      tr {
+        background: transparent;
+
+        td {
+          padding: 0.5rem 0.625rem 0.625rem;
+          font-weight: bold;
+          text-align: left;
+        }
+
+        th {
+          color: var(--PrimaryColor, #757575);
+        }
+      }
+    }
+
+    tbody {
+      background-color: #fefefe;
+
+      tr {
+        border-bottom: 1px solid #9f9f9f;
+
+        th {
+          color: #757575;
+          text-align: left;
+          text-transform: uppercase;
+          font-weight: 500;
+          padding: 1.5rem 0.625rem;
+        }
+
+        td {
+          padding: 1.5rem 0.625rem;
+          color: #333;
+        }
       }
     }
   }

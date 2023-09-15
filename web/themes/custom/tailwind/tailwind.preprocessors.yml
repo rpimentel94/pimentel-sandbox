@@ -34,3 +34,8 @@ tailwind.paragraph__grid:
   class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\Grid'
   hook: paragraph__grid
   weight: 0
+
+tailwind.paragraph__general_content_section:
+  class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\GeneralContent'
+  hook: paragraph__general_content_section
+  weight: 0
