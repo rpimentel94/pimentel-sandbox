@@ -1,5 +1,5 @@
-<div{{attributes.addClass(classes)}}>
-	<div class="w-full bg-{{background_color}} {{text_color}} {{gutter_option}}" style="background-color:{{background_color}}">
+<div{{attributes.addClass(classes, 'uneven-columns')}}>
+	<div class="w-full bg-{{background_color}} {{text_color}} {{gutter_option}} {{background_style}}" style="background-color:{{background_color}}">
 		<div class="w-8/12 m-auto max-w-7xl">
 			{% if content.field_display_admin_title %}
 				<h2 class="text-4xl font-extralight pb-6">{{ content.field_admin_title }}</h2>

@@ -30,6 +30,7 @@ class UnevenColumns extends PreprocessPluginBase
       if ($background_color == "primary" || $background_color == "secondary") {
         $variables['text_color'] = "text-htlfWhite";
       }
+      $variables['background_style'] = !$paragraph->get('field_background_color')->isEmpty() ? $paragraph->get('field_background_color')->getString() : "";
     }
 
     //Gutters

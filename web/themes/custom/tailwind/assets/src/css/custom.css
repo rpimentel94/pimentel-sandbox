@@ -210,11 +210,13 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
 }
 
 .testimonial .primary,
-.testimonial .primary p {
+.testimonial .primary p, .uneven-columns .primary,
+.uneven-columns .primary p {
   color: white;
 }
 .testimonial .primary .button:not(.secondary),
-.testimonial .primary p .button:not(.secondary) {
+.testimonial .primary p .button:not(.secondary), .uneven-columns .primary .button:not(.secondary),
+.uneven-columns .primary p .button:not(.secondary) {
   background-color: white;
   color: #000;
 }
