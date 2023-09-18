@@ -1398,9 +1398,33 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:m-auto {
+    margin: auto;
+  }
+
+  .sm\:justify-center {
+    justify-content: center;
+  }
+
+  .sm\:border-0 {
+    border-width: 0px;
+  }
+
+  .sm\:border-\[unset\] {
+    border-color: unset;
+  }
+
+  .sm\:p-8 {
+    padding: 2rem;
+  }
+
   .sm\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .sm\:text-center {
+    text-align: center;
   }
 }
 
@@ -1459,6 +1483,15 @@ video {
 
   .md\:justify-between {
     justify-content: space-between;
+  }
+
+  .md\:border-l-2 {
+    border-left-width: 2px;
+  }
+
+  .md\:border-htlfGray {
+    --tw-border-opacity: 1;
+    border-color: rgb(166 166 166 / var(--tw-border-opacity));
   }
 
   .md\:pt-0 {

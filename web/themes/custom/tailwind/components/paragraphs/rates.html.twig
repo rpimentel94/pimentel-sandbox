@@ -4,9 +4,9 @@
             {% if content.field_display_admin_title %}
                 <h2 class="text-4xl font-extralight pb-6 pt-2">{{ content.field_admin_title }}</h2>
             {% endif %}
-            <div class="flex flex-row flex-wrap justify-between">
+            <div class="flex grow flex-col md:flex-row justify-between">
 				{% for item in rate_items %}
-                    <div class="rates-inner border-l-2 border-htlfGray pl-4">
+                    <div class="rates-inner md:border-l-2 md:border-htlfGray pl-4 sm:m-auto sm:text-center sm:border-[unset] sm:border-0 sm:p-8">
                         <a 
                             class="uppercase tracking-wider font-medium hover:underline underline-offset-4 decoration-2 decoration-[--PrimaryColor]" 
                             style="color:{{item.button.color}}" 
@@ -16,7 +16,7 @@
                         </a>
 
                         <p class="font-light">{{item.qualifying_text}}</p>
-                        <div class="flex flex-row flex-wrap">
+                        <div class="flex flex-row flex-wrap sm:m-auto sm:text-center sm:justify-center">
                             <p class="text-5xl font-medium" style="color:{{item.button.color}}">{{item.rate_value}}</p>
                             <div>
                                 <p class="text-xl" style="color:{{item.button.color}}">{{item.rate_symbol}}</p> 
