@@ -39,3 +39,8 @@ tailwind.paragraph__general_content_section:
   class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\GeneralContent'
   hook: paragraph__general_content_section
   weight: 0
+
+tailwind.paragraph__rates:
+  class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\Rates'
+  hook: paragraph__rates
+  weight: 0

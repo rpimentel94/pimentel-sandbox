@@ -115,87 +115,90 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   color: #333;
 }
 
-#block-tailwind-content h2 {
+.general-content h2, .uneven-columns h2 {
   font-size: 2rem;
   font-weight: 300;
 }
-#block-tailwind-content h3 {
+.general-content h3, .uneven-columns h3 {
   font-size: 1.625rem;
   font-weight: 500;
 }
-#block-tailwind-content ol,
-#block-tailwind-content ul {
+.general-content ol,
+.general-content ul, .uneven-columns ol,
+.uneven-columns ul {
   margin-left: 2.5rem;
 }
-#block-tailwind-content ol {
+.general-content ol, .uneven-columns ol {
   list-style-type: decimal;
 }
-#block-tailwind-content li {
+.general-content li, .uneven-columns li {
   list-style-type: circle;
 }
-#block-tailwind-content blockquote {
+.general-content blockquote, .uneven-columns blockquote {
   padding: 1.5625rem;
   margin: 0 0 1rem;
   border-left: 1px solid #cacaca;
 }
-#block-tailwind-content blockquote p {
+.general-content blockquote p, .uneven-columns blockquote p {
   text-align: center;
   font-size: 1.25rem;
   margin-bottom: 0;
   color: var(--PrimaryColor, #757575);
 }
-#block-tailwind-content p {
+.general-content p, .uneven-columns p {
   color: #333;
   margin-bottom: 1rem;
   font-size: inherit;
   line-height: 1.6;
   text-rendering: optimizeLegibility;
 }
-#block-tailwind-content .primary,
-#block-tailwind-content .primary p {
+.general-content .primary,
+.general-content .primary p, .uneven-columns .primary,
+.uneven-columns .primary p {
   color: white;
 }
-#block-tailwind-content .primary .button:not(.secondary),
-#block-tailwind-content .primary p .button:not(.secondary) {
+.general-content .primary .button:not(.secondary),
+.general-content .primary p .button:not(.secondary), .uneven-columns .primary .button:not(.secondary),
+.uneven-columns .primary p .button:not(.secondary) {
   background-color: white;
   color: #000;
 }
-#block-tailwind-content table {
+.general-content table, .uneven-columns table {
   width: 100%;
 }
-#block-tailwind-content table thead {
+.general-content table thead, .uneven-columns table thead {
   background: #f8f8f8;
   color: #0a0a0a;
 }
-#block-tailwind-content table thead tr {
+.general-content table thead tr, .uneven-columns table thead tr {
   background: transparent;
 }
-#block-tailwind-content table thead tr td {
+.general-content table thead tr td, .uneven-columns table thead tr td {
   padding: 0.5rem 0.625rem 0.625rem;
   font-weight: bold;
   text-align: left;
 }
-#block-tailwind-content table thead tr th {
+.general-content table thead tr th, .uneven-columns table thead tr th {
   color: var(--PrimaryColor, #757575);
 }
-#block-tailwind-content table tbody {
+.general-content table tbody, .uneven-columns table tbody {
   background-color: #fefefe;
 }
-#block-tailwind-content table tbody tr {
+.general-content table tbody tr, .uneven-columns table tbody tr {
   border-bottom: 1px solid #9f9f9f;
 }
-#block-tailwind-content table tbody tr th {
+.general-content table tbody tr th, .uneven-columns table tbody tr th {
   color: #757575;
   text-align: left;
   text-transform: uppercase;
   font-weight: 500;
   padding: 1.5rem 0.625rem;
 }
-#block-tailwind-content table tbody tr td {
+.general-content table tbody tr td, .uneven-columns table tbody tr td {
   padding: 1.5rem 0.625rem;
   color: #333;
 }
-#block-tailwind-content code {
+.general-content code, .uneven-columns code {
   padding: 0.125rem 0.3125rem 0.0625rem;
   border: 1px solid #cacaca;
   background-color: #e6e6e6;
@@ -203,8 +206,9 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   font-weight: normal;
   color: #0a0a0a;
 }
-#block-tailwind-content em,
-#block-tailwind-content i {
+.general-content em,
+.general-content i, .uneven-columns em,
+.uneven-columns i {
   font-style: italic;
   line-height: inherit;
 }
