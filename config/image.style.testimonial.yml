@@ -1,0 +1,21 @@
+uuid: 29301d1a-3d21-4870-b722-0f05683cd12e
+langcode: en
+status: true
+dependencies: {  }
+name: testimonial
+label: Testimonial
+effects:
+  d880ea48-7bcb-4653-b107-ef84b14348d0:
+    uuid: d880ea48-7bcb-4653-b107-ef84b14348d0
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 270
+      height: 305
+      anchor: center-center
+  937544bb-aee2-4fd5-8ca6-408c55583983:
+    uuid: 937544bb-aee2-4fd5-8ca6-408c55583983
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

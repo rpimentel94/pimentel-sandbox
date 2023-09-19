@@ -52,6 +52,13 @@ input:is(:focus, :valid) + .placeholder {
   box-shadow: inset 0 0 0 2em var(--hover);
   cursor: pointer;
 }
+@media screen and (max-width: 550px) {
+  .button {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+}
 
 .secondary {
   background-color: var(--SecondaryColor, #757575);
@@ -165,6 +172,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
 }
 .general-content table, .uneven-columns table {
   width: 100%;
+  word-break: break-all;
 }
 .general-content table thead, .uneven-columns table thead {
   background: #f8f8f8;

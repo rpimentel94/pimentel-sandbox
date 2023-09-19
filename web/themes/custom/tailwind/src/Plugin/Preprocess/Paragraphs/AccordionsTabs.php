@@ -1,0 +1,76 @@
+<?php
+
+namespace Drupal\tailwind\Plugin\Preprocess\Paragraphs;
+
+use Drupal\tailwind\Plugin\Preprocess\TailwindHelper;
+use Drupal\preprocess\PreprocessPluginBase;
+use Drupal\media\Entity\Media;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\Core\Url;
+
+
+/**
+ * Custom Page Preprocessor.
+ *
+ * @Preprocess(
+ *   id = "talwind.paragraph__accordions_tabs",
+ *   hook = "block"
+ * )
+ */
+class AccordionsTabs extends PreprocessPluginBase
+{
+
+  /**
+   * {@inheritdoc}
+   */
+  public function preprocess(array $variables): array
+  {
+    // Do any preprocessing here for your block!
+    $paragraph = $variables['paragraph'];
+    
+    if ($paragraph->hasField('field_background_color')) {
+      $variables['background_color'] = !$paragraph->get('field_background_color')->isEmpty() ? TailwindHelper::getColor($paragraph->get('field_background_color')->getString()) : "htlfBody";
+      $variables['background_style'] = !$paragraph->get('field_background_color')->isEmpty() ? $paragraph->get('field_background_color')->getString() : "";
+    }
+
+    //Gutters
+    if ($paragraph->hasField('field_gutter')) {
+      $field_gutter = !$paragraph->get('field_gutter')->isEmpty() ? $paragraph->get('field_gutter')->getString() : "";
+      $variables['gutter_option'] = TailwindHelper::getGutter($field_gutter);
+    }
+
+    // Create Empty Tabs
+    $tab_items = [];
+    
+    if ($paragraph->hasField('field_accordion_tab_item')) {
+      $tabs = $paragraph->field_accordion_tab_item->referencedEntities();
+
+      foreach ($tabs as $tab) {
+        //Create empty item to append altered data to
+        $item = [];
+        $item['title'] = $tab->get('field_text')->getString(); 
+        $item['tag'] = $tab->get('field_tag')->getString();
+
+        $variables['body'] = [
+            '#type' => 'processed_text',
+            '#text' => $tab->get('field_textarea')->value,
+            '#format' => $tab->get('field_textarea')->format,
+        ];
+
+        //Create Button
+        if ($tab->hasField('field_button') && !$tab->get('field_button')->isEmpty()) {
+          $item['button']['title'] = $tab->get('field_button')->first()->title ?: "";
+          $item['button']['url'] = TailwindHelper::createUrl($item['button']['title'], $tab->get('field_button')->first()->getUrl()->toString(), $tab->get('field_button')->first()->getUrl());
+          $item['button']['color'] = TailwindHelper::getButtonColor('');
+          $item['button']['aria'] = $tab->get('field_button_aria_label')->getString() ?: "";
+          $tab_items[] = $item;
+      }
+      }
+
+      $variables['tabs'] = $tab_items;
+    }
+
+    return $variables;
+  }
+
+}

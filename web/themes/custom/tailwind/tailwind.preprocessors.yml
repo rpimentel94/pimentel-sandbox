@@ -44,3 +44,8 @@ tailwind.paragraph__rates:
   class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\Rates'
   hook: paragraph__rates
   weight: 0
+
+tailwind.paragraph__accordions_tabs:
+  class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\AccordionsTabs'
+  hook: paragraph__accordions_tabs
+  weight: 0
