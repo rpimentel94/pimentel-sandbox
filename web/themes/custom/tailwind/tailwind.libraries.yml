@@ -32,3 +32,10 @@ tabs:
   dependencies:
     - core/drupal
     - core/once
+
+v-tabs:
+  js:
+    assets/src/js/v-tabs.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

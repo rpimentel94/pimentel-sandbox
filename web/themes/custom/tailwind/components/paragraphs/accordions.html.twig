@@ -89,32 +89,36 @@
 									{% endfor %}
 								</div>
 							</div>
-                        
-                        {# End Tabs Widget #}
-						{# Section for V-Tabs Widget #}
-						{% elseif widget_style == "v-tabs" %}
-                            <div
-								class="w-full mx-auto mt-4">
-								<!-- Tabs -->
-								<ul id="tabs" class="inline-flex pt-2 px-1 w-full border-b">
-									{% for tab in tabs %}
-										{% if loop.first %}
-											<li class="bg-white px-4 text-gray-800 font-semibold py-2 rounded-t border-t border-r border-l -mb-px">
-												<a id="tab-{{loop.index}}" href="#{{tab.link_title}}-{{loop.index}}">{{tab.title}}</a>
-											</li>
-										{% else %}
-											<li class="px-4 text-gray-800 font-semibold py-2 rounded-t">
-												<a href="#{{tab.link_title}}-{{loop.index}}">{{tab.title}}</a>
-											</li>
-										{% endif %}
-									{% endfor %}
-								</ul>
 
+							{# End Tabs Widget #}
+							{# Section for V-Tabs Widget #}
+						{% elseif widget_style == "v-tabs" %}
+
+                            {{ attach_library('tailwind/v-tabs') }}
+
+							<div
+								class="flex grow flex-col md:flex-row justify-between">
+								<!-- Tabs -->
+								<div class="md:basis-3/12">
+									<ul id="v-tabs" class="pt-2 px-1 w-full border-b">
+										{% for tab in tabs %}
+											{% if loop.first %}
+												<li class="bg-white px-4 text-gray-800 font-semibold py-2 rounded-t border-t border-r border-l -mb-px">
+													<a id="v-tab-{{loop.index}}" href="#{{tab.link_title}}-v-{{loop.index}}">{{tab.title}}</a>
+												</li>
+											{% else %}
+												<li class="px-4 text-gray-800 font-semibold py-2 rounded-t">
+													<a href="#{{tab.link_title}}-v-{{loop.index}}">{{tab.title}}</a>
+												</li>
+											{% endif %}
+										{% endfor %}
+									</ul>
+								</div>
 								<!-- Tab Contents -->
-								<div id="tab-contents">
+								<div id="v-tab-contents" class="md:basis-9/12">
 									{% for tab in tabs %}
 										{% if loop.first %}
-											<div id="{{tab.link_title}}-{{loop.index}}" class="p-10">
+											<div id="{{tab.link_title}}-v-{{loop.index}}" class="p-10">
 												{{tab.body}}
 
 												{% if tab.button is not empty %}
@@ -125,7 +129,7 @@
 												{% endif %}
 											</div>
 										{% else %}
-											<div id="{{tab.link_title}}-{{loop.index}}" class="hidden p-10">
+											<div id="{{tab.link_title}}-v-{{loop.index}}" class="hidden p-10">
 												{{tab.body}}
 
 												{% if tab.button is not empty %}
@@ -139,7 +143,7 @@
 									{% endfor %}
 								</div>
 							</div>
-                        {% endif %}
+						{% endif %}
 						{# End V-Tabs Widget #}
 					</ul>
 				</div>
