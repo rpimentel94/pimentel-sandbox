@@ -21,7 +21,9 @@
     "scss": "gulp watch"
   },
   "dependencies": {
+    "@preline/tabs": "^1.3.1",
     "autoprefixer": "^10.4.14",
+    "flowbite": "^1.8.1",
     "gulp-cli": "^2.3.0",
     "gulp-eslint": "^6.0.0",
     "gulp-if": "^3.0.0",

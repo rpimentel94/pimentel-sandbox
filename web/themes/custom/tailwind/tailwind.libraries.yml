@@ -25,3 +25,10 @@ slideshow:
     - core/drupal
     - core/once
     - tailwind/swiper
+
+tabs:
+  js:
+    assets/src/js/tabs.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

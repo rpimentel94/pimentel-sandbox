@@ -233,6 +233,19 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   color: #000;
 }
 
+.accordion-tabs .arrow {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid var(--SecondaryColor, #757575);
+  border-left: 2px solid var(--SecondaryColor, #757575);
+  border-color: var(--SecondaryColor, #757575);
+  transform: rotate(135deg);
+}
+.accordion-tabs .arrow:hover {
+  text-decoration: underline;
+}
+
 footer .footer-inner-top #block-auxmenu-2 ul {
   justify-content: flex-start;
   margin-left: 1em;

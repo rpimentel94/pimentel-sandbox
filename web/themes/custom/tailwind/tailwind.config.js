@@ -5,7 +5,9 @@ module.exports = {
     'tailwind.theme',
     'components/styles.scss',
     'components/**/*.{html,js,twig, scss}',
-    'src/Plugin/Preprocess/**/*.php'
+    'src/Plugin/Preprocess/**/*.php',
+    'assets/src/js/*.js',
+    'node_modules/flowbite/**/*.js'
   ],
   theme: {
     extend: {
@@ -24,5 +26,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ]
 }
