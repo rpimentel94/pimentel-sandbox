@@ -1,8 +1,8 @@
 <div{{attributes.addClass(classes,"accordion-tabs")}}>
-	<div class="w-full flex bg-cover {{gutter_option}} {{background_style}}" style="background-color:{{background_color}}">
+	<div class="w-full flex bg-cover {{gutter_option}} {{background_style}} border-b-2 border-htlflightGray" style="background-color:{{background_color}}">
 		<div class="w-8/12 m-auto max-w-7xl">
 			{% if content.field_display_admin_title %}
-				<h2 class="text-4xl font-extralight pb-6 pt-2">{{ content.field_admin_title }}</h2>
+				<h2 class="text-4xl font-extralight pb-6 pt-2 text-htlfLightGray">{{ content.field_admin_title }}</h2>
 			{% endif %}
 			<div class="">
 				<div class="bg-white w-full mx-auto border border-gray-200" x-data="{selected:1}">
@@ -14,15 +14,15 @@
 								<li class="relative border-b border-gray-200">
 
 									<button type="button" class="w-full px-8 py-6 text-left" @click="selected !== {{loop.index}} ? selected = {{loop.index}} : selected = null">
-										<div class="flex items-center justify-between">
+										<div class="flex items-center justify-start">
+                                            <i class="arrow h-0 w-0 transition-all duration-700" x-ref="container{{loop.index}}" x-bind:style="selected == {{loop.index}} ? 'transform: rotate(225deg)' : ''" "></i>
 											<{{tab.tag}}>
 												{{tab.title}}
 											</{{tab.tag}}>
-											<i class="arrow h-0 w-0 transition-all duration-700" x-ref="container{{loop.index}}" x-bind:style="selected == {{loop.index}} ? 'transform: rotate(225deg)' : ''" "></i>
 										</div>
 									</button>
 
-									<div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container{{loop.index}}" x-bind:style="selected == {{loop.index}} ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+									<div id="{{tab.link_title}}-ac-{{loop.index}}" class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container{{loop.index}}" x-bind:style="selected == {{loop.index}} ? 'max-height: ' + $refs.container{{loop.index}}.scrollHeight + 'px' : ''">
 										<div class="p-10">
 											{{tab.body}}
 

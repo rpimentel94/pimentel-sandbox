@@ -235,10 +235,10 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
 
 .accordion-tabs .arrow {
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-top: 2px solid var(--SecondaryColor, #757575);
-  border-left: 2px solid var(--SecondaryColor, #757575);
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid var(--SecondaryColor, #757575);
+  border-left: 3px solid var(--SecondaryColor, #757575);
   border-color: var(--SecondaryColor, #757575);
   transform: rotate(135deg);
 }
