@@ -26,7 +26,6 @@ module:
   dblog: 0
   devel: 0
   devel_generate: 0
-  devel_kint_extras: 0
   domain: 0
   domain_access: 0
   domain_access_logo: 0
