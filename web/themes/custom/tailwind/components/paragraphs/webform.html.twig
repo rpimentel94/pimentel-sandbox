@@ -1,0 +1,30 @@
+<div{{attributes.addClass(classes,'webform')}}>
+	<div class="w-full {{gutter_option}} {{background_style}}" style="background-color:{{background_color}}">
+		<div class="w-8/12 m-auto max-w-7xl">
+			{% if content.field_display_admin_title %}
+				<h2 class="text-4xl font-extralight pb-6">{{ content.field_admin_title }}</h2>
+			{% endif %}
+
+			<div class='flex grow flex-col md:flex-row w-full justify-between'>
+				<div class="w-4/12 pt-14 pr-14 text-xl">
+					{% if show_sidebar %}
+						{% if icon %}
+							<div class="fontawesome-icon mb-4">
+								<i class="{{icon.classes}} text-4xl" data-fa-transform="{{ icon.transforms }}" data-fa-mask="{{ icon.mask }}" style="{{ icon.css }}"></i>
+							</div>
+						{% endif %}
+
+						{{sidebar_content}}
+					{% endif %}
+				</div>
+				<div class="w-8/12 p-2 relative -top-28 shadow-2xl drop-shadow-2xl bg-htlfWhite">
+					{% if form_script_url is not empty %}
+						<script type="text/javascript" src="{{ form_script_url }}"></script>
+					{% else %}
+						{{content.field_webform}}
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -2,7 +2,7 @@
 	<div class="w-full flex bg-cover {{gutter_option}} {{background_style}} border-b-2 border-htlflightGray" style="background-color:{{background_color}}">
 		<div class="w-8/12 m-auto max-w-7xl">
 			{% if content.field_display_admin_title %}
-				<h2 class="text-4xl font-extralight pb-6 pt-2 text-htlfLightGray">{{ content.field_admin_title }}</h2>
+				<h2 class="text-4xl font-extralight pb-6 pt-2 text-htlfBlack">{{ content.field_admin_title }}</h2>
 			{% endif %}
 			<div class="">
 				<div class="bg-white w-full mx-auto border border-gray-200" x-data="{selected:1}">
@@ -11,12 +11,12 @@
 						{# Section for Accordion Widget #}
 						{% if widget_style == "accordion" %}
 							{% for tab in tabs %}
-								<li class="relative border-b border-gray-200">
+								<li class="relative  border-gray-200">
 
 									<button type="button" class="w-full px-8 py-6 text-left" @click="selected !== {{loop.index}} ? selected = {{loop.index}} : selected = null">
 										<div class="flex items-center justify-start">
                                             <i class="arrow h-0 w-0 transition-all duration-700" x-ref="container{{loop.index}}" x-bind:style="selected == {{loop.index}} ? 'transform: rotate(225deg)' : ''" "></i>
-											<{{tab.tag}}>
+											<{{tab.tag}} class="pl-6">
 												{{tab.title}}
 											</{{tab.tag}}>
 										</div>
@@ -44,16 +44,16 @@
 							{{ attach_library('tailwind/tabs') }}
 
 							<div
-								class="w-full mx-auto mt-4">
+								class="w-full mx-auto">
 								<!-- Tabs -->
-								<ul id="tabs" class="inline-flex pt-2 px-1 w-full border-b">
+								<ul id="tabs" class="inline-flex w-full">
 									{% for tab in tabs %}
 										{% if loop.first %}
-											<li class="bg-white px-4 text-gray-800 font-semibold py-2 rounded-t border-t border-r border-l -mb-px">
+											<li class="bg-white p-6 text-white bg-[--PrimaryColor] font-semibold">
 												<a id="tab-{{loop.index}}" href="#{{tab.link_title}}-{{loop.index}}">{{tab.title}}</a>
 											</li>
 										{% else %}
-											<li class="px-4 text-gray-800 font-semibold py-2 rounded-t">
+											<li class="p-6 text-gray-800 font-semibold">
 												<a href="#{{tab.link_title}}-{{loop.index}}">{{tab.title}}</a>
 											</li>
 										{% endif %}
@@ -100,14 +100,14 @@
 								class="flex grow flex-col md:flex-row justify-between">
 								<!-- Tabs -->
 								<div class="md:basis-3/12">
-									<ul id="v-tabs" class="pt-2 px-1 w-full border-b">
+									<ul id="v-tabs" class="w-full">
 										{% for tab in tabs %}
 											{% if loop.first %}
-												<li class="bg-white px-4 text-gray-800 font-semibold py-2 rounded-t border-t border-r border-l -mb-px">
+												<li class="bg-white p-6 text-white bg-[--PrimaryColor] font-semibold">
 													<a id="v-tab-{{loop.index}}" href="#{{tab.link_title}}-v-{{loop.index}}">{{tab.title}}</a>
 												</li>
 											{% else %}
-												<li class="px-4 text-gray-800 font-semibold py-2 rounded-t">
+												<li class="p-6 text-gray-800 font-semibold">
 													<a href="#{{tab.link_title}}-v-{{loop.index}}">{{tab.title}}</a>
 												</li>
 											{% endif %}

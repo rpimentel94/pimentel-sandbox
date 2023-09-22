@@ -49,3 +49,8 @@ tailwind.paragraph__accordions_tabs:
   class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\AccordionsTabs'
   hook: paragraph__accordions_tabs
   weight: 0
+
+tailwind.paragraph__webform:
+  class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\Webform'
+  hook: paragraph__webform
+  weight: 0

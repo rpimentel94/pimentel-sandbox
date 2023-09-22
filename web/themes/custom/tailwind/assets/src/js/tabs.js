@@ -15,11 +15,8 @@
 
           for (let i = 0; i < tabContents.children.length; i++) {
             tabTogglers[i].parentElement.classList.remove(
-              "border-t",
-              "border-r",
-              "border-l",
-              "-mb-px",
-              "bg-white"
+              "text-white",
+              "bg-[--PrimaryColor]"
             );
             tabContents.children[i].classList.remove("hidden");
             if ("#" + tabContents.children[i].id === tabName) {
@@ -28,11 +25,8 @@
             tabContents.children[i].classList.add("hidden");
           }
           e.target.parentElement.classList.add(
-            "border-t",
-            "border-r",
-            "border-l",
-            "-mb-px",
-            "bg-white"
+            "text-white",
+            "bg-[--PrimaryColor]"
           );
         });
       });
