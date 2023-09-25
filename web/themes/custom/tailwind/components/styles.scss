@@ -140,7 +140,8 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
 }
 
 //General Site Settings
-.general-content, .uneven-columns {
+.general-content,
+.uneven-columns {
   h2 {
     font-size: 2rem;
     font-weight: 300;
@@ -256,7 +257,8 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   }
 }
 
-.testimonial, .uneven-columns {
+.testimonial,
+.uneven-columns {
   .primary,
   .primary p {
     color: white;
@@ -283,3 +285,32 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   }
 }
 
+.featured-product {
+  h2 {
+    color: #fefefe;
+    font-family: NeurialGrotesk-Regular, sans-serif;
+    font-size: 3.375rem;
+    font-weight: 300;
+    line-height: 1.25;
+
+    strong {
+      font-family: NeurialGrotesk-Bold, sans-serif;
+      font-weight: 500;
+    }
+  }
+
+  p {
+    color: #fefefe;
+    font-size: 1.1rem;
+    line-height: 1.75;
+  }
+
+  .button {
+    font-size: 1rem;
+    color: currentColor;
+    background-color: transparent;
+    padding: 1.125rem 3rem;
+    border-radius: 4px;
+    border: solid 1px currentColor;
+  }
+}

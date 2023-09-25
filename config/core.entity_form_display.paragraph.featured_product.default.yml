@@ -14,6 +14,7 @@ dependencies:
     - paragraphs.paragraphs_type.featured_product
   module:
     - link
+    - media_library
     - text
 id: paragraph.featured_product.default
 targetEntityType: paragraph
@@ -63,14 +64,11 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_image:
-    type: entity_reference_autocomplete
+    type: media_library_widget
     weight: 2
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      media_types: {  }
     third_party_settings: {  }
   field_textarea:
     type: text_textarea

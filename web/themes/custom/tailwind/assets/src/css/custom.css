@@ -122,37 +122,45 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   color: #333;
 }
 
-.general-content h2, .uneven-columns h2 {
+.general-content h2,
+.uneven-columns h2 {
   font-size: 2rem;
   font-weight: 300;
 }
-.general-content h3, .uneven-columns h3 {
+.general-content h3,
+.uneven-columns h3 {
   font-size: 1.625rem;
   font-weight: 500;
 }
 .general-content ol,
-.general-content ul, .uneven-columns ol,
+.general-content ul,
+.uneven-columns ol,
 .uneven-columns ul {
   margin-left: 2.5rem;
 }
-.general-content ol, .uneven-columns ol {
+.general-content ol,
+.uneven-columns ol {
   list-style-type: decimal;
 }
-.general-content li, .uneven-columns li {
+.general-content li,
+.uneven-columns li {
   list-style-type: circle;
 }
-.general-content blockquote, .uneven-columns blockquote {
+.general-content blockquote,
+.uneven-columns blockquote {
   padding: 1.5625rem;
   margin: 0 0 1rem;
   border-left: 1px solid #cacaca;
 }
-.general-content blockquote p, .uneven-columns blockquote p {
+.general-content blockquote p,
+.uneven-columns blockquote p {
   text-align: center;
   font-size: 1.25rem;
   margin-bottom: 0;
   color: var(--PrimaryColor, #757575);
 }
-.general-content p, .uneven-columns p {
+.general-content p,
+.uneven-columns p {
   color: #333;
   margin-bottom: 1rem;
   font-size: inherit;
@@ -160,53 +168,65 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   text-rendering: optimizeLegibility;
 }
 .general-content .primary,
-.general-content .primary p, .uneven-columns .primary,
+.general-content .primary p,
+.uneven-columns .primary,
 .uneven-columns .primary p {
   color: white;
 }
 .general-content .primary .button:not(.secondary),
-.general-content .primary p .button:not(.secondary), .uneven-columns .primary .button:not(.secondary),
+.general-content .primary p .button:not(.secondary),
+.uneven-columns .primary .button:not(.secondary),
 .uneven-columns .primary p .button:not(.secondary) {
   background-color: white;
   color: #000;
 }
-.general-content table, .uneven-columns table {
+.general-content table,
+.uneven-columns table {
   width: 100%;
   word-break: break-all;
 }
-.general-content table thead, .uneven-columns table thead {
+.general-content table thead,
+.uneven-columns table thead {
   background: #f8f8f8;
   color: #0a0a0a;
 }
-.general-content table thead tr, .uneven-columns table thead tr {
+.general-content table thead tr,
+.uneven-columns table thead tr {
   background: transparent;
 }
-.general-content table thead tr td, .uneven-columns table thead tr td {
+.general-content table thead tr td,
+.uneven-columns table thead tr td {
   padding: 0.5rem 0.625rem 0.625rem;
   font-weight: bold;
   text-align: left;
 }
-.general-content table thead tr th, .uneven-columns table thead tr th {
+.general-content table thead tr th,
+.uneven-columns table thead tr th {
   color: var(--PrimaryColor, #757575);
 }
-.general-content table tbody, .uneven-columns table tbody {
+.general-content table tbody,
+.uneven-columns table tbody {
   background-color: #fefefe;
 }
-.general-content table tbody tr, .uneven-columns table tbody tr {
+.general-content table tbody tr,
+.uneven-columns table tbody tr {
   border-bottom: 1px solid #9f9f9f;
 }
-.general-content table tbody tr th, .uneven-columns table tbody tr th {
+.general-content table tbody tr th,
+.uneven-columns table tbody tr th {
   color: #757575;
   text-align: left;
   text-transform: uppercase;
   font-weight: 500;
   padding: 1.5rem 0.625rem;
 }
-.general-content table tbody tr td, .uneven-columns table tbody tr td {
+.general-content table tbody tr td,
+.uneven-columns table tbody tr td {
   padding: 1.5rem 0.625rem;
   color: #333;
 }
-.general-content code, .uneven-columns code {
+.general-content code,
+.uneven-columns code {
   padding: 0.125rem 0.3125rem 0.0625rem;
   border: 1px solid #cacaca;
   background-color: #e6e6e6;
@@ -215,19 +235,22 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   color: #0a0a0a;
 }
 .general-content em,
-.general-content i, .uneven-columns em,
+.general-content i,
+.uneven-columns em,
 .uneven-columns i {
   font-style: italic;
   line-height: inherit;
 }
 
 .testimonial .primary,
-.testimonial .primary p, .uneven-columns .primary,
+.testimonial .primary p,
+.uneven-columns .primary,
 .uneven-columns .primary p {
   color: white;
 }
 .testimonial .primary .button:not(.secondary),
-.testimonial .primary p .button:not(.secondary), .uneven-columns .primary .button:not(.secondary),
+.testimonial .primary p .button:not(.secondary),
+.uneven-columns .primary .button:not(.secondary),
 .uneven-columns .primary p .button:not(.secondary) {
   background-color: white;
   color: #000;
@@ -244,6 +267,31 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
 }
 .accordion-tabs .arrow:hover {
   text-decoration: underline;
+}
+
+.featured-product h2 {
+  color: #fefefe;
+  font-family: NeurialGrotesk-Regular, sans-serif;
+  font-size: 3.375rem;
+  font-weight: 300;
+  line-height: 1.25;
+}
+.featured-product h2 strong {
+  font-family: NeurialGrotesk-Bold, sans-serif;
+  font-weight: 500;
+}
+.featured-product p {
+  color: #fefefe;
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+.featured-product .button {
+  font-size: 1rem;
+  color: currentColor;
+  background-color: transparent;
+  padding: 1.125rem 3rem;
+  border-radius: 4px;
+  border: solid 1px currentColor;
 }
 
 footer .footer-inner-top #block-auxmenu-2 ul {

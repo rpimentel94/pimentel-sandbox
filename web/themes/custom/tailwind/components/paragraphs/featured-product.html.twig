@@ -1,0 +1,24 @@
+<div{{attributes.addClass(classes,"featured-product")}}>
+	<div class="bg-cover w-full {{gutter_option}}" {% if background_image is not empty %} style="background-image: url({{background_image}});" {% endif %}>
+		<div class="w-8/12 m-auto max-w-7xl">
+			{% if content.field_display_admin_title %}
+				<h2 class="text-4xl font-extralight pb-6">{{ content.field_admin_title }}</h2>
+			{% endif %}
+
+
+			<div class="text-htlfWhite flex {{alignment}} p-4">
+				<div class="product-inner w-6/12 px-4 m-4">
+
+					{{body}}
+
+					{% if button is not empty %}
+						<a class="rounded-md w-44 relative top-5 py-4 px-10 my-8 font-medium hover:shadow-2xl hover:drop-shadow-2xl transition duration-200 {{button.color.text}}" style="background-color: {{button.color.background}}" href="{{button.url}}" aria-label="{{button.aria}}">
+							{{button.title}}</a>
+					{% endif %}
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+</div>

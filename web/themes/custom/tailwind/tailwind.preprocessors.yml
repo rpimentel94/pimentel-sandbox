@@ -54,3 +54,9 @@ tailwind.paragraph__webform:
   class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\Webform'
   hook: paragraph__webform
   weight: 0
+
+
+tailwind.paragraph__featured_product:
+  class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\FeaturedProduct'
+  hook: paragraph__featured_product
+  weight: 0
