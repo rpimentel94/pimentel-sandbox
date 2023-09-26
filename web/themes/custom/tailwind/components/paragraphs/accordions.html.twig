@@ -49,7 +49,7 @@
 								<ul id="tabs" class="inline-flex w-full">
 									{% for tab in tabs %}
 										{% if loop.first %}
-											<li class="bg-white p-6 text-white bg-[--PrimaryColor] font-semibold">
+											<li class="p-6 text-white bg-[--PrimaryColor] font-semibold">
 												<a id="tab-{{loop.index}}" href="#{{tab.link_title}}-{{loop.index}}">{{tab.title}}</a>
 											</li>
 										{% else %}
@@ -103,7 +103,7 @@
 									<ul id="v-tabs" class="w-full">
 										{% for tab in tabs %}
 											{% if loop.first %}
-												<li class="bg-white p-6 text-white bg-[--PrimaryColor] font-semibold">
+												<li class="p-6 text-white bg-[--PrimaryColor] font-semibold">
 													<a id="v-tab-{{loop.index}}" href="#{{tab.link_title}}-v-{{loop.index}}">{{tab.title}}</a>
 												</li>
 											{% else %}

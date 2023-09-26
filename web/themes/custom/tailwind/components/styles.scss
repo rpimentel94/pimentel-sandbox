@@ -330,6 +330,11 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
 
 //Middle Content
 .middle-content-section {
+
+  .general-content-inner {
+    padding-top: 0 !important;
+  }
+
   &_sidebar {
     font-size: 1.625rem;
     font-weight: 300;

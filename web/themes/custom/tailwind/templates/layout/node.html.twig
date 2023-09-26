@@ -95,7 +95,7 @@
 		{% if middle_section %}
 			<div class="middle-content-section flex grow flex-col md:flex-row justify-between w-8/12 container m-auto max-w-7xl">
 
-				<div class="middle-content-section_content w-8/12 p-6 relative -top-28 shadow-2xl drop-shadow-2xl bg-htlfWhite">
+				<div class="middle-content-section_content w-8/12 p-6 relative -top-28 shadow-2xl drop-shadow-2xl bg-htlfWhite {% if sidebar is false %} w-full{% endif %}">
 					{{content.field_middle_section}}
 					{# Unsetting section to remove from render #}
 					{% set content = content|merge({('field_middle_section'): NULL }) %}
@@ -103,7 +103,7 @@
 
 				{% if sidebar %}
 
-					<div class="middle-content-section_sidebar lg:max-w-xs">
+					<div class="middle-content-section_sidebar lg:max-w-xs lg:min-w-[20rem]">
 						{{content.field_sidebar}}
 						{# Unsetting section to remove from render #}
 						{% set content = content|merge({('field_sidebar'): NULL }) %}

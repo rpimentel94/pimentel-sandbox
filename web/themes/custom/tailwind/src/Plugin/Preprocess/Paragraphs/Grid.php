@@ -125,8 +125,9 @@ class Grid extends PreprocessPluginBase
                     $item['button']['url'] = TailwindHelper::createUrl($item['button']['title'], $grid->get('field_button')->first()->getUrl()->toString(), $grid->get('field_button')->first()->getUrl());
                     $item['button']['color'] = TailwindHelper::getGridButtonColor('primary', $variables['grid_style']);
                     $item['button']['aria'] = $grid->get('field_button_aria_label')->getString() ?: "";
-                    $grid_items[] = $item;
                 }
+
+                $grid_items[] = $item;
             }
 
             $variables['grid_items'] = $grid_items;

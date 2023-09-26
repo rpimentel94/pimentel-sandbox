@@ -304,6 +304,9 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   border: solid 1px currentColor;
 }
 
+.middle-content-section .general-content-inner {
+  padding-top: 0 !important;
+}
 .middle-content-section_sidebar {
   font-size: 1.625rem;
   font-weight: 300;
