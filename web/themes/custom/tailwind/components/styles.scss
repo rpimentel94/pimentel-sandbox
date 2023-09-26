@@ -67,9 +67,22 @@ input:is(:focus, :valid) + .placeholder {
 
 // Content Editor Primary Node Actions
 #block-tailwind-primary-local-tasks {
-  position: absolute;
+  position: fixed;
+  left: 0;
   bottom: 0;
-  width: 94vh;
+  width: 100%;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  z-index: 9999;
+}
+
+.status-message {
+  .placeholder {
+    position: unset;
+
+    a {
+      color: var(--PrimaryColor, #757575);
+    }
+  }
 }
 
 //Banner
@@ -312,5 +325,18 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
     padding: 1.125rem 3rem;
     border-radius: 4px;
     border: solid 1px currentColor;
+  }
+}
+
+//Middle Content
+.middle-content-section {
+  &_sidebar {
+    font-size: 1.625rem;
+    font-weight: 300;
+    line-height: 1.31;
+
+    .button {
+      font-size: 1rem;
+    }
   }
 }

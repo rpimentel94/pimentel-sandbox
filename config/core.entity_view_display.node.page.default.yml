@@ -19,7 +19,6 @@ dependencies:
   module:
     - entity_reference_revisions
     - metatag
-    - options
     - text
     - user
 _core:
@@ -34,14 +33,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 100
-    region: content
-  field_banner_height:
-    type: list_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 102
+    weight: 0
     region: content
   field_content_sections:
     type: entity_reference_revisions_entity_view
@@ -50,33 +42,14 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 103
-    region: content
-  field_disable_banner:
-    type: boolean
-    label: hidden
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 104
-    region: content
-  field_internal_banner_image:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    weight: 105
+    weight: 2
     region: content
   field_metatags:
     type: metatag_empty_formatter
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 106
+    weight: 4
     region: content
   field_middle_section:
     type: entity_reference_revisions_entity_view
@@ -85,7 +58,7 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 107
+    weight: 5
     region: content
   field_sidebar:
     type: entity_reference_revisions_entity_view
@@ -94,31 +67,18 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 108
-    region: content
-  field_sidebar_enabled:
-    type: boolean
-    label: hidden
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 109
-    region: content
-  field_subtitle:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 110
+    weight: 1
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 3
     region: content
 hidden:
+  field_banner_height: true
+  field_disable_banner: true
   field_domain_access: true
   field_domain_all_affiliates: true
+  field_internal_banner_image: true
+  field_sidebar_enabled: true
+  field_subtitle: true
