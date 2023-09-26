@@ -45,7 +45,12 @@ class Banner extends PreprocessPluginBase
             }
         $item['overlay'] = $slide->get('field_overlay')->getString() == "dark" ? "bg-slate-900 bg-opacity-25" : "";
         $item['title'] = $slide->get('field_text')->getString(); 
-        $item['body'] = $slide->get('field_textarea_plain')->getString();
+        $item['body'] = [
+          '#type' => 'processed_text',
+          '#text' => $slide->get('field_textarea_plain')->value,
+          '#format' => $slide->get('field_textarea_plain')->format,
+      ];
+        
 
         //Create Image
         if ($slide->hasField('field_image') && !$slide->get('field_image')->isEmpty()) {
@@ -62,8 +67,8 @@ class Banner extends PreprocessPluginBase
           $item['button']['url'] = TailwindHelper::createUrl($item['button']['title'], $slide->get('field_button')->first()->getUrl()->toString(), $slide->get('field_button')->first()->getUrl());
           $item['button']['color'] = TailwindHelper::getButtonColor('');
           $item['button']['aria'] = $slide->get('field_button_aria_label')->getString() ?: "";
-          $slide_items[] = $item;
-      }
+        }
+        $slide_items[] = $item;
       }
 
       $variables['slides'] = $slide_items;

@@ -14,7 +14,7 @@
 					<div class="bg-cover w-full h-full {{slide.overlay}}">
 						<div class="w-8/12 m-auto max-w-7xl py-14 text-htlfWhite flex {{slide.alignment}}">
 							<div class="slide-inner">
-								<h2 class="text-5xl font-medium">{{slide.title}}</h2>
+								<h2 class="text-5xl font-medium">{{slide.title|raw}}</h2>
 								<p class="text-htlfWhite py-4">{{slide.body}}</p>
 
 								{% if slide.button is not empty %}

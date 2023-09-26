@@ -56,8 +56,8 @@ class Rates extends PreprocessPluginBase
                     $item['button']['title'] = $rate->get('field_text')->getString();
                     $item['button']['url'] = TailwindHelper::createUrl($item['button']['title'], $rate->get('field_rate_link')->first()->getUrl()->toString(), $rate->get('field_rate_link')->first()->getUrl());
                     $item['button']['color'] = TailwindHelper::getColor('primary');
-                    $rate_items[] = $item;
                 }
+                $rate_items[] = $item;
             }
 
             $variables['rate_items'] = $rate_items;
