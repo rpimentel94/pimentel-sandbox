@@ -31,7 +31,12 @@ class Page extends PreprocessPluginBase
     $variables['active_domain'] = $active_domain = \Drupal::service('domain.negotiator')->getActiveId() != "pimentel_sandbox_lndo_site" ?: "htlf";
     $parent_theme_path = \Drupal::theme()->getActiveTheme()->getPath();
 
+    $variables['page_type'] = NULL;
+
     if (array_key_exists('node', $variables)) {
+
+      $variables['page_type'] = $variables['node']->getType();
+
       //Create Image
       if ($variables['node']->hasField('field_internal_banner_image') && !$variables['node']->get('field_internal_banner_image')->isEmpty()) {
         $media_field = $variables['node']->get('field_internal_banner_image')->getString();

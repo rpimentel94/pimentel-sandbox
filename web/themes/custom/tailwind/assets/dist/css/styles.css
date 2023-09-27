@@ -1248,6 +1248,14 @@ input:checked + .toggle-bg {
   height: 100%;
 }
 
+.h-\[32rem\] {
+  height: 32rem;
+}
+
+.h-\[31rem\] {
+  height: 31rem;
+}
+
 .max-h-0 {
   max-height: 0px;
 }
@@ -1322,6 +1330,10 @@ input:checked + .toggle-bg {
 
 .max-w-\[10rem\] {
   max-width: 10rem;
+}
+
+.max-w-\[34rem\] {
+  max-width: 34rem;
 }
 
 .flex-1 {

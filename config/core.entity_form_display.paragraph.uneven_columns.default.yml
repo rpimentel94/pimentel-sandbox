@@ -25,7 +25,7 @@ mode: default
 content:
   field_admin_title:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
@@ -33,7 +33,7 @@ content:
     third_party_settings: {  }
   field_aria_label_secondary:
     type: string_textfield
-    weight: 5
+    weight: 6
     region: content
     settings:
       size: 60
@@ -41,27 +41,11 @@ content:
     third_party_settings: {  }
   field_background_color:
     type: options_select
-    weight: 1
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   field_button:
-    type: link_default
-    weight: 2
-    region: content
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-  field_button_aria_label:
-    type: string_textfield
-    weight: 4
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_button_secondary:
     type: link_default
     weight: 3
     region: content
@@ -69,34 +53,42 @@ content:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
+  field_button_aria_label:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_button_secondary:
+    type: link_default
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
   field_col_split:
     type: options_select
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   field_display_admin_title:
     type: boolean_checkbox
-    weight: 8
+    weight: 9
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_gutter:
     type: options_select
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   field_textarea:
-    type: text_textarea
-    weight: 6
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_textarea_secondary:
     type: text_textarea
     weight: 7
     region: content
@@ -104,6 +96,20 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_textarea_secondary:
+    type: text_textarea
+    weight: 8
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
 hidden:
   created: true
-  status: true

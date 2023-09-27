@@ -20,7 +20,7 @@ mode: default
 content:
   field_accordion_tab_item:
     type: paragraphs
-    weight: 1
+    weight: 2
     region: content
     settings:
       title: Paragraph
@@ -38,7 +38,7 @@ content:
     third_party_settings: {  }
   field_admin_title:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
@@ -46,35 +46,41 @@ content:
     third_party_settings: {  }
   field_background_color:
     type: options_select
-    weight: 2
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   field_display_admin_title:
     type: boolean_checkbox
-    weight: 3
+    weight: 4
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_gutter:
     type: options_select
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   field_section_width:
     type: options_select
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   field_widget_type:
     type: options_select
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
 hidden:
   created: true
-  status: true

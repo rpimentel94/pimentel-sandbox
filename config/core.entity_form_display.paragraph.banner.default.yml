@@ -21,7 +21,7 @@ mode: default
 content:
   field_banner_item:
     type: paragraphs_previewer
-    weight: 0
+    weight: 1
     region: content
     settings:
       title: Paragraph
@@ -47,6 +47,13 @@ content:
         paragraphs_ee:
           dialog_off_canvas: false
           dialog_style: tiles
+  status:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
 hidden:
   created: true
   field_animation: true
@@ -54,4 +61,3 @@ hidden:
   field_integer: true
   field_random: true
   field_static: true
-  status: true

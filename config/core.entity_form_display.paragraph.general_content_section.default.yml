@@ -12,9 +12,9 @@ dependencies:
     - field.field.paragraph.general_content_section.field_textarea
     - paragraphs.paragraphs_type.general_content_section
   module:
-    - paragraphs
     - paragraphs_ee
     - paragraphs_features
+    - paragraphs_previewer
     - text
 id: paragraph.general_content_section.default
 targetEntityType: paragraph
@@ -23,7 +23,7 @@ mode: default
 content:
   field_admin_title:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
@@ -31,26 +31,26 @@ content:
     third_party_settings: {  }
   field_background_color:
     type: options_select
-    weight: 1
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   field_display_section_sidebar:
     type: boolean_checkbox
-    weight: 3
+    weight: 4
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_gutter:
     type: options_select
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   field_section_sidebar:
-    type: paragraphs
-    weight: 5
+    type: paragraphs_previewer
+    weight: 6
     region: content
     settings:
       title: Paragraph
@@ -58,14 +58,14 @@ content:
       edit_mode: closed_expand_nested
       closed_mode: summary
       autocollapse: none
-      closed_mode_threshold: 0
+      closed_mode_threshold: '0'
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: _none
       features:
-        add_above: '0'
-        collapse_edit_all: collapse_edit_all
         duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: 0
     third_party_settings:
       paragraphs_features:
         add_in_between: false
@@ -78,18 +78,24 @@ content:
           dialog_style: tiles
   field_section_width:
     type: options_select
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   field_textarea:
     type: text_textarea
-    weight: 2
+    weight: 3
     region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
 hidden:
   created: true
-  status: true

@@ -47,97 +47,97 @@
 #}
 
 <header role="banner" class="w-full bg-white">
-    <nav>
+	<nav>
 
-        <div class="w-full bg-htlfLightGray">
-          <div class="w-8/12 container m-auto flex justify-end max-w-7xl">
-            {{ page.header }}
-          </div>
-        </div>
-        <div class="flex flex-wrap items-stretch justify-between w-8/12 text-lg text-gray-700 bg-white container m-auto max-w-7xl">
-        {{ page.primary_menu }}
-        </div>
+		<div class="w-full bg-htlfLightGray">
+			<div class="w-8/12 container m-auto flex justify-end max-w-7xl">
+				{{ page.header }}
+			</div>
+		</div>
+		<div class="flex flex-wrap items-stretch justify-between w-8/12 text-lg text-gray-700 bg-white container m-auto max-w-7xl">
+			{{ page.primary_menu }}
+		</div>
 
-        <div class="bg-htlfDarkGray h-11 min-h-11">
-          <div class="w-8/12 container m-auto flex justify-end max-w-7xl">
-            {{ page.secondary_menu }}
-          </div>
-        </div>
+		<div class="bg-htlfDarkGray h-11 min-h-11">
+			<div class="w-8/12 container m-auto flex justify-end max-w-7xl">
+				{{ page.secondary_menu }}
+			</div>
+		</div>
 
-    </nav>
-  </header>
+	</nav>
+</header>
 
-  <div class="w-full bg-htlfGray bg-cover bg-center min-h-[19rem] relative" style="background-image: url({{banner_image}});">
-    <div class="container w-8/12 m-auto max-w-7xl">
-      {{ page.breadcrumb }}
+{# Creating seperate sections in depending on CT, info passed from Page.php #}
+{% if page_type and page_type != "landing_page" %}
+	<div class="w-full bg-htlfGray bg-cover bg-center min-h-[19rem] relative" style="background-image: url({{banner_image}});">
+		<div class="container w-8/12 m-auto max-w-7xl">
+			{{ page.breadcrumb }}
 
-      {% if not is_front %}
-        <div class="text-white font-xl">
-          {{page['#title']}}
-        </div>
-      {% endif %}
+			{% if not is_front %}
+				<div class="text-white font-xl">
+					{{page['#title']}}
+				</div>
+			{% endif %}
 
-      {{ page.highlighted }}
+			{{ page.highlighted }}
 
-      {{ page.content_above }}
-    </div>
-  </div>
-
-  {# <div class="w-full bg-cover bg-center" style="height:32rem; background-image: url(https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
-        <div class="flex items-center justify-center h-full w-full bg-gray-900 bg-opacity-50">
-            <div class="text-center">
-                <h1 class="text-white text-2xl font-semibold uppercase md:text-3xl">Build Your new <span class="underline text-blue-400">Saas</span></h1>
-                <button class="mt-4 px-4 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">Start project</button>
-            </div>
-        </div>
-    </div> #}
-
-  {# <div class="container w-full bg-white"> #}
-
-    <main role="main container" class="w-full bg-htlfWhite pt-14">
-      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-      {{ page.hero }}
+			{{ page.content_above }}
+		</div>
+	</div>
+{% else %}
+	{{ page.content_above }}
+{% endif %}
 
 
-          {{ page.content }}
+{# Removing top level padding for landing pages #}
 
-        {% if page.sidebar_first %}
-          <aside class="p-4 md:w-1/4" role="complementary">
-            {{ page.sidebar_first }}
-          </aside>
-        {% endif %}
+<main role="main container" class="w-full bg-htlfWhite {% if page_type and page_type != "landing_page" %} pt-14{% endif %}">
+	<a id="main-content" tabindex="-1"></a>
+	{# link is in html.html.twig #}
 
-        {% if page.sidebar_second %}
-          <aside class="md:w-1/4" role="complementary">
-            {{ page.sidebar_second }}
-          </aside>
-        {% endif %}
-    </main>
+	{{ page.hero }}
 
-  {# </div> #}
 
-    <footer role="contentinfo" class="w-full bg-htlfGray">
-      <div class="footer-inner container w-8/12 m-auto max-w-7xl">
-      <div class="footer-inner-top flex flex-wrap items-center justify-start">
-        <div class="py-10 pr-10 w-44">
-          <a href="#" rel="home" class="site-logo">
-            <img class="min-w-[10rem] max-w-[10rem] w-full" src="/themes/custom/tailwind/assets/images/footer_logo.svg" alt="{{ 'Home'|t }}" />
-          </a>
-        </div>
-        <div class="flex flex-wrap items-center justify-start w-10/12 ml-auto">
-        {{ page.footer_top }}
-        </div>
-      </div>
-      <div class="footer-inner-middle w-10/12 flex flex-wrap items-center justify-end ml-auto">
-        {{page.footer_bottom}}
-      </div>
-      <div class="footer-inner-bottom pt-[3.75rem] pb-[7.25rem] flex flex-wrap items-center justify-between text-white">
-        <div class="">
-          ©{{ 'now' | date('Y') }} HTLF Bank
-        </div>
-        <div class="right-test pr-4">
-          ©{{ 'now' | date('Y') }} {{bank_name}}
-        </div>
-      </div>
-    </footer>
+	{{ page.content }}
+
+	{% if page.sidebar_first %}
+		<aside class="p-4 md:w-1/4" role="complementary">
+			{{ page.sidebar_first }}
+		</aside>
+	{% endif %}
+
+	{% if page.sidebar_second %}
+		<aside class="md:w-1/4" role="complementary">
+			{{ page.sidebar_second }}
+		</aside>
+	{% endif %}
+</main>
+
+{# </div> #}
+
+<footer role="contentinfo" class="w-full bg-htlfGray">
+	<div class="footer-inner container w-8/12 m-auto max-w-7xl">
+		<div class="footer-inner-top flex flex-wrap items-center justify-start">
+			<div class="py-10 pr-10 w-44">
+				<a href="#" rel="home" class="site-logo">
+					<img class="min-w-[10rem] max-w-[10rem] w-full" src="/themes/custom/tailwind/assets/images/footer_logo.svg" alt="{{ 'Home'|t }}"/>
+				</a>
+			</div>
+			<div class="flex flex-wrap items-center justify-start w-10/12 ml-auto">
+				{{ page.footer_top }}
+			</div>
+		</div>
+		<div class="footer-inner-middle w-10/12 flex flex-wrap items-center justify-end ml-auto">
+			{{page.footer_bottom}}
+		</div>
+		<div class="footer-inner-bottom pt-[3.75rem] pb-[7.25rem] flex flex-wrap items-center justify-between text-white">
+			<div class="">
+				©{{ 'now' | date('Y') }}
+				HTLF Bank
+			</div>
+			<div class="right-test pr-4">
+				©{{ 'now' | date('Y') }}
+				{{bank_name}}
+			</div>
+		</div>
+	</footer>

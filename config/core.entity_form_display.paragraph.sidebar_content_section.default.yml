@@ -18,7 +18,7 @@ mode: default
 content:
   field_admin_title:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
@@ -26,31 +26,37 @@ content:
     third_party_settings: {  }
   field_background_color:
     type: options_select
-    weight: 1
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   field_display_admin_title:
     type: boolean_checkbox
-    weight: 3
+    weight: 4
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_gutter:
     type: options_select
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   field_textarea:
     type: text_textarea
-    weight: 2
+    weight: 3
     region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
 hidden:
   created: true
-  status: true
