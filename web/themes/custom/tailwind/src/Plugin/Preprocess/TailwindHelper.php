@@ -123,6 +123,9 @@ class TailwindHelper
         if ($style == "callouts") {
             $color['background'] = theme_get_setting('primary_color');
             $color['text'] = "rounded-md w-44 top-5 py-4 px-10 my-8 font-medium hover:shadow-2xl hover:drop-shadow-2xl transition duration-200 text-htlfWhite border border-white border-solid hover:!bg-htlfWhite hover:!text-htlfBlack";
+        } elseif ($style == "smallcallouts") {
+            $color['background'] = "";
+            $color['text'] = "text-htlfWhite hover:!text-htlfLighterGray";
         } else {
             $color['background'] = "";
             $color['text'] = "hover:underline underline-offset-8 decoration-2 decoration-[--SecondaryColor]";

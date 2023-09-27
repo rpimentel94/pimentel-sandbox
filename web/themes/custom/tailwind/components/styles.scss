@@ -115,7 +115,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
       background-color: var(--SecondaryColor, #757575);
     }
   }
-
   .arrow {
     display: inline-block;
     width: 10px;
@@ -148,6 +147,34 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
         font-family: "NeurialGrotesk-Regular", sans-serif;
         color: #333;
       }
+    }
+  }
+
+  .smallcallouts {
+    .card {
+      max-width: 80%;
+      color: white;
+      h3 {
+      font-size: 2.5rem;
+      line-height: 1.13;
+      letter-spacing: -0.4px;
+      color: white;
+      }
+      p {
+        margin-top: 0.5rem;
+        font-size: 1.125rem;
+        color: white;
+      }
+    }
+    a {
+      position: absolute;
+      bottom: 40px;
+      font-size: 1.2rem;
+    }
+    .arrow {
+      border-top: 2px solid white;
+      border-left: 2px solid white;
+      border-color: white;
     }
   }
 }
@@ -288,9 +315,9 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
     display: inline-block;
     width: 16px;
     height: 16px;
-    border-top: 3px solid var(--SecondaryColor, #757575);
-    border-left: 3px solid var(--SecondaryColor, #757575);
-    border-color: var(--SecondaryColor, #757575);
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    border-color: white;
     transform: rotate(135deg);
     &:hover {
       text-decoration: underline;
@@ -330,7 +357,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
 
 //Middle Content
 .middle-content-section {
-
   .general-content-inner {
     padding-top: 0 !important;
   }

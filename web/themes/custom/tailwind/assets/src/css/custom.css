@@ -131,6 +131,31 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   font-family: "NeurialGrotesk-Regular", sans-serif;
   color: #333;
 }
+.grid-section .smallcallouts .card {
+  max-width: 80%;
+  color: white;
+}
+.grid-section .smallcallouts .card h3 {
+  font-size: 2.5rem;
+  line-height: 1.13;
+  letter-spacing: -0.4px;
+  color: white;
+}
+.grid-section .smallcallouts .card p {
+  margin-top: 0.5rem;
+  font-size: 1.125rem;
+  color: white;
+}
+.grid-section .smallcallouts a {
+  position: absolute;
+  bottom: 40px;
+  font-size: 1.2rem;
+}
+.grid-section .smallcallouts .arrow {
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-color: white;
+}
 
 .general-content h2,
 .uneven-columns h2 {
@@ -270,9 +295,9 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   display: inline-block;
   width: 16px;
   height: 16px;
-  border-top: 3px solid var(--SecondaryColor, #757575);
-  border-left: 3px solid var(--SecondaryColor, #757575);
-  border-color: var(--SecondaryColor, #757575);
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+  border-color: white;
   transform: rotate(135deg);
 }
 .accordion-tabs .arrow:hover {

@@ -80,6 +80,8 @@ class Grid extends PreprocessPluginBase
                 if ($columns == "three") {
                     $variables['columns'] = "md:max-w-[33%] pb-10";
                 }
+            } elseif ($variables['grid_style'] == "smallcallouts") {
+                $variables['columns'] = "md:max-w-[46%] !p-10 min-h-[330px]";
             }
         }
 
