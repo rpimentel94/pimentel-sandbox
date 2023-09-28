@@ -29,21 +29,21 @@ mode: default
 content:
   field_location_address:
     type: address_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 102
     region: content
   field_location_content:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 108
     region: content
   field_location_fax:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -51,7 +51,7 @@ content:
     region: content
   field_location_geocode:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -59,14 +59,14 @@ content:
     region: content
   field_location_hours:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 105
     region: content
   field_location_image:
     type: entity_reference_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: false
@@ -75,7 +75,7 @@ content:
     region: content
   field_location_phone:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -83,21 +83,21 @@ content:
     region: content
   field_location_services:
     type: list_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 110
     region: content
   field_location_type:
     type: list_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 111
     region: content
   field_metatags:
     type: metatag_empty_formatter
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 107

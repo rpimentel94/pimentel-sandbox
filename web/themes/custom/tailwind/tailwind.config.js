@@ -3,7 +3,7 @@ module.exports = {
   content: [
     'templates/**/*.{html,js,twig}',
     'tailwind.theme',
-    'components/styles.scss',
+    'components/*.scss',
     'components/**/*.{html,js,twig, scss}',
     'src/Plugin/Preprocess/**/*.php',
     'assets/src/js/*.js',

@@ -47,6 +47,23 @@ class Node extends PreprocessPluginBase
             }
         }
 
+        //Parse location services
+        if ($node->hasField('field_location_services') && !$node->get('field_location_services')->isEmpty() && !$node->get('field_location_services')->first()->isEmpty()) {
+
+            $allowed_values = $node->getFieldDefinition('field_location_services')->getFieldStorageDefinition()->getSetting('allowed_values');
+            $services = $node->get('field_location_services')->getValue();
+            $variables['services'] = [];
+
+            foreach ($services as $service) {
+                $variables['services'][] = $allowed_values[$service['value']];
+            }
+        }
+
+        //Parse location geocode
+        if ($node->hasField('field_location_geocode') && !$node->get('field_location_geocode')->isEmpty()) {
+            $geocode = explode(' ', str_replace('POINT(', '', str_replace(')', '', $node->get('field_location_geocode')->value)));
+            $variables['geolocation'] = $geocode[1] . ',' . $geocode[0];
+        }
 
         return $variables;
     }
