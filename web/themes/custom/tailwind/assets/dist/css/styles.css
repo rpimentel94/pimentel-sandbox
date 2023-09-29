@@ -1665,6 +1665,11 @@ input:checked + .toggle-bg {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.border-htlfLightGray {
+  --tw-border-opacity: 1;
+  border-color: rgb(242 242 242 / var(--tw-border-opacity));
+}
+
 .border-x-transparent {
   border-left-color: transparent;
   border-right-color: transparent;
