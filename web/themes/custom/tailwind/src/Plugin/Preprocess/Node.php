@@ -65,6 +65,11 @@ class Node extends PreprocessPluginBase
             $variables['geolocation'] = $geocode[1] . ',' . $geocode[0];
         }
 
+        //Check if image exists
+        if ($node->hasField('field_location_image') && !$node->get('field_location_image')->isEmpty()) {
+            $variables['has_image'] = TRUE;
+        }
+
         return $variables;
     }
 

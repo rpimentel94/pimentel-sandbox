@@ -1,3 +1,15 @@
+.alerts-section .alert-body strong {
+  font-weight: bold;
+}
+.alerts-section a {
+  text-decoration: underline;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+.alerts-section a:hover, .alerts-section a:focus, .alerts-section a:active {
+  text-decoration: none;
+}
+
 .location .hours h3 {
   font-size: 1.625rem;
   font-weight: 500;

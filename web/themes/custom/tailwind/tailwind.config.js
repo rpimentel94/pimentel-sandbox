@@ -7,7 +7,8 @@ module.exports = {
     'components/**/*.{html,js,twig, scss}',
     'src/Plugin/Preprocess/**/*.php',
     'assets/src/js/*.js',
-    'node_modules/flowbite/**/*.js'
+    'node_modules/flowbite/**/*.js',
+    '../../../modules/custom/htlf_alert/Plugin/Block/AlertsBlock.php'
   ],
   theme: {
     extend: {

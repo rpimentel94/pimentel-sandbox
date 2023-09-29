@@ -1,0 +1,20 @@
+// Alerts
+.alerts-section {
+  .alert-body {
+    strong {
+        font-weight: bold;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    font-weight: 700;
+    font-size: 0.875rem;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+    }
+  }
+}

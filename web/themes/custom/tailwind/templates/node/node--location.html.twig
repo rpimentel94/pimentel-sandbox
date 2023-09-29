@@ -70,8 +70,8 @@
 <article{{attributes.addClass(classes,'location')}}>
 
 	<div{{content_attributes}}>
-		<div class="location w-8/12 m-auto max-w-7xl">
-			<div class="location-info flex flex-row flex-wrap gap-y-8 justify-between content-start">
+		<div class="location w-8/12 m-auto max-w-7xl flex flex-row flex-wrap">
+			<div class="location-info flex flex-row flex-wrap gap-y-8 justify-between content-start {% if has_image %} basis-4/6 {% endif %}">
 				<div class="address basis-1/3">
 					<h2 class="text-xl mb-2">
 						<i class="fas fa-map-marker-alt mr-2.5"></i>
@@ -125,12 +125,15 @@
 					</div>
 				{% endif %}
 			</div>
+            {% if has_image %}
+            <div class="basis-2/6">
+                {{content.field_location_image}}
+            </div>
+            {% endif %}
 
 
-			<div class="location-content pt-10">
-				<div class="grid-container">
-					{{ content.field_location_content }}
-				</div>
+			<div class="location-content pt-10 basis-full">
+				{{ content.field_location_content }}
 			</div>
 		</div>
 	</div>

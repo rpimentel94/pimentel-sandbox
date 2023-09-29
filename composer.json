@@ -45,6 +45,7 @@
         "drupal/fontawesome": "^2.26",
         "drupal/geocoder": "^3.34",
         "drupal/gin": "^3.0@RC",
+        "drupal/leaflet": "^10.2",
         "drupal/linkchecker": "^2.0@alpha",
         "drupal/menu_export": "^1.4",
         "drupal/menus_attribute": "^1.3",
