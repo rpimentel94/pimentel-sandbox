@@ -29,8 +29,9 @@
 
 {% set alerts = content['#alerts'] %}
 
+{{ attach_library('tailwind/alert-messages') }}
 
-<div{{attributes.addClass('w-full')}}>
+<div{{attributes.addClass('w-full site-alert')}}>
 	{% for alert in alerts %}
 
 		{% if alert.alert_level == 'general' %}
@@ -41,13 +42,13 @@
 			{% set colors = "bg-red-600 text-white" %}
 		{% endif %}
 
-		<div class="alert-message-{{alert.nid}} {{colors}} border-b-2 border-htlfLightGray">
+		<div id="alert-message-{{alert.nid}}" class="site-alert-item {{colors}} hidden border-b-2 border-htlfLightGray transition-opacity duration-500">
 			<div class="w-8/12 font-normal alert-body m-auto flex justify-between flex-wrap max-w-7xl py-6 leading-loose">
 				<div class="basis-11/12">
 					{{alert.body}}
 				</div>
 
-				<button type="button" class="rounded-md max-h-[1.25rem] p-2 inline-flex items-center justify-center text-white font-bold hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+				<button type="button" class="dismiss-alert rounded-md max-h-[1.25rem] p-2 inline-flex items-center justify-center text-white font-bold hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
 					<span class="sr-only">Close Alert</span>
 					<!-- Heroicon name: outline/x -->
 					<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor" aria-hidden="true">

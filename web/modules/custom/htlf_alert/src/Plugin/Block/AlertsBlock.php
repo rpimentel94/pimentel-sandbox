@@ -90,6 +90,9 @@ class AlertsBlock extends BlockBase
     return [
       '#theme' => 'htlf_alert_block',
       '#alerts' => $alerts,
+      '#attached' => [
+        'library' => ['tailwind/alert-messages'],
+      ],
     ];
   }
 

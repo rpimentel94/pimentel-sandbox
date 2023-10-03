@@ -39,3 +39,10 @@ v-tabs:
   dependencies:
     - core/drupal
     - core/once
+
+alert-messages:
+  js:
+    assets/src/js/alert-messages.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
