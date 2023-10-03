@@ -42,3 +42,4 @@ hidden:
   field_location_services: true
   field_location_type: true
   field_metatags: true
+  langcode: true

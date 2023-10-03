@@ -16,9 +16,11 @@ module:
   comment: 0
   components: 0
   config: 0
+  config_translation: 0
   contact: 0
   content_moderation: 0
   contextual: 0
+  cookies: 0
   crop: 0
   ctools: 0
   custom_form: 0
@@ -63,10 +65,12 @@ module:
   jquery_ui: 0
   jquery_ui_autocomplete: 0
   jquery_ui_menu: 0
+  language: 0
   layout_discovery: 0
   leaflet: 0
   link: 0
   linkchecker: 0
+  locale: 0
   media: 0
   media_library: 0
   menu_export: 0

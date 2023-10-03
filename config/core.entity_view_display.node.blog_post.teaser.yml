@@ -52,3 +52,4 @@ hidden:
   field_metatags: true
   field_middle_section: true
   field_sidebar: true
+  langcode: true

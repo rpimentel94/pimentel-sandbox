@@ -42,3 +42,4 @@ hidden:
   field_member_title: true
   field_metatags: true
   field_phone: true
+  langcode: true

@@ -30,3 +30,4 @@ hidden:
   field_domain_all_affiliates: true
   field_metatags: true
   field_middle_section: true
+  langcode: true

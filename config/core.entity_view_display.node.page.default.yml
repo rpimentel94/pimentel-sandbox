@@ -82,3 +82,4 @@ hidden:
   field_internal_banner_image: true
   field_sidebar_enabled: true
   field_subtitle: true
+  langcode: true

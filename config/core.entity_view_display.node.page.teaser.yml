@@ -50,3 +50,4 @@ hidden:
   field_sidebar: true
   field_sidebar_enabled: true
   field_subtitle: true
+  langcode: true

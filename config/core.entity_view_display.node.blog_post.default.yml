@@ -124,3 +124,4 @@ content:
 hidden:
   field_domain_access: true
   field_domain_all_affiliates: true
+  langcode: true
