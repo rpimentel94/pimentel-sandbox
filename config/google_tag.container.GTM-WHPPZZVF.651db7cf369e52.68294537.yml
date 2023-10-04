@@ -1,0 +1,23 @@
+uuid: aaf8ae9f-ab57-4af2-a658-3ae4710bb6a7
+langcode: en
+status: true
+dependencies: {  }
+id: GTM-WHPPZZVF.651db7cf369e52.68294537
+label: GTM-WHPPZZVF
+weight: 0
+tag_container_ids:
+  - GTM-WHPPZZVF
+advanced_settings: {  }
+dimensions_metrics: {  }
+conditions: {  }
+events:
+  generate_lead:
+    value: ''
+    currency: ''
+  search: {  }
+  webform_purchase: {  }
+  custom: {  }
+  login:
+    method: CMS
+  sign_up:
+    method: CMS
