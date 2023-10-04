@@ -153,6 +153,7 @@ module:
   pathauto: 1
   password_policy: 10
   views: 10
+  cookies_gtag: 11
   paragraphs: 11
   paragraphs_ee: 15
   standard: 1000
