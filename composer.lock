@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "31954ad3bd0a2c62a2bde4892e762d2e",
+    "content-hash": "a527c92219fb59245171df654499da6b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3847,6 +3847,55 @@
             "homepage": "https://www.drupal.org/project/google_tag",
             "support": {
                 "source": "https://git.drupalcode.org/project/google_tag"
+            }
+        },
+        {
+            "name": "drupal/hotjar",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/hotjar.git",
+                "reference": "8.x-3.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/hotjar-8.x-3.1.zip",
+                "reference": "8.x-3.1",
+                "shasum": "2ab70dd75277c484363758020b966ba41802f59d"
+            },
+            "require": {
+                "drupal/core": "^9.4 || ^10",
+                "ext-json": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-3.1",
+                    "datestamp": "1667919107",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "csakiistvan",
+                    "homepage": "https://www.drupal.org/user/491514"
+                },
+                {
+                    "name": "tikaszvince",
+                    "homepage": "https://www.drupal.org/user/337178"
+                }
+            ],
+            "description": "Allows your site to be tracked by Hotjar by adding a Javascript tracking code to every page",
+            "homepage": "https://www.drupal.org/project/hotjar",
+            "support": {
+                "source": "https://git.drupalcode.org/project/hotjar"
             }
         },
         {
@@ -16573,5 +16622,5 @@
     "platform-overrides": {
         "php": "8.1.13"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }

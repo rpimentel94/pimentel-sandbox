@@ -60,6 +60,7 @@ module:
   google_tag: 0
   help: 0
   history: 0
+  hotjar: 0
   htlf_alert: 0
   htlf_migrate: 0
   image: 0
