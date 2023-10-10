@@ -1,0 +1,5 @@
+name: HTLF Online Banking
+description: Custom implementation for use of online banking
+type: module
+package: HTLF
+core_version_requirement: ^9.5 || ^10

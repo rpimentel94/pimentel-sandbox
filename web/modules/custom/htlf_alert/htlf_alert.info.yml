@@ -1,4 +1,5 @@
 name: HTLF Site Alerts
 description: Custom implementation of alerts across the site & specificed pages/paths.
 type: module
+package: HTLF
 core_version_requirement: ^9.5 || ^10

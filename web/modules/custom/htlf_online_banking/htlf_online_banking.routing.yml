@@ -1,0 +1,7 @@
+htlf_online_banking.settings:
+  path: '/admin/config/olb/settings'
+  defaults:
+    _form: '\Drupal\htlf_online_banking\Form\OnlineBankingForm'
+    _title: 'Online Banking Configurations'
+  requirements:
+    _permission: 'administer site configuration'

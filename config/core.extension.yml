@@ -66,6 +66,7 @@ module:
   hotjar: 0
   htlf_alert: 0
   htlf_migrate: 0
+  htlf_online_banking: 0
   image: 0
   jquery_ui: 0
   jquery_ui_autocomplete: 0
