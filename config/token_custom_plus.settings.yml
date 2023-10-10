@@ -1,0 +1,6 @@
+_core:
+  default_config_hash: PIRbFWznYU1ZGtR35AZEDzLoY7TajPw2wKy6kfN1RIE
+custom_token_clone_suffix: '*'
+custom_token_list_limit: null
+custom_token_list_sort_by_type: true
+relaxed_machine_names: false

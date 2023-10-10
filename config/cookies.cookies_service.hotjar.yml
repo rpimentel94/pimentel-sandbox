@@ -1,0 +1,19 @@
+uuid: 2b4649c1-81f7-4449-b584-9309c096090f
+langcode: en
+status: true
+dependencies: {  }
+id: hotjar
+label: Hotjar
+group: tracking
+info:
+  value: ''
+  format: basic_html
+consentRequired: true
+purpose: ''
+placeholderMainText: 'This content is blocked because Hotjar cookies have not been accepted.'
+placeholderAcceptText: 'Only accept Hotjar cookies.'
+processor: Hotjar
+processorContact: ''
+processorUrl: 'https://www.hotjar.com/'
+processorPrivacyPolicyUrl: 'https://www.hotjar.com/legal/policies/privacy/'
+processorCookiePolicyUrl: ''

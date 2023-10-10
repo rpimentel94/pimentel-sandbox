@@ -6,6 +6,7 @@ module:
   admin_toolbar_links_access_filter: 0
   admin_toolbar_search: 0
   admin_toolbar_tools: 0
+  asset_injector: 0
   automated_cron: 0
   big_pipe: 0
   block: 0
@@ -21,6 +22,7 @@ module:
   content_moderation: 0
   contextual: 0
   cookies: 0
+  cookies_asset_injector: 0
   crop: 0
   ctools: 0
   custom_form: 0
@@ -56,6 +58,7 @@ module:
   geocoder_address: 0
   geocoder_field: 0
   geofield: 0
+  gin_login: 0
   gin_toolbar: 0
   google_tag: 0
   help: 0
@@ -125,6 +128,8 @@ module:
   tb_megamenu: 0
   text: 0
   token: 0
+  token_custom: 0
+  token_custom_plus: 0
   toolbar: 0
   total_control: 0
   tour: 0

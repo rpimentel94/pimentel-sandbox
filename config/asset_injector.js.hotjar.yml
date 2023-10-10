@@ -1,0 +1,29 @@
+uuid: 98ef511c-52d3-483c-86b6-13e890a1ef03
+langcode: en
+status: true
+dependencies:
+  module:
+    - cookies_asset_injector
+third_party_settings:
+  cookies_asset_injector:
+    cookies_service: hotjar
+id: hotjar
+label: Hotjar
+code: |
+  <!-- Hotjar Tracking Code for https://dev-pimentel-sandbox.pantheonsite.io/ -->
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:3681457,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+noscript: ''
+noscriptRegion: {  }
+jquery: false
+header: false
+preprocess: false
+conditions: {  }
+contexts: {  }
+conditions_require_all: true
