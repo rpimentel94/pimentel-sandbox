@@ -43,6 +43,8 @@ class OnlineBankingForm extends ConfigFormBase
     {
         $config = $this->config(static::SETTINGS);
 
+        //dd($config);
+
         $form['default_title'] = array(
             '#type' => 'textfield',
             '#title' => t('Default Login Name'),
@@ -57,7 +59,6 @@ class OnlineBankingForm extends ConfigFormBase
             '#required' => FALSE,
         );
 
-
         $form['logins'] = [
             '#type' => 'details',
             '#title' => "Logins",
@@ -71,7 +72,7 @@ class OnlineBankingForm extends ConfigFormBase
             '#submit' => ['::addOneLogin'],
             '#weight' => 100,
             '#ajax' => [
-                'callback' => '::updateTagCallback',
+                'callback' => '::updateLoginCallback',
                 'wrapper' => 'login-fields-wrapper',
                 'method' => 'replace',
             ],
@@ -82,7 +83,7 @@ class OnlineBankingForm extends ConfigFormBase
             '#submit' => ['::remOneLogin'],
             '#weight' => 100,
             '#ajax' => [
-                'callback' => '::updateTagCallback',
+                'callback' => '::updateLoginCallback',
                 'wrapper' => 'login-fields-wrapper',
                 'method' => 'replace',
             ],
@@ -93,64 +94,79 @@ class OnlineBankingForm extends ConfigFormBase
             '#prefix' => '<div id="login-fields-wrapper">',
             '#suffix' => '</div>',
         ];
-        $number_of_logins = $form_state->get('number_of_logins');
+
+        $number_of_logins = !empty($config->get('login_settings')) && empty($form_state->get('number_of_logins')) ? count($config->get('login_settings')) : $form_state->get('number_of_logins');
+        $login_settings = $config->get('login_settings');
 
         $values = [
-            'login' => t('Login'),
-            'url' => t('URL')
+            'link' => t('Link'),
+            'form' => t('Form')
         ];
+
+        //echo "Counter: " . $number_of_logins;
 
         if (empty($number_of_logins)) {
             $number_of_logins = 1;
             $form_state->set('number_of_logins', $number_of_logins);
         }
-        for ($i = 0; $i < $number_of_logins; $i++) {
 
-            $form['logins']['login_values'][$i]['name'] = [
-                '#type' => 'textfield',
-                '#title' => $this->t('Name'),
-                '#default_value' => "",
+        //echo "<hr> Counter: " . $number_of_logins . " " . $form_state->get('number_of_logins');
+
+        for ($i = 1; $i <= $number_of_logins; $i++) {
+
+            $index = $i - 1;
+
+            $form['logins']['login_values'][$i]['container'] = [
+                '#type' => 'container',
+                '#tree' => TRUE,
+                '#prefix' => '<div id="individual-items">',
+                '#suffix' => '</div>',
             ];
 
-            $form['logins']['login_values'][$i]['active'] = array(
+            $form['logins']['login_values'][$i]['container']['name'] = [
+                '#type' => 'textfield',
+                '#title' => $this->t('Name'),
+                '#default_value' => isset($login_settings[$index]) ? $login_settings[$index]['name'] : "",
+            ];
+
+            $form['logins']['login_values'][$i]['container']['active'] = array(
                 '#type' => 'checkbox',
-                '#default_value' => FALSE,
+                '#default_value' => isset($login_settings[$index]) ? $login_settings[$index]['active'] : FALSE,
                 '#title' => t('Active'),
                 '#required' => FALSE,
             );
 
-            $form['logins']['login_values'][$i]['type'] = array(
+            $form['logins']['login_values'][$i]['container']['type'] = array(
                 '#title' => t('Login Type'),
                 '#type' => 'select',
                 '#options' => $values,
-                '#default_value' => 'login'
-              );
+                '#default_value' => isset($login_settings[$index]) ? $login_settings[$index]['type'] : "link",
+            );
 
-            $form['logins']['login_values'][$i]['url'] = [
+            $form['logins']['login_values'][$i]['container']['url'] = [
                 '#type' => 'textfield',
                 '#title' => $this->t('URL'),
-                '#default_value' => "",
+                '#default_value' => isset($login_settings[$index]) ? $login_settings[$index]['url'] : "url",
             ];
 
-            $form['logins']['login_values'][$i]['form_action'] = [
+            $form['logins']['login_values'][$i]['container']['form_action'] = [
                 '#type' => 'textfield',
                 '#title' => $this->t('Form Action'),
-                '#default_value' => "",
+                '#default_value' => isset($login_settings[$index]) ? $login_settings[$index]['form_action'] : "",
             ];
 
-            $form['logins']['login_values'][$i]['user_name'] = [
+            $form['logins']['login_values'][$i]['container']['user_name'] = [
                 '#type' => 'textfield',
                 '#title' => $this->t('User ID Name Override'),
-                '#default_value' => "",
+                '#default_value' => isset($login_settings[$index]) ? $login_settings[$index]['user_name'] : "",
             ];
 
-            $form['logins']['login_values'][$i]['pass_name'] = [
+            $form['logins']['login_values'][$i]['container']['pass_name'] = [
                 '#type' => 'textfield',
                 '#title' => $this->t('Password Name Override'),
-                '#default_value' => "",
+                '#default_value' => isset($login_settings[$index]) ? $login_settings[$index]['pass_name'] : "",
             ];
         }
-        //return $form;
 
         return parent::buildForm($form, $form_state);
     }
@@ -160,14 +176,17 @@ class OnlineBankingForm extends ConfigFormBase
      */
     public function submitForm(array &$form, FormStateInterface $form_state)
     {
-        dd($form_state->getValues());
-        // Retrieve the configuration.
+        $login_values = $form_state->getValue('login_values');
+        $login_settings = [];
+        foreach ($login_values as $index => $login_items) {
+            $login_settings[$index] = $login_items['container'];
+        }
+
         $this->config(static::SETTINGS)
             // Set the submitted configuration setting.
-            ->set('example_thing', $form_state->getValue('example_thing'))
-            // You can set multiple configurations at once by making
-            // multiple calls to set().
-            ->set('other_things', $form_state->getValue('other_things'))
+            ->set('default_title', $form_state->getValue('default_title'))
+            ->set('enable_logins', $form_state->getValue('enable_logins'))
+            ->set('login_settings', $login_settings)
             ->save();
 
         parent::submitForm($form, $form_state);
@@ -193,9 +212,9 @@ class OnlineBankingForm extends ConfigFormBase
         $form_state->setRebuild(TRUE);
     }
     /**
-     * Return the tag list (Form).
+     * Return the login field list (Form).
      */
-    public function updateTagCallback(array &$form, FormStateInterface $form_state)
+    public function updateLoginCallback(array &$form, FormStateInterface $form_state)
     {
         return $form['logins']['login_values'];
     }

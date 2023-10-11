@@ -1,0 +1,11 @@
+default_title: 'Online Banking'
+enable_logins: 1
+login_settings:
+  -
+    name: 'Business Online Banking'
+    active: 1
+    type: link
+    url: 'https://savvyatarizbank.com/arizonabankandtrustonline/Uux.aspx'
+    form_action: Kona
+    user_name: Testing
+    pass_name: YesSir
