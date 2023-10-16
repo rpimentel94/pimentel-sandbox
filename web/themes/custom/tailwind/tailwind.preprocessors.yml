@@ -10,7 +10,7 @@ tailwind.node:
 
 tailwind.main_menu:
   class: '\Drupal\tailwind\Plugin\Preprocess\MainMenu'
-  hook: menu__main
+  hook: menu__primary_menu
   weight: 0
 
 #Paragraph Bundles

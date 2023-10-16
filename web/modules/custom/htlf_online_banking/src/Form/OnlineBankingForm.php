@@ -18,6 +18,18 @@ class OnlineBankingForm extends ConfigFormBase
      */
     const SETTINGS = 'htlf_online_banking.settings';
 
+    /**
+     * Get the current domain specific settings
+     */
+    public function getDomainSettings() {
+        $loader = \Drupal::service('domain.negotiator');
+        $current_domain = $loader->getActiveDomain();
+        $active_domain = $current_domain->id();
+        $config_name = 'htlf_online_banking.'. $active_domain .'.settings';
+        return $config_name;
+        
+    }
+
     /** 
      * {@inheritdoc}
      */
@@ -32,7 +44,7 @@ class OnlineBankingForm extends ConfigFormBase
     protected function getEditableConfigNames()
     {
         return [
-            static::SETTINGS,
+            $this->getDomainSettings(),
         ];
     }
 
@@ -41,7 +53,7 @@ class OnlineBankingForm extends ConfigFormBase
      */
     public function buildForm(array $form, FormStateInterface $form_state)
     {
-        $config = $this->config(static::SETTINGS);
+        $config = $this->config($this->getDomainSettings());
 
         //dd($config);
 
@@ -182,7 +194,7 @@ class OnlineBankingForm extends ConfigFormBase
             $login_settings[$index] = $login_items['container'];
         }
 
-        $this->config(static::SETTINGS)
+        $this->config($this->getDomainSettings())
             // Set the submitted configuration setting.
             ->set('default_title', $form_state->getValue('default_title'))
             ->set('enable_logins', $form_state->getValue('enable_logins'))

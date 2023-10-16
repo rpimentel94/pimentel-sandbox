@@ -18,6 +18,10 @@ class MainMenu extends PreprocessPluginBase {
    * {@inheritdoc}
    */
   public function preprocess(array $variables): array {
+
+    //dd($variables);
+
+
     // Do any preprocessing here for your block!
     return $variables;
   }
