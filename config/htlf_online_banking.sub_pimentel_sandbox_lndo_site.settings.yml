@@ -1,0 +1,11 @@
+default_title: 'Online Banking'
+enable_logins: 0
+login_settings:
+  1:
+    name: ''
+    active: 0
+    type: link
+    url: url
+    form_action: ''
+    user_name: ''
+    pass_name: ''

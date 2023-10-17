@@ -46,3 +46,10 @@ alert-messages:
   dependencies:
     - core/drupal
     - core/once
+
+online-banking:
+  js:
+    assets/src/js/online-banking.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

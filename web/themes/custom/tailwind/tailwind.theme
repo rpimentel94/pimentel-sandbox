@@ -10,80 +10,113 @@
 function tailwind_form_system_theme_settings_alter(&$form, $form_state)
 {
 
-    // To make the fieldset collapsible
-    $form['custom'] = array(
-        '#type' => 'fieldset',
-        '#title' => t('Name'),
-        '#collapsible' => TRUE,
-        // Added
-        '#collapsed' => FALSE, // Added
-    );
+  // To make the fieldset collapsible
+  $form['custom'] = array(
+    '#type' => 'details',
+    '#title' => t('Bank/Site Information'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+    '#weight' => -2
+  );
 
-    $form['custom']['bank_name'] = array(
-        '#title' => t('Bank Name'),
-        '#description' => t('Official user facing name of bank/division'),
-        '#type' => 'textfield',
-        '#default_value' => theme_get_setting('bank_name'),
-    );
+  $form['custom']['bank_name'] = array(
+    '#title' => t('Bank Name'),
+    '#description' => t('Official user facing name of bank/division'),
+    '#type' => 'textfield',
+    '#default_value' => theme_get_setting('bank_name'),
+  );
 
-    $form['custom']['logo_footer'] = array(
-        '#title' => t('Logo Footer'),
-        '#description' => t('This Is Logo Footer: png|jpg|jpeg|svg'),
-        '#type' => 'managed_file',
-        '#upload_location' => 'public://logo-footer/',
-        '#upload_validators' => array(
-            'file_validate_extensions' => array('png jpg jpeg svg'),
-        ),
-        '#default_value' => theme_get_setting('logo_footer'),
-    );
+  $form['custom']['logo_footer'] = array(
+    '#title' => t('Logo Footer'),
+    '#description' => t('This Is Logo Footer: png|jpg|jpeg|svg'),
+    '#type' => 'managed_file',
+    '#upload_location' => 'public://logo-footer/',
+    '#upload_validators' => array(
+      'file_validate_extensions' => array('png jpg jpeg svg'),
+    ),
+    '#default_value' => theme_get_setting('logo_footer'),
+  );
 
-    $form['custom']['primary_color'] = array(
-        '#title' => t('Primary Color'),
-        '#description' => t('Color used for main banner'),
-        '#type' => 'textfield',
-        '#default_value' => theme_get_setting('primary_color'),
-    );
+  $form['custom']['primary_color'] = array(
+    '#title' => t('Primary Color'),
+    '#description' => t('Color used for main banner'),
+    '#type' => 'textfield',
+    '#default_value' => theme_get_setting('primary_color'),
+  );
 
-    $form['custom']['secondary_color'] = array(
-        '#title' => t('Secondary Color'),
-        '#description' => t('Color used link colors links, buttons & section background colors'),
-        '#type' => 'textfield',
-        '#default_value' => theme_get_setting('secondary_color'),
-    );
+  $form['custom']['secondary_color'] = array(
+    '#title' => t('Secondary Color'),
+    '#description' => t('Color used link colors links, buttons & section background colors'),
+    '#type' => 'textfield',
+    '#default_value' => theme_get_setting('secondary_color'),
+  );
 
-    $form['custom']['test_color'] = array(
-      '#title' => t('Test Color'),
-      '#description' => t('Color used link colors links, buttons & section background colors'),
-      '#type' => 'textfield',
-      '#default_value' => theme_get_setting('test_color'),
+  $form['custom']['test_color'] = array(
+    '#title' => t('Test Color'),
+    '#description' => t('Color used link colors links, buttons & section background colors'),
+    '#type' => 'textfield',
+    '#default_value' => theme_get_setting('test_color'),
+  );
+
+
+  $form['online_banking'] = [
+    '#type' => 'details',
+    '#title' => t('Online Banking'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+    '#weight' => -1
+  ];
+
+  $form['online_banking']['login_url'] = array(
+    '#title' => t('Online Banking Login URL'),
+    '#description' => t('Provide a link to the Online Banking Login page.'),
+    '#type' => 'textfield',
+    '#default_value' => theme_get_setting('login_url'),
+  );
+
+  $form['online_banking']['enroll_url'] = array(
+    '#title' => t('Auto Enrollment URL'),
+    '#description' => t('Provide a link to the Auto Enrollment Login page.'),
+    '#type' => 'textfield',
+    '#default_value' => theme_get_setting('enroll_url'),
+  );
+
+  $form['online_banking']['recovery_url'] = array(
+    '#title' => t('Forgot Password URL'),
+    '#description' => t('Provide a link to the Account Recovery page.'),
+    '#type' => 'textfield',
+    '#default_value' => theme_get_setting('recovery_url'),
   );
 
 }
 
-function tailwind_preprocess_block(array &$variables) {
-    if (!empty($variables['elements']['#id'])) {
-      $variables['content']['#attributes']['data-block-id'] = $variables['elements']['#id'];
+function tailwind_preprocess_block(array &$variables)
+{
+  if (!empty($variables['elements']['#id'])) {
+    $variables['content']['#attributes']['data-block-id'] = $variables['elements']['#id'];
+  }
+}
+
+function tailwind_theme_suggestions_menu_alter(array &$suggestions, array $variables)
+{
+  if (isset($variables['attributes']['data-block-id'])) {
+    $block = \Drupal\block\Entity\Block::load($variables['attributes']['data-block-id']);
+    if ($block) {
+      array_unshift($suggestions, 'menu__' . str_replace('-', '_', $block->getRegion()));
     }
   }
+}
 
-  function tailwind_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
-    if (isset($variables['attributes']['data-block-id'])) {
-      $block = \Drupal\block\Entity\Block::load($variables['attributes']['data-block-id']);
-      if ($block) {
-        array_unshift($suggestions, 'menu__' . str_replace('-', '_', $block->getRegion()));
-      }
-    }
-  }
-
-  /**
+/**
  * Implements hook_preprocess_HOOK().
  */
-function tailwind_preprocess_html(&$variables) {
+function tailwind_preprocess_html(&$variables)
+{
   $primary_color = theme_get_setting('primary_color');
   $secondary_color = theme_get_setting('secondary_color');
   $style = [
     '#tag' => 'style',
-    '#value' => ":root {\n  --PrimaryColor: ". $primary_color ."; --SecondaryColor: " . $secondary_color . ";\n}",
+    '#value' => ":root {\n  --PrimaryColor: " . $primary_color . "; --SecondaryColor: " . $secondary_color . ";\n}",
   ];
   $variables['page']['#attached']['html_head'][] = [$style, 'site-colors'];
 }

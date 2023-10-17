@@ -8,6 +8,11 @@ tailwind.node:
   hook: node
   weight: 0
 
+tailwind.block:
+  class: '\Drupal\tailwind\Plugin\Preprocess\Block'
+  hook: block
+  weight: 0
+
 tailwind.main_menu:
   class: '\Drupal\tailwind\Plugin\Preprocess\MainMenu'
   hook: menu__primary_menu

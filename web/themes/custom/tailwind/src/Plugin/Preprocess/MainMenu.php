@@ -12,15 +12,14 @@ use Drupal\preprocess\PreprocessPluginBase;
  *   hook = "block"
  * )
  */
-class MainMenu extends PreprocessPluginBase {
+class MainMenu extends PreprocessPluginBase
+{
 
   /**
    * {@inheritdoc}
    */
-  public function preprocess(array $variables): array {
-
-    //dd($variables);
-
+  public function preprocess(array $variables): array
+  {
 
     // Do any preprocessing here for your block!
     return $variables;

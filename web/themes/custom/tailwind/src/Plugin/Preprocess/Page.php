@@ -57,6 +57,22 @@ class Page extends PreprocessPluginBase
       $variables['middle_section'] = $variables['node']->hasField('field_middle_section') && !$variables['node']->get('field_middle_section')->isEmpty() ? TRUE : FALSE;
     }
 
+    // $loader = \Drupal::service('domain.negotiator');
+    // $current_domain = $loader->getActiveDomain();
+    // $active_domain = $current_domain->id();
+    // $olb_settings = 'htlf_online_banking.' . $active_domain . '.settings';
+
+    // $olb_settings = \Drupal::config($olb_settings);
+
+    // $variables['online_banking'] = $olb_settings->get('enable_logins') ? TRUE : FALSE;
+
+    // if ($variables['online_banking']) {
+    //   $variables['logins'] = [];
+    //   foreach ($olb_settings->get('login_settings') as $value) {
+    //     $variables['logins'][] = $value;
+    //   }
+    // }
+
 
     return $variables;
   }

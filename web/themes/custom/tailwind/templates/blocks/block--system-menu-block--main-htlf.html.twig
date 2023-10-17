@@ -32,17 +32,98 @@
  */
 #}
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
-<nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes|without('role', 'aria-labelledby', 'class') }} class="w-full flex-grow lg:flex lg:items-stretch lg:w-auto">
-  {# Label. If not displayed, we still provide it for screen readers. #}
-  {% if not configuration.label_display %}
-    {% set title_attributes = title_attributes.addClass('visually-hidden') %}
-  {% endif %}
-  {{ title_prefix }}
-  <h2{{ title_attributes.setAttribute('id', heading_id) }}>{{ configuration.label }}</h2>
-  {{ title_suffix }}
+<nav
+	role="navigation" aria-labelledby="{{ heading_id }}" {{ attributes|without('role', 'aria-labelledby', 'class') }} class="w-full flex-grow lg:flex lg:items-stretch lg:w-auto">
+	{# Label. If not displayed, we still provide it for screen readers. #}
+	{% if not configuration.label_display %}
+		{% set title_attributes = title_attributes.addClass('visually-hidden') %}
+	{% endif %}
+	{{ title_prefix }}
+	<h2{{title_attributes.setAttribute('id',heading_id)}}>{{ configuration.label }}</h2>
+	{{ title_suffix }}
 
-  {# Menu. #}
-  {% block content %}
-    {{ content }}
-  {% endblock %}
-</nav>
+	{# Menu. #}
+	{% block content %}
+		<div class="flex justify-between relative w-full" x-data="{ open: false }">
+			{{ content }}
+
+			{% if online_banking %}
+				{{ attach_library('tailwind/online-banking') }}
+
+				<div class="flex items-center justify-center pl-14">
+					<button class="button olb-trigger" x-on:click="open = ! open">Login</button>
+				</div>
+				<div x-show="open" class="absolute right-0 top-3/4 z-10 transition-opacity border border-slate-800" id="modal">
+					<div class="bg-white p-4 sm:p-6 sm:pb-4">
+						<div class="flex justify-between pb-4">
+							<h3>Account Type</h3>
+							<span class="olb-trigger cursor-pointer text-xl font-bold text-slate-500 hover:text-black" x-on:click="open = ! open">x</span>
+						</div>
+						<select id="login-type">
+							{% for login in logins %}
+								<option value="login-section-{{loop.index}}">{{login.name}}</option>
+							{% endfor %}
+							<select>
+								<div class="login-sections mt-4">
+									{% for login in logins %}
+										<div id="login-section-{{loop.index}}" class="{% if loop.first %}vis{% else %}inv{% endif %}">
+											{% if login.name == 'Online Banking' %}
+												<form id="login-form-{{loop.index}}" name="OnlineBankingLogin" action="{{login.url}}" method="post">
+													<div class="mb-4">
+														<label class="block text-gray-700 text-sm font-bold mb-2" for="desktop-user-id">
+															Login ID
+														</label>
+														<input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="desktop-user-id" name="user_id" type="text" placeholder="Username">
+													</div>
+													<div class="mb-6">
+														<label class="block text-gray-700 text-sm font-bold mb-2" for="desktop-password">
+															Password
+														</label>
+														<input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="desktop-password" name="password" type="password" placeholder="******************">
+													</div>
+
+													<div class="text-center">
+														<button class="button login" type="submit">Login</button>
+													</div>
+													<ul class="olb-links flex justify-between !text-sm pt-8">
+														<li>
+															<a href="{{login.enroll}}" class="enroll-link">Enroll</a>
+														</li>
+														<li>
+															<a href="{{login.recovery}}" class="forgot-password-link">Forgot ID or Password?</a>
+														</li>
+													</ul>
+												</form>
+											{% elseif login.type == 'form' %}
+												<form id="login-form-{{loop.index}}" name="OnlineBankingLogin" action="{{login.url}}" method="post">
+													<div class="mb-4">
+														<label class="block text-gray-700 text-sm font-bold mb-2" for="desktop-user-id">
+															Login ID
+														</label>
+														<input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="desktop-user-id" name="user_id" type="text" placeholder="Username">
+													</div>
+													<div class="mb-6">
+														<label class="block text-gray-700 text-sm font-bold mb-2" for="desktop-password">
+															Password
+														</label>
+														<input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="desktop-password" name="password" type="password" placeholder="******************">
+													</div>
+
+													<div class="text-center">
+														<button class="button login" type="submit">Login</button>
+													</div>
+												</form>
+											{% elseif login.type == 'link' %}
+                        <div class="my-4 flex justify-center">
+                          <a href="{{login.url}}" target="_blank" class="button" name="Login">Login</a>
+                        </div>
+											{% endif %}
+										</div>
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+					{% endif %}
+				</div>
+			{% endblock %}
+		</nav>
