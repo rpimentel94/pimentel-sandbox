@@ -1,0 +1,62 @@
+<?php
+
+use Drupal\Core\Render\BubbleableMetadata;
+
+/**
+ * Implements hook_token_info()
+ */
+
+function htlf_tokens_token_info()
+{
+
+    $type = [
+        'name' => t('HTLF Tokens'),
+        'description' => t('Custom Token for site use across all Division banks'),
+    ];
+
+    $node['dateformat'] = [
+        'name' => t("Custom Date Format"),
+        'dynamic' => TRUE,
+        'description' => t('Show a custom format for the current date'),
+    ];
+    
+    return [
+        'types' => ['htlf_tokens' => $type],
+        'tokens' => ['htlf_tokens' => $node],
+    ];
+}
+
+
+/**
+ * Implements hook_tokens()
+ */
+
+function htlf_tokens_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata)
+{
+    $replacements = [];
+   
+    $loader = \Drupal::service('domain.negotiator');
+    $current_domain = $loader->getActiveDomain();
+    $active_domain = $current_domain->id();
+    $custom_tokens = 'htlf_tokens.' . $active_domain;
+
+    $custom_tokens = \Drupal::config($custom_tokens);
+
+    if ($type == 'htlf_tokens') {
+        foreach ($tokens as $name => $original) {
+            switch ($name) {
+                case 'title':
+                    $replacements[$original] = $data['node']->getTitle();
+                break;
+            }
+        }
+        if ($dateTokens = \Drupal::token()->findWithPrefix($tokens, 'dateformat')) {
+            // var_dump($dateTokens)
+            // retult: array(1) { ["Y-m-d"]=> string(30) "[customtoken:dateformat:Y-m-d]" }
+            foreach ($dateTokens as $format => $original) {
+                $replacements[$original] = date($format);
+            }
+        }
+    }
+    return $replacements;
+}

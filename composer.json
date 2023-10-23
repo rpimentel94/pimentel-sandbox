@@ -151,6 +151,9 @@
             },
             "drupal/token_filter": {
                 "CKEditor5 Missing Token Option": "https://www.drupal.org/files/issues/2023-06-14/token_filter-2.x-dev-3262052-19.patch"
+            },
+            "drupal/token": {
+                "In tandem with Missing Token Option": "https://www.drupal.org/files/issues/2023-06-02/token-8.x-1.x-3262052-17.patch"
             }
          }
     },
