@@ -95,6 +95,7 @@
         "drupal/token": "^1.12",
         "drupal/token_custom": "^1.0@alpha",
         "drupal/token_custom_plus": "^2.0",
+        "drupal/token_filter": "^2.0",
         "drupal/total_control": "^3.0",
         "drupal/twig_debugger": "^1.1",
         "drupal/twig_tweak": "^3.2",
@@ -147,6 +148,9 @@
             "drupal/core": {
                 "Correct Link Formatter": "./patches/unsupported-link-operator.patch",
                 "CkEditor5 Not Respecting Row Size": "https://www.drupal.org/files/issues/2023-02-02/3241295-d9.5-101.patch"
+            },
+            "drupal/token_filter": {
+                "CKEditor5 Missing Token Option": "https://www.drupal.org/files/issues/2023-06-14/token_filter-2.x-dev-3262052-19.patch"
             }
          }
     },

@@ -1,0 +1,19 @@
+uuid: b1cd06c0-d280-46f6-9d94-9b7a07bab761
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.custom_site_tokens
+    - field.storage.config_pages.field_token_name
+id: config_pages.custom_site_tokens.field_token_name
+field_name: field_token_name
+entity_type: config_pages
+bundle: custom_site_tokens
+label: 'Token Name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

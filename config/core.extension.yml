@@ -17,6 +17,7 @@ module:
   comment: 0
   components: 0
   config: 0
+  config_pages: 0
   config_translation: 0
   contact: 0
   content_moderation: 0
@@ -141,6 +142,7 @@ module:
   token: 0
   token_custom: 0
   token_custom_plus: 0
+  token_filter: 0
   toolbar: 0
   total_control: 0
   tour: 0

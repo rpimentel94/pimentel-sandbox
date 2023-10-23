@@ -1,0 +1,5 @@
+name: HTLF Custom Token Library
+description: Custom implementation for token across all division sites
+type: module
+package: HTLF
+core_version_requirement: ^9.5 || ^10
