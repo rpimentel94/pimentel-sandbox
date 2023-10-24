@@ -1,0 +1,7 @@
+htlf_tokens.settings:
+  path: '/admin/config/custom-tokens/settings'
+  defaults:
+    _form: '\Drupal\htlf_tokens\Form\CustomTokenSheetForm'
+    _title: 'Custom Token Sheet Upload'
+  requirements:
+    _permission: 'administer site configuration'
