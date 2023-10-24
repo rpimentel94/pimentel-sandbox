@@ -1,6 +1,8 @@
 <?php
 
 use Drupal\Core\Render\BubbleableMetadata;
+use Drupal\media\Entity\Media;
+use Drupal\file\Entity\File;
 
 /**
  * Implements hook_token_info()
@@ -14,15 +16,49 @@ function htlf_tokens_token_info()
         'description' => t('Custom Token for site use across all Division banks'),
     ];
 
-    $node['dateformat'] = [
-        'name' => t("Custom Date Format"),
-        'dynamic' => TRUE,
-        'description' => t('Show a custom format for the current date'),
-    ];
-    
+    //Load Media *Replace with currently set live version*
+    $media = Media::load(6469);
+    $fid = $media->field_media_image->target_id;
+    $file = File::load($fid);
+
+    $tokens = [];
+
+    if ($file) {
+        //loop through the csv file into an array
+        $tokens = array_map('str_getcsv', file($file->getFileUri(), FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES));
+        /*Walk through the array and combine the headers which is the first element of our csv array with the rest of the csv data*/
+        array_walk($tokens, function (&$ary) use ($tokens) {
+            $ary = array_combine($tokens[0], $ary);
+        });
+
+        //remove column headers which is the first element
+        array_shift($tokens);
+        foreach ($tokens as $key => $value) {
+            $tokens[$key]['Type'] = strtolower($value['Type']);
+        }
+    }
+
+    uasort($tokens, function ($a, $b) {
+        return strcmp($a['Type'], $b['Type']);
+    });
+
+    $tokens = array_values($tokens);
+
+    $htlf_tokens = [];
+
+    foreach ($tokens as $key => $value) {
+        $token_name = $value['Type'] . ":" . $value['Token Name'];
+
+        $htlf_tokens[$token_name] = [
+            'name' => $value['Type'] . " - " . $value['Name'],
+            'dynamic' => FALSE,
+            'description' => $value['Name']
+        ];
+    }
+
     return [
         'types' => ['htlf_tokens' => $type],
-        'tokens' => ['htlf_tokens' => $node],
+        'tokens' => ['htlf_tokens' => $htlf_tokens],
     ];
 }
 
@@ -34,7 +70,7 @@ function htlf_tokens_token_info()
 function htlf_tokens_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata)
 {
     $replacements = [];
-   
+
     $loader = \Drupal::service('domain.negotiator');
     $current_domain = $loader->getActiveDomain();
     $active_domain = $current_domain->id();
@@ -47,7 +83,7 @@ function htlf_tokens_tokens($type, $tokens, array $data, array $options, Bubblea
             switch ($name) {
                 case 'title':
                     $replacements[$original] = $data['node']->getTitle();
-                break;
+                    break;
             }
         }
         if ($dateTokens = \Drupal::token()->findWithPrefix($tokens, 'dateformat')) {

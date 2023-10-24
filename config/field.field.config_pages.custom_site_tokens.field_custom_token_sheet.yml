@@ -1,0 +1,43 @@
+uuid: 47f3cfaf-b309-4520-bea0-8b67aa8baa94
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.custom_site_tokens
+    - field.storage.config_pages.field_custom_token_sheet
+    - media.type.audio
+    - media.type.csv
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.uopen
+    - media.type.vector_image
+    - media.type.video
+id: config_pages.custom_site_tokens.field_custom_token_sheet
+field_name: field_custom_token_sheet
+entity_type: config_pages
+bundle: custom_site_tokens
+label: 'Custom Token Sheet'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      audio: audio
+      csv: csv
+      document: document
+      image: image
+      remote_video: remote_video
+      uopen: uopen
+      vector_image: vector_image
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: audio
+field_type: entity_reference

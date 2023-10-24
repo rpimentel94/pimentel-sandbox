@@ -4,46 +4,19 @@ status: true
 dependencies:
   config:
     - config_pages.type.custom_site_tokens
-    - field.field.config_pages.custom_site_tokens.field_name
-    - field.field.config_pages.custom_site_tokens.field_token
-    - field.field.config_pages.custom_site_tokens.field_token_name
-    - field.field.config_pages.custom_site_tokens.field_type
-  module:
-    - options
+    - field.field.config_pages.custom_site_tokens.field_custom_token_sheet
 id: config_pages.custom_site_tokens.default
 targetEntityType: config_pages
 bundle: custom_site_tokens
 mode: default
 content:
-  field_name:
-    type: string
+  field_custom_token_sheet:
+    type: entity_reference_entity_view
     label: above
     settings:
-      link_to_entity: false
+      view_mode: default
+      link: false
     third_party_settings: {  }
     weight: 0
-    region: content
-  field_token:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 3
-    region: content
-  field_token_name:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  field_type:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 1
     region: content
 hidden: {  }

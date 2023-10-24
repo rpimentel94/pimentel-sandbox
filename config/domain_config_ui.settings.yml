@@ -1,4 +1,4 @@
 _core:
   default_config_hash: PJP3-sJN2SQZTgCupMBEHry3ui7zsl93xtTovoTanFU
 remember_domain: false
-path_pages: "/admin/appearance\r\n/admin/config/system/site-information\r\n/admin/config/domain/domain_source\r\n/admin/config/domain/domain_access\r\n/admin/config/domain/domain_access_logo\r\n/admin/appearance/settings/tailwind"
+path_pages: "/admin/appearance\r\n/admin/config/system/site-information\r\n/admin/config/domain/domain_source\r\n/admin/config/domain/domain_access\r\n/admin/config/domain/domain_access_logo\r\n/admin/appearance/settings/tailwind\r\n/admin/config/system/custom-tokens"
