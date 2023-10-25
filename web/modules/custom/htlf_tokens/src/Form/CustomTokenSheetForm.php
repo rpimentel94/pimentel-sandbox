@@ -62,7 +62,7 @@ class CustomTokenSheetForm extends ConfigFormBase
             '#type' => 'media_library',
             '#allowed_bundles' => ['csv', 'image'],
             '#title' => t('Upload your csv'),
-            '#default_value' => 6469,
+            '#default_value' => $config->get('token_sheet') ?: "",
             '#description' => t('Upload updated custom token sheet'),
         ];
 

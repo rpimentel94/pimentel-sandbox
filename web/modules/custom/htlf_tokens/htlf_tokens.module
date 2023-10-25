@@ -58,56 +58,10 @@ function htlf_tokens_token_info()
  * Implements hook_tokens()
  */
 
-function htlf_tokens_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata)
-{
-    $replacements = [];
-
-    $loader = \Drupal::service('domain.negotiator');
-    $current_domain = $loader->getActiveDomain();
-    $active_domain = $current_domain->id();
-    $token_sheet = 'htlf_tokens.' . $active_domain . '.settings';
-
-    $token_sheet = \Drupal::config($token_sheet);
-
-    $token_sheet_data = unserialize($token_sheet->get('token_sheet_data'));
-
-    \Drupal::logger('my_module')->debug('<pre><code>' . print_r($type, TRUE) . '</code></pre>');
+// function htlf_tokens_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata)
+// {
+//     $replacements = [];
 
 
-    if (array_key_exists($type, $token_sheet_data)) {
-        \Drupal::logger('my_module')->debug('<pre><code>' . print_r($type, TRUE) . '</code></pre>');
-        foreach ($tokens as $key => $token) {
-            dd($key, $token);
-        }
-    }
-
-
-    // switch ($type) {
-    //     case 'global-example':
-    //         foreach ($tokens as $key => $token) {
-    //             switch ($key) {
-    //                 case 'fruit':
-    //                     $replacements[$token] = 'kiwi';
-    //                     break;
-    //                 case 'basic-node':
-    //                     $replacements[$token] = Node::load(1)->title->value;
-    //                     break;
-    //             }
-    //         }
-
-    //         $node_tokens = \Drupal::token()->findWithPrefix($tokens, 'basic-node');
-    //         $replacements += \Drupal::token()->generate('node', $node_tokens, ['node' => Node::load(1)], $options, $bubbleable_metadata);
-
-    //         break;
-
-    //     case 'node-example':
-    //         foreach ($tokens as $key => $token) {
-    //             if ($key == 'timestamps') {
-    //                 $replacements[$token] = $data['node']->created->value . ' and ' . $data['node']->changed->value;
-    //             }
-    //         }
-    //         break;
-    // }
-
-    return $replacements;
-}
+//     return $replacements;
+// }
