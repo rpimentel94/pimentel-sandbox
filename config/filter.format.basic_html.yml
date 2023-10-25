@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - editor
+    - htlf_tokens
+    - token_filter
 _core:
   default_config_hash: RjoJPQLCAE8u1Ys_yCKubpkYlRz_Oy12a5qCVeNIHJ8
 name: 'Basic HTML'
@@ -43,3 +45,16 @@ filters:
     status: true
     weight: 11
     settings: {  }
+  custom_token_sheet_filter:
+    id: custom_token_sheet_filter
+    provider: htlf_tokens
+    status: true
+    weight: 0
+    settings: {  }
+  token_filter:
+    id: token_filter
+    provider: token_filter
+    status: false
+    weight: 0
+    settings:
+      replace_empty: '0'

@@ -122,7 +122,8 @@ class CustomTokenSheetForm extends ConfigFormBase
                     'name' => $value['Name'],
                     'dynamic' => FALSE,
                     'description' => $value['Name'],
-                    'token_name' => $value['Token Name']
+                    'token_name' => "[" . $value['Type'] . ":" . $value['Token Name'] . "]",
+                    'value' => $value['Value'],
                 ];
             }
         }

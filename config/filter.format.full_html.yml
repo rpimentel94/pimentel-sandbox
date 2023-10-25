@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - editor
+    - htlf_tokens
     - media
     - token_filter
 _core:
@@ -61,3 +62,9 @@ filters:
     weight: 0
     settings:
       replace_empty: '0'
+  custom_token_sheet_filter:
+    id: custom_token_sheet_filter
+    provider: htlf_tokens
+    status: true
+    weight: 0
+    settings: {  }
