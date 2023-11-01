@@ -22,6 +22,14 @@
   margin-bottom: 1rem;
 }
 
+.social-share svg {
+  height: 3em;
+  color: var(--PrimaryColor);
+}
+.social-share svg :hover {
+  color: var(--SecondaryColor);
+}
+
 .input-wrapper {
   --padding: 22px;
   --focus-color: black;
@@ -366,6 +374,21 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
 
 .inv {
   display: none;
+}
+
+.blog-post-sidebar_view .views-row {
+  padding: 20px 0;
+  border-bottom: solid 1px #e8e8e8;
+}
+.blog-post-sidebar_view .views-row .views-field-title {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--PrimaryColor);
+  font-weight: 500;
+}
+.blog-post-sidebar_view .views-row .views-field-title:hover {
+  text-decoration: underline;
+  color: var(--SeconadaryColor);
 }
 
 footer .footer-inner-top #block-auxmenu-2 ul {

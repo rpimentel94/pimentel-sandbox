@@ -5,3 +5,16 @@ htlf_tokens.settings:
     _title: 'Custom Token Sheet Upload'
   requirements:
     _permission: 'administer site configuration'
+# # Defines a route for a collection containing featured articles nodes.
+# htlf_tokens.api_endpoint:
+#   # %jsonapi% is a placeholder for the JSON:API base path, which can be
+#   # configured in a site's services.yml file.
+#   path: '/%jsonapi%/token-sheet'
+#   defaults:
+#     # Every JSON:API resource route must declare a _jsonapi_resource. The
+#     # value can either be a class or a service ID. Unlike the _controller
+#     # route default, it is not possible to declare a method name to be called.
+#     _jsonapi_resource: Drupal\my_custom_resource\Resource\FeaturedArticlesResource
+#     _jsonapi_resource_types: ['node--article']
+#   requirements:
+#     _permission: 'access content'

@@ -14,3 +14,15 @@
     }
   }
 }
+
+
+.social-share {
+  svg {
+    height: 3em;
+    color: var(--PrimaryColor);
+
+    :hover {
+      color: var(--SecondaryColor);
+    }
+  }
+}
