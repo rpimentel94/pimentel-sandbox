@@ -1,0 +1,21 @@
+uuid: fece40d6-0964-40a8-ad55-195d0f552212
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_html_body
+    - paragraphs.paragraphs_type.banner_item
+  module:
+    - text
+id: paragraph.banner_item.field_html_body
+field_name: field_html_body
+entity_type: paragraph
+bundle: banner_item
+label: 'HTML Body'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

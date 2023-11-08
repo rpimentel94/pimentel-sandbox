@@ -1,0 +1,6 @@
+name: Custom HTLF Banner
+type: module
+description: Updated configs for custom HTLF field change & render of banner image
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9

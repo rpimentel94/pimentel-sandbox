@@ -1,0 +1,29 @@
+{% set q2_alignment = content.field_q2_alignment['#items'].getString() %}
+{% set q2_theme = content.field_q2_overlay['#items'].getString() %}
+
+{% if paragraph.isPublished() %}
+  {% block paragraph %}
+    <li class="orbit-slide {{ q2_alignment ~ " " ~ q2_theme }}">
+      <figure class="orbit-figure">
+        <div class="orbit-image{{ q2_mobile_image ?  ' show-for-medium' }}"{{ q2_desktop_image }} role="presentation"></div>
+        {% if q2_mobile_image %}
+          <div class="orbit-image show-for-small-only"{{ q2_mobile_image }}></div>
+        {% endif %}
+        <figcaption class="orbit-caption">
+          <div class="banner-item-inner {{q2_alignment}}">
+          {% block content %}
+            <h2>{{ q2_banner_item.title }}</h2>
+            <p class="orbit-content">{{ q2_banner_item.body }}</p>
+            <div class="banner-item-inner__content">
+             {{content.field_html_body}}
+            </div>
+            {% if q2_banner_item.button %}
+              {{ q2_banner_item.button }}
+            {% endif %}
+          {% endblock %}
+          </div>
+         </figcaption>
+      </figure>
+    </li>
+  {% endblock paragraph %}
+{% endif %}

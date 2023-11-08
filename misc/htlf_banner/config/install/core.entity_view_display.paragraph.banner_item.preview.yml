@@ -1,0 +1,43 @@
+uuid: 753964c5-1193-4b76-a97f-ab1a7d76c857
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.banner_item.field_html_body
+    - field.field.paragraph.banner_item.field_q2_alignment
+    - field.field.paragraph.banner_item.field_q2_aria_label
+    - field.field.paragraph.banner_item.field_q2_banner_height
+    - field.field.paragraph.banner_item.field_q2_button
+    - field.field.paragraph.banner_item.field_q2_image
+    - field.field.paragraph.banner_item.field_q2_image_secondary
+    - field.field.paragraph.banner_item.field_q2_overlay
+    - field.field.paragraph.banner_item.field_q2_text
+    - field.field.paragraph.banner_item.field_q2_textarea_plain
+    - paragraphs.paragraphs_type.banner_item
+_core:
+  default_config_hash: 8VdWUxH7liAcQH2mkAVxfaX0QjOdzM444bT7gtOjio4
+id: paragraph.banner_item.preview
+targetEntityType: paragraph
+bundle: banner_item
+mode: preview
+content:
+  field_q2_text:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_html_body: true
+  field_q2_alignment: true
+  field_q2_aria_label: true
+  field_q2_banner_height: true
+  field_q2_button: true
+  field_q2_image: true
+  field_q2_image_secondary: true
+  field_q2_overlay: true
+  field_q2_textarea_plain: true
+  search_api_excerpt: true
