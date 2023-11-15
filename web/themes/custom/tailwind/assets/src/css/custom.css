@@ -22,11 +22,46 @@
   margin-bottom: 1rem;
 }
 
-.social-share svg {
+.blog-post .blog-info {
+  word-spacing: 3px;
+}
+.blog-post .blog-post-content h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+.blog-post .blog-post-content h3 {
+  font-size: 1.625rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.blog-post .blog-post-content h4 {
+  font-size: 1.125rem;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.blog-post .blog-post-content p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+}
+.blog-post .blog-post-content strong {
+  font-weight: 500;
+}
+.blog-post .blog-post-content ul {
+  margin-left: 1.25rem;
+  list-style-type: disc;
+  margin-bottom: 1rem;
+  list-style-position: outside;
+  line-height: 1.6;
+}
+.blog-post .social-share svg {
   height: 3em;
   color: var(--PrimaryColor);
 }
-.social-share svg :hover {
+.blog-post .social-share svg :hover {
   color: var(--SecondaryColor);
 }
 

@@ -67,7 +67,7 @@
  *
  */
 #}
-<article{{attributes.addClass(classes,'blog-post-mt-5')}}>
+<article{{attributes.addClass(classes,'blog-post blog-post-mt-5')}}>
 
 	{{ title_prefix }}
 	{% if not page %}
@@ -77,7 +77,7 @@
 	{% endif %}
 	{{ title_suffix }}
 
-	{% if display_submitted %}
+	{# {% if display_submitted %}
 		<footer>
 			{{ author_picture }}
 			<div{{author_attributes}}>
@@ -88,7 +88,7 @@
 				{{ metadata }}
 			</div>
 		</footer>
-	{% endif %}
+	{% endif %} #}
 
 	{% set sidebar = TRUE %}
 
@@ -96,14 +96,40 @@
 		<div class="blog-post w-8/12 m-auto max-w-7xl flex flex-row flex-wrap justify-between">
 			<div class="basis-full p-6 relative -top-28 shadow-2xl drop-shadow-2xl bg-htlfWhite {% if sidebar %} !basis-3/4{% endif %}">
 				{% if content.field_blog_image %}
-					<div class="blog-post_image w-full">
+					<div class="blog-post_image w-full shadow-xl drop-shadow-xl">
 						{{content.field_blog_image}}
 					</div>
 				{% endif %}
 
-				{{dump(content)}}
+				<div class="blog-info pt-6 font-medium text-sm">
+					<i class="fa-regular fa-clock"></i> 
+					{{ node.getCreatedTime|format_date('custom', 'F j, Y') }}
+					<span> | </span>
+					{{content.field_blog_time}}
+					<span> | </span>
+					{{content.field_blog_category}}
 
-				{{ content }}
+					<div class='blog-divider w-32 my-8 border-b-2 border-[--SecondaryColor]'>
+					</div>
+				</div>
+
+				<div class="blog-post-content">
+					{{ content.field_blog_content }}
+				</div>
+
+				<div class="blog-middle-content">
+					{{content.field_middle_section}}
+				</div>
+
+				{{content.field_blog_tags}}
+
+				<ul>
+				{% for tag in tags %}
+					<li>
+						<a href="/blog/tag/{{tag.name.value}}" target="_blank" class="uppercase text-htlgGray text-sm font-medium tracking-wide">#{{tag.name.value}}</a>
+					</li>
+				{% endfor %}
+				</ul>
 			</div>
 
 			{% if sidebar %}
@@ -138,3 +164,7 @@
 	</div>
 
 </article>
+
+<div class="blog-post-content-sections">
+	{{content.field_content_sections}}
+</div>

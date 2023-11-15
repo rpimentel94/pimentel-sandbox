@@ -74,11 +74,14 @@ class Node extends PreprocessPluginBase
         //Check if image exists
         if ($node->hasField('field_blog_tags') && !$node->get('field_blog_tags')->isEmpty()) {
             $tags = $node->get('field_blog_tags')->referencedEntities();
+            $rendered_tags = [];
             $terms = "";
             foreach ($tags as $key => $value) {
                 $terms .= $value->id() . "+";
+                $rendered_tags[$key] = $value;
             }
             $variables['terms'] = substr_replace($terms ,"", -1);
+            $variables['tags'] = $rendered_tags;
         }
 
         return $variables;

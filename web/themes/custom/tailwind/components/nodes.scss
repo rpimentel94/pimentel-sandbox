@@ -3,7 +3,7 @@
     h3 {
       font-size: 1.625rem;
       font-weight: 500;
-      margin-bottom: .75rem;
+      margin-bottom: 0.75rem;
     }
 
     p {
@@ -15,14 +15,59 @@
   }
 }
 
+.blog-post {
+  .blog-info {
+    word-spacing: 3px;
+  }
 
-.social-share {
-  svg {
-    height: 3em;
-    color: var(--PrimaryColor);
+  .blog-post-content {
+    h2 {
+      font-size: 2rem;
+      font-weight: 300;
+      margin-bottom: 0.5rem;
+    }
 
-    :hover {
-      color: var(--SecondaryColor);
+    h3 {
+      font-size: 1.625rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    h4 {
+      font-size: 1.125rem;
+      line-height: 1.4;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      font-size: 1.125rem;
+    }
+
+    strong {
+      font-weight: 500;
+    }
+
+    ul {
+      margin-left: 1.25rem;
+      list-style-type: disc;
+      margin-bottom: 1rem;
+      list-style-position: outside;
+      line-height: 1.6;
+    }
+  }
+
+  .social-share {
+    svg {
+      height: 3em;
+      color: var(--PrimaryColor);
+
+      :hover {
+        color: var(--SecondaryColor);
+      }
     }
   }
 }
