@@ -121,12 +121,11 @@
 					{{content.field_middle_section}}
 				</div>
 
-				{{content.field_blog_tags}}
 
-				<ul>
+				<ul class="blog-post-tags flex py-4">
 				{% for tag in tags %}
-					<li>
-						<a href="/blog/tag/{{tag.name.value}}" target="_blank" class="uppercase text-htlgGray text-sm font-medium tracking-wide">#{{tag.name.value}}</a>
+					<li class="pr-4">
+						<a href="/blog/tag/{{tag.name.value}}" target="_blank" class="uppercase text-htlgGray text-sm font-medium tracking-wide hover:underline hover:opacity-75 hover:underline-offset-4">#{{tag.name.value}}</a>
 					</li>
 				{% endfor %}
 				</ul>

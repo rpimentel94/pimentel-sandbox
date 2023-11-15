@@ -1257,6 +1257,10 @@ input:checked + .toggle-bg {
   display: grid;
 }
 
+.list-item {
+  display: list-item;
+}
+
 .hidden {
   display: none;
 }
@@ -2460,6 +2464,14 @@ input:checked + .toggle-bg {
 
 .hover\:underline:hover {
   text-decoration-line: underline;
+}
+
+.hover\:underline-offset-4:hover {
+  text-underline-offset: 4px;
+}
+
+.hover\:opacity-75:hover {
+  opacity: 0.75;
 }
 
 .hover\:shadow-2xl:hover {
