@@ -36,7 +36,7 @@
     {% endif %}
     {% for item in items %}
       <li{{ item.attributes.addClass('lg:mr-3 relative group') }}>
-        {{ link(item.title, item.url, { 'class':['block lg:inline-block tracking-wide text-black text-opacity-80 text-base font-base no-underline transition duration-500 p-2'] }) }}
+        {{ link(item.title, item.url, { 'class':['block lg:inline-block tracking-wide text-black text-opacity-80 text-sm font-base no-underline transition duration-500 p-2'] }) }}
           <span class="absolute -bottom-1 left-0 w-0 h-2 bg-blue-400 transition-all group-hover:w-full"></span>
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}

@@ -42,11 +42,11 @@
         <li{{ item.attributes.addClass('lg:mr-16 relative group mx-0 my-auto flex justify-center') }}>
       {% endif %}
         <div class="w-full mx-auto">
-        {{ link(item.title, item.url, { 'class':['block lg:inline-block tracking-wide text-white text-sm font-light no-underline transition duration-500 p-2'] }) }}
-          <span class="absolute -bottom-0 left-0 w-0 h-2 bg-white transition-all group-hover:w-full"></span>
+        {{ link(item.title, item.url, { 'class':['block lg:inline-block tracking-wide text-[--PrimaryColor] text-base font-base no-underline transition duration-500 p-2'] }) }}
+          <span class="absolute -bottom-0 left-0 w-0 h-2 bg-[--PrimaryColor] transition-all group-hover:w-full"></span>
 
           {% if item.in_active_trail %}
-            <span class="absolute -bottom-0 left-0 w-0 h-2 bg-white w-full"></span>
+            <span class="absolute -bottom-0 left-0 w-0 h-2 bg-[--PrimaryColor] w-full"></span>
           {% endif %}
         </div>
         {% if item.below %}

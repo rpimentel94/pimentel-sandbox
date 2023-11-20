@@ -47,7 +47,7 @@
 		<div class="flex justify-between relative w-full" x-data="{ open: false }">
 			{{ content }}
 
-			{% if online_banking %}
+			{% if online_banking and 'secondary' not in attributes.id|render|render %}
 				{{ attach_library('tailwind/online-banking') }}
 
 				<div class="flex items-center justify-center pl-14">

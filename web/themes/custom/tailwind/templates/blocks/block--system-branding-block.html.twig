@@ -15,14 +15,14 @@
 #}
 {% block content %}
   {% if site_logo %}
-    <div class="p-6 shadow-xl">
+    <div class="p-6 border-r-4 border-htlfLightGray h-[90%]">
       <a href="{{ path('<front>') }}" rel="home" class="site-logo">
         <img class="min-h-[5.625rem] max-h-[5.625rem] w-full" src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
       </a>
     </div>
   {% elseif site_name %}
     {% if site_name %}
-      <div class="site-name">
+      <div class="site-name relative bottom-1.5">
         <a href="{{ path('<front>') }}" rel="home">{{ site_name }}</a>
       </div>
     {% endif %}
