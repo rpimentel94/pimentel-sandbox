@@ -1,13 +1,13 @@
 <div{{attributes.addClass(classes, 'uneven-columns')}}>
 	<div class="w-full bg-{{background_color}} {{text_color}} {{gutter_option}} {{background_style}}" style="background-color:{{background_color}}">
 		<div class="w-8/12 m-auto max-w-7xl">
-			{% if content.field_display_admin_title %}
+			{% if content.field_display_admin_title.value %}
 				<h2 class="text-4xl font-extralight pb-6">{{ content.field_admin_title }}</h2>
 			{% endif %}
 
 			<div class="flex grow flex-col md:flex-row justify-between">
 				<div class="py-4 pr-4 relative {{splits.left}}">
-					<div class="mb-24">
+					<div class="mb-4">
                         {{content.field_textarea}}
                     </div>   
                     {% if content.field_button is not empty %}
@@ -21,7 +21,7 @@
                     {% endif %}
 				</div>
 				<div class="py-4 pr-4 relative {{splits.right}}">
-                    <div class="mb-24">
+                    <div class="mb-4">
 					    {{content.field_textarea_secondary}}
                     </div>
                     {% if content.field_button_secondary is not empty %}
