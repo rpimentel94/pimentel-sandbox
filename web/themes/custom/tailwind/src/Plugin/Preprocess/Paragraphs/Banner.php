@@ -28,7 +28,7 @@ class Banner extends PreprocessPluginBase
     $paragraph = $variables['paragraph'];
     $parent = $paragraph->getParentEntity();
 
-    $variables['slide_height'] = $parent->getType() == 'landing_page' ? "h-[31rem]" : "h-96";
+    $variables['slide_height'] = $parent->getType() == 'landing_page' ? "min-h-[31rem]" : "min-h-[24rem]";
 
     // Create Empty slides
     $slide_items = [];

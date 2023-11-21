@@ -35,8 +35,13 @@
       <ul>
     {% endif %}
     {% for item in items %}
-      <li{{ item.attributes.addClass('lg:mr-3 relative group') }}>
-        {{ link(item.title, item.url, { 'class':['block lg:inline-block tracking-wide text-black text-opacity-80 text-sm font-base no-underline transition duration-500 p-2'] }) }}
+    {% set menu_attributes = menus_attribute(items|keys[loop.index0]) %}
+    {% set fa_icon = menu_attributes.link.class %}
+      <li{{ item.attributes.addClass('lg:mr-6 relative group') }}>
+        {% if fa_icon %}
+         <i class="{{fa_icon}} font-sm max-h-[.75rem]"></i>
+        {% endif %}
+        {{ link(item.title, item.url, { 'class':['block lg:inline-block tracking-wide text-black text-opacity-80 text-sm font-base no-underline transition duration-500 py-2'] }) }}
           <span class="absolute -bottom-1 left-0 w-0 h-2 bg-blue-400 transition-all group-hover:w-full"></span>
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
