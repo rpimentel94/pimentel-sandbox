@@ -30,14 +30,14 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0') }}>
+      <ul{{ attributes.addClass('pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0 md:gap-8') }}>
     {% else %}
       <ul>
     {% endif %}
     {% for item in items %}
     {% set menu_attributes = menus_attribute(items|keys[loop.index0]) %}
     {% set fa_icon = menu_attributes.link.class %}
-      <li{{ item.attributes.addClass('lg:mr-6 relative group') }}>
+      <li{{ item.attributes.addClass('relative group') }}>
         {% if fa_icon %}
          <i class="{{fa_icon}} font-sm max-h-[.75rem]"></i>
         {% endif %}

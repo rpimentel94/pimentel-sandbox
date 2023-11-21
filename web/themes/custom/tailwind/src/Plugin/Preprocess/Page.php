@@ -37,6 +37,8 @@ class Page extends PreprocessPluginBase
 
       $variables['page_type'] = $variables['node']->getType();
 
+      $variables['title'] = $variables['node']->label();
+
       //Create Image
       if ($variables['node']->hasField('field_internal_banner_image') && !$variables['node']->get('field_internal_banner_image')->isEmpty()) {
         $media_field = $variables['node']->get('field_internal_banner_image')->getString();

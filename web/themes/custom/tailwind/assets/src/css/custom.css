@@ -214,7 +214,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
 }
 .grid-section .smallcallouts a {
   position: absolute;
-  bottom: 40px;
+  bottom: 10%;
   font-size: 1.2rem;
 }
 .grid-section .smallcallouts .arrow {

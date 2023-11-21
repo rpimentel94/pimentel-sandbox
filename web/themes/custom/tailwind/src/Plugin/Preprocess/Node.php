@@ -29,6 +29,8 @@ class Node extends PreprocessPluginBase
 
         $node = $variables['node'];
 
+        $variables['type'] = $node->getType();
+
         //Check for sidebar
         if ($node->hasField('field_sidebar_enabled') && !$node->get('field_sidebar_enabled')->isEmpty()) {
             $variables['sidebar'] = $node->get('field_sidebar_enabled')->getString() == 1 ? TRUE : FALSE;

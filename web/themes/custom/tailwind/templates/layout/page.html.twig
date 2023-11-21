@@ -72,15 +72,15 @@
 
 {# Creating seperate sections in depending on CT, info passed from Page.php #}
 {% if page_type and page_type != "landing_page" %}
-	<div class="w-full bg-htlfGray bg-cover bg-center min-h-[19rem] relative" style="background-image: url({{banner_image}});">
-		<div class="container w-8/12 m-auto max-w-7xl">
+	<div class="w-8/12 m-auto max-w-7xl bg-htlfGray bg-cover bg-no-repeat bg-center min-h-[12rem] relative" style="background-image: url({{banner_image}});">
+		<div class="container px-6">
+			<div class="flex">
 			{{ page.breadcrumb }}
 
 			{% if not is_front %}
-				<div class="text-white font-xl">
-					{{page['#title']}}
-				</div>
+				<div class="py-10 pr-2 font-normal text-xl text-white"> <span class=""> > </span> {{title}}</div>
 			{% endif %}
+			</div>
 
 			{{ page.highlighted }}
 
@@ -94,12 +94,11 @@
 
 {# Removing top level padding for landing pages #}
 
-<main role="main container" class="w-full bg-htlfWhite {% if page_type and page_type != "landing_page" %} pt-14{% endif %}">
+<main role="main container" class="w-full bg-htlfWhite {% if page_type and page_type != "landing_page" %} pt-6{% endif %}">
 	<a id="main-content" tabindex="-1"></a>
 	{# link is in html.html.twig #}
 
 	{{ page.hero }}
-
 
 	{{ page.content }}
 

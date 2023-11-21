@@ -28,9 +28,9 @@
 {% if not is_inline %}
   {% include "field.html.twig" %}
 {% else %}
-<span{{ attributes.addClass('font-white text-4xl') }}>
+<h1{{ attributes.addClass('page-title text-4xl') }}>
   {%- for item in items -%}
     {{ item.content }}
   {%- endfor -%}
-</span>
+</h1>
 {% endif %}

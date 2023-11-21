@@ -94,9 +94,9 @@
 
 	<div{{content_attributes}}>
 		<div class="blog-post w-8/12 m-auto max-w-7xl flex flex-row flex-wrap justify-between">
-			<div class="basis-full p-6 relative -top-28 shadow-2xl drop-shadow-2xl bg-htlfWhite {% if sidebar %} !basis-3/4{% endif %}">
+			<div class="basis-full p-6 relative -top-28 bg-htlfWhite {% if sidebar %} !basis-3/4{% endif %}">
 				{% if content.field_blog_image %}
-					<div class="blog-post_image w-full shadow-xl drop-shadow-xl">
+					<div class="blog-post_image w-full">
 						{{content.field_blog_image}}
 					</div>
 				{% endif %}

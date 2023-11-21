@@ -12,8 +12,8 @@
 			class="swiper-wrapper">
 			<!-- Slides -->
 			{% for slide in slides %}
-				<div class="swiper-slide bg-cover w-full {{slide_height}}" {% if slide.background_image is not empty %} style="background-image: url({{slide.background_image}});" {% endif %}>
-					<div class="bg-cover w-full h-full {{slide.overlay}}">
+				<div class="swiper-slide bg-cover w-full {{slide_height}} {{slide.overlay}}" {% if slide.background_image is not empty %} style="background-image: url({{slide.background_image}});" {% endif %}>
+					<div class="bg-cover w-full h-full">
 						<div class="w-8/12 m-auto max-w-7xl py-14 text-htlfWhite flex {{slide.alignment}}">
 							<div class="slide-inner max-w-[34rem]">
 								<h2 class="text-5xl font-medium">{{slide.title|raw}}</h2>

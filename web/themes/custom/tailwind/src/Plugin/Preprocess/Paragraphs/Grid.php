@@ -44,13 +44,13 @@ class Grid extends PreprocessPluginBase
             $variables['grid_style'] = $paragraph->get('field_grid_style')->getString();
             switch ($paragraph->get('field_grid_style')->getString()) {
                 case 'cards':
-                    $variables['item_background'] = "bg-htlfWhite shadow-2xl drop-shadow-2xl";
+                    $variables['item_background'] = "bg-htlfWhite";
                     break;
                 case 'callouts':
                     $variables['item_background'] = "bg-htlfWhite";
                     break;
                 case 'smallcallouts':
-                    $variables['item_background'] = "bg-htlfWhite shadow-2xl drop-shadow-2xl";
+                    $variables['item_background'] = "bg-htlfWhite";
                     break;
                 default:
                     $variables['item_background'] = "";
@@ -76,7 +76,7 @@ class Grid extends PreprocessPluginBase
 
             //Check against Grid Style
             if ($variables['grid_style'] == "callouts") {
-                $variables['col_count'] .= " shadow-2xl drop-shadow-2xl bg-htlfBody py-8 ";
+                $variables['col_count'] .= " bg-htlfBody py-8 ";
                 if ($columns == "three") {
                     $variables['columns'] = "md:max-w-[33%] pb-10";
                 }
