@@ -12,13 +12,7 @@ source:
 process:
   id: id
   revision_id: revision_id
-  langcode:
-    plugin: static_map
-    bypass: true
-    source: language
-    map:
-      und: en
-    default_value: en
+  langcode: langcode
   path: path
   alias: alias
   status: status
