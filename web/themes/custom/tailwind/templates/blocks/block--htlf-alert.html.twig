@@ -35,20 +35,25 @@
 	{% for alert in alerts %}
 
 		{% if alert.alert_level == 'general' %}
-			{% set colors = "bg-htlfLightBlue text-white" %}
+			{% set colors = "bg-htlfMessage text-htlfMessage" %}
 		{% elseif alert.alert_level == 'information' %}
-			{% set colors = "bg-yellow-600 text-black" %}
+			{% set colors = "bg-htlfNotice text-htlfNotice" %}
 		{% elseif alert.alert_level == 'high_priority' %}
-			{% set colors = "bg-red-600 text-white" %}
+			{% set colors = "bg-htlfWarning text-[#b60012]" %}
 		{% endif %}
 
 		<div id="alert-message-{{alert.nid}}" class="site-alert-item {{colors}} hidden border-b-2 border-htlfLightGray transition-opacity duration-500">
 			<div class="w-8/12 font-normal alert-body m-auto flex justify-between flex-wrap max-w-7xl py-6 leading-loose">
+				<div class="alert-icon">
+					<div class="bg-[#b60012] px-2 pb-1 rounded-[50%]">
+					<i class="fas fa-exclamation-triangle fa-lg h-4" style="color: #ffffff;"></i>
+					</div>
+				</div>
 				<div class="basis-11/12">
 					{{alert.body}}
 				</div>
 
-				<button type="button" class="dismiss-alert rounded-md max-h-[1.25rem] p-2 inline-flex items-center justify-center text-white font-bold hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+				<button type="button" class="dismiss-alert rounded-md max-h-[1.25rem] p-2 inline-flex items-center justify-center font-bold hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
 					<span class="sr-only">Close Alert</span>
 					<!-- Heroicon name: outline/x -->
 					<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor" aria-hidden="true">
