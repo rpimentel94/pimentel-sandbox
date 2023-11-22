@@ -15,13 +15,7 @@ source:
 process:
   rid: rid
   type: type
-  language:
-    plugin: static_map
-    bypass: true
-    source: language
-    map:
-      und: en
-    default_value: en
+  language: language
   uid: uid
   redirect_source/path: redirect_source__path
   redirect_source/query: redirect_source__query
