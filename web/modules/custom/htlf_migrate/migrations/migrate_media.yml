@@ -78,6 +78,12 @@ process:
       source: filemime
       default_value: image
       map:
+        image/gif: image
+        image/jpeg: image
+        image/png: image
+        image/svg+xml: vector_image
+        text/csv: csv
+        video/mp4: video
         document/pdf: document
         application/pdf: document
         application/msword: document
