@@ -19,6 +19,7 @@ process:
     -
       plugin: get
       source: fid
+  uuid: uuid
   filename:
     -
       plugin: get
