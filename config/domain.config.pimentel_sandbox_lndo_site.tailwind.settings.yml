@@ -5,12 +5,14 @@ features:
   favicon: 1
 logo:
   use_default: 0
-  path: 'public://logo/logo.svg'
+  path: 'public://domains/htlf/images/logo.svg'
 favicon:
   use_default: 1
-logo_footer:
-  - '9185'
+logo_footer: {  }
 bank_name: 'HTLF Bank'
 primary_color: '#212845'
 secondary_color: '#1c3685'
 test_color: '#1c3685'
+login_url: 'https://pimentel-sandbox.lndo.site'
+enroll_url: 'https://pimentel-sandbox.lndo.site'
+recovery_url: 'https://pimentel-sandbox.lndo.site'

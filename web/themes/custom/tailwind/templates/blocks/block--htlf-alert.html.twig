@@ -35,18 +35,24 @@
 	{% for alert in alerts %}
 
 		{% if alert.alert_level == 'general' %}
-			{% set colors = "bg-htlfMessage text-htlfMessage" %}
+			{% set bg_color = "bg-htlfMessage" %}
+			{% set text_color = "htlfMessageText" %}
+			{% set icon = "fa-solid fa-newspaper bg-htlfMessageText" %}
 		{% elseif alert.alert_level == 'information' %}
-			{% set colors = "bg-htlfNotice text-htlfNotice" %}
+			{% set bg_color = "bg-htlfNotice" %}
+			{% set text_color = "htlfNoticeText" %}
+			{% set icon = "fa-solid fa-bell bg-htlfNoticeText" %}
 		{% elseif alert.alert_level == 'high_priority' %}
-			{% set colors = "bg-htlfWarning text-[#b60012]" %}
+			{% set bg_color = "bg-htlfWarning" %}
+			{% set text_color = "htlfWarningText" %}
+			{% set icon = "fa-solid fa-circle-exclamation bg-htlfWarningText" %}
 		{% endif %}
 
-		<div id="alert-message-{{alert.nid}}" class="site-alert-item {{colors}} hidden border-b-2 border-htlfLightGray transition-opacity duration-500">
+		<div id="alert-message-{{alert.nid}}" class="site-alert-item {{bg_color}} text-{{text_color}} hidden border-b-2 border-htlfLightGray transition-opacity duration-500">
 			<div class="w-8/12 font-normal alert-body m-auto flex justify-between flex-wrap max-w-7xl py-6 leading-loose">
 				<div class="alert-icon">
-					<div class="bg-[#b60012] px-2 pb-1 rounded-[50%]">
-					<i class="fas fa-exclamation-triangle fa-lg h-4" style="color: #ffffff;"></i>
+					<div class="bg-{{text_color}} px-2.5 pb-1 rounded-[50%]">
+					<i class="{{icon}} fa-lg h-4 text-white"></i>
 					</div>
 				</div>
 				<div class="basis-11/12">

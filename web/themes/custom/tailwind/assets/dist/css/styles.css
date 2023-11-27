@@ -1289,10 +1289,6 @@ input:checked + .toggle-bg {
   height: 100%;
 }
 
-.h-5 {
-  height: 1.25rem;
-}
-
 .max-h-0 {
   max-height: 0px;
 }
@@ -1385,10 +1381,6 @@ input:checked + .toggle-bg {
   width: 100%;
 }
 
-.w-24 {
-  width: 6rem;
-}
-
 .min-w-\[10rem\] {
   min-width: 10rem;
 }
@@ -1451,18 +1443,6 @@ input:checked + .toggle-bg {
 
 .basis-full {
   flex-basis: 100%;
-}
-
-.basis-10\/12 {
-  flex-basis: 83.333333%;
-}
-
-.basis-2\/12 {
-  flex-basis: 16.666667%;
-}
-
-.basis-1\/12 {
-  flex-basis: 8.333333%;
 }
 
 .-translate-x-full {
@@ -1626,24 +1606,16 @@ input:checked + .toggle-bg {
   border-radius: 0.25rem;
 }
 
+.rounded-\[50\%\] {
+  border-radius: 50%;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
 }
 
 .rounded-md {
   border-radius: 0.375rem;
-}
-
-.rounded-full {
-  border-radius: 9999px;
-}
-
-.rounded-\[25\%\] {
-  border-radius: 25%;
-}
-
-.rounded-\[50\%\] {
-  border-radius: 50%;
 }
 
 .rounded-l-lg {
@@ -1677,8 +1649,8 @@ input:checked + .toggle-bg {
   border-bottom-width: 40px;
 }
 
-.border-r-4 {
-  border-right-width: 4px;
+.border-r-2 {
+  border-right-width: 2px;
 }
 
 .border-solid {
@@ -1842,9 +1814,19 @@ input:checked + .toggle-bg {
   background-color: rgb(255 255 255 / 0.5);
 }
 
-.bg-\[\#b60012\] {
+.bg-htlfMessageText {
   --tw-bg-opacity: 1;
-  background-color: rgb(182 0 18 / var(--tw-bg-opacity));
+  background-color: rgb(84 138 133 / var(--tw-bg-opacity));
+}
+
+.bg-htlfNoticeText {
+  --tw-bg-opacity: 1;
+  background-color: rgb(138 128 84 / var(--tw-bg-opacity));
+}
+
+.bg-htlfWarningText {
+  --tw-bg-opacity: 1;
+  background-color: rgb(138 84 89 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-25 {
@@ -1975,9 +1957,9 @@ input:checked + .toggle-bg {
   padding-bottom: 2rem;
 }
 
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+.px-2\.5 {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
 }
 
 .pb-1 {
@@ -2258,6 +2240,21 @@ input:checked + .toggle-bg {
   color: rgb(166 166 166 / var(--tw-text-opacity));
 }
 
+.text-htlfMessageText {
+  --tw-text-opacity: 1;
+  color: rgb(84 138 133 / var(--tw-text-opacity));
+}
+
+.text-htlfNoticeText {
+  --tw-text-opacity: 1;
+  color: rgb(138 128 84 / var(--tw-text-opacity));
+}
+
+.text-htlfWarningText {
+  --tw-text-opacity: 1;
+  color: rgb(138 84 89 / var(--tw-text-opacity));
+}
+
 .text-htlfWhite {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -2271,31 +2268,6 @@ input:checked + .toggle-bg {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-htlfMessage {
-  --tw-text-opacity: 1;
-  color: rgb(229 242 241 / var(--tw-text-opacity));
-}
-
-.text-htlfNotice {
-  --tw-text-opacity: 1;
-  color: rgb(247 223 110 / var(--tw-text-opacity));
-}
-
-.text-htlfWarning {
-  --tw-text-opacity: 1;
-  color: rgb(230 137 146 / var(--tw-text-opacity));
-}
-
-.text-\[\#df3a4a\] {
-  --tw-text-opacity: 1;
-  color: rgb(223 58 74 / var(--tw-text-opacity));
-}
-
-.text-\[\#b60012\] {
-  --tw-text-opacity: 1;
-  color: rgb(182 0 18 / var(--tw-text-opacity));
 }
 
 .text-opacity-80 {
@@ -2336,6 +2308,14 @@ input:checked + .toggle-bg {
 
 .opacity-100 {
   opacity: 1;
+}
+
+.bg-blend-multiply {
+  background-blend-mode: multiply;
+}
+
+.bg-blend-darken {
+  background-blend-mode: darken;
 }
 
 .shadow {

@@ -25,8 +25,11 @@ module.exports = {
         transparent: 'transparent',
         htlfBlack: '#333',
         htlfMessage: '#E5F2F1',
+        htlfMessageText: '#548A85',
         htlfNotice: '#F7DF6E',
-        htlfWarning: '#E68992'
+        htlfNoticeText: '#8A8054',
+        htlfWarning: '#E68992',
+        htlfWarningText: '#8A5459'
       },
     },
   },

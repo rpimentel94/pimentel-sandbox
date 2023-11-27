@@ -72,7 +72,7 @@
 
 {# Creating seperate sections in depending on CT, info passed from Page.php #}
 {% if page_type and page_type != "landing_page" %}
-	<div class="w-8/12 m-auto max-w-7xl bg-htlfGray bg-cover bg-no-repeat bg-center min-h-[12rem] relative" style="background-image: url({{banner_image}});">
+	<div class="w-8/12 m-auto max-w-7xl bg-htlfGray bg-cover bg-no-repeat bg-center bg-blend-multiply min-h-[12rem] relative" style="background-image: url({{banner_image}});">
 		<div class="container px-6">
 			<div class="flex">
 			{{ page.breadcrumb }}
