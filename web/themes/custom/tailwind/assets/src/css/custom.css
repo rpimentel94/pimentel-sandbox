@@ -7,7 +7,7 @@
   font-size: 0.875rem;
 }
 .alerts-section a:hover, .alerts-section a:focus, .alerts-section a:active {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .location .hours h3 {
