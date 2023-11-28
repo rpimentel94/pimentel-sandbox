@@ -23,7 +23,7 @@ module.exports = {
         htlfLightBlue: '#1C3685',
         htlfBody: '#e7e7e7',
         transparent: 'transparent',
-        htlfBlack: '#333',
+        htlfBlack: '#333333',
         htlfMessage: '#E5F2F1',
         htlfMessageText: '#548A85',
         htlfNotice: '#F7DF6E',
