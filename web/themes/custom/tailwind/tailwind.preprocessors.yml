@@ -70,3 +70,8 @@ tailwind.paragraph__featured_product:
   class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\FeaturedProduct'
   hook: paragraph__featured_product
   weight: 0
+
+tailwind.paragraph__blog_post:
+  class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\BlogPost'
+  hook: paragraph__blog_post
+  weight: 0

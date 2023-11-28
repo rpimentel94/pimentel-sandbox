@@ -361,9 +361,9 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   display: inline-block;
   width: 16px;
   height: 16px;
-  border-top: 3px solid white;
-  border-left: 3px solid white;
-  border-color: white;
+  border-top: 3px solid var(--PrimaryColor);
+  border-left: 3px solid var(--PrimaryColor);
+  border-color: var(--PrimaryColor);
   transform: rotate(135deg);
 }
 .accordion-tabs .arrow:hover {

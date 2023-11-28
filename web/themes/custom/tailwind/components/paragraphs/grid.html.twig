@@ -1,7 +1,7 @@
 <div{{attributes.addClass(classes,'grid-section')}}>
-	<div class="w-full bg-{{background_color}} {{text_color}} {{gutter_option}}" style="background-color:{{background_color}}">
-		<div class="w-8/12 m-auto max-w-7xl">
-			{% if content.field_display_admin_title.value %}
+	<div class="w-full bg-{{background_color}} {{text_color}} {{gutter_option}}">
+		<div class="{{paragraph_width}}">
+			{% if content.field_display_admin_title.0['#markup'] == "On" %}
 				<h2 class="text-5xl font-extralight py-6">{{ content.field_admin_title }}</h2>
 			{% endif %}
 

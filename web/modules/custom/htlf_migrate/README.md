@@ -19,7 +19,7 @@ Results as of 11/28/2023
   HTLF (htlf)   migrate_paragraph_accordions_tabs           Idle     82      82         0             0               2023-11-22 12:28:45
   HTLF (htlf)   migrate_paragraph_banner                    Idle     17      17         0             0               2023-11-22 12:28:32
   HTLF (htlf)   migrate_paragraph_banner_item               Idle     31      31         0             0               2023-11-22 12:25:47
-  HTLF (htlf)   migrate_paragraph_blog_posts                Idle     0       0          0             0               2023-11-22 12:24:04
+  HTLF (htlf)   migrate_paragraph_blog_posts                Idle     144     144        0             0               2023-11-28 10:22:23
   HTLF (htlf)   migrate_paragraph_call_to_action            Idle     33      33         0             0               2023-11-22 12:27:25
   HTLF (htlf)   migrate_paragraph_featured_product          Idle     10      10         0             0               2023-11-22 12:24:18
   HTLF (htlf)   migrate_paragraph_general_content_section   Idle     1322    1322       0             0               2023-11-22 12:29:38
@@ -45,6 +45,6 @@ Results as of 11/28/2023
   HTLF (htlf)   migrate_node_alert                          Idle     48      48         0             0               2023-11-22 12:20:31
   HTLF (htlf)   migrate_node_team_members                   Idle     593     593        0             0               2023-11-22 12:21:10
   HTLF (htlf)   migrate_node_page                           Idle     362     362        0             0               2023-11-22 12:21:39
-  HTLF (htlf)   migrate_media                               Idle     8114    8054       0             0               2023-11-22 11:59:31
+  HTLF (htlf)   migrate_media                               Idle     8114    8054       0             0               2023-11-27 13:23:42
   HTLF (htlf)   migrate_node_location                       Idle     337     337        0             0               2023-11-22 12:23:07
  ------------- ------------------------------------------- -------- ------- ---------- ------------- --------------- ---------------------

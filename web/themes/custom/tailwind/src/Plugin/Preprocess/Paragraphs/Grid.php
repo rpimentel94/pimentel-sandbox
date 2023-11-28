@@ -29,11 +29,14 @@ class Grid extends PreprocessPluginBase
         // Do any preprocessing here for your block!
         $paragraph = $variables['paragraph'];
 
+        $parent_field = str_replace('_q2_', '_', $paragraph->parent_field_name->getString());
+        $variables['paragraph_width'] =  $parent_field == "field_middle_sections" ? "w-full m-auto" : "w-8/12 m-auto max-w-7xl";
+
         $variables['theme_color'] = theme_get_setting('primary_color');
 
         if ($paragraph->hasField('field_background_color')) {
-            $background_color = $paragraph->get('field_background_color')->getString() ?: "htlfBody";
-            $variables['background_color'] = !$paragraph->get('field_background_color')->isEmpty() ? TailwindHelper::getColor($paragraph->get('field_background_color')->getString()) : "htlfBody";
+            $background_color = $paragraph->get('field_background_color')->getString() ?: "htlfWhite";
+            $variables['background_color'] = !$paragraph->get('field_background_color')->isEmpty() ? TailwindHelper::getColor($paragraph->get('field_background_color')->getString()) : "htlfWhite";
             if ($background_color == "primary" || $background_color == "secondary") {
                 $variables['text_color'] = "text-htlfWhite";
             }
@@ -76,7 +79,7 @@ class Grid extends PreprocessPluginBase
 
             //Check against Grid Style
             if ($variables['grid_style'] == "callouts") {
-                $variables['col_count'] .= " bg-htlfBody py-8 ";
+                $variables['col_count'] .= "py-8";
                 if ($columns == "three") {
                     $variables['columns'] = "md:max-w-[33%] pb-10";
                 }

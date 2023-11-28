@@ -9,13 +9,15 @@ migration_tags:
   - HTLF
   - Files
 source:
-  plugin: d8_entity
+  plugin: d8_paragraph_alter
   key: migrate
-  bundle: blog_posts
+  bundle: q2_blog_posts
   entity_type: paragraph
 destination: 
   plugin: 'entity_reference_revisions:paragraph'
+  bundle: blog_posts
 process:
+  bundle: blog_posts
   id: id
   revision_id: revision_id
   langcode:
