@@ -28,9 +28,7 @@ class AccordionsTabs extends PreprocessPluginBase
         // Do any preprocessing here for your block!
         $paragraph = $variables['paragraph'];
 
-        dd($paragraph);
 
-        //dd($paragraph);
         $parent_field = str_replace('_q2_', '_', $paragraph->parent_field_name->getString());
         $variables['paragraph_width'] =  $parent_field == "field_middle_sections" ? "w-full m-auto" : "w-8/12 m-auto max-w-7xl";
 

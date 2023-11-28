@@ -42,7 +42,7 @@ function htlf_tokens_token_info()
             $tokens[$key][$token_key] = [
                 'name' => $value['name'],
                 'dynamic' => FALSE,
-                'description' => $value['name']
+                'description' => $value['value']
             ];
         }
     }
