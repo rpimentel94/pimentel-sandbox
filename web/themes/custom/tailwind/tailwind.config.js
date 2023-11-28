@@ -29,7 +29,7 @@ module.exports = {
         htlfNotice: '#F7DF6E',
         htlfNoticeText: '#8A8054',
         htlfWarning: '#E68992',
-        htlfWarningText: '#8A5459'
+        htlfWarningText: '#8A5459',
       },
     },
   },

@@ -11,8 +11,8 @@
                         {{content.field_textarea}}
                     </div>   
                     {% if content.field_button is not empty %}
-                        <a 
-                            class="rounded-md absolute bottom-0 py-4 px-10 mb-4 font-medium hover:shadow-2xl hover:drop-shadow-2xl transition duration-200 {{button.first.color.text}}"
+                        <a
+                            class="rounded-md absolute bottom-0 py-4 px-10 mb-4 font-medium hover:drop-shadow-2xl transition duration-200 {{button.first.color.text}}"
                             style="background-color: {{button.first.color.background}}"
                             href="{{button.first.url}}"
                             aria-label="Testing"
@@ -26,7 +26,7 @@
                     </div>
                     {% if content.field_button_secondary is not empty %}
 					<a 
-                        class="rounded-md w-44 absolute bottom-0 py-4 px-10 mb-4 font-medium hover:shadow-2xl hover:drop-shadow-2xl transition duration-200 {{button.second.color.text}}"
+                        class="rounded-md w-44 absolute bottom-0 py-4 px-10 mb-4 font-medium hover:drop-shadow-2xl transition duration-200 {{button.second.color.text}}"
                         style="background-color: {{button.second.color.background}}"
                         href="{{button.second.url}}"
                         aria-label="Testing"

@@ -45,7 +45,7 @@ class Cta extends PreprocessPluginBase
                 $uri = $media_entity_load->field_media_image->entity->getFileUri();
                 $variables['background_image'] = $style->buildUrl($uri);
                 $variables['background_height'] = 'min-h-[28rem]';
-                $variables['text_color'] = "text-htlfBlack";
+                $variables['text_color'] = "text-htlfWhite";
 
             } elseif ($variables['background_type'] == "primary") {
                 $variables['background_color'] = "bg-htlfBlue";
