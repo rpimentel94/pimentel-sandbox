@@ -50,7 +50,7 @@ process:
   field_background_color: field_q2_background_color
   field_display_admin_title: field_q2_display_admin_title
   field_gutter: field_q2_gutter
-  field_blog_display_type: field_q2_blog_display_type
+  field_display_type: field_q2_blog_display_type
   field_blog_tag_filter: field_q2_blog_tag_filter
   ### Start Section for Paragraph References ###
 

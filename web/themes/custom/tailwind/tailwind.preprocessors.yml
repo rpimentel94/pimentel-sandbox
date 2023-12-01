@@ -71,7 +71,7 @@ tailwind.paragraph__featured_product:
   hook: paragraph__featured_product
   weight: 0
 
-tailwind.paragraph__blog_post:
-  class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\BlogPost'
-  hook: paragraph__blog_post
+tailwind.paragraph__blog_posts:
+  class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\BlogPosts'
+  hook: paragraph__blog_posts
   weight: 0

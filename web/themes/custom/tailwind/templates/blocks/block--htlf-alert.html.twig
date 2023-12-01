@@ -36,22 +36,25 @@
 
 		{% if alert.alert_level == 'general' %}
 			{% set bg_color = "bg-htlfMessage" %}
-			{% set text_color = "htlfMessageText" %}
+			{% set text_color = "text-htlfMessageText" %}
+			{% set icon_color = "bg-htlfMessageText" %}
 			{% set icon = "fa-solid fa-newspaper bg-htlfMessageText" %}
 		{% elseif alert.alert_level == 'information' %}
 			{% set bg_color = "bg-htlfNotice" %}
-			{% set text_color = "htlfNoticeText" %}
+			{% set text_color = "text-htlfNoticeText" %}
+			{% set icon_color = "bg-htlfNoticeText" %}
 			{% set icon = "fa-solid fa-bell bg-htlfNoticeText" %}
 		{% elseif alert.alert_level == 'high_priority' %}
 			{% set bg_color = "bg-htlfWarning" %}
-			{% set text_color = "htlfWarningText" %}
+			{% set text_color = "text-htlfWarningText" %}
+			{% set icon_color = "bg-htlfWarningText" %}
 			{% set icon = "fa-solid fa-circle-exclamation bg-htlfWarningText" %}
 		{% endif %}
 
-		<div id="alert-message-{{alert.nid}}" class="site-alert-item {{bg_color}} text-{{text_color}} hidden border-b-2 border-htlfLightGray transition-opacity duration-500">
+		<div id="alert-message-{{alert.nid}}" class="site-alert-item {{bg_color}} {{text_color}} hidden border-b-2 border-htlfLightGray transition-opacity duration-500">
 			<div class="w-8/12 font-normal alert-body m-auto flex justify-between flex-wrap max-w-7xl py-6 leading-loose">
 				<div class="alert-icon">
-					<div class="bg-{{text_color}} px-2.5 pb-1 rounded-[50%]">
+					<div class="{{icon_color}} px-2.5 pb-1 rounded-[50%]">
 					<i class="{{icon}} fa-lg h-4 text-white"></i>
 					</div>
 				</div>

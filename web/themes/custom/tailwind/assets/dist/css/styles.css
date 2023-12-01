@@ -1777,7 +1777,7 @@ input:checked + .toggle-bg {
 
 .bg-htlfMessageText {
   --tw-bg-opacity: 1;
-  background-color: rgb(84 138 133 / var(--tw-bg-opacity));
+  background-color: rgb(44 92 87 / var(--tw-bg-opacity));
 }
 
 .bg-htlfNotice {
@@ -1787,7 +1787,7 @@ input:checked + .toggle-bg {
 
 .bg-htlfNoticeText {
   --tw-bg-opacity: 1;
-  background-color: rgb(138 128 84 / var(--tw-bg-opacity));
+  background-color: rgb(133 120 64 / var(--tw-bg-opacity));
 }
 
 .bg-htlfWarning {
@@ -1797,7 +1797,7 @@ input:checked + .toggle-bg {
 
 .bg-htlfWarningText {
   --tw-bg-opacity: 1;
-  background-color: rgb(138 84 89 / var(--tw-bg-opacity));
+  background-color: rgb(92 44 49 / var(--tw-bg-opacity));
 }
 
 .bg-htlfWhite {
@@ -2235,6 +2235,21 @@ input:checked + .toggle-bg {
   color: rgb(166 166 166 / var(--tw-text-opacity));
 }
 
+.text-htlfMessageText {
+  --tw-text-opacity: 1;
+  color: rgb(44 92 87 / var(--tw-text-opacity));
+}
+
+.text-htlfNoticeText {
+  --tw-text-opacity: 1;
+  color: rgb(133 120 64 / var(--tw-text-opacity));
+}
+
+.text-htlfWarningText {
+  --tw-text-opacity: 1;
+  color: rgb(92 44 49 / var(--tw-text-opacity));
+}
+
 .text-htlfWhite {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -2248,21 +2263,6 @@ input:checked + .toggle-bg {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-htlfMessageText {
-  --tw-text-opacity: 1;
-  color: rgb(84 138 133 / var(--tw-text-opacity));
-}
-
-.text-htlfNoticeText {
-  --tw-text-opacity: 1;
-  color: rgb(138 128 84 / var(--tw-text-opacity));
-}
-
-.text-htlfWarningText {
-  --tw-text-opacity: 1;
-  color: rgb(138 84 89 / var(--tw-text-opacity));
 }
 
 .text-opacity-80 {
