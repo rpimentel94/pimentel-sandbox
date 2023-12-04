@@ -108,6 +108,28 @@ function tailwind_theme_suggestions_menu_alter(array &$suggestions, array $varia
 }
 
 /**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ *
+ * Add views template suggestions.
+ * 
+ * @inheritdoc
+ */
+function tailwind_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'views_view__' . $variables['view']->id();
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ *
+ * Add views unformatted template suggestions.
+ * 
+ * @inheritdoc
+ */
+function tailwind_theme_suggestions_views_view_unformatted_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'views_view_unformatted__' . $variables['view']->id();
+}
+
+/**
  * Implements hook_preprocess_HOOK().
  */
 function tailwind_preprocess_html(&$variables)

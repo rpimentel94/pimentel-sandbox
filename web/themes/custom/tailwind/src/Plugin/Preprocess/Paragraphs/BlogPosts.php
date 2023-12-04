@@ -8,6 +8,7 @@ use Drupal\Core\Url;
 use Drupal\Core\Link;
 use Drupal\preprocess\PreprocessPluginBase;
 use Drupal\tailwind\Plugin\Preprocess\TailwindHelper;
+use Drupal\views\Views;
 
 /**
  * Custom Page Preprocessor.
@@ -27,7 +28,7 @@ class BlogPosts extends PreprocessPluginBase
     {
         // Do any preprocessing here for your block!
         $paragraph = $variables['paragraph'];
-        
+
         if ($paragraph->hasField('field_background_color')) {
             $background_color = $paragraph->get('field_background_color')->getString() ?: "htlfWhite";
             $variables['background_color'] = !$paragraph->get('field_background_color')->isEmpty() ? TailwindHelper::getColor($paragraph->get('field_background_color')->getString()) : "htlfWhite";
@@ -36,14 +37,48 @@ class BlogPosts extends PreprocessPluginBase
             }
         }
 
+        $views_filter = NULL;
+
         $blog_tags = [];
         //Blog Tags
         if ($paragraph->hasField('field_blog_tag_filter')) {
             $tags = $paragraph->field_blog_tag_filter->referencedEntities();
 
             foreach ($tags as $key => $value) {
-                echo $value->get('tid')->getString();
+                $blog_tags[] = $value->get('tid')->getString();
             }
+            $views_filter = $blog_tags;
+        }
+
+        
+
+        $blog_categories = [];
+        //Blog Categories
+        if ($paragraph->hasField('field_blog_category_filter')) {
+            $categories = $paragraph->field_blog_category_filter->referencedEntities();
+
+            foreach ($categories as $key => $value) {
+                $blog_categories[] = $value->get('tid')->getString();
+            }
+            $views_filter = $blog_categories;
+        }
+
+        $display_type = NULL;
+        //Display Type
+        if ($paragraph->hasField('field_display_type')) {
+            $custom_views = ['topics', 'personalize'];
+            $display_type =  !in_array($paragraph->field_display_type->getString(), $custom_views) ? $paragraph->field_display_type->getString() : "recent" ;
+            //echo $display_type;
+        }
+
+        if ($display_type) {
+            $view = Views::getView('blog_posts');
+            $view->setDisplay($display_type);
+            // contextual relationship filter
+            $view->setArguments($views_filter);
+            $view->execute();
+            $rendered = $view->render();
+            $variables['blogs'] = \Drupal::service('renderer')->render($rendered);
         }
 
         //Gutters

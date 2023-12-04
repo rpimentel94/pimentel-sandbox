@@ -1,1 +1,11 @@
-KONA
+<div{{ attributes.addClass(classes, "blog-posts-paragraph") }}>
+    <div class="blog-posts-paragraph-inner w-full flex bg-cover {{gutter_option}} {{background_style}}">
+        <div class="w-full m-auto max-w-7xl">
+            {% if content.field_display_admin_title.0['#markup'] == "On" %}
+                <h2 class="text-4xl font-extralight pb-6">{{ content.field_admin_title }}</h2>
+            {% endif %}
+
+            {{blogs}}
+        </div>
+    </div>
+</div>
