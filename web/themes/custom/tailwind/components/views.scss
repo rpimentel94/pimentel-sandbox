@@ -1,18 +1,40 @@
 .blog-post-sidebar_view {
-    .views-row {
-        padding: 20px 0;
-        border-bottom: solid 1px #e8e8e8;
+  .views-row {
+    padding: 20px 0;
+    border-bottom: solid 1px #e8e8e8;
 
-        .views-field-title {
-            font-size: 1rem;
-            margin: 0;
-            color: var(--PrimaryColor);
-            font-weight: 500;
+    .views-field-title {
+      font-size: 1rem;
+      margin: 0;
+      color: var(--PrimaryColor);
+      font-weight: 500;
 
-            &:hover {
-                text-decoration: underline;
-                color: var(--SeconadaryColor);
-            }
-        }
+      &:hover {
+        text-decoration: underline;
+        color: var(--SeconadaryColor);
+      }
     }
+  }
+}
+
+//Blog Posts Pargraph Referenced View
+
+.blog-post-views {
+  &-recent, &-tag, &-category {
+    .views-field-field {
+      &-blog-time {
+        padding: 0.5rem 0 0.25rem;
+        font-size: 0.875rem;
+        color: #757575;
+        word-break: break-all;
+      }
+    }
+
+    .views-field-title {
+      font-size: 1.3125rem;
+      line-height: 1.29;
+      font-weight: 500;
+      color: var(--PrimaryColor);
+    }
+  }
 }

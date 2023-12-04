@@ -1,0 +1,23 @@
+uuid: 9d850f02-5199-4b6d-b4df-b6313377065c
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: blog_posts
+label: 'Blog Posts'
+effects:
+  048b5d4a-a62c-429e-950a-2f3003fa03af:
+    uuid: 048b5d4a-a62c-429e-950a-2f3003fa03af
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 275
+      height: 195
+      crop_type: focal_point
+  a1516f50-2834-4e99-b453-c7a7127085af:
+    uuid: a1516f50-2834-4e99-b453-c7a7127085af
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

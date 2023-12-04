@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.blog_posts.field_admin_title
     - field.field.paragraph.blog_posts.field_background_color
+    - field.field.paragraph.blog_posts.field_blog_category_filter
     - field.field.paragraph.blog_posts.field_blog_tag_filter
     - field.field.paragraph.blog_posts.field_display_admin_title
     - field.field.paragraph.blog_posts.field_display_type
@@ -29,6 +30,33 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_blog_category_filter:
+    type: entity_reference_autocomplete
+    weight: 7
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        f0412feb-c753-411b-895c-da718040215d:
+          entity_type: paragraph
+          bundle: blog_posts
+          dependee: field_display_type
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 3
+            value: ''
+            values: category
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
   field_blog_tag_filter:
     type: entity_reference_autocomplete
     weight: 5
