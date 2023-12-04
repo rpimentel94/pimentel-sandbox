@@ -20,13 +20,13 @@
 {% endif %}
 
 {% if view.current_display == "full" %}
-  {% set grid_size = "grid-cols-3" %}
+  {% set grid_size = "md:grid-cols-3" %}
 {% else %}
-  {% set grid_size = "grid-cols-4" %}
+  {% set grid_size = "md:grid-cols-4" %}
 {% endif %}
 
 <div 
-  class="grid {{grid_size}} gap-16 blog-post-views-{{view.current_display}}">
+  class="grid grid-cols-1 {{grid_size}} gap-16 blog-post-views-{{view.current_display}}">
 
 {% for row in rows %}
   {% set row_classes = [default_row_class ? 'views-row',] %}
