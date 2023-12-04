@@ -90,6 +90,7 @@
         "drupal/simple_sitemap": "^4.1",
         "drupal/simplei": "^2.1",
         "drupal/smart_date": "^4.0",
+        "drupal/smart_trim": "^2.1",
         "drupal/svg_image": "^3.0",
         "drupal/svg_image_field": "^2.2",
         "drupal/symfony_debug": "^2.0",
