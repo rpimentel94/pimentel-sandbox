@@ -19,22 +19,42 @@
   <h3>{{ title }}</h3>
 {% endif %}
 
-{% if view.current_display == "full" %}
-  {% set grid_size = "md:grid-cols-3" %}
-{% else %}
-  {% set grid_size = "md:grid-cols-4" %}
-{% endif %}
+{# Starting render for standard blogs posts #}
+{% if view.current_display in ['full', 'recent', 'tag', 'category'] %}
 
-<div 
-  class="grid grid-cols-1 {{grid_size}} gap-16 blog-post-views-{{view.current_display}}">
+  {% if view.current_display == "full" %}
+    {% set grid_size = "md:grid-cols-3" %}
+  {% else %}
+    {% set grid_size = "md:grid-cols-4" %}
+  {% endif %}
 
-{% for row in rows %}
-  {% set row_classes = [default_row_class ? 'views-row',] %}
+  <div class="grid grid-cols-1 {{grid_size}} gap-16 blog-post-views-{{view.current_display}}">
 
-  <div{{ row.attributes.addClass(row_classes) }}>
-    {{- row.content -}}
+  {% for row in rows %}
+    {% set row_classes = [default_row_class ? 'views-row',] %}
+
+    <div{{ row.attributes.addClass(row_classes) }}>
+      {{- row.content -}}
+    </div>
+
+  {% endfor %}
+
   </div>
-
-{% endfor %}
-
-</div>
+{# End render for standard blogs posts #}
+{% else %}
+{# Start render for Featured #}
+  <div class="flex flex-wrap blog-post-views-{{view.current_display}}">
+    {% for row in rows %}
+        {% if loop.first %}
+          <div class="basis-full flex blog-posts-feature-main">
+            {{- row.content -}}
+          </div>
+        {% else %}
+          <div class="basis-1/2 flex blog-posts-feature-secondary">
+            {{- row.content -}}
+          </div>
+        {% endif %}
+    {% endfor %}
+  </div>
+{# End render for Featured #}
+{% endif %}

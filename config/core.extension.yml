@@ -160,6 +160,7 @@ module:
   user: 0
   viewfield: 0
   views_bulk_edit: 0
+  views_fieldsets: 0
   views_ui: 0
   webform: 0
   webform_access: 0

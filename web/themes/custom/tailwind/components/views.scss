@@ -20,7 +20,16 @@
 //Blog Posts Pargraph Referenced View
 
 .blog-post-views {
-  &-recent, &-tag, &-category {
+  &-recent,
+  &-tag,
+  &-category {
+    .views-field-title {
+      font-size: 1.3125rem;
+      line-height: 1.29;
+      font-weight: 500;
+      color: var(--PrimaryColor);
+    }
+
     .views-field-field {
       &-blog-time {
         padding: 0.5rem 0 0.25rem;
@@ -29,12 +38,56 @@
         word-break: break-all;
       }
     }
+  }
 
+  &-full {
     .views-field-title {
-      font-size: 1.3125rem;
-      line-height: 1.29;
+      font-size: 1.625rem;
+      line-height: 1.23;
       font-weight: 500;
       color: var(--PrimaryColor);
+      padding-bottom: 1rem;
+    }
+
+    .views-field-field {
+      &-blog-time {
+        padding: 0.5rem 0 0.25rem;
+        font-size: 0.875rem;
+        color: #757575;
+        word-break: break-all;
+      }
+    }
+  }
+
+  &-featured {
+    .blog-posts-feature {
+      &-main {
+        .views-field-field-blog-image {
+          min-height: 32rem;
+
+          img {
+            object-fit: cover;
+          }
+        }
+
+        .views-field-fieldset {
+          
+        }
+      }
+
+      &-secondary {
+        .views-field-field-blog-image {
+          min-height: 25rem;
+
+          img {
+            object-fit: cover;
+          }
+        }
+
+        .views-field-fieldset {
+          
+        }
+      }
     }
   }
 }
