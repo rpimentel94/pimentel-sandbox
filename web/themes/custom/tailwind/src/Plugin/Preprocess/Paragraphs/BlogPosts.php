@@ -37,30 +37,30 @@ class BlogPosts extends PreprocessPluginBase
             }
         }
 
-        $views_filter = NULL;
+        $views_filter = [];
 
-        $blog_tags = [];
+        $blog_tags = "";
         //Blog Tags
-        if ($paragraph->hasField('field_blog_tag_filter')) {
+        if ($paragraph->hasField('field_blog_tag_filter') && !$paragraph->get('field_blog_tag_filter')->isEmpty()) {
             $tags = $paragraph->field_blog_tag_filter->referencedEntities();
 
             foreach ($tags as $key => $value) {
-                $blog_tags[] = $value->get('tid')->getString();
+                $blog_tags .= $value->get('tid')->getString() . ",";
             }
-            $views_filter = $blog_tags;
+            $views_filter[] = substr_replace($blog_tags ,"", -1);
         }
 
         
 
-        $blog_categories = [];
+        $blog_categories = "";
         //Blog Categories
-        if ($paragraph->hasField('field_blog_category_filter')) {
+        if ($paragraph->hasField('field_blog_category_filter') && !$paragraph->get('field_blog_category_filter')->isEmpty()) {
             $categories = $paragraph->field_blog_category_filter->referencedEntities();
 
             foreach ($categories as $key => $value) {
-                $blog_categories[] = $value->get('tid')->getString();
+                $blog_categories .= $value->get('tid')->getString() . ",";
             }
-            $views_filter = $blog_categories;
+            $views_filter[] = substr_replace($blog_categories ,"", -1);
         }
 
         $display_type = NULL;
@@ -70,6 +70,9 @@ class BlogPosts extends PreprocessPluginBase
             $display_type =  !in_array($paragraph->field_display_type->getString(), $custom_views) ? $paragraph->field_display_type->getString() : "recent" ;
             //echo $display_type;
         }
+
+        \Drupal::logger('display_name')->debug('<pre><code>' . print_r($display_type, TRUE) . '</code></pre>');
+        \Drupal::logger('views_filters')->debug('<pre><code>' . print_r($views_filter, TRUE) . '</code></pre>');
 
         if ($display_type) {
             $view = Views::getView('blog_posts');
