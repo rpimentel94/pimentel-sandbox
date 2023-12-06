@@ -83,6 +83,7 @@ module:
   leaflet: 0
   link: 0
   linkchecker: 0
+  linkit: 0
   locale: 0
   media: 0
   media_bulk_upload: 0

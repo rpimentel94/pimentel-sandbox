@@ -64,28 +64,45 @@
       &-main {
         .views-field-field-blog-image {
           min-height: 32rem;
+          flex: 1 0 60%;
 
           img {
             object-fit: cover;
+            min-height: 32rem;
+            width: 100%;
           }
         }
 
         .views-field-fieldset {
-          
+          padding: 2.625rem 3.75rem;
+
+          .views-field-title {
+            font-size: 2rem;
+            line-height: 1.25;
+            font-weight: 500;
+            color: var(--PrimaryColor);
+          }
+        }
+      }
+    }
+
+    &-secondary {
+      .views-field-field-blog-image {
+        min-height: 25rem;
+
+        img {
+          object-fit: cover;
         }
       }
 
-      &-secondary {
-        .views-field-field-blog-image {
-          min-height: 25rem;
+      .views-field-fieldset {
+        padding: 2.625rem 3.75rem;
 
-          img {
-            object-fit: cover;
-          }
-        }
-
-        .views-field-fieldset {
-          
+        .views-field-title {
+          font-size: 1.65rem;
+          line-height: 1.25;
+          font-weight: 500;
+          color: var(--PrimaryColor);
         }
       }
     }

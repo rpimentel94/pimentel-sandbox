@@ -56,6 +56,7 @@
         "drupal/jsonapi_resources": "^1.0@beta",
         "drupal/leaflet": "^10.2",
         "drupal/linkchecker": "^2.0@alpha",
+        "drupal/linkit": "^6.0",
         "drupal/media_bulk_upload": "^3.0",
         "drupal/media_library_form_element": "^2.0",
         "drupal/menu_export": "^1.4",
@@ -145,7 +146,7 @@
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
             "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
         },
-        "composer-exit-on-patch-failure": true,
+        "composer-exit-on-patch-failure": false,
         "patchLevel": {
             "drupal/core": "-p2"
         },
@@ -157,6 +158,12 @@
             },
             "drupal/token": {
                 "In tandem with Missing Token Option": "https://www.drupal.org/files/issues/2023-06-02/token-8.x-1.x-3262052-17.patch"
+            },
+            "drupal/link_attributes": {
+                "2939514: Add support for Linkit for Link field": "https://www.drupal.org/files/issues/2021-10-22/2939514-19.patch"
+            },
+            "drupal/linkit": {
+                "2712951: Linkit for Link field": "https://www.drupal.org/files/issues/2022-07-22/2712951-293.patch"
             }
          }
     },

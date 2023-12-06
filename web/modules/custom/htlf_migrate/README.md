@@ -48,3 +48,7 @@ Results as of 11/28/2023
   HTLF (htlf)   migrate_media                               Idle     8114    8054       0             0               2023-11-27 13:23:42
   HTLF (htlf)   migrate_node_location                       Idle     337     337        0             0               2023-11-22 12:23:07
  ------------- ------------------------------------------- -------- ------- ---------- ------------- --------------- ---------------------
+
+##web/core/lib/Drupal/Core/TypedData/Plugin/DataType/Map.php
+##$backup_array = ['value' => 'a:0:{}'];
+##$values = $values == "a:0:{}" ? $backup_array : $values;

@@ -46,11 +46,11 @@
   <div class="flex flex-wrap blog-post-views-{{view.current_display}}">
     {% for row in rows %}
         {% if loop.first %}
-          <div class="basis-full flex blog-posts-feature-main">
+          <div class="basis-full flex blog-posts-feature-main bg-htlfWhite">
             {{- row.content -}}
           </div>
         {% else %}
-          <div class="basis-1/2 flex blog-posts-feature-secondary">
+          <div class="basis-1/2 blog-posts-feature-secondary bg-htlfWhite">
             {{- row.content -}}
           </div>
         {% endif %}

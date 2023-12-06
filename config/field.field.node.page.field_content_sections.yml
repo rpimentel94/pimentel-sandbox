@@ -14,6 +14,7 @@ dependencies:
     - paragraphs.paragraphs_type.ordered_team_members
     - paragraphs.paragraphs_type.rates
     - paragraphs.paragraphs_type.team_members
+    - paragraphs.paragraphs_type.testimonial
     - paragraphs.paragraphs_type.uneven_columns
     - paragraphs.paragraphs_type.webform
   module:
@@ -41,6 +42,7 @@ settings:
       ordered_team_members: ordered_team_members
       rates: rates
       team_members: team_members
+      testimonial: testimonial
       uneven_columns: uneven_columns
       webform: webform
     negate: 0
@@ -98,7 +100,7 @@ settings:
         enabled: true
       testimonial:
         weight: 38
-        enabled: false
+        enabled: true
       uneven_columns:
         weight: 39
         enabled: true
