@@ -1,23 +1,23 @@
-uuid: ef0497ad-8e1c-4ca2-9461-796b15f7ea1d
+uuid: 79c7fbd4-8b83-4e11-9ec4-652f9616f3c3
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.footer
+    - system.menu.main-htlf
   module:
     - domain
     - system
   theme:
     - tailwind
-id: footer
+id: mainmenuhtlf_2
 theme: tailwind
 region: footer_bottom
 weight: 0
 provider: null
-plugin: 'system_menu_block:footer'
+plugin: 'system_menu_block:main-htlf'
 settings:
-  id: 'system_menu_block:footer'
-  label: Footer
+  id: 'system_menu_block:main-htlf'
+  label: 'Main Menu HTLF'
   label_display: '0'
   provider: system
   level: 1
@@ -26,7 +26,7 @@ settings:
 visibility:
   domain:
     id: domain
-    negate: true
+    negate: false
     context_mapping:
       domain: '@domain.current_domain_context:domain'
     domains:

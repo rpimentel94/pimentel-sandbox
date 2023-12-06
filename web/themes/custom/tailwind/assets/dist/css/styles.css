@@ -1385,6 +1385,10 @@ input:checked + .toggle-bg {
   width: 100%;
 }
 
+.w-auto {
+  width: auto;
+}
+
 .min-w-\[10rem\] {
   min-width: 10rem;
 }
