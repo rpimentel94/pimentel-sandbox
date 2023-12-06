@@ -27,7 +27,7 @@ class Cta extends PreprocessPluginBase
     {
         // Do any preprocessing here for your block!
         $paragraph = $variables['paragraph'];
-        
+
         //Create Button
         $variables['button'] = [];
         $variables['button']['title'] = $paragraph->get('field_button')->first()->title ?: "";
@@ -41,9 +41,11 @@ class Cta extends PreprocessPluginBase
             if ($variables['background_type'] == "image") {
                 $media_field = $paragraph->get('field_image_secondary')->getString();
                 $media_entity_load = Media::load($media_field);
-                $style = ImageStyle::load('banner');
-                $uri = $media_entity_load->field_media_image->entity->getFileUri();
-                $variables['background_image'] = $style->buildUrl($uri);
+                if ($media_entity_load) {
+                    $style = ImageStyle::load('banner');
+                    $uri = $media_entity_load->field_media_image->entity->getFileUri();
+                    $variables['background_image'] = $style->buildUrl($uri);
+                }
                 $variables['background_height'] = 'min-h-[28rem]';
                 $variables['text_color'] = "text-htlfWhite";
 

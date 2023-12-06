@@ -1225,6 +1225,10 @@ input:checked + .toggle-bg {
   margin-top: 1.5rem;
 }
 
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
 .block {
   display: block;
 }
@@ -1447,6 +1451,10 @@ input:checked + .toggle-bg {
 
 .basis-1\/2 {
   flex-basis: 50%;
+}
+
+.basis-\[48\%\] {
+  flex-basis: 48%;
 }
 
 .-translate-x-full {

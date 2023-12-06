@@ -19,8 +19,21 @@
   <h3>{{ title }}</h3>
 {% endif %}
 
+{% if view.current_display == "block_1" %}
+
+{% for row in rows %}
+  {%
+    set row_classes = [
+      default_row_class ? 'views-row',
+    ]
+  %}
+  <div{{ row.attributes.addClass(row_classes) }}>
+    {{- row.content -}}
+  </div>
+{% endfor %}
+
 {# Starting render for standard blogs posts #}
-{% if view.current_display in ['full', 'recent', 'tag', 'category'] %}
+{% elseif view.current_display in ['full', 'recent', 'tag', 'category'] %}
 
   {% if view.current_display == "full" %}
     {% set grid_size = "md:grid-cols-3" %}
@@ -43,14 +56,14 @@
 {# End render for standard blogs posts #}
 {% else %}
 {# Start render for Featured #}
-  <div class="flex flex-wrap blog-post-views-{{view.current_display}}">
+  <div class="flex flex-wrap justify-between blog-post-views-{{view.current_display}}">
     {% for row in rows %}
         {% if loop.first %}
-          <div class="basis-full flex blog-posts-feature-main bg-htlfWhite">
+          <div class="basis-full flex mb-20 blog-posts-feature-main bg-htlfWhite">
             {{- row.content -}}
           </div>
         {% else %}
-          <div class="basis-1/2 blog-posts-feature-secondary bg-htlfWhite">
+          <div class="basis-[48%] mb-20 blog-posts-feature-secondary bg-htlfWhite">
             {{- row.content -}}
           </div>
         {% endif %}
