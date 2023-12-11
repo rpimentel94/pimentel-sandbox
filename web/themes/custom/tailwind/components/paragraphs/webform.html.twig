@@ -1,6 +1,6 @@
 <div{{attributes.addClass(classes,'webform')}}>
 	<div class="w-full {{gutter_option}} {{background_style}}" style="background-color:{{background_color}}">
-		<div class="w-8/12 m-auto max-w-7xl">
+		<div class="w-11/12 xl:w-8/12 m-auto max-w-7xl">
 			{% if content.field_display_admin_title.0['#markup'] == "On" %}
 				<h2 class="text-4xl font-extralight pb-6">{{ content.field_admin_title }}</h2>
 			{% endif %}
@@ -17,7 +17,7 @@
 						{{sidebar_content}}
 					{% endif %}
 				</div>
-				<div class="w-8/12 p-2 relative -top-28 bg-htlfWhite shadow-2xl drop-shadow-2xl">
+				<div class="w-11/12 xl:w-8/12 p-2 relative -top-28 bg-htlfWhite shadow-2xl drop-shadow-2xl">
 					{% if form_script_url is not empty %}
 						<script type="text/javascript" src="{{ form_script_url }}"></script>
 					{% else %}

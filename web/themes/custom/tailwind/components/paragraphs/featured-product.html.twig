@@ -1,6 +1,6 @@
 <div{{attributes.addClass(classes,"featured-product")}}>
 	<div class="bg-cover w-full {{gutter_option}}" {% if background_image is not empty %} style="background-image: url({{background_image}});" {% endif %}>
-		<div class="w-8/12 m-auto max-w-7xl">
+		<div class="w-11/12 xl:w-8/12 m-auto max-w-7xl">
 			{% if content.field_display_admin_title.0['#markup'] == "On" %}
 				<h2 class="text-4xl font-extralight pb-6">{{ content.field_admin_title }}</h2>
 			{% endif %}

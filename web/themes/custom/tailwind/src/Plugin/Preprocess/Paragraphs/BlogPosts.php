@@ -67,12 +67,9 @@ class BlogPosts extends PreprocessPluginBase
         //Display Type
         if ($paragraph->hasField('field_display_type')) {
             $custom_views = ['topics', 'personalize'];
+            $display = $paragraph->field_display_type->getString();
             $display_type =  !in_array($paragraph->field_display_type->getString(), $custom_views) ? $paragraph->field_display_type->getString() : "recent" ;
-            //echo $display_type;
         }
-
-        \Drupal::logger('display_name')->debug('<pre><code>' . print_r($display_type, TRUE) . '</code></pre>');
-        \Drupal::logger('views_filters')->debug('<pre><code>' . print_r($views_filter, TRUE) . '</code></pre>');
 
         if ($display_type) {
             $view = Views::getView('blog_posts');
@@ -82,6 +79,10 @@ class BlogPosts extends PreprocessPluginBase
             $view->execute();
             $rendered = $view->render();
             $variables['blogs'] = \Drupal::service('renderer')->render($rendered);
+        }
+
+        if ($display == "topics") {
+            
         }
 
         //Gutters
