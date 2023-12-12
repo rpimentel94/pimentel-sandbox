@@ -7,16 +7,18 @@
 			{% if topic_tags %}
 				<div class="blog-post-form">
 					<div class="w-11/12 xl:w-8/12 m-auto">
-                        <h2 class="text-xl font-medium pb-4">View Our Topics Centers</h2>
-						<select class="block appearance-none font-extralight text-3xl w-full bg-white border-0 border-b-2 border-b-gray-400 hover:border-b-gray-500 px-4 py-2 pr-8 leading-tight focus:outline-none focus:shadow-outline">
-							<option value="">Select a topic...</option>
-							{% for tag in topic_tags %}
-								<option value="{{tag.tid}}">{{tag.label}}</option>
-							{% endfor %}
-						</select>
-                        <div class="flex grow gap-5 flex-col md:flex-row justify-center py-8">
-                            <a class="rounded-md sm:m-[20px auto] text-htlfWhite py-4 px-10 mb-4 font-medium hover:shadow-2xl hover:drop-shadow-2xl transition duration-200" href="#">Continue</a>
-                        </div>
+						<h2 class="text-xl font-medium pb-4">View Our Topics Centers</h2>
+						<div x-data="{ topic_url: '/blog' }">
+							<select @change="topic_url = $event.target.value" class="block appearance-none font-extralight text-3xl w-full bg-white border-0 border-b-2 border-b-gray-400 hover:border-b-gray-500 px-4 py-2 pr-8 leading-tight focus:outline-none focus:shadow-outline">
+								<option x-bind:value="'/blog'">Select a topic...</option>
+								{% for tag in topic_tags %}
+									<option x-bind:value="'/blog/{{ tag.tid }}'">{{ tag.label }}</option>
+								{% endfor %}
+							</select>
+							<div class="flex grow gap-5 flex-col md:flex-row justify-center py-8">
+								<a class="rounded-md sm:m-[20px auto] text-htlfWhite py-4 px-10 mb-4 font-medium hover:shadow-2xl hover:drop-shadow-2xl transition duration-200" :href="topic_url" title="View Blog Posts">Continue</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			{% else %}
