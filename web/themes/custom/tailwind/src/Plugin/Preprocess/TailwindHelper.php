@@ -128,8 +128,8 @@ class TailwindHelper
             $color['text'] = "text-htlfWhite hover:!text-htlfLighterGray";
         } else {
             $color['background'] = "";
-            $color['text'] = "text-[--SecondaryColor] font-medium hover:underline underline-offset-8 decoration-2 decoration-[--SecondaryColor]";
-            $color['chevron'] = "border-[--SecondaryColor]";
+            $color['text'] = "text-[--PrimaryColor] font-medium hover:underline underline-offset-8 decoration-2 decoration-[--PrimaryColor]";
+            $color['chevron'] = "border-[--PrimaryColor]";
         }
 
         return $color;

@@ -74,11 +74,11 @@
 {% if page_type and page_type != "landing_page" %}
 	<div class="w-11/12 xl:w-8/12 m-auto max-w-7xl bg-htlfGray bg-cover bg-no-repeat bg-center bg-blend-multiply min-h-[12rem] relative" style="background-image: url({{banner_image}});">
 		<div class="container px-6">
-			<div class="flex">
+			<div class="flex flex-wrap">
 			{{ page.breadcrumb }}
 
 			{% if not is_front %}
-				<div class="py-10 pr-2 font-normal text-xl text-white"> <span class=""> > </span> {{title}}</div>
+				<div class="xl:py-10 py-2 pl-2 xl:pl-0 xl:pr-2 font-normal text-sm xl:text-xl text-white"> <span class=""> > </span> {{title}}</div>
 			{% endif %}
 			</div>
 

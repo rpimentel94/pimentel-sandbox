@@ -94,7 +94,7 @@
 
 	<div{{content_attributes}}>
 		<div class="blog-post w-11/12 xl:w-8/12 m-auto max-w-7xl flex flex-row flex-wrap justify-between">
-			<div class="basis-full bg-htlfWhite {% if sidebar %} !basis-3/4{% endif %}">
+			<div class="basis-full bg-htlfWhite {% if sidebar %} !xl:basis-3/4{% endif %}">
 				<div class="w-full pb-12 blog-post-title">
 					{{label}}
 				</div>
@@ -136,9 +136,9 @@
 			</div>
 
 			{% if sidebar %}
-				<div class="blog-post-sidebar basis-1/4 pl-12">
+				<div class="blog-post-sidebar basis-full xl:basis-1/4 xl:pl-12">
                     <div class="blog-post-sidebar_view pb-6">
-					    <h3 class="pb-2 text-sm uppercase text-htlfGray">Recent Posts</h3>
+					    <h3 class="pb-2 xl:text-sm text-xl uppercase text-htlfGray">Recent Posts</h3>
 					    {{ drupal_view('blog_posts', 'block_1', terms) }}
                     </div>
 					<div class="social-share js-social-share">
