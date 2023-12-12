@@ -82,7 +82,13 @@ class BlogPosts extends PreprocessPluginBase
         }
 
         if ($display == "topics") {
-            
+            $topic_tags = [];
+            foreach ($tags as $key => $value) {
+                $topic_tags[$key]['tid'] = $value->get('tid')->getString();
+                $topic_tags[$key]['label'] = $value->get('name')->getString();
+            }
+
+            $variables['topic_tags'] = $topic_tags;
         }
 
         //Gutters

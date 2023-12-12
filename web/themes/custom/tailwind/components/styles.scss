@@ -372,6 +372,17 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   }
 }
 
+//Blog Posts Filtered Topics
+.blog-post-form {
+  select:not([size]) {
+    background-size: .6rem .6rem;
+  }
+
+  a {
+    background-color: var(--PrimaryColor);
+  }
+}
+
 //Online Banking Modal
 .inv {
   display: none;

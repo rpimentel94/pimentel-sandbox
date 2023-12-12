@@ -407,6 +407,13 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   font-size: 1rem;
 }
 
+.blog-post-form select:not([size]) {
+  background-size: 0.6rem 0.6rem;
+}
+.blog-post-form a {
+  background-color: var(--PrimaryColor);
+}
+
 .inv {
   display: none;
 }
