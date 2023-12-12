@@ -199,18 +199,18 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
 }
 .grid-section .smallcallouts .card {
   max-width: 80%;
-  color: white;
+  color: black;
 }
 .grid-section .smallcallouts .card h3 {
   font-size: 2.5rem;
   line-height: 1.13;
   letter-spacing: -0.4px;
-  color: white;
+  color: black;
 }
 .grid-section .smallcallouts .card p {
   margin-top: 0.5rem;
   font-size: 1.125rem;
-  color: white;
+  color: black;
 }
 .grid-section .smallcallouts a {
   position: absolute;
@@ -218,9 +218,22 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   font-size: 1.2rem;
 }
 .grid-section .smallcallouts .arrow {
-  border-top: 2px solid white;
-  border-left: 2px solid white;
-  border-color: white;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  border-color: black;
+}
+.grid-section .with-image * {
+  color: white !important;
+  text-decoration: white !important;
+}
+.grid-section .with-image * h2::after, .grid-section .with-image * h3::after {
+  background-color: white !important;
+}
+.grid-section .with-image * .card * {
+  color: white !important;
+}
+.grid-section .with-image * .arrow {
+  border-color: white !important;
 }
 
 .general-content h2,

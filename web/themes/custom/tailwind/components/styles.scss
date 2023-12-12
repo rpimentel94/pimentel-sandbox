@@ -153,17 +153,17 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   .smallcallouts {
     .card {
       max-width: 80%;
-      color: white;
+      color: black;
       h3 {
       font-size: 2.5rem;
       line-height: 1.13;
       letter-spacing: -0.4px;
-      color: white;
+      color: black;
       }
       p {
         margin-top: 0.5rem;
         font-size: 1.125rem;
-        color: white;
+        color: black;
       }
     }
     a {
@@ -172,10 +172,27 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
       font-size: 1.2rem;
     }
     .arrow {
-      border-top: 2px solid white;
-      border-left: 2px solid white;
-      border-color: white;
+      border-top: 2px solid black;
+      border-left: 2px solid black;
+      border-color: black;
     }
+  }
+
+  .with-image * {
+      color: white !important;
+      text-decoration: white !important;
+      
+      h2::after, h3::after {
+        background-color: white !important;
+      }
+
+      .card * {
+        color: white !important;
+      }
+
+      .arrow {
+        border-color: white !important;
+      }
   }
 }
 
