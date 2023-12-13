@@ -40,7 +40,8 @@
         "drupal/devel_kint_extras": "^1.1",
         "drupal/domain": "^2.0@beta",
         "drupal/domain_access_logo": "^2.0",
-        "drupal/domain_theme_switch": "^1.5",
+        "drupal/domain_theme_switch": "^2.0",
+        "drupal/dynamic_entity_reference": "^3.0",
         "drupal/editor_advanced_link": "^2.2",
         "drupal/entity_usage": "^2.0@beta",
         "drupal/feeds_tamper": "^2.0@beta",
@@ -68,6 +69,7 @@
         "drupal/migrate_tools": "^6.0",
         "drupal/migrate_upgrade": "^4.0",
         "drupal/module_filter": "^4.0",
+        "drupal/panels": "^4.7",
         "drupal/paragraphs": "^1.15",
         "drupal/paragraphs_browser": "^1.1",
         "drupal/paragraphs_ee": "^2.1@alpha",
@@ -162,9 +164,6 @@
             },
             "drupal/link_attributes": {
                 "2939514: Add support for Linkit for Link field": "https://www.drupal.org/files/issues/2021-10-22/2939514-19.patch"
-            },
-            "drupal/linkit": {
-                "2712951: Linkit for Link field": "https://www.drupal.org/files/issues/2022-07-22/2712951-293.patch"
             }
          }
     },
