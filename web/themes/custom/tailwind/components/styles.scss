@@ -155,10 +155,10 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
       max-width: 80%;
       color: black;
       h3 {
-      font-size: 2.5rem;
-      line-height: 1.13;
-      letter-spacing: -0.4px;
-      color: black;
+        font-size: 2.5rem;
+        line-height: 1.13;
+        letter-spacing: -0.4px;
+        color: black;
       }
       p {
         margin-top: 0.5rem;
@@ -179,20 +179,21 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   }
 
   .with-image * {
+    color: white !important;
+    text-decoration: white !important;
+
+    h2::after,
+    h3::after {
+      background-color: white !important;
+    }
+
+    .card * {
       color: white !important;
-      text-decoration: white !important;
-      
-      h2::after, h3::after {
-        background-color: white !important;
-      }
+    }
 
-      .card * {
-        color: white !important;
-      }
-
-      .arrow {
-        border-color: white !important;
-      }
+    .arrow {
+      border-color: white !important;
+    }
   }
 }
 
@@ -253,51 +254,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
     }
   }
 
-  table {
-    width: 100%;
-    word-break: break-all;
-
-    thead {
-      background: #f8f8f8;
-      color: #0a0a0a;
-
-      tr {
-        background: transparent;
-
-        td {
-          padding: 0.5rem 0.625rem 0.625rem;
-          font-weight: bold;
-          text-align: left;
-        }
-
-        th {
-          color: var(--PrimaryColor, #757575);
-        }
-      }
-    }
-
-    tbody {
-      background-color: #fefefe;
-
-      tr {
-        border-bottom: 1px solid #9f9f9f;
-
-        th {
-          color: #757575;
-          text-align: left;
-          text-transform: uppercase;
-          font-weight: 500;
-          padding: 1.5rem 0.625rem;
-        }
-
-        td {
-          padding: 1.5rem 0.625rem;
-          color: #333;
-        }
-      }
-    }
-  }
-
   code {
     padding: 0.125rem 0.3125rem 0.0625rem;
     border: 1px solid #cacaca;
@@ -354,12 +310,20 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
       font-family: NeurialGrotesk-Bold, sans-serif;
       font-weight: 500;
     }
+
+    @media screen and (max-width: 750px) {
+      font-size: 2.5rem;
+      padding-bottom: 3rem;
+    }
   }
 
   p {
     color: #fefefe;
     font-size: 1.1rem;
     line-height: 1.75;
+    @media screen and (max-width: 750px) {
+      padding-bottom: 1rem;
+    }
   }
 
   .button {
@@ -392,7 +356,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
 //Blog Posts Filtered Topics
 .blog-post-form {
   select:not([size]) {
-    background-size: .6rem .6rem;
+    background-size: 0.6rem 0.6rem;
   }
 
   a {
@@ -403,4 +367,56 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
 //Online Banking Modal
 .inv {
   display: none;
+}
+
+//Table responsivenss
+.tailwind-table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+
+  table {
+    width: 100%;
+    word-break: auto-phrase;
+
+    thead {
+      background: #f8f8f8;
+      color: #0a0a0a;
+
+      tr {
+        background: transparent;
+
+        td {
+          padding: 0.5rem 0.625rem 0.625rem;
+          font-weight: bold;
+          text-align: left;
+        }
+
+        th {
+          color: var(--PrimaryColor, #757575);
+        }
+      }
+    }
+
+    tbody {
+      background-color: #fefefe;
+
+      tr {
+        border-bottom: 1px solid #9f9f9f;
+
+        th {
+          color: #757575;
+          text-align: left;
+          text-transform: uppercase;
+          font-weight: 500;
+          padding: 1.5rem 0.625rem;
+        }
+
+        td {
+          padding: 1.5rem 0.625rem;
+          color: #333;
+        }
+      }
+    }
+  }
 }

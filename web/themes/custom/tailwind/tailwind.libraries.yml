@@ -3,6 +3,8 @@ global-styling:
   css:
     theme:
       assets/dist/css/htlf.css: {}
+  js:
+    assets/src/js/global.js: {}
 
 alpine-js:     
   js: 

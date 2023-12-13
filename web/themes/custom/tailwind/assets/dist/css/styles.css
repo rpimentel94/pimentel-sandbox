@@ -2881,6 +2881,10 @@ input:checked + .toggle-bg {
     width: auto;
   }
 
+  .lg\:flex-nowrap {
+    flex-wrap: nowrap;
+  }
+
   .lg\:items-stretch {
     align-items: stretch;
   }
@@ -2900,8 +2904,16 @@ input:checked + .toggle-bg {
 }
 
 @media (min-width: 1280px) {
+  .xl\:m-4 {
+    margin: 1rem;
+  }
+
   .xl\:w-8\/12 {
     width: 66.666667%;
+  }
+
+  .xl\:w-6\/12 {
+    width: 50%;
   }
 
   .xl\:basis-\[48\%\] {
@@ -2920,9 +2932,18 @@ input:checked + .toggle-bg {
     flex-basis: 75%;
   }
 
+  .xl\:p-4 {
+    padding: 1rem;
+  }
+
   .xl\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+
+  .xl\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .xl\:pl-12 {

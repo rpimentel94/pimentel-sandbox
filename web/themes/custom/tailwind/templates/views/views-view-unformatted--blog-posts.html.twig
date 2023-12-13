@@ -59,11 +59,11 @@
   <div class="flex flex-wrap justify-between blog-post-views-{{view.current_display}}">
     {% for row in rows %}
         {% if loop.first %}
-          <div class="basis-full flex flex-wrap mb-20 blog-posts-feature-main bg-htlfWhite">
+          <div class="basis-full flex flex-wrap lg:flex-nowrap mb-20 blog-posts-feature-main bg-htlfWhite">
             {{- row.content -}}
           </div>
         {% else %}
-          <div class="basis-full xl:basis-[48%] flex flex-wrap mb-20 blog-posts-feature-secondary bg-htlfWhite">
+          <div class="basis-full xl:basis-[48%] flex flex-wrap lg:flex-nowrap mb-20 blog-posts-feature-secondary bg-htlfWhite">
             {{- row.content -}}
           </div>
         {% endif %}

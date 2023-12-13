@@ -226,7 +226,8 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   color: white !important;
   text-decoration: white !important;
 }
-.grid-section .with-image * h2::after, .grid-section .with-image * h3::after {
+.grid-section .with-image * h2::after,
+.grid-section .with-image * h3::after {
   background-color: white !important;
 }
 .grid-section .with-image * .card * {
@@ -294,51 +295,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   background-color: white;
   color: #000;
 }
-.general-content table,
-.uneven-columns table {
-  width: 100%;
-  word-break: break-all;
-}
-.general-content table thead,
-.uneven-columns table thead {
-  background: #f8f8f8;
-  color: #0a0a0a;
-}
-.general-content table thead tr,
-.uneven-columns table thead tr {
-  background: transparent;
-}
-.general-content table thead tr td,
-.uneven-columns table thead tr td {
-  padding: 0.5rem 0.625rem 0.625rem;
-  font-weight: bold;
-  text-align: left;
-}
-.general-content table thead tr th,
-.uneven-columns table thead tr th {
-  color: var(--PrimaryColor, #757575);
-}
-.general-content table tbody,
-.uneven-columns table tbody {
-  background-color: #fefefe;
-}
-.general-content table tbody tr,
-.uneven-columns table tbody tr {
-  border-bottom: 1px solid #9f9f9f;
-}
-.general-content table tbody tr th,
-.uneven-columns table tbody tr th {
-  color: #757575;
-  text-align: left;
-  text-transform: uppercase;
-  font-weight: 500;
-  padding: 1.5rem 0.625rem;
-}
-.general-content table tbody tr td,
-.uneven-columns table tbody tr td {
-  padding: 1.5rem 0.625rem;
-  color: #333;
-}
 .general-content code,
 .uneven-columns code {
   padding: 0.125rem 0.3125rem 0.0625rem;
@@ -394,10 +350,21 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   font-family: NeurialGrotesk-Bold, sans-serif;
   font-weight: 500;
 }
+@media screen and (max-width: 750px) {
+  .featured-product h2 {
+    font-size: 2.5rem;
+    padding-bottom: 3rem;
+  }
+}
 .featured-product p {
   color: #fefefe;
   font-size: 1.1rem;
   line-height: 1.75;
+}
+@media screen and (max-width: 750px) {
+  .featured-product p {
+    padding-bottom: 1rem;
+  }
 }
 .featured-product .button {
   font-size: 1rem;
@@ -429,6 +396,48 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
 
 .inv {
   display: none;
+}
+
+.tailwind-table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+.tailwind-table table {
+  width: 100%;
+  word-break: auto-phrase;
+}
+.tailwind-table table thead {
+  background: #f8f8f8;
+  color: #0a0a0a;
+}
+.tailwind-table table thead tr {
+  background: transparent;
+}
+.tailwind-table table thead tr td {
+  padding: 0.5rem 0.625rem 0.625rem;
+  font-weight: bold;
+  text-align: left;
+}
+.tailwind-table table thead tr th {
+  color: var(--PrimaryColor, #757575);
+}
+.tailwind-table table tbody {
+  background-color: #fefefe;
+}
+.tailwind-table table tbody tr {
+  border-bottom: 1px solid #9f9f9f;
+}
+.tailwind-table table tbody tr th {
+  color: #757575;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 1.5rem 0.625rem;
+}
+.tailwind-table table tbody tr td {
+  padding: 1.5rem 0.625rem;
+  color: #333;
 }
 
 .blog-post-sidebar_view .views-row {
