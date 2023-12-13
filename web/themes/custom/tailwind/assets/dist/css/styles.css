@@ -1859,6 +1859,11 @@ input:checked + .toggle-bg {
   background-color: rgb(117 117 117 / var(--tw-bg-opacity)) !important;
 }
 
+.bg-htlfDarkGray {
+  --tw-bg-opacity: 1;
+  background-color: rgb(117 117 117 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
 }
@@ -2314,6 +2319,11 @@ input:checked + .toggle-bg {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-htlfDarkGray {
+  --tw-text-opacity: 1;
+  color: rgb(117 117 117 / var(--tw-text-opacity));
 }
 
 .text-opacity-80 {
@@ -2902,6 +2912,14 @@ input:checked + .toggle-bg {
     flex-basis: 25%;
   }
 
+  .xl\:\!basis-3\/4 {
+    flex-basis: 75% !important;
+  }
+
+  .xl\:basis-3\/4 {
+    flex-basis: 75%;
+  }
+
   .xl\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
@@ -2917,6 +2935,10 @@ input:checked + .toggle-bg {
 
   .xl\:pl-0 {
     padding-left: 0px;
+  }
+
+  .xl\:pt-\[5\.25rem\] {
+    padding-top: 5.25rem;
   }
 
   .xl\:text-sm {
