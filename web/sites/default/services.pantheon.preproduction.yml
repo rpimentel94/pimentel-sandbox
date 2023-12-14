@@ -1,4 +1,9 @@
 parameters:
+  twig.config:
+    debug: true
+    auto_reload: true
+    cache: false
+  http.response.debug_cacheability_headers: true
   cors.config:
     enabled: true
     # Specify allowed headers, like 'x-allowed-header'.
@@ -13,8 +18,7 @@ parameters:
     maxAge: false
     # Sets the Access-Control-Allow-Credentials header.
     supportsCredentials: true
-session.storage.options:
-    #
+  session.storage.options:
     # Drupal automatically generates a unique session cookie name based on the
     # full domain name used to access the site. This mechanism is sufficient
     # for most use-cases, including multi-site deployments. However, if it is
@@ -26,3 +30,6 @@ session.storage.options:
     #
     # @default none
     cookie_domain: '.htlf.com'
+services:
+  cache.backend.null:
+    class: Drupal\Core\Cache\NullBackendFactory
