@@ -14,16 +14,16 @@ proxy:
     - pimentel-sandbox.lndo.site
     - sub.pimentel-sandbox.lndo.site
     - sub2.pimentel-sandbox.lndo.site
-  # search:
-  #   - search.pimentel-sandbox.site:8963
+  search:
+    - search.pimentel-sandbox.site:8963
 services:
-  # search:
-  #   type: solr:8
-  #   portforward: true
-  #   core: sandbox
-  #   config:
-  #     dir: .config/solr_8.x
-  #     conf: solr/conf
+  search:
+    type: solr:8
+    portforward: true
+    core: sandbox
+    config:
+      dir: .config/solr_8.x
+      conf: solr/conf
   appserver:
     overrides:
       environment:
