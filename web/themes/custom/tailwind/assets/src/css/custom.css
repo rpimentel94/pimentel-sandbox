@@ -66,7 +66,7 @@
 }
 
 .button {
-  background: #202945;
+  background: var(--PrimaryColor, #757575);
   color: white;
   font: inherit;
   line-height: 1;
@@ -332,11 +332,11 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
 }
 .featured-product .button {
   font-size: 1rem;
-  color: currentColor;
+  color: var(--PrimaryColor, #757575);
   background-color: transparent;
   padding: 1.125rem 3rem;
   border-radius: 4px;
-  border: solid 1px currentColor;
+  border: solid 1px var(--PrimaryColor, #757575);
 }
 
 .middle-content-section .general-content-inner {
