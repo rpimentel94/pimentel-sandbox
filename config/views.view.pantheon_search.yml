@@ -363,7 +363,7 @@ display:
             operator: search_api_fulltext_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: search_api_fulltext
+            identifier: keyword
             required: false
             remember: false
             multiple: false
@@ -391,7 +391,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          parse_mode: terms
+          parse_mode: phrase
           min_length: null
           fields:
             - body
