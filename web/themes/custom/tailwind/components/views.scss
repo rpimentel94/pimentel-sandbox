@@ -186,3 +186,37 @@
     }
   }
 }
+
+
+//Site Search
+.tailwind-search {
+  form {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    border-color: var(--PrimaryColor);
+    border-width: 0px 0px 2px;
+    max-width: 40%;
+    margin: auto;
+
+    input#edit-keyword {
+      width: 30vw;
+      border: none;
+      font-size: 2em;
+      padding: .5em;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    input#edit-submit-pantheon-search {
+      font-size: 2em;
+      padding: 0.5em 1em;
+  }
+  }
+
+  .views-row {
+
+  }
+}

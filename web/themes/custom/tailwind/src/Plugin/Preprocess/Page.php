@@ -59,6 +59,11 @@ class Page extends PreprocessPluginBase
       $variables['middle_section'] = $variables['node']->hasField('field_middle_section') && !$variables['node']->get('field_middle_section')->isEmpty() ? TRUE : FALSE;
     }
 
+    //$active_trail = \Drupal::service('menu.active_trail');
+  
+    // Replace `main` with the name of the menu you're working with.
+    //$menu_level = count($active_trail->getActiveTrailIds('main-htlf'));
+
     // $loader = \Drupal::service('domain.negotiator');
     // $current_domain = $loader->getActiveDomain();
     // $active_domain = $current_domain->id();
