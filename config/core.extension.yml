@@ -41,6 +41,7 @@ module:
   domain_config: 0
   domain_config_ui: 0
   domain_content: 0
+  domain_menu_links: 0
   domain_source: 0
   domain_theme_switch: 0
   dynamic_entity_reference: 0
