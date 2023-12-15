@@ -134,6 +134,7 @@ module:
   scheduled_transitions: 0
   scheduler: 0
   search_api: 0
+  search_api_exclude: 0
   search_api_pantheon: 0
   search_api_pantheon_admin: 0
   search_api_solr: 0

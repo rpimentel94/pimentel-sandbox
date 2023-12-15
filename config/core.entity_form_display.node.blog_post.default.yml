@@ -95,15 +95,15 @@ content:
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
       closed_mode: summary
       autocollapse: none
       closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
       features:
-        duplicate: duplicate
         collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
   field_domain_access:
     type: options_buttons
@@ -141,15 +141,15 @@ content:
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
       closed_mode: summary
       autocollapse: none
       closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
       features:
-        duplicate: duplicate
         collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
   field_sidebar:
     type: paragraphs_previewer
@@ -159,15 +159,15 @@ content:
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
       closed_mode: summary
       autocollapse: none
       closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
       features:
-        duplicate: duplicate
         collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
   langcode:
     type: language_select
@@ -188,12 +188,6 @@ content:
     region: content
     settings:
       display_label: true
-    third_party_settings: {  }
-  publish_on:
-    type: datetime_timestamp
-    weight: 16
-    region: content
-    settings: {  }
     third_party_settings: {  }
   simple_sitemap:
     weight: 9
@@ -232,15 +226,11 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  unpublish_on:
-    type: datetime_timestamp
-    weight: 17
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   url_redirects:
     weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true
