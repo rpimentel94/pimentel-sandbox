@@ -75,3 +75,8 @@ tailwind.paragraph__blog_posts:
   class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\BlogPosts'
   hook: paragraph__blog_posts
   weight: 0
+
+tailwind.paragraph__team_members:
+  class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\TeamMembers'
+  hook: paragraph__team_members
+  weight: 0

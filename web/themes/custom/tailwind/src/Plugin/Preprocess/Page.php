@@ -62,8 +62,8 @@ class Page extends PreprocessPluginBase
     }
 
     //$active_trail = \Drupal::service('menu.active_trail');
-  
-    // Replace `main` with the name of the menu you're working with.
+
+    //Replace `main` with the name of the menu you're working with.
     //$menu_level = count($active_trail->getActiveTrailIds('main-htlf'));
 
     // $loader = \Drupal::service('domain.negotiator');
