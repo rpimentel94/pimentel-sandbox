@@ -62,6 +62,7 @@
         "drupal/linkchecker": "^2.0@alpha",
         "drupal/linkit": "^6.0",
         "drupal/media_bulk_upload": "^3.0",
+        "drupal/media_entity_file_replace": "^1.2",
         "drupal/media_library_form_element": "^2.0",
         "drupal/menu_export": "^1.4",
         "drupal/menus_attribute": "^1.3",
