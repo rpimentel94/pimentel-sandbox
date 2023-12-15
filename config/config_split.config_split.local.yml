@@ -1,0 +1,17 @@
+uuid: 6c6941b5-a32f-499f-b003-629830c5ff1b
+langcode: en
+status: false
+dependencies: {  }
+id: local
+label: Local
+description: 'Local settings used within Lando, primarily for Solr, Twig & Devel Settings.'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config_local
+module: {  }
+theme: {  }
+complete_list: {  }
+partial_list:
+  - search_api.server.pantheon_solr8

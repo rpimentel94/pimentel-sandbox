@@ -1,35 +1,35 @@
-parameters:
-  twig.config:
-    debug: true
-    auto_reload: true
-    cache: false
-  http.response.debug_cacheability_headers: true
-  cors.config:
-    enabled: true
-    # Specify allowed headers, like 'x-allowed-header'.
-    allowedHeaders: ['x-csrf-token','authorization','content-type','accept','origin','x-requested-with', 'access-control-allow-origin','x-allowed-header','*']
-    # Specify allowed request methods, specify ['*'] to allow all possible ones.
-    allowedMethods: ['*']
-    # Configure requests allowed from specific origins.
-    allowedOrigins: ['http://localhost/','http://localhost:3000','http://localhost:3001','http://localhost:3002','*']
-    # Sets the Access-Control-Expose-Headers header.
-    exposedHeaders: false
-    # Sets the Access-Control-Max-Age header.
-    maxAge: false
-    # Sets the Access-Control-Allow-Credentials header.
-    supportsCredentials: true
-  session.storage.options:
-    # Drupal automatically generates a unique session cookie name based on the
-    # full domain name used to access the site. This mechanism is sufficient
-    # for most use-cases, including multi-site deployments. However, if it is
-    # desired that a session can be reused across different subdomains, the
-    # cookie domain needs to be set to the shared base domain. Doing so assures
-    # that users remain logged in as they cross between various subdomains.
-    # To maximize compatibility and normalize the behavior across user agents,
-    # the cookie domain should start with a dot.
-    #
-    # @default none
-    cookie_domain: '.htlf.com'
-services:
-  cache.backend.null:
-    class: Drupal\Core\Cache\NullBackendFactory
+# parameters:
+#   twig.config:
+#     debug: true
+#     auto_reload: true
+#     cache: false
+#   http.response.debug_cacheability_headers: true
+#   cors.config:
+#     enabled: true
+#     # Specify allowed headers, like 'x-allowed-header'.
+#     allowedHeaders: ['x-csrf-token','authorization','content-type','accept','origin','x-requested-with', 'access-control-allow-origin','x-allowed-header','*']
+#     # Specify allowed request methods, specify ['*'] to allow all possible ones.
+#     allowedMethods: ['*']
+#     # Configure requests allowed from specific origins.
+#     allowedOrigins: ['http://localhost/','http://localhost:3000','http://localhost:3001','http://localhost:3002','*']
+#     # Sets the Access-Control-Expose-Headers header.
+#     exposedHeaders: false
+#     # Sets the Access-Control-Max-Age header.
+#     maxAge: false
+#     # Sets the Access-Control-Allow-Credentials header.
+#     supportsCredentials: true
+#   session.storage.options:
+#     # Drupal automatically generates a unique session cookie name based on the
+#     # full domain name used to access the site. This mechanism is sufficient
+#     # for most use-cases, including multi-site deployments. However, if it is
+#     # desired that a session can be reused across different subdomains, the
+#     # cookie domain needs to be set to the shared base domain. Doing so assures
+#     # that users remain logged in as they cross between various subdomains.
+#     # To maximize compatibility and normalize the behavior across user agents,
+#     # the cookie domain should start with a dot.
+#     #
+#     # @default none
+#     # cookie_domain: '.htlf.com'
+# services:
+#   cache.backend.null:
+#     class: Drupal\Core\Cache\NullBackendFactory
