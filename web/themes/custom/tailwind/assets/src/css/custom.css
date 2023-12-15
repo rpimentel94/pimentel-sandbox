@@ -546,8 +546,14 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   padding-bottom: 40px;
   border-color: var(--PrimaryColor);
   border-width: 0px 0px 2px;
-  max-width: 40%;
+  max-width: 50%;
   margin: auto;
+}
+@media screen and (max-width: 750px) {
+  .tailwind-search form {
+    max-width: 100%;
+    padding-bottom: 20px;
+  }
 }
 .tailwind-search form input#edit-keyword {
   width: 30vw;
@@ -555,12 +561,23 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   font-size: 2em;
   padding: 0.5em;
 }
+@media screen and (max-width: 750px) {
+  .tailwind-search form input#edit-keyword {
+    width: 50vw;
+    font-size: 1em;
+  }
+}
 .tailwind-search form input#edit-keyword:focus {
   box-shadow: none;
 }
 .tailwind-search form input#edit-submit-pantheon-search {
   font-size: 2em;
   padding: 0.5em 1em;
+}
+@media screen and (max-width: 750px) {
+  .tailwind-search form input#edit-submit-pantheon-search {
+    font-size: 1em;
+  }
 }
 .tailwind-search .total-results::after {
   display: block;

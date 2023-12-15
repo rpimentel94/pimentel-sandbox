@@ -195,14 +195,24 @@
     padding-bottom: 40px;
     border-color: var(--PrimaryColor);
     border-width: 0px 0px 2px;
-    max-width: 40%;
+    max-width: 50%;
     margin: auto;
+
+    @media screen and (max-width: 750px) {
+      max-width: 100%;
+      padding-bottom: 20px;
+    }
 
     input#edit-keyword {
       width: 30vw;
       border: none;
       font-size: 2em;
       padding: 0.5em;
+
+      @media screen and (max-width: 750px) {
+        width: 50vw;
+        font-size: 1em;
+      }
 
       &:focus {
         box-shadow: none;
@@ -212,7 +222,11 @@
     input#edit-submit-pantheon-search {
       font-size: 2em;
       padding: 0.5em 1em;
+      @media screen and (max-width: 750px) {
+        font-size: 1em;
+      }
     }
+    
   }
 
   .total-results {
