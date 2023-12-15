@@ -1,0 +1,28 @@
+.desktop-navigation {
+    //Section for additional desktop menu changes
+}
+
+.mobile-navigation {
+    .mobile-menu {
+        .menu {
+            .menu-item {
+                font-size: 1.25em;
+                padding-bottom: 1em;
+
+                //Section for secondary menu list
+                .menu {
+                    padding: 1em 1em 0;
+                    .menu-item {
+                        font-size: 1em;
+                    }
+                }
+            }
+
+            .is-active {
+                color: var(--PrimaryColor);
+                font-weight: 500;
+                text-decoration: solid underline var(--SecondaryColor) 2px;
+            }
+        }
+    }
+}
