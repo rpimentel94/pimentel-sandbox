@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e681f9d931b353e00adac1ec30d9b8d5",
+    "content-hash": "b364871913dafbbd777c35e6cd7f42b7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3134,6 +3134,52 @@
             "homepage": "https://www.drupal.org/project/domain_access_logo",
             "support": {
                 "source": "https://git.drupalcode.org/project/domain_access_logo"
+            }
+        },
+        {
+            "name": "drupal/domain_access_search_api",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/domain_access_search_api.git",
+                "reference": "1.0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/domain_access_search_api-1.0.3.zip",
+                "reference": "1.0.3",
+                "shasum": "67f5fc342fae5df5c4bcff5bd23be5ab93f48071"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10",
+                "drupal/domain": "*",
+                "drupal/search_api": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.3",
+                    "datestamp": "1678489231",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "andileco",
+                    "homepage": "https://www.drupal.org/user/2054544"
+                }
+            ],
+            "description": "Creates a Views filter to filter by domain",
+            "homepage": "https://www.drupal.org/project/domain_access_search_api",
+            "support": {
+                "source": "https://git.drupalcode.org/project/domain_access_search_api"
             }
         },
         {

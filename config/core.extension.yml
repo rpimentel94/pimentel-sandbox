@@ -36,6 +36,7 @@ module:
   domain: 0
   domain_access: 0
   domain_access_logo: 0
+  domain_access_search_api: 0
   domain_alias: 0
   domain_config: 0
   domain_config_ui: 0
@@ -132,11 +133,11 @@ module:
   salesforce_webform: 0
   scheduled_transitions: 0
   scheduler: 0
-  search: 0
   search_api: 0
   search_api_pantheon: 0
   search_api_pantheon_admin: 0
   search_api_solr: 0
+  search_api_solr_admin: 0
   serialization: 0
   shortcut: 0
   shs: 0
@@ -150,7 +151,6 @@ module:
   system: 0
   tamper: 0
   taxonomy: 0
-  tb_megamenu: 0
   text: 0
   token: 0
   token_custom: 0

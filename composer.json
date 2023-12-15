@@ -41,6 +41,7 @@
         "drupal/devel_kint_extras": "^1.1",
         "drupal/domain": "^2.0@beta",
         "drupal/domain_access_logo": "^2.0",
+        "drupal/domain_access_search_api": "^1.0",
         "drupal/domain_theme_switch": "^2.0",
         "drupal/dynamic_entity_reference": "^3.0",
         "drupal/editor_advanced_link": "^2.2",
@@ -117,7 +118,8 @@
         "drush/drush": "^11 || ^12",
         "geocoder-php/google-maps-provider": "^4.7",
         "pantheon-systems/drupal-integrations": "^9",
-        "pantheon-upstreams/upstream-configuration": "dev-main"
+        "pantheon-upstreams/upstream-configuration": "dev-main",
+        "solarium/solarium": "^6.3"
     },
     "require-dev": {
         "drupal/core-dev": "^9.2"
