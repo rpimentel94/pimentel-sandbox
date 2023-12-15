@@ -19,16 +19,16 @@
 	<h3>{{ title }}</h3>
 {% endif %}
 
-<div class="w-11/12 xl:w-8/12 m-auto max-w-7xl">
+<div class="w-11/12 xl:w-8/12 m-auto max-w-7xl pt-12">
 
-	<h2 class="">
+	<h2 class="total-results text-3xl font-extralight py-6">
 		{% if view.total_rows > 0 %}
 			{{view.total_rows}}
 			total results for
-			{{view.exposed_raw_input.keyword}}<h2>
-			{% else %}
-				No results found for
-				{{view.exposed_raw_input.keyword}}
+			<span class="font-medium">{{view.exposed_raw_input.keyword}}</span>
+		{% else %}
+			No results found for
+			<span class="font-medium">{{view.exposed_raw_input.keyword}}</span>
 		{% endif %}
 	</h2>
 
@@ -38,7 +38,7 @@
       default_row_class ? 'views-row',
     ]
   %}
-		<div{{row.attributes.addClass(row_classes)}}>
+		<div{{row.attributes.addClass(row_classes, "pb-8")}}>
 			{{- row.content -}}
 		</div>
 	{% endfor %}

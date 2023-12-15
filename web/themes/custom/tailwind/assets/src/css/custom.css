@@ -562,6 +562,40 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   font-size: 2em;
   padding: 0.5em 1em;
 }
+.tailwind-search .total-results::after {
+  display: block;
+  content: " ";
+  width: 6.875rem;
+  height: 2px;
+  margin: 2rem 0 2.5rem;
+  background-color: var(--SecondaryColor, #757575);
+}
+.tailwind-search .views-row .views-field-title {
+  font-size: 1.625rem;
+  line-height: 1.23;
+  font-weight: 500;
+  color: var(--PrimaryColor);
+  padding-bottom: 1.25rem;
+  display: inline-block;
+  position: relative;
+}
+.tailwind-search .views-row .views-field-title::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--SecondaryColor, #757575);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.tailwind-search .views-row .views-field-title:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 footer .footer-inner-top #block-auxmenu-2 ul {
   justify-content: flex-start;
   margin-left: 1em;
