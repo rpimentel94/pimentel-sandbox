@@ -48,7 +48,7 @@ class TeamMembers extends PreprocessPluginBase
         }
 
         $view = Views::getView('team_members');
-        $view->setDisplay('block_1');
+        $view->setDisplay('team_members');
         //contextual relationship filter
         $view->setArguments([$views_filter]);
         $view->execute();

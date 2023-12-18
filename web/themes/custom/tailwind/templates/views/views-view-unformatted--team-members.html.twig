@@ -16,15 +16,14 @@
  */
 #}
 {% if title %}
-  <h3>{{ title }}</h3>
+	<h3>{{ title }}</h3>
 {% endif %}
-{% for row in rows %}
-  {%
-    set row_classes = [
-      default_row_class ? 'views-row',
-    ]
-  %}
-  <div{{ row.attributes.addClass(row_classes, "team-members") }}>
-    {{- row.content -}}
-  </div>
-{% endfor %}
+
+<div class="grid grid-cols-2 gap-16 justify-between team-members-views-{{view.current_display}}">
+	{% for row in rows %}
+		{% set row_classes = [default_row_class ? 'views-row',] %}
+		<div{{row.attributes.addClass(row_classes, "basis-full xl:basis-1/2 flex flex-wrap")}}>
+			{{- row.content -}}
+		</div>
+	{% endfor %}
+</div>

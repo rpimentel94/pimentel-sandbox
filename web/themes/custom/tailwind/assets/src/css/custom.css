@@ -702,6 +702,90 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   transform-origin: bottom left;
 }
 
+.team-members-views-team_members .views-row .views-field-field-member-image img {
+  height: 225px;
+  width: auto;
+}
+.team-members-views-team_members .views-row .views-field-fieldset {
+  max-width: 60%;
+}
+@media screen and (max-width: 750px) {
+  .team-members-views-team_members .views-row .views-field-fieldset {
+    max-width: 100%;
+  }
+}
+.team-members-views-team_members .views-row .views-field-fieldset .member-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 1.5em;
+}
+.team-members-views-team_members .views-row .views-field-fieldset .member-content .views-field-title {
+  font-size: 1.6rem;
+  color: var(--PrimaryColor);
+  line-height: 1.23;
+  display: inline-block;
+  position: relative;
+}
+.team-members-views-team_members .views-row .views-field-fieldset .member-content .views-field-title::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--SecondaryColor, #757575);
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+}
+.team-members-views-team_members .views-row .views-field-fieldset .member-content .views-field-title:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.team-members-views-team_members .views-row .views-field-fieldset .member-content .views-field-field-member-title {
+  font-size: 1.2rem;
+  line-height: 1.56;
+  font-weight: 400;
+  line-break: strict;
+}
+.team-members-views-team_members .views-row .views-field-fieldset .member-content .views-field-field-phone {
+  color: var(--PrimaryColor);
+}
+.team-members-views-team_members .views-row .views-field-fieldset .member-content .views-field-field-phone:hover {
+  text-decoration: underline;
+  color: var(--SecondaryColor);
+}
+.team-members-views-team_members .views-row .views-field-fieldset .member-content .views-field-field-email {
+  background: var(--PrimaryColor, #757575);
+  color: white;
+  font: inherit;
+  line-height: 1;
+  padding: 1em 2em;
+  --color: white;
+  --hover: #445794;
+  transition: 0.5s;
+  border-radius: 0.3125rem;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.25em;
+  max-width: 175px;
+}
+.team-members-views-team_members .views-row .views-field-fieldset .member-content .views-field-field-email:hover, .team-members-views-team_members .views-row .views-field-fieldset .member-content .views-field-field-email:focus {
+  border-color: var(--hover);
+  color: --color;
+  box-shadow: inset 0 0 0 3em var(--hover);
+  cursor: pointer;
+}
+@media screen and (max-width: 550px) {
+  .team-members-views-team_members .views-row .views-field-fieldset .member-content .views-field-field-email {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+}
+
 footer .footer-inner-top #block-auxmenu-2 ul {
   justify-content: flex-start;
   margin-left: 1em;

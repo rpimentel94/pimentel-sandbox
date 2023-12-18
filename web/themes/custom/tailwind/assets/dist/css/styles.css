@@ -1563,6 +1563,10 @@ input:checked + .toggle-bg {
   grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -1621,6 +1625,14 @@ input:checked + .toggle-bg {
 
 .gap-5 {
   gap: 1.25rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .gap-x-8 {
@@ -3214,6 +3226,10 @@ input:checked + .toggle-bg {
 
   .xl\:basis-\[48\%\] {
     flex-basis: 48%;
+  }
+
+  .xl\:basis-1\/2 {
+    flex-basis: 50%;
   }
 
   .xl\:p-4 {
