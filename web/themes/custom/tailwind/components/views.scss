@@ -275,6 +275,12 @@
 //Team Members
 .team-members-views-team_members {
   .views-row {
+
+    @media screen and (max-width: 750px) {
+      justify-content: center;
+      text-align: center;
+    }
+
     .views-field {
       &-field-member-image {
         img {
@@ -366,6 +372,7 @@
                 width: 100%;
                 display: block;
                 text-align: center;
+                margin: auto;
               }
             }
           }

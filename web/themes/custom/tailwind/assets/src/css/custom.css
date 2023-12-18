@@ -702,6 +702,12 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   transform-origin: bottom left;
 }
 
+@media screen and (max-width: 750px) {
+  .team-members-views-team_members .views-row {
+    justify-content: center;
+    text-align: center;
+  }
+}
 .team-members-views-team_members .views-row .views-field-field-member-image img {
   height: 225px;
   width: auto;
@@ -783,6 +789,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
     width: 100%;
     display: block;
     text-align: center;
+    margin: auto;
   }
 }
 
