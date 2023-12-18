@@ -89,7 +89,7 @@ class CustomTokenSheetForm extends ConfigFormBase
     public function createConfigArray($mid)
     {
         $media = Media::load($mid);
-        $fid = $media->field_media_image->target_id;
+        $fid = $media->field_media_file_csv->target_id;
         $file = File::load($fid);
 
         $tokens = $sorted_data = [];
