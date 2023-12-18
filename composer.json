@@ -94,6 +94,7 @@
         "drupal/salesforce_push": "^5.0",
         "drupal/scheduled_transitions": "^2.3",
         "drupal/scheduler": "^2.0",
+        "drupal/search_api_block": "^1.1",
         "drupal/search_api_exclude": "^2.0",
         "drupal/search_api_pantheon": "^8",
         "drupal/shs": "^2.0@RC",

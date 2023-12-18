@@ -13,6 +13,10 @@
             el.parentNode.insertBefore(wrapper, el);
             wrapper.appendChild(el);
         }
+
+        function toggleSearchModal() { document.getElementById('modal').classList.toggle('hidden')
+        }
+
       },
     };
   })(Drupal, drupalSettings, once);

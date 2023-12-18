@@ -25,7 +25,7 @@ mode: default
 content:
   field_admin_title:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -33,14 +33,14 @@ content:
     region: content
   field_background:
     type: list_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 1
     region: content
   field_display_admin_title:
     type: boolean
-    label: above
+    label: hidden
     settings:
       format: default
       format_custom_false: ''
@@ -50,7 +50,7 @@ content:
     region: content
   field_display_bio:
     type: boolean
-    label: above
+    label: hidden
     settings:
       format: default
       format_custom_false: ''
@@ -60,7 +60,7 @@ content:
     region: content
   field_display_button:
     type: boolean
-    label: above
+    label: hidden
     settings:
       format: default
       format_custom_false: ''
@@ -70,7 +70,7 @@ content:
     region: content
   field_display_image:
     type: boolean
-    label: above
+    label: hidden
     settings:
       format: default
       format_custom_false: ''
@@ -80,7 +80,7 @@ content:
     region: content
   field_display_links:
     type: boolean
-    label: above
+    label: hidden
     settings:
       format: default
       format_custom_false: ''
@@ -90,7 +90,7 @@ content:
     region: content
   field_display_title:
     type: boolean
-    label: above
+    label: inline
     settings:
       format: default
       format_custom_false: ''
@@ -100,31 +100,32 @@ content:
     region: content
   field_gutter:
     type: list_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 9
     region: content
   field_image_orientation:
     type: list_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 7
     region: content
   field_num_cols:
     type: list_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 8
     region: content
   field_team_member_group:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     weight: 10
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true
