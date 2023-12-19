@@ -238,6 +238,25 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   }
 }
 
+//General Content Specifically
+.general-content {
+  a {
+    color: var(--PrimaryColor, #757575);
+    font-weight: bold;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .button {
+    color: white;
+    font-weight: normal;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
 .testimonial,
 .uneven-columns {
   .primary,

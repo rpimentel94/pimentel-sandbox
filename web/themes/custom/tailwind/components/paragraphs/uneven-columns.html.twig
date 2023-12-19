@@ -10,7 +10,7 @@
 					<div class="mb-4">
                         {{content.field_textarea}}
                     </div>   
-                    {% if content.field_button is not empty %}
+                    {% if content.field_button.0 is not empty %}
                         <a
                             class="rounded-md py-4 px-10 mb-4 font-medium hover:drop-shadow-2xl transition duration-200 {{button.first.color.text}}"
                             style="background-color: {{button.first.color.background}}"
@@ -24,7 +24,7 @@
                     <div class="mb-4">
 					    {{content.field_textarea_secondary}}
                     </div>
-                    {% if content.field_button_secondary is not empty %}
+                    {% if content.field_button_secondary.0 is not empty %}
 					<a 
                         class="rounded-md inline-block w-44 py-4 px-10 mb-4 font-medium hover:drop-shadow-2xl transition duration-200 {{button.second.color.text}}"
                         style="background-color: {{button.second.color.background}}"

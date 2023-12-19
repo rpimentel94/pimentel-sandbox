@@ -80,10 +80,10 @@ class TailwindHelper
                 $theme_color = theme_get_setting('secondary_color');
                 break;
             case 'grey':
-                $theme_color = '#f5f5f5';
+                $theme_color = 'htlfLighterGray';
                 break;
             default:
-                $theme_color = '#f5f5f5';
+                $theme_color = 'htlfLighterGray';
                 break;
         }
 

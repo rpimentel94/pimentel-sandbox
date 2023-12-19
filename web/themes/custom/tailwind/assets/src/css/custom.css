@@ -295,6 +295,21 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   line-height: inherit;
 }
 
+.general-content a {
+  color: var(--PrimaryColor, #757575);
+  font-weight: bold;
+}
+.general-content a:hover {
+  text-decoration: underline;
+}
+.general-content .button {
+  color: white;
+  font-weight: normal;
+}
+.general-content .button:hover {
+  text-decoration: none;
+}
+
 .testimonial .primary,
 .testimonial .primary p,
 .uneven-columns .primary,
