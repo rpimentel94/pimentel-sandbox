@@ -629,6 +629,87 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   color: var(--SecondaryColor);
 }
 
+.blog-post-page .blog-post-views-blog_page .views-field-title {
+  font-size: 2rem;
+  line-height: 1.23;
+  font-weight: 300;
+  color: var(--PrimaryColor);
+  padding-bottom: 1.5rem;
+  display: inline-block;
+  position: relative;
+}
+.blog-post-page .blog-post-views-blog_page .views-field-title::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: 10px;
+  left: 0;
+  background-color: var(--SecondaryColor, #757575);
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+}
+.blog-post-page .blog-post-views-blog_page .views-field-title:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.blog-post-page .blog-post-views-blog_page .blog-time {
+  display: flex;
+  font-weight: 500;
+  padding-bottom: 2rem;
+}
+.blog-post-page .blog-post-views-blog_page .blog-time .views-field-field-blog-time {
+  padding-right: 5px;
+}
+.blog-post-page .blog-post-views-blog_page .views-field-field-blog-content {
+  margin: 1rem 0;
+  font-size: inherit;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  color: #333;
+}
+.blog-post-page .blog-post-views-blog_page .views-field-field-blog-tags ul {
+  display: flex;
+  padding: 1rem 0;
+}
+.blog-post-page .blog-post-views-blog_page .views-field-field-blog-tags ul li {
+  padding-right: 1rem;
+}
+.blog-post-page .blog-post-views-blog_page .views-field-field-blog-tags ul li a {
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.blog-post-page .blog-post-views-blog_page .views-field-field-blog-tags ul li a::before {
+  display: inline-block;
+  content: "#";
+}
+.blog-post-page .blog-post-views-blog_page .views-field-field-blog-tags ul li a:hover {
+  text-decoration: underline;
+}
+.blog-post-page .blog-post-views-blog_page .views-field-view-node {
+  padding-top: 1rem;
+}
+.blog-post-page .blog-post-views-blog_page .views-field-view-node a {
+  font-size: 1.25rem;
+  line-height: 1;
+  font-weight: 600;
+  color: var(--PrimaryColor);
+}
+.blog-post-page .blog-post-views-blog_page .views-field-view-node a::after {
+  display: inline-block;
+  content: " >";
+  position: relative;
+  left: 5px;
+}
+.blog-post-page .blog-post-views-blog_page .views-field-view-node a:hover {
+  text-decoration: underline;
+  color: var(--SecondaryColor);
+}
+
 .tailwind-search form {
   display: flex;
   justify-content: space-between;

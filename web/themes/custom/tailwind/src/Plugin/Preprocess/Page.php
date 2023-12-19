@@ -59,6 +59,9 @@ class Page extends PreprocessPluginBase
 
       //Check for sidebar
       $variables['middle_section'] = $variables['node']->hasField('field_middle_section') && !$variables['node']->get('field_middle_section')->isEmpty() ? TRUE : FALSE;
+    
+    } elseif (array_key_exists('#title', $variables['page']) && $variables['page']['#title'] == "Blog Posts") {
+      $variables['banner_image'] = '/' . $parent_theme_path . '/domains/' . $active_domain . '/images/internal-banner-image.jpg';
     }
 
     //$active_trail = \Drupal::service('menu.active_trail');

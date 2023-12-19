@@ -187,6 +187,111 @@
   }
 }
 
+//Blog Post Page
+
+.blog-post-page {
+  //Main View
+  .blog-post-views-blog_page {
+    .views-field-title {
+      font-size: 2rem;
+      line-height: 1.23;
+      font-weight: 300;
+      color: var(--PrimaryColor);
+      padding-bottom: 1.5rem;
+      display: inline-block;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 4px;
+        bottom: 10px;
+        left: 0;
+        background-color: var(--SecondaryColor, #757575);
+        transform-origin: bottom right;
+        transition: transform 0.4s ease-out;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+
+    .blog-time {
+      display: flex;
+      font-weight: 500;
+      padding-bottom: 2rem;
+
+      .views-field-field-blog-time {
+        padding-right: 5px;
+      }
+
+    }
+
+    .views-field-field-blog-content {
+      margin: 1rem 0;
+      font-size: inherit;
+      line-height: 1.6;
+      text-rendering: optimizeLegibility;
+      color: #333;
+    }
+
+    .views-field-field-blog-tags {
+      ul {
+        display: flex;
+        padding: 1rem 0;
+
+        li {
+          padding-right: 1rem;
+
+          a {
+            letter-spacing: .025em;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: .875rem;
+            line-height: 1.25rem;
+
+            &::before {
+              display: inline-block;
+              content: "#";
+            }
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .views-field-view-node {
+      padding-top: 1rem;
+  
+      a {
+        font-size: 1.25rem;
+        line-height: 1;
+        font-weight: 600;
+        color: var(--PrimaryColor);
+
+        &::after {
+          display: inline-block;
+          content: " >";
+          position: relative;
+          left: 5px;
+        }
+  
+        &:hover {
+          text-decoration: underline;
+          color: var(--SecondaryColor);
+        }
+      }
+    }
+  }
+}
+
 //Site Search
 .tailwind-search {
   form {
@@ -275,7 +380,6 @@
 //Team Members
 .team-members-views-team_members {
   .views-row {
-
     @media screen and (max-width: 750px) {
       justify-content: center;
       text-align: center;

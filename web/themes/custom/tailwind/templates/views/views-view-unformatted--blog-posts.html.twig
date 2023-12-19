@@ -54,6 +54,22 @@
 
   </div>
 {# End render for standard blogs posts #}
+
+{% elseif view.current_display == "blog_page" %}
+
+  <div class="grid grid-cols-1 gap-16 blog-post-views-{{view.current_display}}">
+
+  {% for row in rows %}
+    {% set row_classes = [default_row_class ? 'views-row',] %}
+
+    <div{{ row.attributes.addClass(row_classes) }}>
+      {{- row.content -}}
+    </div>
+
+  {% endfor %}
+
+  </div>
+
 {% else %}
 {# Start render for Featured #}
   <div class="flex flex-wrap justify-between blog-post-views-{{view.current_display}}">
