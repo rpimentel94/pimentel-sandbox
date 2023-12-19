@@ -85,3 +85,8 @@ tailwind.paragraph__team_members:
   class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\TeamMembers'
   hook: paragraph__team_members
   weight: 0
+
+tailwind.paragraph__ordered_team_members:
+  class: '\Drupal\tailwind\Plugin\Preprocess\Paragraphs\OrderedTeamMembers'
+  hook: paragraph__ordered_team_members
+  weight: 0

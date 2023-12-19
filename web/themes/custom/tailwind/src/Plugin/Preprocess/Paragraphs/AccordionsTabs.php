@@ -30,7 +30,7 @@ class AccordionsTabs extends PreprocessPluginBase
 
 
         $parent_field = str_replace('_q2_', '_', $paragraph->parent_field_name->getString());
-        $variables['paragraph_width'] =  $parent_field == "field_middle_sections" ? "w-full m-auto" : "w-11/12 xl:w-8/12 m-auto max-w-7xl";
+        $variables['paragraph_width'] = $parent_field == "field_middle_sections" ? "w-full m-auto" : "w-11/12 xl:w-8/12 m-auto max-w-7xl";
 
         if ($paragraph->hasField('field_background_color')) {
             $variables['background_color'] = !$paragraph->get('field_background_color')->isEmpty() ? TailwindHelper::getColor($paragraph->get('field_background_color')->getString()) : "htlfBody";
@@ -56,23 +56,35 @@ class AccordionsTabs extends PreprocessPluginBase
             foreach ($tabs as $tab) {
                 //Create empty item to append altered data to
                 $item = [];
-                $item['title'] = $tab->get('field_text')->getString();
-                $item['link_title'] = strtolower(str_replace(" ", "-", $item['title']));
-                $item['tag'] = $tab->get('field_tag')->getString();
+
+                if ($tab->getType() == "accordion_tab_item") {
+                    $item['title'] = $tab->get('field_text')->getString();
+                    $item['link_title'] = strtolower(str_replace(" ", "-", $item['title']));
+                    $item['tag'] = $tab->get('field_tag')->getString();
+                    $item['type'] = "accordion_item";
+
+                    $item['body'] = [
+                        '#type' => 'processed_text',
+                        '#text' => $tab->get('field_textarea')->value,
+                        '#format' => $tab->get('field_textarea')->format,
+                    ];
+
+                    //Create Button
+                    if ($tab->hasField('field_button') && !$tab->get('field_button')->isEmpty()) {
+                        $item['button']['title'] = $tab->get('field_button')->first()->title ?: "";
+                        $item['button']['url'] = TailwindHelper::createUrl($item['button']['title'], $tab->get('field_button')->first()->getUrl()->toString(), $tab->get('field_button')->first()->getUrl());
+                        $item['button']['color'] = TailwindHelper::getButtonColor('');
+                        $item['button']['aria'] = $tab->get('field_button_aria_label')->getString() ?: "";
+                    }
+                } else {
+
+                    $item['title'] = $tab->get('field_admin_title')->getString() ?: "";
+                    $item['type'] = "team_members";
+                    $item['tag'] = "h2";
+                    $item['link_title'] = strtolower(str_replace(" ", "-", $item['title']));
+                    $item['content'] = $tab;
 
 
-                $item['body'] = [
-                    '#type' => 'processed_text',
-                    '#text' => $tab->get('field_textarea')->value,
-                    '#format' => $tab->get('field_textarea')->format,
-                ];
-
-                //Create Button
-                if ($tab->hasField('field_button') && !$tab->get('field_button')->isEmpty()) {
-                    $item['button']['title'] = $tab->get('field_button')->first()->title ?: "";
-                    $item['button']['url'] = TailwindHelper::createUrl($item['button']['title'], $tab->get('field_button')->first()->getUrl()->toString(), $tab->get('field_button')->first()->getUrl());
-                    $item['button']['color'] = TailwindHelper::getButtonColor('');
-                    $item['button']['aria'] = $tab->get('field_button_aria_label')->getString() ?: "";
                 }
                 $tab_items[] = $item;
             }

@@ -24,13 +24,17 @@
 
 									<div id="{{tab.link_title}}-ac-{{loop.index}}" class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container{{loop.index}}" x-bind:style="selected == {{loop.index}} ? 'max-height: ' + $refs.container{{loop.index}}.scrollHeight + 'px' : ''">
 										<div class="p-10">
-											{{tab.body}}
+											{% if tab.type and tab.type != 'team_members' %}
+												{{tab.body}}
 
-											{% if tab.button is not empty %}
-												<a class="{{tab.button.color.text}}" style="background-color: {{tab.button.color.background}}" href="{{tab.button.url}}" aria-label="{{tab.button.aria}}">
-													{{tab.button.title}}
-													<i class="arrow"></i>
-												</a>
+												{% if tab.button is not empty %}
+													<a class="{{tab.button.color.text}}" style="background-color: {{tab.button.color.background}}" href="{{tab.button.url}}" aria-label="{{tab.button.aria}}">
+														{{tab.button.title}}
+														<i class="arrow"></i>
+													</a>
+												{% endif %}
+											{% else %}
+												{{tab.content|view('full')}}
 											{% endif %}
 										</div>
 									</div>

@@ -6,6 +6,7 @@ dependencies:
     - field.storage.paragraph.field_accordion_tab_item
     - paragraphs.paragraphs_type.accordion_tab_item
     - paragraphs.paragraphs_type.accordions_tabs
+    - paragraphs.paragraphs_type.ordered_team_members
   module:
     - entity_reference_revisions
 id: paragraph.accordions_tabs.field_accordion_tab_item
@@ -23,6 +24,7 @@ settings:
   handler_settings:
     target_bundles:
       accordion_tab_item: accordion_tab_item
+      ordered_team_members: ordered_team_members
     negate: 0
     target_bundles_drag_drop:
       accordion_tab_item:
@@ -31,7 +33,58 @@ settings:
       accordions_tabs:
         weight: 4
         enabled: false
+      banner:
+        weight: 23
+        enabled: false
+      banner_item:
+        weight: 24
+        enabled: false
+      blog_posts:
+        weight: 25
+        enabled: false
+      call_to_action:
+        weight: 26
+        enabled: false
+      featured_product:
+        weight: 27
+        enabled: false
       from_library:
         weight: 6
+        enabled: false
+      general_content_section:
+        weight: 29
+        enabled: false
+      grid:
+        weight: 30
+        enabled: false
+      grid_item:
+        weight: 31
+        enabled: false
+      ordered_team_members:
+        weight: 32
+        enabled: true
+      rate_item:
+        weight: 34
+        enabled: false
+      rates:
+        weight: 33
+        enabled: false
+      sidebar_content_section:
+        weight: 35
+        enabled: false
+      static_map:
+        weight: 36
+        enabled: false
+      team_members:
+        weight: 37
+        enabled: false
+      testimonial:
+        weight: 38
+        enabled: false
+      uneven_columns:
+        weight: 39
+        enabled: false
+      webform:
+        weight: 40
         enabled: false
 field_type: entity_reference_revisions
