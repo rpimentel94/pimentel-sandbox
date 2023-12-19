@@ -1,0 +1,113 @@
+uuid: bd9cbc54-9670-401c-8f46-c888a28ddfb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.site_settings
+    - field.field.config_pages.site_settings.field_body_tags
+    - field.field.config_pages.site_settings.field_bottom_tags
+    - field.field.config_pages.site_settings.field_enable_social_media_icons
+    - field.field.config_pages.site_settings.field_facebook_url
+    - field.field.config_pages.site_settings.field_header_tags
+    - field.field.config_pages.site_settings.field_instagram_url
+    - field.field.config_pages.site_settings.field_linkedin_url
+    - field.field.config_pages.site_settings.field_pinterest_url
+    - field.field.config_pages.site_settings.field_twitter_url
+    - field.field.config_pages.site_settings.field_yelp_url
+    - field.field.config_pages.site_settings.field_youtube_url
+  module:
+    - text
+id: config_pages.site_settings.default
+targetEntityType: config_pages
+bundle: site_settings
+mode: default
+content:
+  field_body_tags:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_bottom_tags:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_enable_social_media_icons:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_facebook_url:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_header_tags:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_instagram_url:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_linkedin_url:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_pinterest_url:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_twitter_url:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_yelp_url:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_youtube_url:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+hidden:
+  search_api_excerpt: true

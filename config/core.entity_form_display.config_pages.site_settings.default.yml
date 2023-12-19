@@ -1,0 +1,170 @@
+uuid: b3332388-2015-4f28-af7a-98789f1f8cc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.site_settings
+    - field.field.config_pages.site_settings.field_body_tags
+    - field.field.config_pages.site_settings.field_bottom_tags
+    - field.field.config_pages.site_settings.field_enable_social_media_icons
+    - field.field.config_pages.site_settings.field_facebook_url
+    - field.field.config_pages.site_settings.field_header_tags
+    - field.field.config_pages.site_settings.field_instagram_url
+    - field.field.config_pages.site_settings.field_linkedin_url
+    - field.field.config_pages.site_settings.field_pinterest_url
+    - field.field.config_pages.site_settings.field_twitter_url
+    - field.field.config_pages.site_settings.field_yelp_url
+    - field.field.config_pages.site_settings.field_youtube_url
+  module:
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_site_settings:
+      children:
+        - group_social_media_links
+        - group_analytics_tracking_snippet
+      label: 'Site Settings'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: vertical
+        width_breakpoint: 640
+    group_social_media_links:
+      children:
+        - field_enable_social_media_icons
+        - field_facebook_url
+        - field_instagram_url
+        - field_linkedin_url
+        - field_pinterest_url
+        - field_twitter_url
+        - field_yelp_url
+        - field_youtube_url
+      label: 'Social Media Links'
+      region: content
+      parent_name: group_site_settings
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: open
+        description: ''
+        required_fields: false
+    group_analytics_tracking_snippet:
+      children:
+        - field_header_tags
+        - field_body_tags
+        - field_bottom_tags
+      label: 'Analytics / Tracking Snippets'
+      region: hidden
+      parent_name: group_site_settings
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: false
+id: config_pages.site_settings.default
+targetEntityType: config_pages
+bundle: site_settings
+mode: default
+content:
+  field_body_tags:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_bottom_tags:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_enable_social_media_icons:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_facebook_url:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_header_tags:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_instagram_url:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_linkedin_url:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_pinterest_url:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_twitter_url:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_yelp_url:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_youtube_url:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  label: true

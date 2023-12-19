@@ -1,0 +1,19 @@
+uuid: 4df37581-0e18-43f5-be65-61500914f299
+langcode: en
+status: true
+dependencies: {  }
+id: site_settings
+label: 'Site Settings'
+token: false
+context:
+  show_warning: true
+  group:
+    domain: true
+    language: false
+  fallback:
+    language: ''
+    domain: htlf
+menu:
+  path: /admin/config/site-settings
+  weight: 0
+  description: ''

@@ -1,0 +1,21 @@
+uuid: 74709473-fa73-4f0a-a3c2-4900daa6c6e8
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_pages
+id: config_pages.field_pinterest_url
+field_name: field_pinterest_url
+entity_type: config_pages
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

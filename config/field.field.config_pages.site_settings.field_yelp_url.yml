@@ -1,0 +1,19 @@
+uuid: e3538e94-a895-42b1-b299-1b5a2fe7564f
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.site_settings
+    - field.storage.config_pages.field_yelp_url
+id: config_pages.site_settings.field_yelp_url
+field_name: field_yelp_url
+entity_type: config_pages
+bundle: site_settings
+label: 'Yelp URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

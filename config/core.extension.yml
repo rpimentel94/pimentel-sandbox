@@ -39,6 +39,7 @@ module:
   domain_access_search_api: 0
   domain_alias: 0
   domain_config: 0
+  domain_config_pages: 0
   domain_config_ui: 0
   domain_content: 0
   domain_menu_links: 0

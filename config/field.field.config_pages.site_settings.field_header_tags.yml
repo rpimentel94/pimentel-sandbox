@@ -1,0 +1,21 @@
+uuid: dacce48b-6e39-4393-b908-efa51900e0e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.site_settings
+    - field.storage.config_pages.field_header_tags
+  module:
+    - text
+id: config_pages.site_settings.field_header_tags
+field_name: field_header_tags
+entity_type: config_pages
+bundle: site_settings
+label: 'Header Tags'
+description: 'Add analytics / tracking code snippets that need to be placed right before the closing head tag here. This is where Google Analytics code typically goes.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

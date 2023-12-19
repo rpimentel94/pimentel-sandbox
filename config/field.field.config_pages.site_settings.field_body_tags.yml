@@ -1,0 +1,21 @@
+uuid: 7a41ccc3-1102-46e3-bfbd-1c798b474b71
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.site_settings
+    - field.storage.config_pages.field_body_tags
+  module:
+    - text
+id: config_pages.site_settings.field_body_tags
+field_name: field_body_tags
+entity_type: config_pages
+bundle: site_settings
+label: 'Body Tags'
+description: 'Add analytics / tracking code snippets that need to be placed right after the OPENING body tag here. This is where Google Tag Manager code typically goes.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

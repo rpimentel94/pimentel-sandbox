@@ -1,0 +1,23 @@
+uuid: 5cea0c21-2b18-493e-bb02-6d6bbb1aa6c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.site_settings
+    - field.storage.config_pages.field_enable_social_media_icons
+id: config_pages.site_settings.field_enable_social_media_icons
+field_name: field_enable_social_media_icons
+entity_type: config_pages
+bundle: site_settings
+label: 'Enable Social Media Icons'
+description: 'Check this box to enable social media icons'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

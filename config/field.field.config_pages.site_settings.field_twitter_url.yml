@@ -1,0 +1,19 @@
+uuid: 964daca0-7e2a-4f8e-bb4b-e40f8aafb65b
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.site_settings
+    - field.storage.config_pages.field_twitter_url
+id: config_pages.site_settings.field_twitter_url
+field_name: field_twitter_url
+entity_type: config_pages
+bundle: site_settings
+label: 'Twitter URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
