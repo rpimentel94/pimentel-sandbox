@@ -24,15 +24,12 @@ module:
   contact: 0
   content_moderation: 0
   contextual: 0
-  cookies: 0
-  cookies_asset_injector: 0
   crop: 0
   ctools: 0
   custom_form: 0
   datetime: 0
   dblog: 0
   devel: 0
-  devel_generate: 0
   domain: 0
   domain_access: 0
   domain_access_logo: 0
@@ -70,7 +67,6 @@ module:
   google_tag: 0
   help: 0
   history: 0
-  hotjar: 0
   htlf_alert: 0
   htlf_migrate: 0
   htlf_online_banking: 0
@@ -194,7 +190,6 @@ module:
   pathauto: 1
   password_policy: 10
   views: 10
-  cookies_gtag: 11
   paragraphs: 11
   paragraphs_ee: 15
   standard: 1000

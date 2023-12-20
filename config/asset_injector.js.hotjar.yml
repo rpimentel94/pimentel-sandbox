@@ -1,12 +1,7 @@
 uuid: 98ef511c-52d3-483c-86b6-13e890a1ef03
 langcode: en
 status: true
-dependencies:
-  module:
-    - cookies_asset_injector
-third_party_settings:
-  cookies_asset_injector:
-    cookies_service: hotjar
+dependencies: {  }
 id: hotjar
 label: Hotjar
 code: |
