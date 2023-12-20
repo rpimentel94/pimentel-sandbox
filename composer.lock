@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f96c7d2de3c6f07918657f155881ab55",
+    "content-hash": "293a620f197c98834c0315f47b037d9b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2002,55 +2002,6 @@
             }
         },
         {
-            "name": "drupal/asset_injector",
-            "version": "2.19.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/asset_injector.git",
-                "reference": "8.x-2.19"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/asset_injector-8.x-2.19.zip",
-                "reference": "8.x-2.19",
-                "shasum": "c0e6f9450d63f42787b93ec05375c90bcfbc6308"
-            },
-            "require": {
-                "drupal/core": "^9.3 || ^10.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-2.19",
-                    "datestamp": "1694704137",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Mike Decker",
-                    "homepage": "https://www.drupal.org/u/pookmish"
-                },
-                {
-                    "name": "Axel Rutz",
-                    "homepage": "https://www.drupal.org/u/axelrutz"
-                }
-            ],
-            "description": "Adds CSS or JS to the page output based on configurable rules.",
-            "homepage": "http://drupal.org/project/asset_injector",
-            "support": {
-                "source": "https://git.drupalcode.org/project/asset_injector",
-                "issues": "https://www.drupal.org/project/issues/asset_injector"
-            }
-        },
-        {
             "name": "drupal/block_field",
             "version": "1.0.0-rc4",
             "source": {
@@ -2387,75 +2338,6 @@
                 "source": "https://git.drupalcode.org/project/config_split",
                 "issues": "https://www.drupal.org/project/issues/config_split",
                 "slack": "https://drupal.slack.com/archives/C45342CDD"
-            }
-        },
-        {
-            "name": "drupal/cookies",
-            "version": "1.2.8",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/cookies.git",
-                "reference": "1.2.8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/cookies-1.2.8.zip",
-                "reference": "1.2.8",
-                "shasum": "f2fb897cfb49111e225e6f5ca8719781718812cf"
-            },
-            "require": {
-                "drupal/core": "^8.9 || ^9 || ^10",
-                "jfeltkamp/cookiesjsr": "^1.0.12"
-            },
-            "require-dev": {
-                "drupal/asset_injector": "^2",
-                "drupal/facebook_pixel": "^2.0",
-                "drupal/google_analytics": "^4.0",
-                "drupal/google_tag": "^2.0",
-                "drupal/ivw_integration": "^2.0",
-                "drupal/matomo": "^1.0",
-                "drupal/media_entity_instagram": "^3.0",
-                "drupal/media_entity_twitter": "^2.0",
-                "drupal/recaptcha": "^3.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "1.2.8",
-                    "datestamp": "1700575026",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Anybody",
-                    "homepage": "https://www.drupal.org/user/291091"
-                },
-                {
-                    "name": "Grevil",
-                    "homepage": "https://www.drupal.org/user/3668491"
-                },
-                {
-                    "name": "JFeltkamp",
-                    "homepage": "https://www.drupal.org/user/2471686"
-                },
-                {
-                    "name": "thomas.frobieter",
-                    "homepage": "https://www.drupal.org/user/409335"
-                }
-            ],
-            "description": "Cookie consent tool.",
-            "homepage": "https://www.drupal.org/project/cookies",
-            "support": {
-                "source": "http://cgit.drupalcode.org/cookies",
-                "issues": "https://www.drupal.org/project/issues/cookies"
             }
         },
         {
@@ -3656,187 +3538,6 @@
             }
         },
         {
-            "name": "drupal/feeds",
-            "version": "3.0.0-beta4",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/feeds.git",
-                "reference": "8.x-3.0-beta4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/feeds-8.x-3.0-beta4.zip",
-                "reference": "8.x-3.0-beta4",
-                "shasum": "d715c428819b71d7018d022862c8d1c453bcf4d7"
-            },
-            "require": {
-                "drupal/core": "^9.3 || ^10",
-                "laminas/laminas-feed": "^2.13"
-            },
-            "require-dev": {
-                "drupal/pathauto": "^1.8",
-                "drush/drush": "^9 || ^10 || ^11"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-3.0-beta4",
-                    "datestamp": "1685558328",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^9 || ^10 || ^11"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "alex_b",
-                    "homepage": "https://www.drupal.org/user/53995"
-                },
-                {
-                    "name": "Dave Reid",
-                    "homepage": "https://www.drupal.org/user/53892"
-                },
-                {
-                    "name": "e2thex",
-                    "homepage": "https://www.drupal.org/user/189123"
-                },
-                {
-                    "name": "febbraro",
-                    "homepage": "https://www.drupal.org/user/43670"
-                },
-                {
-                    "name": "franz",
-                    "homepage": "https://www.drupal.org/user/581844"
-                },
-                {
-                    "name": "Ian Ward",
-                    "homepage": "https://www.drupal.org/user/4736"
-                },
-                {
-                    "name": "jmiccolis",
-                    "homepage": "https://www.drupal.org/user/31731"
-                },
-                {
-                    "name": "joelpittet",
-                    "homepage": "https://www.drupal.org/user/160302"
-                },
-                {
-                    "name": "kking",
-                    "homepage": "https://www.drupal.org/user/24399"
-                },
-                {
-                    "name": "MegaChriz",
-                    "homepage": "https://www.drupal.org/user/654114"
-                },
-                {
-                    "name": "tobby",
-                    "homepage": "https://www.drupal.org/user/154797"
-                },
-                {
-                    "name": "twistor",
-                    "homepage": "https://www.drupal.org/user/473738"
-                },
-                {
-                    "name": "Will White",
-                    "homepage": "https://www.drupal.org/user/32237"
-                },
-                {
-                    "name": "yhahn",
-                    "homepage": "https://www.drupal.org/user/264833"
-                }
-            ],
-            "description": "Aggregates RSS/Atom/RDF feeds, imports CSV files and more.",
-            "homepage": "https://www.drupal.org/project/feeds",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "https://git.drupalcode.org/project/feeds",
-                "issues": "https://www.drupal.org/project/issues/feeds"
-            }
-        },
-        {
-            "name": "drupal/feeds_tamper",
-            "version": "2.0.0-beta3",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/feeds_tamper.git",
-                "reference": "8.x-2.0-beta3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/feeds_tamper-8.x-2.0-beta3.zip",
-                "reference": "8.x-2.0-beta3",
-                "shasum": "5e70d15af38b41d913eb4d8ffea99db29024cbc9"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9 || ^10",
-                "drupal/feeds": "^3.0",
-                "drupal/tamper": "^1.0-alpha3"
-            },
-            "require-dev": {
-                "drupal/feeds": "3.x-dev"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-2.0-beta3",
-                    "datestamp": "1670507596",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "franz",
-                    "homepage": "https://www.drupal.org/user/581844"
-                },
-                {
-                    "name": "Honza Pobořil",
-                    "homepage": "https://www.drupal.org/user/123612"
-                },
-                {
-                    "name": "mausolos",
-                    "homepage": "https://www.drupal.org/user/642118"
-                },
-                {
-                    "name": "MegaChriz",
-                    "homepage": "https://www.drupal.org/user/654114"
-                },
-                {
-                    "name": "twistor",
-                    "homepage": "https://www.drupal.org/user/473738"
-                }
-            ],
-            "description": "Modify feeds data before it gets saved.",
-            "homepage": "http://drupal.org/project/feeds_tamper",
-            "keywords": [
-                "Drupal",
-                "feeds",
-                "tamper"
-            ],
-            "support": {
-                "source": "http://cgit.drupalcode.org/feeds_tamper",
-                "issues": "http://drupal.org/project/issues/feeds_tamper"
-            }
-        },
-        {
             "name": "drupal/field_group",
             "version": "3.4.0",
             "source": {
@@ -4475,55 +4176,6 @@
             "homepage": "https://www.drupal.org/project/google_tag",
             "support": {
                 "source": "https://git.drupalcode.org/project/google_tag"
-            }
-        },
-        {
-            "name": "drupal/hotjar",
-            "version": "3.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/hotjar.git",
-                "reference": "8.x-3.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/hotjar-8.x-3.1.zip",
-                "reference": "8.x-3.1",
-                "shasum": "2ab70dd75277c484363758020b966ba41802f59d"
-            },
-            "require": {
-                "drupal/core": "^9.4 || ^10",
-                "ext-json": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-3.1",
-                    "datestamp": "1667919107",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "csakiistvan",
-                    "homepage": "https://www.drupal.org/user/491514"
-                },
-                {
-                    "name": "tikaszvince",
-                    "homepage": "https://www.drupal.org/user/337178"
-                }
-            ],
-            "description": "Allows your site to be tracked by Hotjar by adding a Javascript tracking code to every page",
-            "homepage": "https://www.drupal.org/project/hotjar",
-            "support": {
-                "source": "https://git.drupalcode.org/project/hotjar"
             }
         },
         {
@@ -8157,67 +7809,6 @@
             }
         },
         {
-            "name": "drupal/tamper",
-            "version": "1.0.0-alpha4",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/tamper.git",
-                "reference": "8.x-1.0-alpha4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/tamper-8.x-1.0-alpha4.zip",
-                "reference": "8.x-1.0-alpha4",
-                "shasum": "ab591ab64adb923a9901390119bbe0beabc23859"
-            },
-            "require": {
-                "drupal/core": "^8.8 || ^9 || ^10"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.0-alpha4",
-                    "datestamp": "1684984837",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "ericgsmith",
-                    "homepage": "https://www.drupal.org/user/1649952"
-                },
-                {
-                    "name": "jamesdixon",
-                    "homepage": "https://www.drupal.org/user/762570"
-                },
-                {
-                    "name": "MegaChriz",
-                    "homepage": "https://www.drupal.org/user/654114"
-                },
-                {
-                    "name": "twistor",
-                    "homepage": "https://www.drupal.org/user/473738"
-                }
-            ],
-            "description": "Generic plugin to modify data.",
-            "homepage": "https://www.drupal.org/project/tamper",
-            "keywords": [
-                "Drupal",
-                "tamper"
-            ],
-            "support": {
-                "source": "http://cgit.drupalcode.org/tamper",
-                "issues": "http://drupal.org/project/issues/tamper"
-            }
-        },
-        {
             "name": "drupal/tb_megamenu",
             "version": "1.7.0",
             "source": {
@@ -10226,33 +9817,6 @@
                 "source": "https://github.com/itamair/geoPHP/tree/1.5"
             },
             "time": "2023-04-26T23:16:44+00:00"
-        },
-        {
-            "name": "jfeltkamp/cookiesjsr",
-            "version": "1.0.13",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jfeltkamp/cookiesjsr.git",
-                "reference": "a25132aadb01975cbe77dc7746fd5cf15f06d246"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jfeltkamp/cookiesjsr/zipball/a25132aadb01975cbe77dc7746fd5cf15f06d246",
-                "reference": "a25132aadb01975cbe77dc7746fd5cf15f06d246",
-                "shasum": ""
-            },
-            "type": "drupal-library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "description": "Cookie consent tool.",
-            "homepage": "https://github.com/jfeltkamp/cookiesjsr",
-            "support": {
-                "issues": "https://github.com/jfeltkamp/cookiesjsr/issues",
-                "source": "https://github.com/jfeltkamp/cookiesjsr.git"
-            },
-            "time": "2022-03-25T09:05:23+00:00"
         },
         {
             "name": "kint-php/kint",
@@ -19322,7 +18886,6 @@
         "drupal/domain": 10,
         "drupal/domain_config_pages": 5,
         "drupal/entity_usage": 10,
-        "drupal/feeds_tamper": 10,
         "drupal/gin": 5,
         "drupal/jsonapi_resources": 10,
         "drupal/linkchecker": 15,
@@ -19342,5 +18905,5 @@
     "platform-overrides": {
         "php": "8.1.13"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }
