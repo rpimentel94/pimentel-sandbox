@@ -103,7 +103,7 @@
         "drupal/svg_image_field": "^2.2",
         "drupal/symfony_debug": "^2.0",
         "drupal/tailwindcss": "^5.0@alpha",
-        "drupal/tb_megamenu": "^1.7",
+        "drupal/tamper": "^1.0@alpha",
         "drupal/token": "^1.12",
         "drupal/token_custom": "^1.0@alpha",
         "drupal/token_custom_plus": "^2.0",
