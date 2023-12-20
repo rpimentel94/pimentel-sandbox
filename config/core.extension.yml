@@ -71,9 +71,6 @@ module:
   htlf_online_banking: 0
   htlf_tokens: 0
   image: 0
-  jquery_ui: 0
-  jquery_ui_autocomplete: 0
-  jquery_ui_menu: 0
   jsonapi: 0
   jsonapi_resources: 0
   key: 0
@@ -103,7 +100,6 @@ module:
   migrate_tools: 0
   migrate_upgrade: 0
   mobile_detect: 0
-  module_filter: 0
   mysql: 0
   node: 0
   options: 0
