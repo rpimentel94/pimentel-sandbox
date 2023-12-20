@@ -12,7 +12,8 @@ storage: folder
 folder: ../config_local
 module: {  }
 theme: {  }
-complete_list: {  }
+complete_list:
+  - system.performance
 partial_list:
   - search_api.server.pantheon_solr8
   - system.performance
