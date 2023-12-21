@@ -30,7 +30,7 @@ class Grid extends PreprocessPluginBase
         $paragraph = $variables['paragraph'];
 
         $parent_field = str_replace('_q2_', '_', $paragraph->parent_field_name->getString());
-        $variables['paragraph_width'] =  $parent_field == "field_middle_section" ? "w-full m-auto" : "w-11/12 xl:w-8/12 m-auto max-w-7xl";
+        $variables['paragraph_width'] = str_contains($parent_field, "middle_section") ? "w-full m-auto" : "w-11/12 xl:w-8/12 m-auto max-w-7xl";
 
         $variables['theme_color'] = theme_get_setting('primary_color');
 
@@ -66,13 +66,13 @@ class Grid extends PreprocessPluginBase
             $columns = $paragraph->get('field_num_cols')->getString();
             switch ($columns) {
                 case 'two':
-                    $variables['columns'] = "w-full md:max-w-[49%]";
+                    $variables['columns'] = "w-full lg:max-w-[49%]";
                     break;
                 case 'three':
-                    $variables['columns'] = "md:max-w-[32%]";
+                    $variables['columns'] = "lg:max-w-[32%]";
                     break;
                 case 'four':
-                    $variables['columns'] = "md:max-w-[23%]";
+                    $variables['columns'] = "w-full lg:max-w-[48%] xl:max-w-[23%]";
                     break;
             }
             $variables['col_count'] = $columns == "four" ? " justify-start gap-x-8 " : " justify-between ";
@@ -81,10 +81,10 @@ class Grid extends PreprocessPluginBase
             if ($variables['grid_style'] == "callouts") {
                 $variables['col_count'] .= "py-8";
                 if ($columns == "three") {
-                    $variables['columns'] = "md:max-w-[33%] pb-10";
+                    $variables['columns'] = "lg:max-w-[33%] pb-10";
                 }
             } elseif ($variables['grid_style'] == "smallcallouts") {
-                $variables['columns'] = "md:max-w-[46%] !p-10 min-h-[330px]";
+                $variables['columns'] = "lg:max-w-[46%] !p-10 min-h-[330px]";
             }
         }
 

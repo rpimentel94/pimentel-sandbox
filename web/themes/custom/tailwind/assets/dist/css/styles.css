@@ -1309,6 +1309,10 @@ input:checked + .toggle-bg {
   height: 100%;
 }
 
+.h-1 {
+  height: 0.25rem;
+}
+
 .max-h-0 {
   max-height: 0px;
 }
@@ -1817,6 +1821,11 @@ input:checked + .toggle-bg {
   background-color: rgb(32 41 69 / var(--tw-bg-opacity));
 }
 
+.bg-htlfDarkGray {
+  --tw-bg-opacity: 1;
+  background-color: rgb(117 117 117 / var(--tw-bg-opacity));
+}
+
 .bg-htlfGray {
   --tw-bg-opacity: 1;
   background-color: rgb(166 166 166 / var(--tw-bg-opacity));
@@ -1891,9 +1900,8 @@ input:checked + .toggle-bg {
   background-color: rgb(255 255 255 / 0.5);
 }
 
-.bg-htlfDarkGray {
-  --tw-bg-opacity: 1;
-  background-color: rgb(117 117 117 / var(--tw-bg-opacity));
+.bg-\[--SecondaryColor\] {
+  background-color: var(--SecondaryColor);
 }
 
 .bg-opacity-25 {
@@ -2387,6 +2395,10 @@ input:checked + .toggle-bg {
 
 .opacity-100 {
   opacity: 1;
+}
+
+.opacity-75 {
+  opacity: 0.75;
 }
 
 .bg-blend-multiply {
@@ -3090,6 +3102,34 @@ input:checked + .toggle-bg {
     width: auto;
   }
 
+  .lg\:max-w-\[23\%\] {
+    max-width: 23%;
+  }
+
+  .lg\:max-w-\[32\%\] {
+    max-width: 32%;
+  }
+
+  .lg\:max-w-\[33\%\] {
+    max-width: 33%;
+  }
+
+  .lg\:max-w-\[46\%\] {
+    max-width: 46%;
+  }
+
+  .lg\:max-w-\[49\%\] {
+    max-width: 49%;
+  }
+
+  .lg\:max-w-\[50\%\] {
+    max-width: 50%;
+  }
+
+  .lg\:max-w-\[48\%\] {
+    max-width: 48%;
+  }
+
   .lg\:flex-nowrap {
     flex-wrap: nowrap;
   }
@@ -3109,6 +3149,14 @@ input:checked + .toggle-bg {
 
   .lg\:pr-2 {
     padding-right: 0.5rem;
+  }
+
+  .lg\:pl-6 {
+    padding-left: 1.5rem;
+  }
+
+  .lg\:pt-0 {
+    padding-top: 0px;
   }
 }
 
@@ -3131,6 +3179,10 @@ input:checked + .toggle-bg {
 
   .xl\:w-8\/12 {
     width: 66.666667%;
+  }
+
+  .xl\:max-w-\[23\%\] {
+    max-width: 23%;
   }
 
   .xl\:basis-1\/2 {
@@ -3177,6 +3229,18 @@ input:checked + .toggle-bg {
 
   .xl\:pt-\[5\.25rem\] {
     padding-top: 5.25rem;
+  }
+
+  .xl\:pl-6 {
+    padding-left: 1.5rem;
+  }
+
+  .xl\:pt-0 {
+    padding-top: 0px;
+  }
+
+  .xl\:pr-6 {
+    padding-right: 1.5rem;
   }
 
   .xl\:text-lg {
