@@ -1,0 +1,9 @@
+uuid: c59532d5-6330-47b0-8932-2819a859ece6
+langcode: en
+status: true
+dependencies: {  }
+id: dev_htlf_com
+domain_id: htlf
+pattern: dev.htlf.com
+redirect: 0
+environment: development
