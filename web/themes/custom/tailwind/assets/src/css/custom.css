@@ -896,6 +896,9 @@ footer .footer-inner-top #block-auxmenu-2 ul {
 footer .footer-inner-top #block-auxmenu-2 ul li {
   padding-right: 2em;
 }
+footer .footer-inner-top #block-auxmenu-2 ul li svg {
+  display: none;
+}
 footer .footer-inner-top #block-auxmenu-2 ul li a {
   color: white;
   font-weight: bold;

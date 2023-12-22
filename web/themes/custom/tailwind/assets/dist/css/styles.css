@@ -44,7 +44,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: NeurialGrotesk, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -886,6 +886,54 @@ input:checked + .toggle-bg {
   border-color: #1C64F2;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@font-face {
+  font-family: "NeurialGrotesk-Bold";
+
+  src: url("../../fonts/NeurialGroteskBold/font.woff2") format("woff2"),
+      url("../../fonts/NeurialGroteskBold/font.woff") format("woff");
+}
+
+@font-face {
+  font-family: "NeurialGrotesk-Regular";
+
+  src: url("../../fonts/NeurialGroteskLight/font.woff2") format("woff2"),
+      url("../../fonts/NeurialGroteskLight/font.woff") format("woff");
+
+  font-weight: 300;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NeurialGrotesk-Regular";
+
+  src: url("../../fonts/NeurialGroteskMedium/font.woff2") format("woff2"),
+      url("../../fonts/NeurialGroteskMedium/font.woff") format("woff");
+
+  font-weight: 500;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NeurialGrotesk-Regular";
+
+  src: url("../../fonts/NeurialGroteskRegular/font.woff2") format("woff2"),
+      url("../../fonts/NeurialGroteskRegular/font.woff") format("woff");
+
+  font-weight: normal;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeurialGrotesk';
+
+  src: url('../../fonts/neurial_grotesk-regular.otf');
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -1241,6 +1289,10 @@ input:checked + .toggle-bg {
   margin-top: 1.5rem;
 }
 
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
 .block {
   display: block;
 }
@@ -1277,6 +1329,10 @@ input:checked + .toggle-bg {
   height: 0px;
 }
 
+.h-1 {
+  height: 0.25rem;
+}
+
 .h-14 {
   height: 3.5rem;
 }
@@ -1309,10 +1365,6 @@ input:checked + .toggle-bg {
   height: 100%;
 }
 
-.h-1 {
-  height: 0.25rem;
-}
-
 .max-h-0 {
   max-height: 0px;
 }
@@ -1331,6 +1383,10 @@ input:checked + .toggle-bg {
 
 .max-h-\[305px\] {
   max-height: 305px;
+}
+
+.max-h-\[\.85rem\] {
+  max-height: .85rem;
 }
 
 .min-h-\[12rem\] {
@@ -1900,10 +1956,6 @@ input:checked + .toggle-bg {
   background-color: rgb(255 255 255 / 0.5);
 }
 
-.bg-\[--SecondaryColor\] {
-  background-color: var(--SecondaryColor);
-}
-
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
 }
@@ -2115,10 +2167,6 @@ input:checked + .toggle-bg {
 
 .pr-4 {
   padding-right: 1rem;
-}
-
-.pr-6 {
-  padding-right: 1.5rem;
 }
 
 .pr-8 {
@@ -2981,26 +3029,6 @@ input:checked + .toggle-bg {
     width: 25%;
   }
 
-  .md\:max-w-\[23\%\] {
-    max-width: 23%;
-  }
-
-  .md\:max-w-\[32\%\] {
-    max-width: 32%;
-  }
-
-  .md\:max-w-\[33\%\] {
-    max-width: 33%;
-  }
-
-  .md\:max-w-\[46\%\] {
-    max-width: 46%;
-  }
-
-  .md\:max-w-\[49\%\] {
-    max-width: 49%;
-  }
-
   .md\:basis-2\/5 {
     flex-basis: 40%;
   }
@@ -3102,10 +3130,6 @@ input:checked + .toggle-bg {
     width: auto;
   }
 
-  .lg\:max-w-\[23\%\] {
-    max-width: 23%;
-  }
-
   .lg\:max-w-\[32\%\] {
     max-width: 32%;
   }
@@ -3118,16 +3142,12 @@ input:checked + .toggle-bg {
     max-width: 46%;
   }
 
-  .lg\:max-w-\[49\%\] {
-    max-width: 49%;
-  }
-
-  .lg\:max-w-\[50\%\] {
-    max-width: 50%;
-  }
-
   .lg\:max-w-\[48\%\] {
     max-width: 48%;
+  }
+
+  .lg\:max-w-\[49\%\] {
+    max-width: 49%;
   }
 
   .lg\:flex-nowrap {
@@ -3147,16 +3167,20 @@ input:checked + .toggle-bg {
     padding-bottom: 2rem;
   }
 
-  .lg\:pr-2 {
-    padding-right: 0.5rem;
-  }
-
   .lg\:pl-6 {
     padding-left: 1.5rem;
   }
 
+  .lg\:pr-2 {
+    padding-right: 0.5rem;
+  }
+
   .lg\:pt-0 {
     padding-top: 0px;
+  }
+
+  .lg\:pr-1 {
+    padding-right: 0.25rem;
   }
 }
 
@@ -3179,6 +3203,10 @@ input:checked + .toggle-bg {
 
   .xl\:w-8\/12 {
     width: 66.666667%;
+  }
+
+  .xl\:w-9\/12 {
+    width: 75%;
   }
 
   .xl\:max-w-\[23\%\] {
@@ -3227,20 +3255,12 @@ input:checked + .toggle-bg {
     padding-right: 0.5rem;
   }
 
-  .xl\:pt-\[5\.25rem\] {
-    padding-top: 5.25rem;
-  }
-
-  .xl\:pl-6 {
-    padding-left: 1.5rem;
-  }
-
-  .xl\:pt-0 {
-    padding-top: 0px;
-  }
-
   .xl\:pr-6 {
     padding-right: 1.5rem;
+  }
+
+  .xl\:pt-\[5\.25rem\] {
+    padding-top: 5.25rem;
   }
 
   .xl\:text-lg {

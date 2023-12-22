@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     'templates/**/*.{html,js,twig}',
@@ -30,6 +32,9 @@ module.exports = {
         htlfNoticeText: '#857840',
         htlfWarning: '#E68992',
         htlfWarningText: '#5C2C31',
+      },
+      fontFamily: {
+        sans: ["NeurialGrotesk", ...defaultTheme.fontFamily.sans],
       },
     },
   },

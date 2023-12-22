@@ -39,10 +39,9 @@
     {% set fa_icon = menu_attributes.link.class %}
       <li{{ item.attributes.addClass('relative group') }}>
         {% if fa_icon %}
-         <i class="{{fa_icon}} font-sm max-h-[.75rem]"></i>
+         <i class="{{fa_icon}} font-sm max-h-[.85rem] mr-1"></i>
         {% endif %}
-        {{ link(item.title, item.url, { 'class':['block lg:inline-block tracking-wide text-black text-opacity-80 text-sm font-base no-underline transition duration-500 py-2'] }) }}
-          <span class="absolute -bottom-1 left-0 w-0 h-2 bg-blue-400 transition-all group-hover:w-full"></span>
+        {{ link(item.title, item.url, { 'class':['block lg:inline-block tracking-wide text-black text-opacity-80 text-sm font-base no-underline hover:underline py-2'] }) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}

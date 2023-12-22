@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+  @font-face {
+    font-family: "NeurialGrotesk-Bold";
+    src: url("../../fonts/NeurialGroteskBold/font.woff2") format("woff2"),
+      url("../../fonts/NeurialGroteskBold/font.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "NeurialGrotesk-Regular";
+    src: url("../../fonts/NeurialGroteskLight/font.woff2") format("woff2"),
+      url("../../fonts/NeurialGroteskLight/font.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "NeurialGrotesk-Regular";
+    src: url("../../fonts/NeurialGroteskMedium/font.woff2") format("woff2"),
+      url("../../fonts/NeurialGroteskMedium/font.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "NeurialGrotesk-Regular";
+    src: url("../../fonts/NeurialGroteskRegular/font.woff2") format("woff2"),
+      url("../../fonts/NeurialGroteskRegular/font.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'NeurialGrotesk';
+    src: url('../../fonts/neurial_grotesk-regular.otf');
+  }
+}

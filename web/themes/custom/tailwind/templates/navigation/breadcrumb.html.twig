@@ -12,7 +12,7 @@
     <h2 id="system-breadcrumb" class="visually-hidden">{{ 'Breadcrumb'|t }}</h2>
     <ul class="pt-2 xl:text-lg text-sm font-normal text-white flex flex-wrap justify-start w-full">
     {% for item in breadcrumb %}
-      <li class="lg:py-8 lg:pr-2">
+      <li class="lg:py-8 lg:pr-1">
         {% if item.url %}
           <a class="hover:cursor-pointer" href="{{ item.url }}">{{ item.text }}</a>
         {% else %}
