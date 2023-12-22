@@ -1365,6 +1365,10 @@ input:checked + .toggle-bg {
   height: 100%;
 }
 
+.h-\[6px\] {
+  height: 6px;
+}
+
 .max-h-0 {
   max-height: 0px;
 }
@@ -1459,6 +1463,10 @@ input:checked + .toggle-bg {
 
 .w-full {
   width: 100%;
+}
+
+.w-9 {
+  width: 2.25rem;
 }
 
 .min-w-\[10rem\] {
@@ -2213,6 +2221,10 @@ input:checked + .toggle-bg {
   padding-top: 3.75rem;
 }
 
+.pl-1 {
+  padding-left: 0.25rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2565,6 +2577,11 @@ input:checked + .toggle-bg {
   top: -0.35rem;
 }
 
+.before\:top-\[-0\.65rem\]::before {
+  content: var(--tw-content);
+  top: -0.65rem;
+}
+
 .before\:z-50::before {
   content: var(--tw-content);
   z-index: 50;
@@ -2626,6 +2643,11 @@ input:checked + .toggle-bg {
 .after\:right-0::after {
   content: var(--tw-content);
   right: 0px;
+}
+
+.after\:bottom-\[-0\.65rem\]::after {
+  content: var(--tw-content);
+  bottom: -0.65rem;
 }
 
 .after\:block::after {
@@ -3099,6 +3121,16 @@ input:checked + .toggle-bg {
     padding: 1.5rem;
   }
 
+  .md\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .md\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
   .md\:pt-0 {
     padding-top: 0px;
   }
@@ -3165,6 +3197,11 @@ input:checked + .toggle-bg {
   .lg\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .lg\:pl-6 {

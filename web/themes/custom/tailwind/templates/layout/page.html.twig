@@ -53,28 +53,28 @@
 
 	<nav class="desktop-navigation hidden md:block">
 		<div class="w-full">
-			<div class="w-11/12 xl:w-8/12 container m-auto flex justify-end max-w-7xl">
+			<div class="w-11/12 xl:w-9/12 container m-auto flex justify-end max-w-7xl">
 				{{ page.header }}
 			</div>
 		</div>
-		<div class="flex flex-wrap items-stretch justify-between w-11/12 xl:w-8/12 text-lg text-gray-700 bg-white container m-auto max-w-7xl">
+		<div class="flex flex-wrap items-stretch justify-between w-11/12 xl:w-9/12 text-lg text-gray-700 bg-white container m-auto max-w-7xl">
 			{{ page.primary_menu }}
 		</div>
 
 		{% if page.secondary_menu|render|striptags('<drupal-render-placeholder>')|trim|length > 0 %}
 			<div class="bg-htlfLightGray h-14 min-h-14">
-				<div class="w-11/12 xl:w-8/12 container m-auto flex justify-end max-w-7xl">
+				<div class="w-11/12 xl:w-9/12 container m-auto flex justify-end max-w-7xl">
 					{{ page.secondary_menu }}
 				</div>
 			</div>
 		{% endif %}
 	</nav>
 
-	<nav class="mobile-navigation flex block md:hidden">
+	<nav class="mobile-navigation py-4 flex block md:hidden">
 		<div class="menu basis-1/5">
 			<label class="relative z-40 cursor-pointer px-3 py-6" for="mobile-menu">
 				<input class="peer hidden" type="checkbox" id="mobile-menu"/>
-				<div class="relative top-2.5 left-6 z-50 block h-[4px] w-7 bg-black content-[''] before:absolute before:top-[-0.35rem] before:z-50 before:block before:h-full before:w-full before:bg-black before:transition-all before:duration-200 before:ease-out before:content-[''] after:absolute after:right-0 after:bottom-[-0.35rem] after:block after:h-full after:w-full after:bg-black after:transition-all after:duration-200 after:ease-out after:content-[''] peer-checked:bg-transparent before:peer-checked:top-0 before:peer-checked:w-full before:peer-checked:rotate-45 before:peer-checked:transform after:peer-checked:bottom-0 after:peer-checked:w-full after:peer-checked:-rotate-45 after:peer-checked:transform"></div>
+				<div class="relative top-2.5 left-6 z-50 block h-[6px] w-9 bg-black content-[''] before:absolute before:top-[-0.65rem] before:z-50 before:block before:h-full before:w-full before:bg-black before:transition-all before:duration-200 before:ease-out before:content-[''] after:absolute after:right-0 after:bottom-[-0.65rem] after:block after:h-full after:w-full after:bg-black after:transition-all after:duration-200 after:ease-out after:content-[''] peer-checked:bg-transparent before:peer-checked:top-0 before:peer-checked:w-full before:peer-checked:rotate-45 before:peer-checked:transform after:peer-checked:bottom-0 after:peer-checked:w-full after:peer-checked:-rotate-45 after:peer-checked:transform"></div>
 				<div class="fixed inset-0 z-40 hidden h-full w-full bg-black/50 backdrop-blur-sm peer-checked:block">
 					&nbsp;
 				</div>
@@ -94,13 +94,13 @@
 
 {# Creating seperate sections in depending on CT, info passed from Page.php #}
 {% if page_type and page_type != "landing_page" %}
-	<div class="w-11/12 xl:w-8/12 m-auto max-w-7xl bg-htlfGray bg-cover bg-no-repeat bg-center bg-blend-multiply min-h-[12rem] relative" style="background-image: url({{banner_image}});">
+	<div class="w-11/12 xl:w-9/12 m-auto max-w-7xl bg-htlfGray bg-cover bg-no-repeat bg-center bg-blend-multiply min-h-[12rem] relative" style="background-image: url({{banner_image}});">
 		<div class="container px-6">
 			<div class="flex flex-wrap">
 				{{ page.breadcrumb }}
 
 				{% if not is_front %}
-					<div class="xl:py-10 py-2 pl-2 xl:pl-0 xl:pr-2 font-normal text-sm xl:text-xl text-white">
+					<div class="md:py-10 py-2 pl-2 xl:pl-0 xl:pr-2 font-normal text-sm xl:text-xl text-white">
 						<span class="">
 							>
 						</span>

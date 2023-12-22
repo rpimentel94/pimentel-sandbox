@@ -1,6 +1,6 @@
 <div{{ attributes.addClass(classes) }}>
     <div class="w-full {{background_color}} flex bg-cover {{background_height}}" {% if background_type == 'image' %} style="background-image: url({{background_image}});" {% endif %}>
-        <div class="w-11/12 xl:w-8/12 m-auto max-w-7xl lg:p-8 py-8 flex content-center items-center">
+        <div class="w-11/12 xl:w-9/12 m-auto max-w-7xl lg:p-8 py-8 flex content-center items-center">
             {% if content.field_display_admin_title.0['#markup'] == "On" %}
                 <h2 class="text-4xl font-extralight pb-6">{{ content.field_admin_title }}</h2>
             {% endif %}

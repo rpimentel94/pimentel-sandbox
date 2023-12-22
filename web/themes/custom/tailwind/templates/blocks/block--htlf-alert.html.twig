@@ -52,13 +52,13 @@
 		{% endif %}
 
 		<div id="alert-message-{{alert.nid}}" class="site-alert-item {{bg_color}} {{text_color}} hidden border-b-2 border-htlfLightGray transition-opacity duration-500">
-			<div class="w-11/12 xl:w-8/12 font-normal alert-body m-auto flex justify-between flex-wrap max-w-7xl py-6 leading-loose">
+			<div class="w-11/12 xl:w-9/12 font-normal alert-body m-auto flex justify-between max-w-7xl py-6 leading-loose">
 				<div class="alert-icon">
 					<div class="{{icon_color}} px-2.5 pb-1 rounded-[50%]">
 					<i class="{{icon}} fa-lg h-4 text-white"></i>
 					</div>
 				</div>
-				<div class="basis-11/12">
+				<div class="basis-11/12 px-2 lg:px-0 leading-6">
 					{{alert.body}}
 				</div>
 
