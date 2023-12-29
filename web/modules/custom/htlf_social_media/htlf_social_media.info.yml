@@ -1,0 +1,5 @@
+name: HTLF Social Media Links
+description: Custom implementation for social media links within the footer
+type: module
+package: HTLF
+core_version_requirement: ^9.5 || ^10

@@ -41,6 +41,12 @@
 .blog-post .blog-info {
   word-spacing: 3px;
 }
+.blog-post .blog-info a {
+  color: var(--PrimaryColor);
+}
+.blog-post .blog-info a :hover {
+  color: var(--SecondaryColor);
+}
 .blog-post .blog-post-content h2 {
   font-size: 2rem;
   font-weight: 300;
@@ -891,7 +897,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
 
 footer .footer-inner-top #block-auxmenu-2 ul {
   justify-content: flex-start;
-  margin-left: 1em;
 }
 footer .footer-inner-top #block-auxmenu-2 ul li {
   padding-right: 2em;
@@ -911,4 +916,10 @@ footer .footer-inner-top #block-socialmedia {
 }
 footer .footer-inner-middle #block-footer {
   width: 100%;
+}
+footer .footer-inner-bottom .ehl-fdic {
+  font-size: 14px;
+}
+footer .footer-inner-bottom .ehl-fdic .flex article {
+  padding: 5px;
 }

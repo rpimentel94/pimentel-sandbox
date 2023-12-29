@@ -136,9 +136,22 @@ function tailwind_preprocess_html(&$variables)
 {
   $primary_color = theme_get_setting('primary_color');
   $secondary_color = theme_get_setting('secondary_color');
+
+  $active_domain = \Drupal::service('domain.negotiator')->getActiveId() != "pimentel_sandbox_lndo_site" ?: "htlf";
+  $storage = \Drupal::entityTypeManager()->getStorage('domain');
+  $domains = $storage->loadMultiple();
+  $domain_list = "";
+  foreach ($domains as $domain) {  
+    if ($domain->get('id') != $active_domain) {
+      $domain_list .= "." . $domain->get('id') . ", ";
+    }
+  }
+
+  $domain_list = substr_replace($domain_list ,"", -2);
+
   $style = [
     '#tag' => 'style',
-    '#value' => ":root {\n  --PrimaryColor: " . $primary_color . "; --SecondaryColor: " . $secondary_color . ";\n}",
+    '#value' => ":root {\n  --PrimaryColor: " . $primary_color . "; --SecondaryColor: " . $secondary_color . ";\n} " . $domain_list . "{ display: none !important; }",
   ];
   $variables['page']['#attached']['html_head'][] = [$style, 'site-colors'];
 }

@@ -37,12 +37,12 @@
     {% endif %}
     {% for item in items %}
       {% if item.in_active_trail %}
-        <li{{ item.attributes.addClass('lg:mr-3 relative group mx-0 my-auto flex justify-center active-parent') }}>
+        <li{{ item.attributes.addClass('relative group mx-0 my-auto flex justify-center active-parent') }}>
       {% else %}
-        <li{{ item.attributes.addClass('lg:mr-3 relative group mx-0 my-auto flex justify-center') }}>
+        <li{{ item.attributes.addClass('relative group mx-0 my-auto flex justify-center') }}>
       {% endif %}
         <div class="w-full mx-auto">
-        {{ link(item.title, item.url, { 'class':['block lg:inline-block tracking-wide text-black text-opacity-80 text-xl font-light no-underline transition duration-500 p-2'] }) }}
+        {{ link(item.title, item.url, { 'class':['block lg:inline-block tracking-wide text-black text-opacity-80 text-xl font-light no-underline transition duration-500 pb-2'] }) }}
           <span class="absolute -bottom-0 left-0 w-0 h-2 bg-[--PrimaryColor] transition-all group-hover:w-full"></span>
 
           {% if item.in_active_trail %}

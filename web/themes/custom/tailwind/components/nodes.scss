@@ -18,6 +18,14 @@
 .blog-post {
   .blog-info {
     word-spacing: 3px;
+
+    a {
+      color: var(--PrimaryColor);
+
+      :hover {
+        color: var(--SecondaryColor);
+      }
+    }
   }
 
   .blog-post-content {

@@ -30,7 +30,7 @@ class Grid extends PreprocessPluginBase
         $paragraph = $variables['paragraph'];
 
         $parent_field = str_replace('_q2_', '_', $paragraph->parent_field_name->getString());
-        $variables['paragraph_width'] = str_contains($parent_field, "middle_section") ? "w-full m-auto" : "w-11/12 xl:w-9/12 m-auto max-w-7xl";
+        $variables['paragraph_width'] = str_contains($parent_field, "middle_section") ? "w-full m-auto" : "w-11/12 m-auto max-w-7xl";
 
         $variables['theme_color'] = theme_get_setting('primary_color');
 

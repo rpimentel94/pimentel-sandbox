@@ -5,7 +5,6 @@ footer {
 
         ul {
           justify-content: flex-start;
-          margin-left: 1em;
 
           li {
             padding-right: 2em;
@@ -36,5 +35,16 @@ footer {
             width: 100%;
         }
       }
+
+    &-bottom {
+      .ehl-fdic {
+        font-size: 14px;
+        .flex {
+          article {
+            padding: 5px;
+          }
+        }
+      }
+    }
   }
 }
