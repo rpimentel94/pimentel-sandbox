@@ -1,0 +1,20 @@
+uuid: db688282-674c-433e-8c92-64d1d7190e9f
+langcode: en
+status: false
+dependencies:
+  module:
+    - htlf_social_media
+  theme:
+    - tailwind
+id: socialmedialinks
+theme: tailwind
+region: footer_top
+weight: 0
+provider: null
+plugin: htlf_social_media_block
+settings:
+  id: htlf_social_media_block
+  label: 'Social Media Links'
+  label_display: '0'
+  provider: htlf_social_media
+visibility: {  }

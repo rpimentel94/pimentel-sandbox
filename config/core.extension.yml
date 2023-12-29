@@ -69,6 +69,7 @@ module:
   htlf_alert: 0
   htlf_migrate: 0
   htlf_online_banking: 0
+  htlf_social_media: 0
   htlf_tokens: 0
   image: 0
   jsonapi: 0
