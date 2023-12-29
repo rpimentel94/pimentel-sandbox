@@ -27,10 +27,18 @@
  */
 #}
 
+{% set accounts = content['#accounts'] %}
 
-
-<div{{attributes.addClass('site-social-media flex flex-wrap justify-end')}}>
-
-Kona
-
+<div{{attributes.addClass('footer-social-media flex flex-wrap justify-end')}}>
+	<ul class="flex flex-row justify-start">
+		{% for key, account in accounts %}
+			{% if account %}
+				<li class="pl-4">
+					<a class="{{key}} js-{{key}}-share" href="{{account}}" target="_blank" rel="noopener" aria-label="Share this post on {{key|upper}}">
+						<i class="fa-brands {% if key == 'linkedin' %}fa-{{key}}{% else %}fa-{{key}}-square{% endif %}"></i>
+					</a>
+				</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
 </div>

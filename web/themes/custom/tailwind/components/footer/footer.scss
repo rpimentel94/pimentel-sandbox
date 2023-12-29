@@ -2,7 +2,6 @@ footer {
   .footer-inner {
     &-top {
       #block-auxmenu-2 {
-
         ul {
           justify-content: flex-start;
 
@@ -25,16 +24,23 @@ footer {
         }
       }
 
-      #block-socialmedia {
-        margin-left: auto;
+      .footer-social-media {
+        svg {
+          height: 2em;
+          color: white;
+
+          :hover {
+            color: white;
+          }
+        }
       }
     }
 
     &-middle {
-        #block-footer {
-            width: 100%;
-        }
+      #block-footer {
+        width: 100%;
       }
+    }
 
     &-bottom {
       .ehl-fdic {

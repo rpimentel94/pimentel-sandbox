@@ -80,7 +80,7 @@
   line-height: 1.6;
 }
 .blog-post .social-share svg {
-  height: 3em;
+  height: 2em;
   color: var(--PrimaryColor);
 }
 .blog-post .social-share svg :hover {
@@ -911,8 +911,12 @@ footer .footer-inner-top #block-auxmenu-2 ul li a {
 footer .footer-inner-top #block-auxmenu-2 ul li span {
   background-color: white;
 }
-footer .footer-inner-top #block-socialmedia {
-  margin-left: auto;
+footer .footer-inner-top .footer-social-media svg {
+  height: 2em;
+  color: white;
+}
+footer .footer-inner-top .footer-social-media svg :hover {
+  color: white;
 }
 footer .footer-inner-middle #block-footer {
   width: 100%;
