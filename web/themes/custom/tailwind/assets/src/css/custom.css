@@ -42,6 +42,7 @@
   word-spacing: 3px;
 }
 .blog-post .blog-info a {
+  font-weight: 500;
   color: var(--PrimaryColor);
 }
 .blog-post .blog-info a :hover {

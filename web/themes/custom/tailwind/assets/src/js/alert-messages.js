@@ -25,7 +25,7 @@
           dismissAlertButton.addEventListener("click", (event) => {
             event.preventDefault();
             localStorage.setItem(element.id, true);
-            element.style.transition = "1s";
+            element.style.transition = ".75s";
             element.style.opacity = "0";
           });
 
