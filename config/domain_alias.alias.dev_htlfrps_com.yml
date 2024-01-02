@@ -1,0 +1,9 @@
+uuid: 1eb997a6-89a7-4a6e-ba51-7a68ec388e1a
+langcode: en
+status: true
+dependencies: {  }
+id: dev_htlfrps_com
+domain_id: rps
+pattern: dev.htlfrps.com
+redirect: 0
+environment: development

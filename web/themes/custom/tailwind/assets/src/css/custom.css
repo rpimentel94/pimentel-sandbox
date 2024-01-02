@@ -171,9 +171,8 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
   text-decoration: underline;
 }
 .grid-section .card p {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-family: "NeurialGrotesk-Regular", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.65rem;
   color: #333;
   margin-bottom: 1.5625rem;
   font-weight: 300;
@@ -184,7 +183,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
 }
 .grid-section .card ul li {
   font-size: 1rem;
-  font-family: "NeurialGrotesk-Regular", sans-serif;
   color: #333;
 }
 .grid-section .smallcallouts .card {

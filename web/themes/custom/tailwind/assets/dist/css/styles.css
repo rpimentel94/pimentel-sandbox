@@ -1237,6 +1237,11 @@ input:checked + .toggle-bg {
   margin-bottom: auto;
 }
 
+.my-0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -1751,6 +1756,10 @@ input:checked + .toggle-bg {
 
 .border-b-\[40px\] {
   border-bottom-width: 40px;
+}
+
+.border-r-2 {
+  border-right-width: 2px;
 }
 
 .border-solid {
@@ -2692,6 +2701,10 @@ input:checked + .toggle-bg {
 .after\:content-\[\'\'\]::after {
   --tw-content: '';
   content: var(--tw-content);
+}
+
+.last\:border-0:last-child {
+  border-width: 0px;
 }
 
 .hover\:cursor-pointer:hover {

@@ -8,14 +8,14 @@
 			<div class="flex flex-row flex-wrap gap-y-8 {{col_count}}">
 				{% for item in grid_items %}
 					{% set GridIndex = loop.index - 1 %}
-					<div class="{{item_background}} bg-cover pl-0 md:p-6 grow {{columns}} {{grid_style}} relative{% if item.image is defined %} with-image !bg-htlfDarkGray bg-cover bg-no-repeat bg-center bg-blend-overlay" style="background-image: url({{item.image}});"{% else %}"{% endif %}>
+					<div class="{{item_background}} bg-cover pl-0 md:p-6 grow {{columns}} flex justify-between flex-col {{grid_style}} relative{% if item.image is defined %} with-image !bg-htlfDarkGray bg-cover bg-no-repeat bg-center bg-blend-overlay" style="background-image: url({{item.image}});"{% else %}"{% endif %}>
 						{% if item.image_type == 'fa' %}
 							<div class="fontawesome-icon mb-4">
 								<i class="{{item.fa.classes}} text-4xl" data-fa-transform="{{ item.fa.transforms }}" data-fa-mask="{{ item.fa.mask }}" style="{{ item.fa.css }}"></i>
 							</div>
 						{% endif %}
 						<h3 class="font-bold text-2xl pb-4 {{grid_style}} {% if grid_style == "smallcallouts" %}font-light text-sm uppercase text-htlfBlack{% endif %}">{{item.title}}</h3>
-						<div class="mb-6 card">
+						<div class="mb-6 card py-6">
 							{{item.body}}
 						</div>
 						{% if item.button is not empty %}

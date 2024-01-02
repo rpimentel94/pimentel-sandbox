@@ -50,10 +50,10 @@ class Grid extends PreprocessPluginBase
                     $variables['item_background'] = "bg-htlfWhite";
                     break;
                 case 'callouts':
-                    $variables['item_background'] = "bg-htlfWhite";
+                    $variables['item_background'] = "bg-htlfWhite text-center border-r-2 last:border-0";
                     break;
                 case 'smallcallouts':
-                    $variables['item_background'] = "bg-htlfWhite";
+                    $variables['item_background'] = "bg-htlfWhite text-center";
                     break;
                 default:
                     $variables['item_background'] = "";
