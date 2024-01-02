@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.location.field_domain_access
     - field.field.node.location.field_domain_all_affiliates
+    - field.field.node.location.field_leaflet_geocode
     - field.field.node.location.field_location_address
     - field.field.node.location.field_location_content
     - field.field.node.location.field_location_fax
@@ -19,6 +20,7 @@ dependencies:
   module:
     - address
     - field_group
+    - geofield
     - media_library
     - metatag
     - path
@@ -115,6 +117,13 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  field_leaflet_geocode:
+    type: geofield_latlon
+    weight: 26
+    region: content
+    settings:
+      html5_geolocation: false
     third_party_settings: {  }
   field_location_address:
     type: address_default

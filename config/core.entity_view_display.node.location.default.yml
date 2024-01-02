@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.location.field_domain_access
     - field.field.node.location.field_domain_all_affiliates
+    - field.field.node.location.field_leaflet_geocode
     - field.field.node.location.field_location_address
     - field.field.node.location.field_location_content
     - field.field.node.location.field_location_fax
@@ -18,6 +19,7 @@ dependencies:
     - node.type.location
   module:
     - address
+    - geofield
     - metatag
     - options
     - text
@@ -27,6 +29,15 @@ targetEntityType: node
 bundle: location
 mode: default
 content:
+  field_leaflet_geocode:
+    type: geofield_default
+    label: above
+    settings:
+      output_format: wkt
+      output_escape: true
+    third_party_settings: {  }
+    weight: 112
+    region: content
   field_location_address:
     type: address_default
     label: hidden
@@ -111,3 +122,4 @@ hidden:
   field_domain_access: true
   field_domain_all_affiliates: true
   langcode: true
+  search_api_excerpt: true
