@@ -137,7 +137,7 @@ function tailwind_preprocess_html(&$variables)
   $primary_color = theme_get_setting('primary_color');
   $secondary_color = theme_get_setting('secondary_color');
 
-  $active_domain = \Drupal::service('domain.negotiator')->getActiveId() != "pimentel_sandbox_lndo_site" ?: "htlf";
+  $active_domain = \Drupal::service('domain.negotiator')->getActiveId();
   $storage = \Drupal::entityTypeManager()->getStorage('domain');
   $domains = $storage->loadMultiple();
   $domain_list = "";

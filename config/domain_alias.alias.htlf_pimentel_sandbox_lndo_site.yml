@@ -1,0 +1,9 @@
+uuid: 6f4ca26e-d1ce-47fe-afc0-46f6e0eba274
+langcode: en
+status: true
+dependencies: {  }
+id: htlf_pimentel_sandbox_lndo_site
+domain_id: htlf
+pattern: htlf.pimentel-sandbox.lndo.site
+redirect: 0
+environment: local

@@ -22,7 +22,7 @@ class AlertsBlock extends BlockBase
   public function build()
   {
     //Get Active Domain
-    $active_domain = \Drupal::service('domain.negotiator')->getActiveId() != "pimentel_sandbox_lndo_site" ?: "htlf";
+    $active_domain = \Drupal::service('domain.negotiator')->getActiveId();
 
     //Get current path & check for alias URL
     $current_path = \Drupal::service('path.current')->getPath();
