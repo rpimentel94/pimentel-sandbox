@@ -78,6 +78,7 @@ module:
   language: 0
   layout_discovery: 0
   leaflet: 0
+  leaflet_views: 0
   link: 0
   linkchecker: 0
   linkit: 0
