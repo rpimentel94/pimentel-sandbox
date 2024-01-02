@@ -3212,6 +3212,18 @@ input:checked + .toggle-bg {
     align-items: stretch;
   }
 
+  .lg\:border-r-0 {
+    border-right-width: 0px;
+  }
+
+  .lg\:border-r-2 {
+    border-right-width: 2px;
+  }
+
+  .lg\:border-b-0 {
+    border-bottom-width: 0px;
+  }
+
   .lg\:p-8 {
     padding: 2rem;
   }
