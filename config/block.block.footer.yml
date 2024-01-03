@@ -32,3 +32,5 @@ visibility:
     domains:
       pimentel_sandbox_lndo_site: pimentel_sandbox_lndo_site
       htlf: htlf
+      rps: rps
+      sub_pimentel_sandbox_lndo_site: sub_pimentel_sandbox_lndo_site

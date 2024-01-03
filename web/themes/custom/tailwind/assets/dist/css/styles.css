@@ -1222,6 +1222,11 @@ input:checked + .toggle-bg {
   margin-right: auto;
 }
 
+.my-0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -1235,11 +1240,6 @@ input:checked + .toggle-bg {
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
-}
-
-.my-0 {
-  margin-top: 0px;
-  margin-bottom: 0px;
 }
 
 .mb-1 {
@@ -1756,10 +1756,6 @@ input:checked + .toggle-bg {
 
 .border-b-\[40px\] {
   border-bottom-width: 40px;
-}
-
-.border-r-2 {
-  border-right-width: 2px;
 }
 
 .border-solid {
@@ -3212,16 +3208,12 @@ input:checked + .toggle-bg {
     align-items: stretch;
   }
 
-  .lg\:border-r-0 {
-    border-right-width: 0px;
+  .lg\:border-b-0 {
+    border-bottom-width: 0px;
   }
 
   .lg\:border-r-2 {
     border-right-width: 2px;
-  }
-
-  .lg\:border-b-0 {
-    border-bottom-width: 0px;
   }
 
   .lg\:p-8 {
