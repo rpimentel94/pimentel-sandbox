@@ -255,6 +255,20 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
       text-decoration: none;
     }
   }
+
+  .grid-x {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    .medium-4 {
+      width: calc(33.33333% - 1.875rem);
+
+      @media screen and (max-width: 550px) {
+        width: 100%;
+      }
+    }
+  }
 }
 
 .testimonial,

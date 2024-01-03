@@ -1478,6 +1478,10 @@ input:checked + .toggle-bg {
   min-width: 25vw;
 }
 
+.min-w-\[35vw\] {
+  min-width: 35vw;
+}
+
 .max-w-7xl {
   max-width: 80rem;
 }

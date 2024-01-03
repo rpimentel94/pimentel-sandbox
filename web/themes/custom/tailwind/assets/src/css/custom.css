@@ -349,6 +349,19 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-
 .general-content .button:hover {
   text-decoration: none;
 }
+.general-content .grid-x {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.general-content .grid-x .medium-4 {
+  width: calc(33.33333% - 1.875rem);
+}
+@media screen and (max-width: 550px) {
+  .general-content .grid-x .medium-4 {
+    width: 100%;
+  }
+}
 
 .testimonial .primary,
 .testimonial .primary p,
