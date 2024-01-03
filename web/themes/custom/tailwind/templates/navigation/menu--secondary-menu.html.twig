@@ -31,28 +31,59 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('py-2 text-sm text-white flex justify-start w-full') }}>
+      <ul{{ attributes.addClass('py-2 text-sm text-white flex justify-start w-full z-10') }}>
     {% else %}
-      <ul>
+      <ul class="flex flex-col">
     {% endif %}
     {% for item in items %}
-      {% if item.in_active_trail %}
-        <li{{ item.attributes.addClass('lg:mr-16 relative group mx-0 my-auto pr-2 flex justify-center active-parent') }}>
+      {% if item.below %}
+        {% if item.in_active_trail %}
+        <li{{ item.attributes.addClass('lg:mr-16 expandable relative group mx-0 my-auto pr-2 flex justify-center flex-col active-parent') }} x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false" >
       {% else %}
-        <li{{ item.attributes.addClass('lg:mr-16 relative group mx-0 my-auto flex justify-center') }}>
+        <li{{ item.attributes.addClass('lg:mr-16 expandable relative group mx-0 my-auto pr-2 flex justify-center flex-col') }} x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
       {% endif %}
-        <div class="w-full mx-auto">
-        {{ link(item.title, item.url, { 'class':['block lg:inline-block tracking-wide text-[--PrimaryColor] text-base font-base no-underline transition duration-500 p-2'] }) }}
-          <span class="absolute -bottom-0 left-0 w-0 h-1 bg-[--PrimaryColor] transition-all opacity-75 group-hover:w-full"></span>
+        <div class="w-full mx-auto flex">
+        {{ link(item.title, item.url, { 'class':['block secondary-title-link cursor-pointer lg:inline-block tracking-wide text-[--PrimaryColor] text-base font-base no-underline transition duration-500 p-2'] }) }}
+          <span class="menu-underline absolute -bottom-0 left-0 w-0 h-1 bg-[--PrimaryColor] transition-all opacity-75 group-hover:w-full"></span>
 
           {% if item.in_active_trail %}
-            <span class="absolute -bottom-0 left-0 w-0 h-1 bg-[--PrimaryColor] opacity-75 w-full"></span>
+            <span class="menu-underline absolute -bottom-0 left-0 w-0 h-1 bg-[--PrimaryColor] opacity-75 w-full"></span>
           {% endif %}
         </div>
-        {% if item.below %}
-          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
-        {% endif %}
+
+        {% if menu_level == 0 %}
+            <div class="origin-top-right secondary-menu absolute top-full min-w-[25vw] bg-white border border-slate-200 p-2 shadow-xl [&[x-cloak]]:hidden"
+                x-show="open"
+                x-transition:enter="transition ease-out duration-200 transform"
+                x-transition:enter-start="opacity-0 -translate-y-2"
+                x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease-out duration-200"
+                x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0"
+                x-cloak
+                @focusout="await $nextTick();!$el.contains($focus.focused()) && (open = false)">
+          {% else %}
+            <div class="tertiary-menu">
+          {% endif %}
+            {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+          </div>
+
+      {% else %}
+      {% if item.in_active_trail %}
+        <li{{ item.attributes.addClass('lg:mr-16 relative group mx-0 my-auto pr-2 flex justify-center flex-col active-parent') }}>
+      {% else %}
+        <li{{ item.attributes.addClass('lg:mr-16 relative group mx-0 my-auto flex justify-center flex-col') }}>
+      {% endif %}
+        <div class="w-full mx-auto flex">
+        {{ link(item.title, item.url, { 'class':['block lg:inline-block tracking-wide text-[--PrimaryColor] text-base font-base no-underline transition duration-500 p-2'] }) }}
+          <span class="menu-underline absolute -bottom-0 left-0 w-0 h-1 bg-[--PrimaryColor] transition-all opacity-75 group-hover:w-full"></span>
+
+          {% if item.in_active_trail %}
+            <span class="menu-underline absolute -bottom-0 left-0 w-0 h-1 bg-[--PrimaryColor] opacity-75 w-full"></span>
+          {% endif %}
+        </div>
       </li>
+      {% endif %}
     {% endfor %}
     </ul>
   {% endif %}
