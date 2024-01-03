@@ -1,0 +1,29 @@
+uuid: ae06f249-423b-4e6a-99e6-01b4bda128a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.locations
+  module:
+    - system
+    - views
+  theme:
+    - tailwind
+id: views_block__locations_map
+theme: tailwind
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:locations-map'
+settings:
+  id: 'views_block:locations-map'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /locations

@@ -1,23 +1,23 @@
-uuid: 57c5fb98-fad1-44e9-9605-4a7dd0ed7ca7
+uuid: 053b266f-8581-40f1-9948-5f068ca4305f
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.main-htlf
+    - system.menu.main-rps
   module:
     - domain
     - system
   theme:
     - tailwind
-id: mainmenuhtlf
+id: mainmenurps_3
 theme: tailwind
-region: primary_menu
-weight: -8
+region: footer_bottom
+weight: 0
 provider: null
-plugin: 'system_menu_block:main-htlf'
+plugin: 'system_menu_block:main-rps'
 settings:
-  id: 'system_menu_block:main-htlf'
-  label: 'Main Menu HTLF'
+  id: 'system_menu_block:main-rps'
+  label: 'Main Menu RPS'
   label_display: '0'
   provider: system
   level: 1
@@ -30,6 +30,4 @@ visibility:
     context_mapping:
       domain: '@domain.current_domain_context:domain'
     domains:
-      pimentel_sandbox_lndo_site: pimentel_sandbox_lndo_site
-      htlf: htlf
-      sub_pimentel_sandbox_lndo_site: sub_pimentel_sandbox_lndo_site
+      rps: rps
