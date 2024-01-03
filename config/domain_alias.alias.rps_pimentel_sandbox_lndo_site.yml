@@ -1,0 +1,9 @@
+uuid: c2dd484c-3605-4f35-a89f-72e374a3b761
+langcode: en
+status: true
+dependencies: {  }
+id: rps_pimentel_sandbox_lndo_site
+domain_id: rps
+pattern: rps.pimentel-sandbox.lndo.site
+redirect: 0
+environment: local
