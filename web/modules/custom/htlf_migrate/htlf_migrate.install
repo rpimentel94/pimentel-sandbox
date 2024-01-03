@@ -1,0 +1,43 @@
+<?php
+// Add this line at the top of the .install file.
+use Drupal\node\Entity\Node;
+
+/**
+ * Re-save all Locations content.
+ */
+function htlf_migrate_update_8002()
+{
+    // Get an array of all 'article' node ids.
+    $location_nids = \Drupal::entityQuery('node')
+        ->condition('type', 'location')
+        ->execute();
+
+    // Load all the articles.
+    $locations = Node::loadMultiple($location_nids);
+    foreach ($locations as $location) {
+
+        $geocode = explode(' ', str_replace('POINT(', '', str_replace(')', '', $location->get('field_location_geocode')->value)));
+
+        // The location of the Empire State Building, in New York City (US)
+        //$empire_location_lon_lat = [-73.985664, 40.748441];
+
+        // Generate the WKT version of the point geometry:
+        // 'POINT (-73.985664 41.748441)'
+        //$location_wkt = \Drupal::service('geofield.wkt_generator')->wktBuildPoint($location->get('field_location_geocode')->value);
+
+        // Generate the (first) geofield value in the proper format.
+        $geofield_point = [
+            'value' => $location->get('field_location_geocode')->value,
+            'type' => 'Point'
+        ];
+
+        // Get the wanted entity ($id of a node in this example) and set the
+        // 'field_geofield' with the geofield values/geometries
+        $geofield = $location->get('field_leaflet_geocode');
+        $geofield->setValue($geofield_point);
+
+
+        $location->save();
+    }
+}
+?>
