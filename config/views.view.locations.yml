@@ -272,7 +272,7 @@ display:
               aria_label: 'Read more about [node:title]'
               token_browser: ''
             trim_options:
-              text: true
+              text: false
               trim_zero: false
               replace_tokens: false
           group_column: value
@@ -410,6 +410,55 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: 'Location Information (Custom)'
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "{{ title }}\r\n{{ field_location_address }}\r\n{{ field_location_hours }}\r\n{{ field_location_phone }}"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: div
+          element_class: location-info
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
       pager:
         type: none
         options:
@@ -524,17 +573,17 @@ display:
           entity_source: __base_table
           name_field: title
           leaflet_tooltip:
-            value: title
+            value: nothing
             options: '{"permanent":false,"direction":"center"}'
           leaflet_popup:
-            value: title
+            value: nothing
             options: '{"maxWidth":"300","minWidth":"50","autoPan":true}'
             view_mode: full
-          leaflet_map: 'OSM Mapnik'
+          leaflet_map: google-roadmap
           height: '800'
           height_unit: px
           hide_empty_map: false
-          disable_wheel: false
+          disable_wheel: true
           gesture_handling: false
           fitbounds_options: '{"padding":[0,0]}'
           reset_map:
@@ -554,7 +603,7 @@ display:
               lon: !!float 0
             zoomControlPosition: topleft
             zoom: 5
-            minZoom: 1
+            minZoom: 5
             maxZoom: 18
             zoomFiner: 0
           weight: ''
@@ -584,7 +633,7 @@ display:
           leaflet_markercluster:
             control: true
             include_path: false
-            options: '{"spiderfyOnMaxZoom":true,"showCoverageOnHover":true,"removeOutsideVisibleBounds":false}'
+            options: '{"spiderfyOnMaxZoom":true,"showCoverageOnHover":false,"removeOutsideVisibleBounds":true}'
             excluded: '0'
           fullscreen:
             control: true

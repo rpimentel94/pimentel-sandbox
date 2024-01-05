@@ -57,6 +57,7 @@
         "drupal/google_tag": "^2.0",
         "drupal/jsonapi_resources": "^1.0@beta",
         "drupal/leaflet": "^10.2",
+        "drupal/leaflet_more_maps": "^2.1",
         "drupal/linkchecker": "^2.0@alpha",
         "drupal/linkit": "^6.0",
         "drupal/media_bulk_upload": "^3.0",
