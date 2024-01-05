@@ -61,7 +61,7 @@
   text-decoration: solid underline var(--SecondaryColor) 2px;
 }
 
-.site-rps .site-logo img {
+.site-rps .site-logo {
   padding: 10px;
 }
 

@@ -55,6 +55,10 @@
 		<div class="w-full">
 			<div class="w-11/12 xl:w-9/12 container m-auto flex justify-end max-w-7xl">
 				{{ page.header }}
+				<div class="search-modal-open">
+					<i class="fa-solid fa-magnifying-glass font-sm max-h-[.85rem] ml-4"></i> 
+					<span class="block lg:inline-block tracking-wide cursor-pointer text-black text-opacity-80 text-sm font-base no-underline hover:underline py-2">Search</span>
+				</div>
 			</div>
 		</div>
 		<div class="flex flex-wrap items-stretch justify-between w-11/12 xl:w-9/12 text-lg text-gray-700 bg-white container m-auto max-w-7xl">
@@ -143,9 +147,13 @@
 					<img class="min-w-[10rem] max-w-[10rem] w-full" src="/themes/custom/tailwind/domains/{{active_domain}}/images/footer_logo.svg" alt="{{ 'Home'|t }}"/>
 				</a>
 			</div>
-			<div class="flex flex-wrap items-center justify-between w-full lg:w-10/12 ml-auto">
-				{{ page.footer_top }}
-
+			<div class="flex flex-wrap justify-between items-center w-full lg:w-10/12 ml-auto">
+				<div class="flex">
+					{{ page.footer_top }}
+					<div class="search-modal-open">
+						<span class="block lg:inline-block tracking-wide cursor-pointer text-white text-opacity-80 text-normal pt-[5px] pl-7 font-base no-underline hover:underline py-2">Search</span>
+					</div>
+				</div>
 				{{ drupal_block('htlf_social_media_block') }}
 			</div>
 		</div>

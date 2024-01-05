@@ -29,7 +29,7 @@
 
 {% set accounts = content['#accounts'] %}
 
-<div{{attributes.addClass('footer-social-media flex flex-wrap justify-end')}}>
+<div{{attributes.addClass('footer-social-media flex flex-wrap justify-end justify-self-end')}}>
 	<ul class="flex flex-row justify-start">
 		{% for key, account in accounts %}
 			{% if account %}
