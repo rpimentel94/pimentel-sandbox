@@ -1210,7 +1210,7 @@ display:
             - view_node
           wrapper: div
           legend: ''
-          classes: ''
+          classes: blog-fieldset
           collapsible: false
           collapsed: false
         field_blog_tags:

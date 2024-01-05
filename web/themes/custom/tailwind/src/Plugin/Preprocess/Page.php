@@ -28,7 +28,11 @@ class Page extends PreprocessPluginBase
     $handler = \Drupal::service('theme_handler');
 
     $variables['bank_name'] = theme_get_setting('bank_name');
-    $variables['active_domain'] = $active_domain = \Drupal::service('domain.negotiator')->getActiveId();
+    //$variables['bank_name'] = \Drupal::service('domain.current_domain_context')->getHostname();
+    $negotiator = \Drupal::service('domain.negotiator');
+    $variables['active_domain'] = $active_domain = $negotiator->getActiveId();
+    $variables['bank_name'] = $negotiator->getActiveDomain()->toString();
+
     $corporate_domains = ['rps', 'pwm', 'htlf', 'pimentel_sandbox_lndo_site'];
     $variables['main_menu'] = !in_array($active_domain, $corporate_domains) ? "main" : "main-" . $active_domain;
     $parent_theme_path = \Drupal::theme()->getActiveTheme()->getPath();

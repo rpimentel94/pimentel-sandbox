@@ -123,11 +123,11 @@ class TailwindHelper
         if ($style == "callouts") {
             $color['background'] = theme_get_setting('primary_color');
             $color['text'] = "rounded-md w-46 mx-auto my-0 py-4 px-10 font-medium hover:shadow-2xl hover:drop-shadow-2xl transition duration-200 text-htlfWhite border border-white border-solid hover:!bg-htlfWhite hover:!text-htlfBlack";
-            $color['chevron'] = "text-htlfWhite hover:!text-htlfLighterGray";
+            $color['chevron'] = "border-htlfWhite hover:!border-htlfLighterGray";
         } elseif ($style == "smallcallouts") {
             $color['background'] = "";
             $color['text'] = "text-htlfWhite hover:!text-htlfLighterGray";
-            $color['chevron'] = "text-htlfWhite hover:!text-htlfLighterGray";
+            $color['chevron'] = "border-htlfWhite hover:!border-htlfLighterGray";
         } else {
             $color['background'] = "";
             $color['text'] = "text-[--PrimaryColor] font-medium hover:underline underline-offset-8 decoration-2 decoration-[--PrimaryColor]";

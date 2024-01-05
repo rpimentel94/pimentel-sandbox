@@ -71,7 +71,37 @@
     }
 
     &-featured {
+
+      .views-field-title {
+        font-size: 2rem;
+        line-height: 1.25;
+        font-weight: 500;
+        color: var(--PrimaryColor);
+
+        &:hover {
+          text-decoration: underline;
+          color: var(--SecondaryColor);
+        }
+
+        &::after {
+          display: block;
+          content: " ";
+          width: 6.875rem;
+          height: 2px;
+          margin: 3rem 0 3rem;
+          background-color: var(--SecondaryColor);
+        }
+      }
+
+      .blog-fieldset {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
       .blog-posts-feature {
+
         &-main {
           .views-field-field-blog-image {
             min-height: 32rem;
@@ -89,27 +119,6 @@
             border-color: #f2f2f2;
             border-style: solid;
             border-width: 2px 2px 2px 0px;
-
-            .views-field-title {
-              font-size: 2rem;
-              line-height: 1.25;
-              font-weight: 500;
-              color: var(--PrimaryColor);
-
-              &:hover {
-                text-decoration: underline;
-                color: var(--SecondaryColor);
-              }
-
-              &::after {
-                display: block;
-                content: " ";
-                width: 6.875rem;
-                height: 2px;
-                margin: 3rem 0 3rem;
-                background-color: var(--SecondaryColor);
-              }
-            }
           }
         }
 
@@ -132,14 +141,7 @@
 
             .views-field-title {
               font-size: 1.65rem;
-              line-height: 1.25;
-              font-weight: 500;
-              color: var(--PrimaryColor);
-
-              &:hover {
-                text-decoration: underline;
-                color: var(--SecondaryColor);
-              }
+              padding-top: 10px;
             }
           }
         }
@@ -158,6 +160,7 @@
           font-weight: 600;
           display: inline-block;
           text-transform: uppercase;
+          letter-spacing: .1em;
         }
 
         &-blog-content {

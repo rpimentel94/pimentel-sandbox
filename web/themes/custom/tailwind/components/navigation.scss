@@ -73,3 +73,12 @@
     }
   }
 }
+
+
+.site {
+    &-rps {
+        .site-logo img {
+            padding: 10px;
+        }
+    }
+}
